@@ -1,0 +1,140 @@
+{{ define "main" }}
+
+{{- $walkCount := len (where .Site.RegularPages "Section" "walks") -}}
+
+<!-- Hero: brand green, full-bleed on mobile, card on desktop -->
+<div class="install-hero">
+  <h1 class="install-hero-h1">Dog walks and live weather,<br>always in your pocket.</h1>
+  <p class="install-hero-sub">Free. No account. Works on any phone.</p>
+</div>
+
+<!-- Platform-detected primary CTA -->
+<div class="install-platform-section">
+
+  <!-- iOS variant (shown by JS on iPhone/iPad) -->
+  <div class="install-primary" id="install-ios" style="display:none;">
+    <div class="walk-section-heading">ON IPHONE</div>
+    <div class="badge-store" style="display:inline-flex;margin:8px 0;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      <div><div class="badge-label">Download on the</div><div class="badge-name">App Store</div></div>
+    </div>
+    <p style="font-size:12px;color:#888888;line-height:1.5;">Download from the App Store. Tap the icon to launch.</p>
+    <div style="height:0.5px;background:rgba(0,0,0,0.08);margin:16px 0;"></div>
+    <div class="walk-section-heading">OR ADD TO HOME SCREEN</div>
+    <p style="font-size:12px;color:#555555;">In Safari, tap the Share button (the box with an arrow), then tap Add to Home Screen.</p>
+  </div>
+
+  <!-- Android variant (shown by JS on Android) -->
+  <div class="install-primary" id="install-android" style="display:none;">
+    <div class="walk-section-heading">ON ANDROID</div>
+    <div class="badge-store" style="display:inline-flex;margin:8px 0;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M3.18 23.76c.32.18.68.18 1.02.01l11.49-6.45-2.54-2.54-9.97 8.98z" fill="#EA4335"/><path d="M21.54 10.04L19.1 8.67l-2.89 2.57 2.89 2.57 2.46-1.38c.7-.4.7-1.99-.02-2.39z" fill="#FBBC05"/><path d="M4.2.24C3.86.07 3.5.07 3.18.25L13.5 10.57l2.54-2.54L4.2.24z" fill="#4285F4"/><path d="M3.18.25C2.48.65 2 1.41 2 2.28v19.44c0 .87.48 1.63 1.18 2.04l10.32-10.32L3.18.25z" fill="#34A853"/></svg>
+      <div><div class="badge-label">Get it on</div><div class="badge-name">Google Play</div></div>
+    </div>
+    <p style="font-size:12px;color:#888888;line-height:1.5;">Download from Google Play. Tap the icon to launch.</p>
+    <div style="height:0.5px;background:rgba(0,0,0,0.08);margin:16px 0;"></div>
+    <div class="walk-section-heading">OR INSTALL DIRECTLY</div>
+    <p style="font-size:12px;color:#555555;">In Chrome, tap the three-dot menu (top right), then Install app.</p>
+  </div>
+
+  <!-- Desktop variant (shown by JS on desktop / default) -->
+  <div class="install-primary" id="install-desktop">
+    <div class="walk-section-heading">GET SNIFFOUT ON YOUR PHONE</div>
+    <div class="install-qr-block">
+      <div class="install-qr-placeholder">
+        <span style="font-size:11px;color:#888888;text-align:center;display:block;">Scan to install<br>Sniffout</span>
+      </div>
+      <p style="font-size:13px;color:#555555;line-height:1.5;">Scan with your phone camera to open on your device.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Step-by-step guide -->
+<div class="install-steps-section">
+  <div class="walk-section-heading">HOW TO INSTALL</div>
+
+  <!-- Platform tabs -->
+  <div class="platform-tabs">
+    <div class="platform-tab platform-tab--active" id="tab-ios" onclick="switchInstallTab('ios')">iPhone</div>
+    <div class="platform-tab" id="tab-android" onclick="switchInstallTab('android')">Android</div>
+  </div>
+
+  <!-- iPhone steps -->
+  <div class="install-steps" id="steps-ios">
+    <div class="install-step">
+      <div class="install-step-num">1</div>
+      <div class="install-step-content">
+        <div class="install-step-title">Open Safari</div>
+        <div class="install-step-body">Sniffout works best when added from Safari. Open this page in Safari if you haven't already.</div>
+      </div>
+    </div>
+    <div class="install-step">
+      <div class="install-step-num">2</div>
+      <div class="install-step-content">
+        <div class="install-step-title">Tap the Share button</div>
+        <div class="install-step-body">The Share button is the box with an upward arrow at the bottom of the screen.</div>
+      </div>
+    </div>
+    <div class="install-step">
+      <div class="install-step-num">3</div>
+      <div class="install-step-content">
+        <div class="install-step-title">Tap Add to Home Screen</div>
+        <div class="install-step-body">Scroll down in the share sheet and tap Add to Home Screen. Then tap Add in the top right.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Android steps (hidden by default) -->
+  <div class="install-steps" id="steps-android" style="display:none;">
+    <div class="install-step">
+      <div class="install-step-num">1</div>
+      <div class="install-step-content">
+        <div class="install-step-title">Open in Chrome</div>
+        <div class="install-step-body">Sniffout works best when installed from Chrome.</div>
+      </div>
+    </div>
+    <div class="install-step">
+      <div class="install-step-num">2</div>
+      <div class="install-step-content">
+        <div class="install-step-title">Tap the menu</div>
+        <div class="install-step-body">Tap the three-dot menu in the top-right corner of Chrome.</div>
+      </div>
+    </div>
+    <div class="install-step">
+      <div class="install-step-num">3</div>
+      <div class="install-step-content">
+        <div class="install-step-title">Tap Install app</div>
+        <div class="install-step-body">Tap Install app (or Add to Home Screen). Sniffout will appear on your home screen.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Why Sniffout -->
+<div class="install-why">
+  <div class="walk-section-heading">WHY SNIFFOUT</div>
+  <div class="install-benefit">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg>
+    <div>
+      <div class="install-benefit-title">Know before you go</div>
+      <div class="install-benefit-body">Live weather verdict, heat warnings, and best window of the day for every walk.</div>
+    </div>
+  </div>
+  <div class="install-benefit">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <div>
+      <div class="install-benefit-title">{{ $walkCount }} handpicked UK walks</div>
+      <div class="install-benefit-body">Curated dog walks with off-lead status, terrain, and parking for each one.</div>
+    </div>
+  </div>
+  <div class="install-benefit">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    <div>
+      <div class="install-benefit-title">Every walk remembered</div>
+      <div class="install-benefit-body">Log walks, add notes, build a record. No account needed. Data stays on your device.</div>
+    </div>
+  </div>
+</div>
+
+{{ end }}

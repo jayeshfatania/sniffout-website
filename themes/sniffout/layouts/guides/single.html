@@ -1,0 +1,118 @@
+{{ define "main" }}
+
+<!-- Breadcrumb (desktop only) -->
+<nav class="walk-breadcrumb">
+  <a href="/guides/">Guides</a>
+  <span class="walk-breadcrumb-sep">&rsaquo;</span>
+  <span class="walk-breadcrumb-current">{{ .Title }}</span>
+</nav>
+
+<div class="guide-article-layout">
+
+  <!-- Left: article content -->
+  <div class="guide-article-content">
+
+    <!-- Article hero -->
+    <div class="guide-article-hero">
+      {{ with .Params.category }}
+      {{ if eq . "Hazards" }}
+      <span class="category-pill category-pill--hazard">{{ . }}</span>
+      {{ else if eq . "Seasonal" }}
+      <span class="category-pill category-pill--seasonal">{{ . }}</span>
+      {{ else }}
+      <span class="category-pill category-pill--general">{{ . }}</span>
+      {{ end }}
+      {{ end }}
+      <h1 class="guide-article-h1">{{ .Title }}</h1>
+      <div class="guide-article-meta">
+        <span>Updated {{ .Date.Format "January 2006" }}</span>
+        <span class="guide-meta-dot"></span>
+        <span>{{ .Params.readTime }}</span>
+      </div>
+    </div>
+
+    <!-- Article body -->
+    <div class="guide-article-body">
+      <div class="article-body">
+        {{ .Content }}
+      </div>
+
+      <!-- In-article install CTA (mobile: flex row; desktop: stacked) -->
+      <div class="walk-cta-row guide-article-cta walk-mobile-only" style="margin:28px 0 0;">
+        <div class="walk-cta-inner">
+          <div>
+            <div class="cta-headline">Plan your next walk with live weather</div>
+            <div class="cta-subtext">Get the Sniffout app. Free, no account needed.</div>
+          </div>
+          <a href="/get" class="cta-pill-btn">Open in Sniffout</a>
+        </div>
+      </div>
+      <div class="walk-cta-stacked guide-article-cta-desktop" style="margin:28px 0 0;display:none;">
+        <div class="cta-headline cta-headline--desktop">Plan your next walk with live weather</div>
+        <div class="cta-subtext cta-subtext--desktop">Get the Sniffout app. Free, no account needed.</div>
+        <a href="/get" class="cta-btn-full">Open in Sniffout &rarr;</a>
+      </div>
+
+      <!-- Related walks -->
+      <div class="walk-section-heading" style="margin-top:28px;">WALKS MENTIONED IN THIS GUIDE</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;">
+        <div class="nearby-walk-row">
+          <div>
+            <div class="nearby-walk-name">Richmond Park Dog Walk</div>
+            <div class="nearby-walk-meta">7.2 km &middot; Easy &middot; On-lead only</div>
+          </div>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </div>
+        <div class="nearby-walk-row">
+          <div>
+            <div class="nearby-walk-name">Bushy Park Waterhouse Walk</div>
+            <div class="nearby-walk-meta">4.1 km &middot; Easy &middot; Off-lead areas</div>
+          </div>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </div>
+      </div>
+      <a href="/walks/" style="font-size:13px;color:#2C4A14;font-weight:600;">Browse all dog walks &rsaquo;</a>
+    </div>
+
+  </div><!-- /.guide-article-content -->
+
+  <!-- Right sidebar (desktop only) -->
+  <div class="guide-article-sidebar">
+    <div class="walk-cta-stacked">
+      <div class="cta-headline cta-headline--desktop">Plan your next walk with live weather</div>
+      <div class="cta-subtext cta-subtext--desktop">Free. No account needed.</div>
+      <a href="/get" class="cta-btn-full">Open in Sniffout &rarr;</a>
+    </div>
+    <div style="margin-bottom:20px;"></div>
+    <div class="walk-section-heading">IN THIS GUIDE</div>
+    <div class="guide-toc">
+      <a href="#where-to-check-after-a-walk" class="guide-toc-link">Where to check after a walk</a>
+      <a href="#lungworm-and-tick-prevention" class="guide-toc-link">Lungworm and tick prevention</a>
+    </div>
+    <div style="margin-bottom:20px;"></div>
+    <div class="walk-section-heading">RELATED GUIDES</div>
+    {{ range first 2 (where .Site.RegularPages "Section" "guides") }}
+    {{ if ne .Title $.Title }}
+    <a href="{{ .Permalink }}" class="guide-card" style="margin-bottom:8px;">
+      <div style="flex:1;">
+        {{ with .Params.category }}
+        {{ if eq . "Hazards" }}
+        <span class="category-pill category-pill--hazard">{{ . }}</span>
+        {{ else if eq . "Seasonal" }}
+        <span class="category-pill category-pill--seasonal">{{ . }}</span>
+        {{ else }}
+        <span class="category-pill category-pill--general">{{ . }}</span>
+        {{ end }}
+        {{ end }}
+        <div class="guide-card-title">{{ .Title }}</div>
+        <div class="guide-card-meta">{{ .Params.readTime }}</div>
+      </div>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:4px;flex-shrink:0;"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+    {{ end }}
+    {{ end }}
+  </div><!-- /.guide-article-sidebar -->
+
+</div><!-- /.guide-article-layout -->
+
+{{ end }}
