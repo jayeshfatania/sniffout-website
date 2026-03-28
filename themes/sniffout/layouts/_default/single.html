@@ -1,113 +1,134 @@
 {{ define "main" }}
+
+{{- $offLead := .Params.offLead | default "" -}}
+{{- $isOnLead := or (eq $offLead "On-lead only") (eq $offLead "On lead") (eq $offLead "None") -}}
+
+<!-- Breadcrumb - outside two-col grid, full width -->
+<div class="walk-breadcrumb">
+  <a href="/walks/">Walks</a>
+  &rsaquo;
+  <a href="/walks/">{{ .Params.county }}</a>
+  &rsaquo;
+  <span>{{ .Title }}</span>
+</div>
+
+<!-- Hero map - full width mobile, left col desktop -->
+<div class="walk-hero" style="{{- if not .Site.Params.walkInsideGrid }}margin-bottom: 0;{{- end }}">
+  {{- if .Params.heroImage }}
+    <img src="{{ .Params.heroImage }}" alt="{{ .Params.heroAlt | default .Title }}">
+  {{- end }}
+  {{- with .Params.difficulty }}
+    <span class="walk-hero-badge walk-hero-badge--easy">{{ . }}</span>
+  {{- end }}
+  {{- with .Params.offLead }}
+    <span class="walk-hero-badge {{ if $isOnLead }}walk-hero-badge--onlead{{ else }}walk-hero-badge--offlead{{ end }}">{{ . }}</span>
+  {{- end }}
+  <span class="walk-hero-attribution">Map data: OpenStreetMap contributors</span>
+</div>
+
+<!-- Two-column grid starts here -->
 <div class="walk-page">
-  <div class="container">
 
-    <!-- Mobile layout -->
-    <div class="walk-layout">
+  <!-- Left column: main walk content -->
+  <div class="walk-content">
+    <div class="walk-body">
 
-      <!-- Left column (main content) -->
-      <div class="walk-main">
-        <div class="breadcrumb">
-          <a href="/walks/">Walks</a> &rsaquo; {{ .Params.county }}
+      <h1 class="walk-title">{{ .Title }}</h1>
+
+      <div class="walk-chips">
+        {{- with .Params.county }}<span class="chip--location">{{ . }}</span>{{- end }}
+        {{- with .Params.area }}<span class="chip--location">{{ . }}</span>{{- end }}
+      </div>
+
+      <div class="walk-stats">
+        <div class="stat-cell">
+          <div class="stat-label">Distance</div>
+          <div class="stat-value stat-value--sm">{{ .Params.distance | default "-" }}</div>
         </div>
-
-        <h1 class="walk-title">{{ .Title }}</h1>
-
-        <!-- Location chips - shown in left col on mobile, sidebar on desktop -->
-        <div class="location-chips walk-chips-mobile">
-          {{ with .Params.county }}<span class="chip">{{ . }}</span>{{ end }}
-          {{ with .Params.area }}<span class="chip">{{ . }}</span>{{ end }}
+        <div class="stat-cell">
+          <div class="stat-label">Difficulty</div>
+          <div class="stat-value stat-value--sm">{{ .Params.difficulty | default "-" }}</div>
         </div>
-
-        <!-- Hero image -->
-        {{ if .Params.heroImage }}
-          <img class="hero-image" src="{{ .Params.heroImage }}" alt="{{ .Params.heroAlt | default .Title }}">
-        {{ else }}
-          <div class="hero-placeholder"></div>
-        {{ end }}
-
-        <!-- Stats strip -->
-        <div class="stats-strip">
-          {{ with .Params.distance }}<div class="stat-pill"><span>Distance</span> {{ . }}</div>{{ end }}
-          {{ with .Params.difficulty }}<div class="stat-pill"><span>Difficulty</span> {{ . }}</div>{{ end }}
-          {{ with .Params.terrain }}<div class="stat-pill"><span>Terrain</span> {{ . }}</div>{{ end }}
-          {{ with .Params.offLead }}<div class="stat-pill"><span>Off lead</span> {{ . }}</div>{{ end }}
+        <div class="stat-cell">
+          <div class="stat-label">Terrain</div>
+          <div class="stat-value stat-value--sm">{{ .Params.terrain | default "-" }}</div>
         </div>
-
-        <!-- Install CTA (mobile - shown inline; desktop - moves to sidebar) -->
-        <div class="install-cta walk-cta-mobile">
-          <h3>Get live weather for this walk</h3>
-          <p>Free. No account needed.</p>
-          <a href="https://sniffout.app" target="_blank" rel="noopener" class="btn-install">Open in Sniffout</a>
+        <div class="stat-cell">
+          <div class="stat-label">Off lead</div>
+          <div class="stat-value stat-value--sm {{ if $isOnLead }}stat-value--onlead{{ else }}stat-value--offlead{{ end }}">{{ .Params.offLead | default "-" }}</div>
         </div>
+      </div>
 
-        <h2 class="section-heading">About this walk</h2>
-        <div class="walk-description">{{ .Content }}</div>
+      <div class="walk-cta-primary">
+        <div class="cta-headline">Get live weather for this walk</div>
+        <div class="cta-subtext">Free. No account needed.</div>
+        <a href="https://sniffout.app" target="_blank" rel="noopener" class="cta-button">Open in Sniffout</a>
+      </div>
 
-        <!-- Practical info -->
-        <div class="practical-card">
-          {{ with .Params.parking }}
-          <div class="practical-row">
-            <div class="practical-label">Parking</div>
-            <div class="practical-value">{{ . }}</div>
-          </div>
-          {{ end }}
-          {{ with .Params.gettingThere }}
-          <div class="practical-row">
-            <div class="practical-label">Getting there</div>
-            <div class="practical-value">{{ . }}</div>
-          </div>
-          {{ end }}
-          {{ with .Params.facilities }}
-          <div class="practical-row">
-            <div class="practical-label">Facilities</div>
-            <div class="practical-value">{{ . }}</div>
-          </div>
-          {{ end }}
+      <div class="walk-store-badges">
+        <a href="https://sniffout.app" target="_blank" rel="noopener" class="badge-store">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="white"/></svg>
+          <span>App Store</span>
+        </a>
+        <a href="https://sniffout.app" target="_blank" rel="noopener" class="badge-store">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 8.5c.6.37.6 1.23 0 1.6l-14 8.5c-.66.5-1.6.03-1.6-.8z" fill="white"/></svg>
+          <span>Google Play</span>
+        </a>
+      </div>
+
+      <div class="walk-divider"></div>
+
+      <div class="walk-section-heading">About this walk</div>
+      <div class="walk-description">{{ .Params.description }}</div>
+
+      <div class="practical-label">Getting there</div>
+      <div class="practical-rows">
+        {{- with .Params.parking }}
+        <div class="practical-row">
+          <span class="practical-key">Parking</span>
+          <span class="practical-val">{{ . }}</span>
         </div>
-
-        <a href="https://sniffout.app" target="_blank" rel="noopener" class="btn-secondary">Plan this walk in Sniffout</a>
-
-        <h2 class="section-heading">Nearby walks</h2>
-        <div class="nearby-walks">
-          {{ partial "walk-card.html" . }}
-          {{ partial "walk-card.html" . }}
+        {{- end }}
+        {{- with .Params.gettingThere }}
+        <div class="practical-row">
+          <span class="practical-key">By train/bus</span>
+          <span class="practical-val">{{ . }}</span>
         </div>
-
-        {{ with .Params.county }}
-        <a href="/walks/" class="area-link">More {{ . }} dog walks</a>
-        {{ end }}
-
-      </div><!-- /.walk-main -->
-
-      <!-- Right sidebar (desktop only) -->
-      <div class="walk-sidebar">
-        <div class="location-chips walk-chips-desktop">
-          {{ with .Params.county }}<span class="chip">{{ . }}</span>{{ end }}
-          {{ with .Params.area }}<span class="chip">{{ . }}</span>{{ end }}
+        {{- end }}
+        {{- with .Params.facilities }}
+        <div class="practical-row">
+          <span class="practical-key">Facilities</span>
+          <span class="practical-val">{{ . }}</span>
         </div>
+        {{- end }}
+      </div>
 
-        <div class="stats-strip">
-          {{ with .Params.distance }}<div class="stat-pill"><span>Distance</span> {{ . }}</div>{{ end }}
-          {{ with .Params.difficulty }}<div class="stat-pill"><span>Difficulty</span> {{ . }}</div>{{ end }}
-          {{ with .Params.terrain }}<div class="stat-pill"><span>Terrain</span> {{ . }}</div>{{ end }}
-          {{ with .Params.offLead }}<div class="stat-pill"><span>Off lead</span> {{ . }}</div>{{ end }}
-        </div>
+      <div class="walk-section-heading">Nearby walks</div>
+      <div class="nearby-walks">
+        {{ partial "walk-card.html" . }}
+        {{ partial "walk-card.html" . }}
+      </div>
 
-        <div class="install-cta walk-cta-desktop">
-          <h3>Get live weather for this walk</h3>
-          <p>Free. No account needed.</p>
-          <a href="https://sniffout.app" target="_blank" rel="noopener" class="btn-install">Open in Sniffout</a>
-        </div>
+      {{- with .Params.county }}
+      <a href="/walks/" class="area-link">More {{ . }} dog walks &rsaquo;</a>
+      {{- end }}
 
-        <a href="https://sniffout.app" target="_blank" rel="noopener" class="btn-secondary">Plan this walk in Sniffout</a>
+    </div><!-- /.walk-body -->
+  </div><!-- /.walk-content -->
 
-        {{ with .Params.county }}
-        <a href="/walks/" class="area-link">More {{ . }} dog walks</a>
-        {{ end }}
-      </div><!-- /.walk-sidebar -->
+  <!-- Right sidebar -->
+  <div class="walk-sidebar">
 
-    </div><!-- /.walk-layout -->
-  </div><!-- /.container -->
+    {{- with .Params.dogSummary }}
+    <div class="walk-dog-box">
+      <div class="dog-box-label">For your dog</div>
+      <div class="dog-box-body">{{ . }}</div>
+    </div>
+    {{- end }}
+
+    <a href="https://sniffout.app" target="_blank" rel="noopener" class="btn-secondary">Plan this walk in Sniffout</a>
+
+  </div><!-- /.walk-sidebar -->
+
 </div><!-- /.walk-page -->
 {{ end }}
