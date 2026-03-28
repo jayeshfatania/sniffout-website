@@ -1,0 +1,12 @@
+<a href="{{ .Permalink }}" class="walk-card">
+  {{ if .Params.heroImage }}
+    <img class="walk-card-img" src="{{ .Params.heroImage }}" alt="{{ .Params.heroAlt | default .Title }}">
+  {{ else }}
+    <div class="walk-card-img"></div>
+  {{ end }}
+  <div class="walk-card-body">
+    <div class="walk-card-name">{{ .Title }}</div>
+    <div class="walk-card-location">{{ .Params.location }}</div>
+    {{ with .Params.distance }}<span class="walk-card-pill">{{ . }}</span>{{ end }}
+  </div>
+</a>
