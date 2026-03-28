@@ -2,21 +2,18 @@
 title: "Richmond Park Dog Walk"
 location: "Richmond, London"
 county: "London"
-area: "Richmond"
-distance: "4.2 miles"
+area: "Richmond upon Thames"
+distance: "7.2 km"
 difficulty: "Easy"
-terrain: "Parkland"
+terrain: "Flat parkland"
 offLead: "On-lead only"
+duration: "~1h 45m"
+parking: "Richmond Gate car park, free"
+gettingThere: "Richmond station, 10 min walk"
+facilities: "Cafe at Pembroke Lodge"
 dogSummary: "On-lead throughout. Water at the Pen Ponds. Keep extra distance from deer October to November during the rut."
-parking: "Broomfield Hill car park, free at weekends"
-gettingThere: "Richmond station 10 min walk. Buses 65, 371."
-facilities: "Cafe at Pembroke Lodge. Public toilets near Kingston Gate."
-description: "Richmond Park is one of London's most loved green spaces and one of the best dog walks in the capital. At nearly 2,500 acres it offers open grassland, ancient woodland, and the famous Isabella Plantation. Dogs are welcome throughout and can run off lead in designated areas. The park is home to free-roaming red and fallow deer - keep dogs on the lead when deer are nearby, particularly during the rut in autumn and calving in spring. The views from the top of the park across to St Paul's Cathedral on a clear day are hard to beat."
+description: "Richmond Park's famous deer make this one of the most spectacular walks in London. Keep dogs on leads throughout - a legal requirement in the deer park. The Pen Ponds are a favourite stop for dogs, and on a clear day the views stretch all the way to St Paul's Cathedral."
 heroImage: ""
 heroAlt: "Richmond Park open grassland with deer in the distance"
 date: 2026-03-28
 ---
-
-Richmond Park is one of London's most loved green spaces and one of the best dog walks in the capital. At nearly 2,500 acres it offers open grassland, ancient woodland, and the famous Isabella Plantation. Dogs are welcome throughout and can run off lead in designated areas.
-
-The park is home to free-roaming red and fallow deer - keep dogs on the lead when deer are nearby, particularly during the rut in autumn and calving in spring. The views from the top of the park across to St Paul's Cathedral on a clear day are hard to beat.
