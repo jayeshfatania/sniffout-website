@@ -129,8 +129,8 @@ img {
 .walk-breadcrumb {
   font-size: 12px;
   color: var(--ink-2);
-  margin-bottom: 8px;
-  padding: 14px 16px 0;
+  margin-bottom: 0;
+  padding: 12px 16px 0;
 }
 
 .walk-breadcrumb a {
@@ -148,26 +148,9 @@ img {
 
 @media (min-width: 768px) {
   .walk-breadcrumb {
-    padding: 0;
-    margin-bottom: 12px;
-  }
-}
-
-/* --- Walk page layout --- */
-
-.walk-page {
-  padding: 0;
-}
-
-@media (min-width: 768px) {
-  .walk-page {
-    display: grid;
-    grid-template-columns: 60% 1fr;
-    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
-    align-items: start;
+    padding: 10px 28px;
   }
 }
 
@@ -182,10 +165,25 @@ img {
   border-radius: 0;
 }
 
+/* SVG road overlay pattern */
+.walk-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='375' height='200' viewBox='0 0 375 200'%3E%3Cpath d='M0 80 Q80 60 160 90 Q240 120 375 100' stroke='white' stroke-width='4' fill='none'/%3E%3Cpath d='M0 140 Q100 130 200 150 Q300 170 375 155' stroke='white' stroke-width='3' fill='none'/%3E%3Cpath d='M120 0 Q130 80 140 200' stroke='white' stroke-width='3' fill='none'/%3E%3Cpath d='M80 60 Q130 80 170 120 Q210 160 200 190' stroke='%232C4A14' stroke-width='3' fill='none' stroke-dasharray='8 4'/%3E%3Ccircle cx='130' cy='100' r='8' fill='%232C4A14' stroke='white' stroke-width='2.5'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .walk-hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
 }
 
 .walk-hero-badge {
@@ -195,6 +193,7 @@ img {
   font-size: 11px;
   font-weight: 600;
   background: rgba(255,255,255,0.92);
+  z-index: 2;
 }
 
 .walk-hero-badge--easy {
@@ -204,7 +203,7 @@ img {
 }
 
 .walk-hero-badge--onlead {
-  color: var(--amber);
+  color: #b45309;
   top: 10px;
   right: 10px;
 }
@@ -221,12 +220,44 @@ img {
   right: 8px;
   font-size: 9px;
   color: rgba(0,0,0,0.4);
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
   .walk-hero {
-    height: 400px;
-    border-radius: 16px;
+    height: 340px;
+    border-radius: 0;
+  }
+}
+
+/* --- Walk page layout --- */
+
+.walk-page {
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .walk-page {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    align-items: start;
+    border-top: 0.5px solid var(--border);
+  }
+}
+
+/* --- Walk main content --- */
+
+.walk-content {
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .walk-content {
+    border-right: 0.5px solid var(--border);
   }
 }
 
@@ -238,9 +269,11 @@ img {
 
 @media (min-width: 768px) {
   .walk-body {
-    padding: 0;
+    padding: 20px 28px;
   }
 }
+
+/* --- Walk title --- */
 
 h1.walk-title {
   font-size: 21px;
@@ -248,6 +281,12 @@ h1.walk-title {
   color: var(--ink);
   margin: 0 0 6px;
   line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  h1.walk-title {
+    font-size: 20px;
+  }
 }
 
 /* --- Location chips --- */
@@ -263,43 +302,40 @@ h1.walk-title {
   font-size: 11px;
   color: var(--brand);
   background: var(--brand-light);
-  padding: 3px 10px;
+  padding: 3px 9px;
   border-radius: 20px;
   font-weight: 500;
 }
 
-/* --- Stats grid --- */
+/* --- Stats: pill row on mobile, 2x2 grid on desktop --- */
 
 .walk-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 14px;
 }
 
 .stat-cell {
-  background: var(--bg);
-  border-radius: 10px;
-  padding: 10px 12px;
+  background: var(--surface);
+  border: 0.5px solid rgba(0,0,0,0.10);
+  border-radius: 20px;
+  padding: 4px 10px;
+  flex: none;
 }
 
 .stat-label {
-  font-size: 9px;
-  color: var(--ink-3);
-  font-weight: 600;
-  margin-bottom: 2px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  display: none;
 }
 
 .stat-value {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink);
+  font-size: 11px;
+  font-weight: 500;
+  color: #555555;
 }
 
 .stat-value--onlead {
-  color: var(--amber);
+  color: #b45309;
 }
 
 .stat-value--offlead {
@@ -307,48 +343,136 @@ h1.walk-title {
 }
 
 .stat-value--sm {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 500;
+  color: #555555;
+}
+
+@media (min-width: 768px) {
+  .walk-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .stat-cell {
+    background: var(--bg);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 12px;
+    flex: unset;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 9px;
+    color: var(--ink-3);
+    font-weight: 600;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .stat-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .stat-value--onlead {
+    color: #b45309;
+  }
+
+  .stat-value--offlead {
+    color: var(--brand);
+  }
+
+  .stat-value--sm {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+  }
 }
 
 /* --- Primary CTA block --- */
+/* Mobile: 2-col grid (text left, pill button right) */
+/* Desktop: stacked with full-width button */
 
 .walk-cta-primary {
   background: var(--brand);
   border-radius: 14px;
-  padding: 14px;
-  margin-bottom: 10px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  align-items: center;
 }
 
 .cta-headline {
+  grid-column: 1;
+  grid-row: 1;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   color: white;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .cta-subtext {
+  grid-column: 1;
+  grid-row: 2;
   font-size: 11px;
   color: rgba(255,255,255,0.65);
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .cta-button {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
   background: white;
-  border-radius: 10px;
-  padding: 9px;
+  border-radius: 20px;
+  padding: 7px 14px;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--brand);
-  display: block;
+  display: inline-block;
   text-decoration: none;
-  width: 100%;
+  white-space: nowrap;
   transition: transform 0.15s ease;
 }
 
 .cta-button:active {
   transform: scale(0.97);
+}
+
+@media (min-width: 768px) {
+  .walk-cta-primary {
+    display: block;
+    padding: 14px;
+    margin-bottom: 10px;
+  }
+
+  .cta-headline {
+    margin-bottom: 3px;
+    font-weight: 700;
+  }
+
+  .cta-subtext {
+    margin-bottom: 12px;
+  }
+
+  .cta-button {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    padding: 9px;
+    font-size: 13px;
+    text-align: center;
+  }
 }
 
 /* --- App store badges --- */
@@ -382,24 +506,33 @@ h1.walk-title {
 .walk-divider {
   height: 0.5px;
   background: var(--border);
-  margin-bottom: 14px;
+  margin: 0 0 14px;
 }
 
-/* --- Section heading --- */
+@media (min-width: 768px) {
+  .walk-divider {
+    margin: 0 0 14px;
+  }
+}
+
+/* --- Section headings --- */
+/* Small uppercase label style throughout */
 
 .walk-section-heading {
-  font-size: 15px;
+  font-size: 10px;
   font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 12px;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
 }
 
 /* --- Walk description --- */
 
 .walk-description {
   font-size: 14px;
-  line-height: 1.7;
-  color: var(--ink);
+  line-height: 1.65;
+  color: #333333;
   margin-bottom: 20px;
 }
 
@@ -409,35 +542,80 @@ h1.walk-title {
   font-size: 10px;
   font-weight: 600;
   color: var(--ink-3);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
+/* Mobile: white card with divider rows */
 .practical-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  background: var(--surface);
+  border-radius: 12px;
+  border: 0.5px solid rgba(0,0,0,0.08);
+  overflow: hidden;
   margin-bottom: 14px;
 }
 
 .practical-row {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.06);
+  font-size: 13px;
+}
+
+.practical-row:last-child {
+  border-bottom: none;
 }
 
 .practical-key {
   font-size: 11px;
   color: var(--ink-3);
-  width: 70px;
   flex-shrink: 0;
   padding-top: 1px;
+  min-width: 60px;
 }
 
 .practical-val {
   font-size: 13px;
   color: var(--ink);
   font-weight: 500;
+  text-align: right;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .practical-rows {
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    overflow: visible;
+    margin-bottom: 14px;
+  }
+
+  .practical-row {
+    padding: 0;
+    border-bottom: none;
+    margin-bottom: 10px;
+    font-size: 13px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .practical-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .practical-key {
+    width: 70px;
+    min-width: 70px;
+  }
+
+  .practical-val {
+    text-align: left;
+  }
 }
 
 /* --- For your dog box --- */
@@ -476,9 +654,9 @@ h1.walk-title {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   font-weight: 600;
   font-size: 13px;
-  border-radius: 10px;
-  padding: 10px 24px;
-  margin-bottom: 20px;
+  border-radius: 14px;
+  padding: 12px 24px;
+  margin-bottom: 14px;
   transition: transform 0.15s ease, background 0.15s ease;
   background: transparent;
   cursor: pointer;
@@ -494,13 +672,119 @@ h1.walk-title {
 }
 
 /* --- Nearby walks --- */
+/* Mobile: single-column list with chevron */
+/* Desktop: 2-col card grid */
 
 .nearby-walks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
 }
+
+@media (min-width: 768px) {
+  .nearby-walks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: unset;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+}
+
+/* --- Walk card --- */
+/* Mobile: horizontal list row with chevron */
+/* Desktop: simple card with name/meta */
+
+.walk-card {
+  background: var(--surface);
+  border-radius: 12px;
+  border: 0.5px solid rgba(0,0,0,0.08);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  color: var(--ink);
+  transition: transform 0.15s ease;
+  gap: 0;
+}
+
+.walk-card:active {
+  transform: scale(0.97);
+}
+
+/* Chevron via pseudo-element on mobile */
+.walk-card::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%232C4A14' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 8px;
+}
+
+.walk-card-img {
+  display: none;
+}
+
+.walk-card-body {
+  flex: 1;
+  padding: 0;
+  min-width: 0;
+}
+
+.walk-card-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.walk-card-location {
+  font-size: 11px;
+  color: var(--ink-2);
+  margin-top: 2px;
+}
+
+/* legacy class name alias */
+.walk-card-loc {
+  font-size: 11px;
+  color: var(--ink-2);
+}
+
+.walk-card-pill {
+  font-size: 11px;
+  color: var(--ink-2);
+  display: inline;
+}
+
+.walk-card-pill::before {
+  content: ' · ';
+}
+
+@media (min-width: 768px) {
+  .walk-card {
+    display: block;
+    padding: 12px 14px;
+  }
+
+  .walk-card::after {
+    display: none;
+  }
+
+  .walk-card-body {
+    padding: 0;
+  }
+
+  .walk-card-name {
+    margin-bottom: 3px;
+  }
+}
+
+/* --- Area link --- */
 
 .area-link {
   display: inline-block;
@@ -512,58 +796,20 @@ h1.walk-title {
   margin-bottom: 32px;
 }
 
-/* --- Walk card --- */
-
-.walk-card {
-  background: var(--surface);
-  border-radius: 12px;
-  border: 0.5px solid var(--border);
-  overflow: hidden;
-  text-decoration: none;
-  display: block;
-  color: var(--ink);
-  transition: transform 0.15s ease;
-}
-
-.walk-card:active {
-  transform: scale(0.97);
-}
-
-.walk-card-img {
-  height: 90px;
-  background: var(--border);
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.walk-card-body {
-  padding: 8px 10px;
-}
-
-.walk-card-name {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 2px;
-}
-
-.walk-card-loc {
-  font-size: 11px;
-  color: var(--ink-2);
-}
-
 /* --- Walk sidebar --- */
 
 .walk-sidebar {
-  padding: 0 16px 24px;
+  padding: 14px 16px 24px;
 }
 
 @media (min-width: 768px) {
   .walk-sidebar {
+    background: var(--surface);
+    padding: 20px;
     position: sticky;
-    top: 80px;
-    padding: 0;
+    top: 56px;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
   }
 }
 
@@ -571,12 +817,18 @@ h1.walk-title {
 
 .site-footer {
   background: var(--brand);
-  padding: 16px 28px;
+  padding: 14px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .site-footer {
+    padding: 16px 28px;
+  }
 }
 
 .footer-brand {
