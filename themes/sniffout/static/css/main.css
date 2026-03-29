@@ -189,7 +189,7 @@ img { display: block; max-width: 100%; }
 .walk-hero {
   position: relative;
   height: 200px;
-  background: linear-gradient(135deg, #C8D8B0 0%, #A8C088 40%, #8BAD68 70%, #6E9048 100%);
+  background: linear-gradient(135deg, #C8D8B0 0%, #2C4A14 100%);
   overflow: hidden;
 }
 
@@ -461,7 +461,7 @@ h1.walk-sidebar-title {
 .walk-section-heading {
   font-size: 10px;
   font-weight: 600;
-  color: #888;
+  color: rgba(44,74,20,0.55);
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1031,7 +1031,7 @@ h1.walk-sidebar-title {
 
 .walk-card-h-img {
   height: 110px;
-  background: linear-gradient(135deg, #C8D8B0 0%, #A8C088 40%, #8BAD68 70%, #6E9048 100%);
+  background: linear-gradient(135deg, #C8D8B0 0%, #2C4A14 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1154,6 +1154,10 @@ h1.walk-sidebar-title {
   padding: 20px 16px 32px;
 }
 
+.home-final-cta .walk-store-badges {
+  margin-top: 20px;
+}
+
 .home-cta-desktop { display: none; }
 
 @media (min-width: 768px) {
@@ -1269,7 +1273,7 @@ h1.walk-sidebar-title {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #C8D8B0 0%, #A8C088 40%, #8BAD68 70%, #6E9048 100%);
+  background: linear-gradient(135deg, #C8D8B0 0%, #2C4A14 100%);
   overflow: hidden;
 }
 
@@ -1281,6 +1285,7 @@ h1.walk-sidebar-title {
   padding: 12px;
   background: linear-gradient(transparent, rgba(0,0,0,0.72));
   border-radius: 0 0 12px 12px;
+  border-top: 2px solid #2C4A14;
 }
 
 .walk-list-card-name {
@@ -1418,6 +1423,7 @@ h1.walk-sidebar-title {
     max-width: 1200px;
     margin: 0 auto;
     border-bottom: none;
+    border-radius: 12px;
   }
   .area-h1 {
     font-size: 26px;
@@ -1449,12 +1455,20 @@ h1.walk-sidebar-title {
     padding: 20px;
     position: sticky;
     top: 56px;
-    border-left: 0.5px solid rgba(0,0,0,0.08);
+    border: 0.5px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
     min-height: 300px;
   }
 }
 
 /* --- Guides index page --- */
+
+.guides-page .filter-bar {
+  background: transparent;
+  border-bottom: none;
+  padding-left: 0;
+  padding-right: 0;
+}
 
 .guides-hero {
   background: #FFFFFF;
