@@ -12,7 +12,7 @@ Ticks are a regular feature of the British countryside, particularly for anyone 
 
 ## When are ticks active in the UK?
 
-The main tick season in Britain runs from March to October, with the busiest months being May and June. A second smaller rise in activity tends to happen in September. Outside these months, the risk drops significantly - but it does not disappear entirely, particularly in mild winters.
+The main tick season in Britain runs from March to October, with the busiest months being April to June. A second smaller rise in activity tends to happen in September. Outside these months, the risk drops significantly - but it does not disappear entirely, particularly in mild winters.
 
 The areas with consistently high tick numbers include the Scottish Highlands, the New Forest in Hampshire, Exmoor and Dartmoor, the Lake District, the Surrey Hills, the South Downs, the Yorkshire Moors, and Thetford Forest in Norfolk. If you walk regularly in any of these areas, it is worth being particularly thorough with post-walk checks.
 
@@ -59,7 +59,7 @@ What not to do is just as important. Do not squeeze the tick's body at any point
 
 ## What diseases can ticks carry?
 
-The most well-known tick-borne disease in the UK is Lyme disease, which is caused by bacteria carried by the common sheep tick. Most tick bites do not result in Lyme disease, and the risk is significantly lower if the tick is removed promptly - transmission generally requires the tick to be attached for more than 36 hours. In dogs, Lyme disease can cause joint swelling and lameness, lethargy, and loss of appetite. It is treatable with antibiotics and responds well when caught early.
+The most well-known tick-borne disease in the UK is Lyme disease, which is caused by bacteria carried by the common sheep tick. Most tick bites do not result in Lyme disease, but there is no safe window - risk increases significantly the longer the tick feeds, so remove any tick as soon as you find it. In dogs, Lyme disease can cause joint swelling and lameness, lethargy, and loss of appetite. It is treatable with antibiotics and responds well when caught early.
 
 There is also a condition called babesiosis - a blood infection caused by a microscopic parasite, carried by a different tick species called the ornate dog tick. In the UK this has been identified mainly around Harlow in Essex and parts of the surrounding area. It is uncommon and currently geographically limited, but worth knowing about if you walk in that part of the country. Signs include lethargy, pale or yellowed gums, and weakness. It requires prompt veterinary treatment.
 
@@ -77,7 +77,7 @@ Most tick encounters are uneventful. Call your vet if any of the following apply
 
 - You could not remove the tick cleanly and suspect part of it remains under the skin
 - The bite site looks infected, swollen, or is not healing
-- A circular or ring-shaped rash appears around the bite area - in dogs this is less visible through the coat but worth checking; if you spot one on yourself after a walk, that is worth acting on too
+- A circular or ring-shaped rash appears around the bite area - if you spot one on yourself after a walk, that is worth acting on
 - Your dog becomes lethargic, loses interest in food, or develops swollen joints in the weeks following a tick bite
 - You walk regularly around Harlow or Essex and your dog seems unwell after a tick bite - mention this specific detail to your vet
 
