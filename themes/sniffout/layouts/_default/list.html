@@ -50,10 +50,11 @@
       data-difficulty="{{ $p.Params.difficulty }}"
       data-terrain="{{ $p.Params.terrain }}"
       data-offlead="{{ $p.Params.offLead }}">
+      {{ if $p.Params.heroImage }}
+      <div class="walk-list-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('{{ $p.Params.heroImage }}'); background-size: cover; background-position: center;">
+      {{ else }}
       <div class="walk-list-card-img">
-        {{ if $p.Params.heroImage }}
-        <img src="{{ $p.Params.heroImage }}" alt="{{ $p.Params.heroAlt | default $p.Title }}" style="width:100%;height:100%;object-fit:cover;">
-        {{ end }}
+      {{ end }}
         {{ with $p.Params.difficulty }}
         <div class="walk-hero-badge walk-hero-badge--left">{{ . }}</div>
         {{ end }}

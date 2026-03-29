@@ -15,6 +15,14 @@
     <h1 class="guides-h1">Dog walking guides for UK owners</h1>
     <p class="guides-intro">Seasonal hazards, terrain advice, and breed-specific guidance. Written for UK dog owners, updated regularly.</p>
 
+    <!-- Category filter chips -->
+    <div class="filter-bar" style="margin:24px 0 20px;">
+      <button class="filter-chip filter-chip--active guide-filter-chip" onclick="filterGuides('all', this)">All</button>
+      <button class="filter-chip guide-filter-chip" onclick="filterGuides('Hazards', this)">Hazards</button>
+      <button class="filter-chip guide-filter-chip" onclick="filterGuides('Seasonal', this)">Seasonal</button>
+      <button class="filter-chip guide-filter-chip" onclick="filterGuides('Breed guides', this)">Breed guides</button>
+    </div>
+
     <!-- Hero featured card (first guide) -->
     {{ with $featured }}
     <a href="{{ .Permalink }}" class="guide-hero-card" {{ with .Params.heroImage }}style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('{{ . }}'); background-size: cover; background-position: center;"{{ end }}>
@@ -35,20 +43,12 @@
     </a>
     {{ end }}
 
-    <!-- Category filter chips -->
-    <div class="filter-bar" style="margin:24px 0 20px;">
-      <button class="filter-chip filter-chip--active guide-filter-chip" onclick="filterGuides('all', this)">All</button>
-      <button class="filter-chip guide-filter-chip" onclick="filterGuides('Hazards', this)">Hazards</button>
-      <button class="filter-chip guide-filter-chip" onclick="filterGuides('Seasonal', this)">Seasonal</button>
-      <button class="filter-chip guide-filter-chip" onclick="filterGuides('Breed guides', this)">Breed guides</button>
-    </div>
-
     <!-- Guide card grid (all guides except the first) -->
-    <div class="guide-grid" id="guide-grid">
+    <div class="guide-grid" id="guide-grid" style="margin-top:28px;">
       {{ range $rest }}
       <a href="{{ .Permalink }}" class="guide-grid-card" data-category="{{ .Params.category }}">
 
-        <!-- Colour band with icon -->
+        <!-- Background: photo or coloured band with icon -->
         {{ $bandClass := "guide-grid-card-band--general" }}
         {{ if eq .Params.category "Hazards" }}{{ $bandClass = "guide-grid-card-band--hazard" }}{{ end }}
         {{ if eq .Params.category "Seasonal" }}{{ $bandClass = "guide-grid-card-band--seasonal" }}{{ end }}
@@ -70,8 +70,8 @@
         </div>
         {{ end }}
 
-        <!-- Card body -->
-        <div class="guide-grid-card-body">
+        <!-- Category pill (absolute top-left) -->
+        <div style="position:absolute;top:10px;left:10px;z-index:2;">
           {{ if eq .Params.category "Hazards" }}
           <span class="category-pill category-pill--hazard">{{ .Params.category }}</span>
           {{ else if eq .Params.category "Seasonal" }}
@@ -79,14 +79,16 @@
           {{ else }}
           <span class="category-pill category-pill--general">{{ .Params.category }}</span>
           {{ end }}
-          <div class="guide-grid-card-title">{{ .Title }}</div>
-          <div class="guide-grid-card-desc">{{ .Params.description }}</div>
         </div>
 
-        <!-- Card footer -->
-        <div class="guide-grid-card-footer">
-          <span class="guide-grid-card-time">{{ .Params.readTime }}</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        <!-- Card body (absolute bottom, dark gradient) -->
+        <div class="guide-grid-card-body">
+          <div class="guide-grid-card-title">{{ .Title }}</div>
+          <div class="guide-grid-card-desc">{{ .Params.description }}</div>
+          <div class="guide-grid-card-footer">
+            <span class="guide-grid-card-time">{{ .Params.readTime }}</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </div>
         </div>
 
       </a>

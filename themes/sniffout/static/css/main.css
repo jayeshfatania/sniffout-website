@@ -1590,79 +1590,83 @@ h1.walk-sidebar-title {
 }
 
 .guide-grid-card {
-  background: #FFFFFF;
-  border: 0.5px solid rgba(0,0,0,0.08);
+  position: relative;
+  height: 220px;
   border-radius: 12px;
   overflow: hidden;
   display: block;
   text-decoration: none;
-  color: #1A1A1A;
+  background: var(--brand);
   transition: transform 0.15s ease;
 }
 
 .guide-grid-card:active { transform: scale(0.97); }
 
 .guide-grid-card-band {
-  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .guide-grid-card-band--hazard {
-  background: #E8F0DC;
+  background-color: #E8F0DC;
 }
 
 .guide-grid-card-band--seasonal {
-  background: #FFF8E8;
+  background-color: #FFF8E8;
 }
 
 .guide-grid-card-band--breed {
-  background: #EEF0FF;
+  background-color: #EEF0FF;
 }
 
 .guide-grid-card-band--general {
-  background: #F7F5F0;
+  background-color: #F7F5F0;
 }
 
 .guide-grid-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 14px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.78));
+  border-radius: 0 0 12px 12px;
 }
 
 .guide-grid-card-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
-  color: #1A1A1A;
-  line-height: 1.3;
-  margin-bottom: 6px;
-  overflow: hidden;
+  color: white;
+  margin-bottom: 4px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .guide-grid-card-desc {
-  font-size: 13px;
-  color: #555555;
-  line-height: 1.55;
-  margin-bottom: 10px;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  display: none;
 }
 
 .guide-grid-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 14px 12px;
+  margin-top: 4px;
 }
 
 .guide-grid-card-time {
   font-size: 11px;
-  color: #888888;
+  color: rgba(255,255,255,0.7);
 }
 
 /* --- Guide article page --- */
