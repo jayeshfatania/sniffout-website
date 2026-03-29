@@ -844,6 +844,7 @@ h1.walk-sidebar-title {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center bottom;
   opacity: 0;
   animation: heroFade 20s infinite;
 }
