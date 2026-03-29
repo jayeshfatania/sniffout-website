@@ -11,7 +11,7 @@
 <div class="area-hero">
   <h1 class="area-h1">Dog walks across the UK</h1>
   <p class="area-intro">{{ $walkCount }} handpicked dog walks. Updated regularly.</p>
-  <span class="count-chip">{{ $walkCount }} walks</span>
+  <span class="count-chip">{{ $walkCount }} {{ if eq $walkCount 1 }}walk{{ else }}walks{{ end }}</span>
 </div>
 
 <!-- Filter chips -->
