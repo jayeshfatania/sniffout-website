@@ -1463,9 +1463,6 @@ h1.walk-sidebar-title {
 }
 
 .guide-hero-card {
-  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('/img/guides/ticks-hero.jpg');
-  background-size: cover;
-  background-position: center;
   background-color: var(--brand);
   border-radius: 16px;
   overflow: hidden;

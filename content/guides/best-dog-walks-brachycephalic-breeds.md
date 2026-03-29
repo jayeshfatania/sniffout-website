@@ -4,5 +4,6 @@ category: "Breed guides"
 readTime: "6 min read"
 description: "Pugs, French Bulldogs, and Bulldogs need a different approach to walks. Here is what to know."
 date: 2026-03-05
+heroImage: "/img/guides/brachycephalic-hero.jpg"
 ---
 Placeholder content - full article coming soon.
