@@ -1,8 +1,6 @@
 {{ define "main" }}
 
 {{- $walkCount := len .Pages -}}
-{{- $featured := index .Pages 0 -}}
-{{- $rest := after 1 .Pages -}}
 
 <!-- Breadcrumb (desktop only) -->
 <nav class="walk-breadcrumb">
@@ -28,35 +26,12 @@
   <button class="filter-chip" onclick="filterWalks('terrain', 'Coastal', this)">Coastal</button>
 </div>
 
-<!-- Featured walk hero card (first walk) -->
-{{ with $featured }}
-<div class="walk-hero-wrap">
-  <a href="{{ .Permalink }}" class="walk-hero-card"{{ if .Params.heroImage }} style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)), url('{{ .Params.heroImage }}'); background-size: cover; background-position: center;"{{ end }}>
-    {{ with .Params.difficulty }}
-    <div class="walk-hero-badge walk-hero-badge--left">{{ . }}</div>
-    {{ end }}
-    {{ with .Params.offLead }}
-    <div class="walk-hero-badge {{ if or (eq . "On-lead only") (eq . "On lead") }}walk-hero-badge--onlead{{ else }}walk-hero-badge--offlead{{ end }}">{{ . }}</div>
-    {{ end }}
-    <div class="walk-hero-card-body">
-      <h2 class="walk-hero-card-title">{{ .Title }}</h2>
-      <div class="walk-hero-card-location">{{ .Params.location }}</div>
-      <div class="walk-hero-card-pills">
-        {{ with .Params.distance }}<span class="walk-hero-card-pill">{{ . }}</span>{{ end }}
-        {{ with .Params.terrain }}<span class="walk-hero-card-pill">{{ . }}</span>{{ end }}
-      </div>
-      <span class="walk-hero-card-cta">View walk</span>
-    </div>
-  </a>
-</div>
-{{ end }}
-
 <!-- Walk list + desktop sidebar wrapper -->
 <div class="area-layout">
 
   <!-- Walk list -->
   <div class="walk-list">
-    {{ range $i, $p := $rest }}
+    {{ range $i, $p := .Pages }}
 
     {{ if eq $i 5 }}
     <!-- In-list CTA after 5th card (mobile only) -->
