@@ -2,8 +2,9 @@
 title: "Ticks on dogs - what UK dog owners need to know"
 category: "Hazards"
 readTime: "6 min read"
-description: "How to check for ticks, remove them safely, and protect your dog during tick season."
+description: "How to check for ticks, remove them safely, and protect your dog during tick season in the UK."
 date: 2026-03-28
+weight: 1
 ---
 
 Ticks are small parasitic arachnids that attach to your dog's skin and feed on blood. In the UK, tick season runs roughly from March through to October, with peak activity in spring and early autumn. Woodland, heathland, and long grass are the highest-risk environments.

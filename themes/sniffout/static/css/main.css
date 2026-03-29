@@ -1444,6 +1444,230 @@ h1.walk-sidebar-title {
   }
 }
 
+/* --- Guides redesign --- */
+
+.guides-page {
+  /* outer wrapper */
+}
+
+.guides-page-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+@media (min-width: 768px) {
+  .guides-page-inner {
+    padding: 0 28px 64px;
+  }
+}
+
+.guide-hero-card {
+  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('/img/guides/ticks-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: var(--brand);
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 220px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+  margin-bottom: 0;
+}
+
+.guide-hero-card:active { transform: scale(0.97); }
+
+.guide-hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.guide-hero-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.guide-hero-pill {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+  display: inline-block;
+  color: #2C4A14;
+  background: rgba(255,255,255,0.9);
+  align-self: flex-start;
+}
+
+.guide-hero-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
+.guide-hero-desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.guide-hero-meta {
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+}
+
+.guide-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  color: #2C4A14;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 8px 16px;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-top: 4px;
+  transition: transform 0.15s ease;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.guide-hero-cta:active { transform: scale(0.97); }
+
+.guide-hero-visual {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .guide-hero-card {
+    min-height: 280px;
+    padding: 32px;
+  }
+  .guide-hero-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+  .guide-hero-body {
+    flex: 0 0 60%;
+    gap: 12px;
+  }
+  .guide-hero-title {
+    font-size: 28px;
+  }
+  .guide-hero-visual {
+    display: flex;
+    flex: 0 0 40%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.12;
+  }
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .guide-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+.guide-grid-card {
+  background: #FFFFFF;
+  border: 0.5px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: #1A1A1A;
+  transition: transform 0.15s ease;
+}
+
+.guide-grid-card:active { transform: scale(0.97); }
+
+.guide-grid-card-band {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.guide-grid-card-band--hazard {
+  background: #E8F0DC;
+}
+
+.guide-grid-card-band--seasonal {
+  background: #FFF8E8;
+}
+
+.guide-grid-card-band--breed {
+  background: #EEF0FF;
+}
+
+.guide-grid-card-band--general {
+  background: #F7F5F0;
+}
+
+.guide-grid-card-body {
+  padding: 14px;
+}
+
+.guide-grid-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A1A1A;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.guide-grid-card-desc {
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.55;
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.guide-grid-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px 12px;
+}
+
+.guide-grid-card-time {
+  font-size: 11px;
+  color: #888888;
+}
+
 /* --- Guide article page --- */
 
 .guide-article-layout {

@@ -34,6 +34,22 @@ function filterWalks(type, value, chipEl) {
   });
 }
 
+// --- Filter guides (Guides index page) ---
+function filterGuides(category, el) {
+  document.querySelectorAll('.guide-filter-chip').forEach(function(chip) {
+    chip.classList.remove('filter-chip--active');
+  });
+  el.classList.add('filter-chip--active');
+
+  document.querySelectorAll('.guide-grid-card').forEach(function(card) {
+    if (category === 'all' || card.dataset.category === category) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+
 // --- Install page: platform detection ---
 function detectPlatform() {
   var ua = navigator.userAgent;
