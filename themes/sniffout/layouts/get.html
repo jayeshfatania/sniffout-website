@@ -2,6 +2,9 @@
 
 {{- $walkCount := len (where .Site.RegularPages "Section" "walks") -}}
 
+<div class="install-page-inner">
+<div class="install-page-left">
+
 <!-- Hero: brand green, full-bleed on mobile, card on desktop -->
 <div class="install-hero">
   <h1 class="install-hero-h1">Dog walks and live weather,<br>always in your pocket.</h1>
@@ -41,14 +44,15 @@
   <div class="install-primary" id="install-desktop">
     <div class="walk-section-heading">GET SNIFFOUT ON YOUR PHONE</div>
     <div class="install-qr-block">
-      <div class="install-qr-placeholder">
-        <span style="font-size:11px;color:#888888;text-align:center;display:block;">Scan to install<br>Sniffout</span>
-      </div>
+      <img src="/img/qr-install.png" alt="Scan to install Sniffout" width="200" height="200" style="border-radius: 8px; display: block; margin: 0 auto 12px;">
       <p style="font-size:13px;color:#555555;line-height:1.5;">Scan with your phone camera to open on your device.</p>
     </div>
   </div>
 
 </div>
+
+</div><!-- /.install-page-left -->
+<div class="install-page-right">
 
 <!-- Step-by-step guide -->
 <div class="install-steps-section">
@@ -124,7 +128,7 @@
   <div class="install-benefit">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
     <div>
-      <div class="install-benefit-title">{{ $walkCount }} handpicked UK walks</div>
+      <div class="install-benefit-title">{{ $walkCount }} handpicked UK {{ if eq $walkCount 1 }}walk{{ else }}walks{{ end }}</div>
       <div class="install-benefit-body">Curated dog walks with off-lead status, terrain, and parking for each one.</div>
     </div>
   </div>
@@ -136,5 +140,8 @@
     </div>
   </div>
 </div>
+
+</div><!-- /.install-page-right -->
+</div><!-- /.install-page-inner -->
 
 {{ end }}

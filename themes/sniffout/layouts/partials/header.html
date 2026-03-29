@@ -7,9 +7,9 @@
   </a>
   <div class="header-right">
     <nav class="header-nav">
-      <a href="/walks/">Walks</a>
-      <a href="/guides/">Guides</a>
-      <a href="/about/">About</a>
+      <a href="/walks/" {{ if or (eq .Section "walks") (hasPrefix .RelPermalink "/walks/") }}class="nav-active"{{ end }}>Walks</a>
+      <a href="/guides/" {{ if or (eq .Section "guides") (hasPrefix .RelPermalink "/guides/") }}class="nav-active"{{ end }}>Guides</a>
+      <a href="/about/" {{ if eq .RelPermalink "/about/" }}class="nav-active"{{ end }}>About</a>
     </nav>
     <a href="https://sniffout.app" target="_blank" rel="noopener" class="header-cta-pill">Get the app</a>
   </div>

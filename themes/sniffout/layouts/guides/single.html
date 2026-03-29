@@ -72,6 +72,21 @@
         </div>
       </div>
       <a href="/walks/" style="font-size:13px;color:#2C4A14;font-weight:600;">Browse all dog walks &rsaquo;</a>
+
+      <!-- Related guides (mobile only) -->
+      <div class="walk-mobile-only guide-related-mobile">
+        <div class="walk-section-heading" style="margin-top:28px;">RELATED GUIDES</div>
+        {{ range first 3 (where .Site.RegularPages "Section" "guides") }}
+          {{ if ne .Title $.Title }}
+          <a href="{{ .Permalink }}" class="guide-card" style="margin-bottom: 8px; display: block;">
+            <div class="guide-card-body">
+              <div class="guide-card-title">{{ .Title }}</div>
+              <div class="guide-card-meta">{{ .Params.readTime }}</div>
+            </div>
+          </a>
+          {{ end }}
+        {{ end }}
+      </div>
     </div>
 
   </div><!-- /.guide-article-content -->
