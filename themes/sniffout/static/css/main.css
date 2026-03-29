@@ -835,6 +835,7 @@ h1.walk-sidebar-title {
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 420px;
 }
 
 /* Carousel images */
@@ -922,6 +923,7 @@ h1.walk-sidebar-title {
 @media (min-width: 768px) {
   .home-hero {
     padding: 80px 20px 72px;
+    min-height: 500px;
   }
   .home-hero-inner {
     max-width: 560px;
