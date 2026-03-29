@@ -25,7 +25,7 @@
         <path d="M80 60 Q130 80 170 120 Q210 160 200 190" stroke="#2C4A14" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
         <circle cx="130" cy="100" r="8" fill="#2C4A14" stroke="white" stroke-width="2.5"/>
       </svg>
-      <div class="walk-hero-badge walk-hero-badge--left">{{ .Params.difficulty }}</div>
+      <div class="walk-hero-badge walk-hero-badge--left walk-hero-badge--{{ .Params.difficulty | lower }}">{{ .Params.difficulty }}</div>
       <div class="walk-hero-badge {{ if $isOnLead }}walk-hero-badge--onlead{{ else }}walk-hero-badge--offlead{{ end }}">{{ .Params.offLead }}</div>
       <div class="walk-hero-attr">&copy; Crown copyright OS</div>
     </div>

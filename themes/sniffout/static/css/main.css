@@ -18,6 +18,9 @@
   --brand-light: #E8F0DC;
   --brand-mid: #F0F7E8;
   --brand-border: #9DC85A;
+  --sienna: #B85C2C;
+  --sienna-light: #F5E8E0;
+  --sienna-dark: #8A4420;
 }
 
 html { scroll-behavior: smooth; }
@@ -96,8 +99,8 @@ img { display: block; max-width: 100%; }
 
 .header-cta-pill {
   font-size: 11px;
-  color: #2C4A14;
-  background: #E8F0DC;
+  color: #FFFFFF;
+  background: var(--sienna);
   padding: 4px 10px;
   border-radius: 20px;
   font-weight: 600;
@@ -227,6 +230,22 @@ img { display: block; max-width: 100%; }
   top: 10px;
   right: 10px;
   color: #b45309;
+}
+
+/* Difficulty-specific badge colours */
+.walk-hero-badge--easy {
+  background: #E8F0DC;
+  color: #2C4A14;
+}
+
+.walk-hero-badge--moderate {
+  background: var(--sienna-light);
+  color: var(--sienna-dark);
+}
+
+.walk-hero-badge--hard {
+  background: #FDECEA;
+  color: #C0392B;
 }
 
 .walk-hero-attr {

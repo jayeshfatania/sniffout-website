@@ -56,7 +56,7 @@
       <div class="walk-list-card-img">
       {{ end }}
         {{ with $p.Params.difficulty }}
-        <div class="walk-hero-badge walk-hero-badge--left">{{ . }}</div>
+        <div class="walk-hero-badge walk-hero-badge--left walk-hero-badge--{{ . | lower }}">{{ . }}</div>
         {{ end }}
         {{ with $p.Params.offLead }}
         <div class="walk-hero-badge {{ if or (eq . "On-lead only") (eq . "On lead") }}walk-hero-badge--onlead{{ else }}walk-hero-badge--offlead{{ end }}">{{ . }}</div>
