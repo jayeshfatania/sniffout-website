@@ -1213,13 +1213,13 @@ h1.walk-sidebar-title {
 }
 
 .walk-list-card {
-  background: #FFFFFF;
+  position: relative;
+  height: 200px;
   border-radius: 12px;
-  border: 0.5px solid rgba(0,0,0,0.08);
   overflow: hidden;
   display: block;
   text-decoration: none;
-  color: #1A1A1A;
+  background: linear-gradient(135deg, #C8D8B0 0%, #8BAD68 100%);
   margin-bottom: 10px;
   transition: transform 0.15s ease;
 }
@@ -1227,44 +1227,52 @@ h1.walk-sidebar-title {
 .walk-list-card:active { transform: scale(0.97); }
 
 .walk-list-card-img {
-  height: 140px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(135deg, #C8D8B0 0%, #A8C088 40%, #8BAD68 70%, #6E9048 100%);
-  position: relative;
   overflow: hidden;
 }
 
 .walk-list-card-body {
-  padding: 12px 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.72));
+  border-radius: 0 0 12px 12px;
 }
 
 .walk-list-card-name {
   font-size: 15px;
-  font-weight: 700;
-  color: #1A1A1A;
-  margin-bottom: 3px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 2px;
   line-height: 1.2;
 }
 
 .walk-list-card-loc {
   font-size: 11px;
-  color: #888888;
-  margin-bottom: 8px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 6px;
 }
 
 .walk-list-card-teaser {
-  font-size: 13px;
-  color: #555555;
-  line-height: 1.5;
-  margin: 0 0 10px;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  display: none;
 }
 
 .walk-list-card-pills {
   display: flex;
   gap: 6px;
+}
+
+.walk-list-card .meta-pill {
+  background: rgba(255,255,255,0.9);
+  color: #2C4A14;
+  border: none;
 }
 
 .meta-pill {
@@ -1274,6 +1282,93 @@ h1.walk-sidebar-title {
   border: 0.5px solid rgba(0,0,0,0.08);
   padding: 3px 9px;
   border-radius: 20px;
+}
+
+/* --- Walk hero card (featured walk on index) --- */
+
+.walk-hero-wrap {
+  padding: 16px 16px 0;
+}
+
+.walk-hero-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 220px;
+  background: var(--brand);
+  display: block;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.walk-hero-card:active { transform: scale(0.97); }
+
+.walk-hero-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.72));
+  border-radius: 0 0 16px 16px;
+}
+
+.walk-hero-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 4px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+.walk-hero-card-location {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 8px;
+}
+
+.walk-hero-card-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.walk-hero-card-pill {
+  font-size: 11px;
+  background: rgba(255,255,255,0.9);
+  color: #2C4A14;
+  border-radius: 20px;
+  padding: 3px 8px;
+  font-weight: 500;
+}
+
+.walk-hero-card-cta {
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  color: #2C4A14;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+@media (min-width: 768px) {
+  .walk-hero-wrap {
+    padding: 20px 28px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .walk-hero-card {
+    min-height: 280px;
+  }
+  .walk-hero-card-title {
+    font-size: 28px;
+  }
 }
 
 .area-sidebar {
