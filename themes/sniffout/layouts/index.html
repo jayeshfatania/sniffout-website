@@ -46,7 +46,8 @@
   <h2 class="home-featured-heading">Dog walks across the UK</h2>
   <div class="walk-card-h-row">
     {{ range first 6 (where .Site.RegularPages "Section" "walks") }}
-    <a href="{{ .Permalink }}" class="walk-card-h"{{ if .Params.heroImage }} style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.52)), url('{{ .Params.heroImage }}'); background-size: cover; background-position: center;"{{ end }}>
+    <a href="{{ .Permalink }}" class="walk-card-h">
+      {{ with .Params.heroImage }}<div class="walk-card-h-bg" style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.52)), url('{{ . }}');"></div>{{ end }}
       {{ with .Params.difficulty }}
       <div class="walk-hero-badge walk-card-h-badge walk-hero-badge--{{ . | lower }}">{{ . }}</div>
       {{ end }}

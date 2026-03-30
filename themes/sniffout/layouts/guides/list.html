@@ -20,7 +20,8 @@
 
     <!-- Hero featured card (first guide) -->
     {{ with $featured }}
-    <a href="{{ .Permalink }}" class="guide-hero-card" {{ with .Params.heroImage }}style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('{{ . }}'); background-size: cover; background-position: center;"{{ end }}>
+    <a href="{{ .Permalink }}" class="guide-hero-card">
+      {{ with .Params.heroImage }}<div class="guide-hero-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('{{ . }}');"></div>{{ end }}
       <div class="guide-hero-inner">
         <div class="guide-hero-body">
           <span class="guide-hero-pill">{{ .Params.category }}</span>

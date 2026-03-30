@@ -46,24 +46,22 @@
       data-terrain="{{ $p.Params.terrain }}"
       data-offlead="{{ $p.Params.offLead }}">
       {{ if $p.Params.heroImage }}
-      <div class="walk-list-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('{{ $p.Params.heroImage }}'); background-size: cover; background-position: center;">
+      <div class="walk-list-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('{{ $p.Params.heroImage }}'); background-size: cover; background-position: center;"></div>
       {{ else }}
-      <div class="walk-list-card-img">
+      <div class="walk-list-card-img"></div>
       {{ end }}
-        {{ with $p.Params.difficulty }}
-        <div class="walk-hero-badge walk-hero-badge--left walk-hero-badge--{{ . | lower }}">{{ . }}</div>
-        {{ end }}
-        {{ with $p.Params.offLead }}
-        <div class="walk-hero-badge {{ if or (eq . "On-lead only") (eq . "On lead") }}walk-hero-badge--onlead{{ else }}walk-hero-badge--offlead{{ end }}">{{ . }}</div>
-        {{ end }}
-      </div>
+      {{ with $p.Params.difficulty }}
+      <div class="walk-hero-badge walk-hero-badge--left walk-hero-badge--{{ . | lower }}">{{ . }}</div>
+      {{ end }}
+      {{ with $p.Params.offLead }}
+      <div class="walk-hero-badge {{ if or (eq . "On-lead only") (eq . "On lead") }}walk-hero-badge--onlead{{ else }}walk-hero-badge--offlead{{ end }}">{{ . }}</div>
+      {{ end }}
       <div class="walk-list-card-body">
         <div class="walk-list-card-name">{{ $p.Title }}</div>
         <div class="walk-list-card-loc">{{ $p.Params.location }}</div>
         <p class="walk-list-card-teaser">{{ $p.Params.description | truncate 90 }}</p>
         <div class="walk-list-card-pills">
           {{ with $p.Params.distance }}<span class="meta-pill">{{ . }}</span>{{ end }}
-          {{ with $p.Params.terrain }}<span class="meta-pill">{{ . }}</span>{{ end }}
         </div>
       </div>
     </a>
