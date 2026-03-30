@@ -14,6 +14,8 @@ Most grass seeds pass through summer walks without incident, sticking briefly to
 
 The particular type of grass seed that causes problems has a sharp, pointed awn, the kind Blue Cross describes as looking like a miniature barley ear. That structure is the problem. Once a seed catches in a dog's coat and works its way towards the skin through movement, the same barbs that drove it in prevent it from coming back out. Every step the dog takes pushes it further.
 
+![Grass seed awn close-up - what to look for on your dog's coat](/img/guides/grass-seeds.jpg)
+
 Once under the skin, the barbed structure means the seed can only travel forward through tissue. It cannot work its way back out on its own. Over days or weeks, an untreated seed can migrate from a toe to an abscess, from a nose deeper into the nasal passage, from an armpit towards the chest. In the most serious cases, where seeds have reached the chest cavity, the outcome can be life-threatening without specialist treatment.
 
 The practical point is this: a seed found in the coat before it reaches the skin is a five-second job. A seed that has been embedded for three days is a vet job, likely involving sedation and ultrasound. Time genuinely matters.
@@ -27,6 +29,8 @@ Incidence is highest in the East of England and lower in Wales, though cases are
 ## Which dogs are most at risk?
 
 Any dog that moves through long grass during summer can pick up grass seeds. But the same SAVSNET research found that Spaniels are 7.7 times more likely to present with a grass seed foreign body than retrievers, almost certainly because of their feathered ears and feet, and their habit of working at ground level with their heads in the vegetation. Biscuit and Mango both get a thorough check after any summer walk involving anything longer than mown grass.
+
+![Dog walking near long grass in summer](/img/guides/grass-seeds-dog.jpg)
 
 Long-haired dogs generally are at higher risk: seeds lodge in the coat and are harder to spot before they reach the skin. Working dogs and dogs that run with their mouths open also have elevated exposure.
 

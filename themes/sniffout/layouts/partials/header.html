@@ -12,5 +12,36 @@
       <a href="/about/" {{ if eq .RelPermalink "/about/" }}class="nav-active"{{ end }}>About</a>
     </nav>
     <a href="https://sniffout.app" target="_blank" rel="noopener" class="header-cta-pill">Get the app</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </header>
+
+<div class="nav-mobile-overlay" id="nav-mobile-overlay">
+  <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Close menu">&times;</button>
+  <nav class="nav-mobile-links">
+    <a href="/walks/" class="nav-mobile-link {{ if or (eq .Section "walks") (hasPrefix .RelPermalink "/walks/") }}nav-mobile-link--active{{ end }}">Walks</a>
+    <a href="/guides/" class="nav-mobile-link {{ if or (eq .Section "guides") (hasPrefix .RelPermalink "/guides/") }}nav-mobile-link--active{{ end }}">Guides</a>
+    <a href="/about/" class="nav-mobile-link {{ if eq .RelPermalink "/about/" }}nav-mobile-link--active{{ end }}">About</a>
+  </nav>
+</div>
+
+<script>
+document.getElementById('nav-hamburger').addEventListener('click', function() {
+  document.getElementById('nav-mobile-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+});
+document.getElementById('nav-mobile-close').addEventListener('click', function() {
+  document.getElementById('nav-mobile-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+});
+document.querySelectorAll('.nav-mobile-link').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.getElementById('nav-mobile-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+</script>

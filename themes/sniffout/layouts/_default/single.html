@@ -16,7 +16,10 @@
   <!-- LEFT COLUMN: hero + body content -->
   <div class="walk-content">
 
-    <!-- Hero map -->
+    <!-- Hero image or map -->
+    {{ if .Params.heroImage }}
+    <div class="walk-hero" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('{{ .Params.heroImage }}'); background-size: cover; background-position: center;">
+    {{ else }}
     <div class="walk-hero">
       <svg class="walk-hero-svg" width="375" height="200" viewBox="0 0 375 200" preserveAspectRatio="xMidYMid slice">
         <path d="M0 80 Q80 60 160 90 Q240 120 375 100" stroke="white" stroke-width="4" fill="none"/>
@@ -25,9 +28,10 @@
         <path d="M80 60 Q130 80 170 120 Q210 160 200 190" stroke="#2C4A14" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
         <circle cx="130" cy="100" r="8" fill="#2C4A14" stroke="white" stroke-width="2.5"/>
       </svg>
+    {{ end }}
       <div class="walk-hero-badge walk-hero-badge--left walk-hero-badge--{{ .Params.difficulty | lower }}">{{ .Params.difficulty }}</div>
       <div class="walk-hero-badge {{ if $isOnLead }}walk-hero-badge--onlead{{ else }}walk-hero-badge--offlead{{ end }}">{{ .Params.offLead }}</div>
-      <div class="walk-hero-attr">&copy; Crown copyright OS</div>
+      {{ if not .Params.heroImage }}<div class="walk-hero-attr">&copy; Crown copyright OS</div>{{ end }}
     </div>
 
     <!-- Mobile-only: title + chips + stats pills (hidden on desktop, shown in sidebar instead) -->
