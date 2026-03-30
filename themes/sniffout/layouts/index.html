@@ -13,7 +13,6 @@
     <h1 class="home-headline">Dog walks and live weather,<br>built for UK dog owners.</h1>
     <p class="home-subtext">{{ $walkCount }} handpicked UK {{ if eq $walkCount 1 }}walk{{ else }}walks{{ end }}. Know the weather before you go.</p>
     <a href="/get" class="home-cta-btn">Get Sniffout free</a>
-    <p class="home-social-proof">Free &middot; No account needed &middot; iOS and Android</p>
   </div>
 </section>
 
@@ -47,21 +46,15 @@
   <h2 class="home-featured-heading">Dog walks across the UK</h2>
   <div class="walk-card-h-row">
     {{ range first 6 (where .Site.RegularPages "Section" "walks") }}
-    <a href="{{ .Permalink }}" class="walk-card-h">
-      <div class="walk-card-h-img">
-        {{ if .Params.heroImage }}
-        <img src="{{ .Params.heroImage }}" alt="{{ .Params.heroAlt | default .Title }}" style="width:100%;height:100%;object-fit:cover;">
-        {{ end }}
-        {{ with .Params.difficulty }}
-        <div class="walk-hero-badge walk-card-h-badge walk-hero-badge--{{ . | lower }}">{{ . }}</div>
-        {{ end }}
-      </div>
+    <a href="{{ .Permalink }}" class="walk-card-h"{{ if .Params.heroImage }} style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.52)), url('{{ .Params.heroImage }}'); background-size: cover; background-position: center;"{{ end }}>
+      {{ with .Params.difficulty }}
+      <div class="walk-hero-badge walk-card-h-badge walk-hero-badge--{{ . | lower }}">{{ . }}</div>
+      {{ end }}
       <div class="walk-card-h-body">
         <div class="walk-card-h-name">{{ .Title }}</div>
         <div class="walk-card-h-loc">{{ .Params.location }}</div>
         <div class="walk-card-h-pills">
-          {{ with .Params.distance }}<span class="stat-pill walk-card-h-pill">{{ . }}</span>{{ end }}
-          {{ with .Params.difficulty }}<span class="stat-pill walk-card-h-pill">{{ . }}</span>{{ end }}
+          {{ with .Params.distance }}<span class="walk-card-h-pill">{{ . }}</span>{{ end }}
         </div>
       </div>
     </a>

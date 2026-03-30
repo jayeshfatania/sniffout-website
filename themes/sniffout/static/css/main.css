@@ -1035,25 +1035,20 @@ h1.walk-sidebar-title {
 
 .walk-card-h {
   width: 200px;
+  height: 200px;
   flex-shrink: 0;
-  background: #FFFFFF;
+  background: linear-gradient(135deg, #C8D8B0 0%, #2C4A14 100%);
   border-radius: 12px;
-  border: 0.5px solid rgba(0,0,0,0.08);
   overflow: hidden;
   text-decoration: none;
-  color: #1A1A1A;
   display: block;
-  transition: transform 0.15s ease;
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
+
+.walk-card-h:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 
 .walk-card-h:active { transform: scale(0.97); }
-
-.walk-card-h-img {
-  height: 110px;
-  background: linear-gradient(135deg, #C8D8B0 0%, #2C4A14 100%);
-  position: relative;
-  overflow: hidden;
-}
 
 .walk-card-h-badge {
   top: 8px;
@@ -1061,14 +1056,20 @@ h1.walk-sidebar-title {
 }
 
 .walk-card-h-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 10px 12px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.72));
+  border-radius: 0 0 12px 12px;
 }
 
 .walk-card-h-name {
   font-size: 13px;
   font-weight: 600;
-  color: #1A1A1A;
-  margin-bottom: 3px;
+  color: white;
+  margin-bottom: 2px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1076,8 +1077,8 @@ h1.walk-sidebar-title {
 
 .walk-card-h-loc {
   font-size: 11px;
-  color: #888888;
-  margin-bottom: 6px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 5px;
 }
 
 .walk-card-h-pills {
@@ -1087,7 +1088,11 @@ h1.walk-sidebar-title {
 
 .walk-card-h-pill {
   font-size: 10px;
-  padding: 3px 8px;
+  font-weight: 500;
+  background: rgba(255,255,255,0.9);
+  color: #2C4A14;
+  padding: 2px 7px;
+  border-radius: 20px;
 }
 
 .home-see-all {
@@ -1197,7 +1202,7 @@ h1.walk-sidebar-title {
 .area-hero {
   background: #FFFFFF;
   padding: 20px 16px 16px;
-  border-bottom: 0.5px solid rgba(0,0,0,0.08);
+  border-bottom: none;
 }
 
 .area-h1 {
@@ -1281,10 +1286,11 @@ h1.walk-sidebar-title {
   text-decoration: none;
   background: linear-gradient(135deg, #C8D8B0 0%, #8BAD68 100%);
   margin-bottom: 10px;
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .walk-list-card:active { transform: scale(0.97); }
+.walk-list-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 
 .walk-list-card-img {
   position: absolute;
@@ -1304,7 +1310,6 @@ h1.walk-sidebar-title {
   padding: 12px;
   background: linear-gradient(transparent, rgba(0,0,0,0.72));
   border-radius: 0 0 12px 12px;
-  border-top: 2px solid #2C4A14;
 }
 
 .walk-list-card-name {
@@ -1359,10 +1364,11 @@ h1.walk-sidebar-title {
   background: var(--brand);
   display: block;
   text-decoration: none;
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .walk-hero-card:active { transform: scale(0.97); }
+.walk-hero-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 
 .walk-hero-card-body {
   position: absolute;
@@ -1637,11 +1643,12 @@ h1.walk-sidebar-title {
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
   margin-bottom: 0;
 }
 
 .guide-hero-card:active { transform: scale(0.97); }
+.guide-hero-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 
 .guide-hero-inner {
   display: flex;
@@ -1762,10 +1769,11 @@ h1.walk-sidebar-title {
   display: block;
   text-decoration: none;
   background: var(--brand);
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .guide-grid-card:active { transform: scale(0.97); }
+.guide-grid-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 
 .guide-grid-card-band {
   position: absolute;
@@ -2297,4 +2305,9 @@ h1.walk-sidebar-title {
     background: #F7F5F0;
     padding-bottom: 48px;
   }
+}
+
+/* --- Simple page (About, Privacy) --- */
+.simple-content p {
+  margin-bottom: 1.5rem;
 }
