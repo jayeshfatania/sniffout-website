@@ -6,6 +6,9 @@ description: "How to check for ticks, remove them safely, and protect your dog d
 date: 2026-03-28
 weight: 1
 heroImage: "/img/guides/ticks-hero.jpg"
+pullQuote: "A tick found and removed the same day it attached carries a much lower disease risk than one that has been feeding for two days unnoticed."
+relatedWalks:
+  - "richmond-park-dog-walk"
 ---
 
 Ticks are a regular feature of the British countryside, particularly for anyone who walks dogs through woodland, heathland, or long grass between March and October. They are small, they attach quietly, and they can carry disease - but they are also easy enough to deal with once you know the routine. The short version: check your dog after every walk in tick season, remove anything you find with a proper tool, and talk to your vet about prevention.

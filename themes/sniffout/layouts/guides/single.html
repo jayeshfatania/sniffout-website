@@ -1,133 +1,286 @@
 {{ define "main" }}
 
-<!-- Breadcrumb (desktop only) -->
+{{ $pullQuote := .Params.pullQuote }}
+{{ $author := .Params.author | default "Sniffout editorial team" }}
+
+<div class="ga-page">
+
+<!-- Breadcrumb -->
 <nav class="walk-breadcrumb">
   <a href="/guides/">Guides</a>
   <span class="walk-breadcrumb-sep">&rsaquo;</span>
-  <span class="walk-breadcrumb-current">{{ .Title }}</span>
+  {{ with .Params.category }}
+  <span class="walk-breadcrumb-current">{{ . }}</span>
+  {{ end }}
 </nav>
 
-<div class="guide-article-layout">
+<!-- Page header -->
+<header class="ga-header">
+  <div class="ga-header-inner">
+    {{ with .Params.category }}
+    <span class="ga-category-pill">{{ . }}</span>
+    {{ end }}
+    <h1 class="ga-h1">{{ .Title }}</h1>
+    {{ with .Params.description }}
+    <p class="ga-subtitle">{{ . }}</p>
+    {{ end }}
+    <div class="ga-meta">
+      <span>By {{ $author }}</span>
+      {{ with .Params.readTime }}
+      <span class="ga-meta-dot"></span>
+      <span>{{ . }}</span>
+      {{ end }}
+      <span class="ga-meta-dot"></span>
+      <span>{{ .Date.Format "2 January 2006" }}</span>
+    </div>
+  </div>
+</header>
+
+<!-- Hero image -->
+{{ with .Params.heroImage }}
+<div class="ga-hero-wrap">
+  <img class="ga-hero-img"
+       src="{{ . }}"
+       alt="{{ $.Title }}"
+       loading="eager">
+</div>
+{{ end }}
+
+<!-- Two-column layout wrapper -->
+<div class="ga-layout">
 
   <!-- Left: article content -->
-  <div class="guide-article-content">
+  <div class="ga-content">
+    <div class="ga-body-outer">
 
-    <!-- Article hero -->
-    <div class="guide-article-hero">
-      {{ with .Params.category }}
-      {{ if eq . "Hazards" }}
-      <span class="category-pill category-pill--hazard">{{ . }}</span>
-      {{ else if eq . "Seasonal" }}
-      <span class="category-pill category-pill--seasonal">{{ . }}</span>
-      {{ else }}
-      <span class="category-pill category-pill--general">{{ . }}</span>
+      <!-- Pull quote -->
+      {{ with $pullQuote }}
+      <blockquote class="ga-pull-quote">{{ . }}</blockquote>
       {{ end }}
-      {{ end }}
-      <h1 class="guide-article-h1">{{ .Title }}</h1>
-      <div class="guide-article-meta">
-        <span>Updated {{ .Date.Format "January 2006" }}</span>
-        <span class="guide-meta-dot"></span>
-        <span>{{ .Params.readTime }}</span>
-      </div>
-    </div>
 
-    <!-- Article body -->
-    <div class="guide-article-body">
-      <div class="article-body">
+      <!-- Article body -->
+      <div class="ga-body" id="ga-article-body">
         {{ .Content }}
       </div>
 
-      <!-- In-article install CTA (mobile: flex row; desktop: stacked) -->
-      <div class="walk-cta-row guide-article-cta walk-mobile-only" style="margin:28px 0 0;">
-        <div class="walk-cta-inner">
-          <div>
-            <div class="cta-headline">Plan your next walk with live weather</div>
-            <div class="cta-subtext">Get the Sniffout app. Free, no account needed.</div>
+      <!-- Inline install CTA (injected by JS after 3rd H2) -->
+      <template id="ga-inline-cta-tmpl">
+        <div class="ga-inline-cta">
+          <div class="ga-inline-cta-inner">
+            <div class="ga-inline-cta-text">
+              <strong>Plan this walk with live weather</strong>
+              <span>Sniffout checks conditions before you go.</span>
+            </div>
+            <a href="/get" class="ga-inline-cta-btn">Open Sniffout</a>
           </div>
-          <a href="/get" class="cta-pill-btn">Open in Sniffout</a>
         </div>
-      </div>
-      <div class="walk-cta-stacked guide-article-cta-desktop" style="margin:28px 0 0;display:none;">
-        <div class="cta-headline cta-headline--desktop">Plan your next walk with live weather</div>
-        <div class="cta-subtext cta-subtext--desktop">Get the Sniffout app. Free, no account needed.</div>
-        <a href="/get" class="cta-btn-full">Open in Sniffout &rarr;</a>
-      </div>
+      </template>
 
       <!-- Related walks -->
-      <div class="walk-section-heading" style="margin-top:28px;">WALKS MENTIONED IN THIS GUIDE</div>
-      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;">
-        <div class="nearby-walk-row">
-          <div>
-            <div class="nearby-walk-name">Richmond Park Dog Walk</div>
-            <div class="nearby-walk-meta">7.2 km &middot; Easy &middot; On-lead only</div>
-          </div>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-        </div>
-        <div class="nearby-walk-row">
-          <div>
-            <div class="nearby-walk-name">Bushy Park Waterhouse Walk</div>
-            <div class="nearby-walk-meta">4.1 km &middot; Easy &middot; Off-lead areas</div>
-          </div>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-        </div>
-      </div>
-      <a href="/walks/" style="font-size:13px;color:#2C4A14;font-weight:600;">Browse all dog walks &rsaquo;</a>
-
-      <!-- Related guides (mobile only) -->
-      <div class="walk-mobile-only guide-related-mobile">
-        <div class="walk-section-heading" style="margin-top:28px;">RELATED GUIDES</div>
-        {{ range first 3 (where .Site.RegularPages "Section" "guides") }}
-          {{ if ne .Title $.Title }}
-          <a href="{{ .Permalink }}" class="guide-card" style="margin-bottom: 8px; display: block;">
-            <div class="guide-card-body">
-              <div class="guide-card-title">{{ .Title }}</div>
-              <div class="guide-card-meta">{{ .Params.readTime }}</div>
+      {{ if .Params.relatedWalks }}
+      <section class="ga-walks-section">
+        <div class="ga-walks-heading">WALKS IN THIS GUIDE</div>
+        <div class="ga-walks-grid">
+          {{ range .Params.relatedWalks }}
+          {{ $walkPage := $.Site.GetPage (printf "/walks/%s" .) }}
+          {{ with $walkPage }}
+          <a href="{{ .Permalink }}" class="walk-list-card">
+            {{ if .Params.heroImage }}
+            <div class="walk-list-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('{{ .Params.heroImage }}'); background-size: cover; background-position: center;"></div>
+            {{ else }}
+            <div class="walk-list-card-img"></div>
+            {{ end }}
+            {{ with .Params.difficulty }}
+            <div class="walk-hero-badge walk-hero-badge--left">{{ . }}</div>
+            {{ end }}
+            {{ with .Params.offLead }}
+            <div class="walk-hero-badge {{ if or (eq . "On-lead only") (eq . "On lead") }}walk-hero-badge--onlead{{ else }}walk-hero-badge--offlead{{ end }}">{{ . }}</div>
+            {{ end }}
+            <div class="walk-list-card-body">
+              <div class="walk-list-card-name">{{ .Title }}</div>
+              <div class="walk-list-card-loc">{{ .Params.location }}</div>
+              <p class="walk-list-card-teaser">{{ .Params.description | truncate 80 }}</p>
+              <div class="walk-list-card-pills">
+                {{ with .Params.distance }}<span class="meta-pill">{{ . }}</span>{{ end }}
+                {{ with .Params.terrain }}<span class="meta-pill">{{ . }}</span>{{ end }}
+              </div>
             </div>
           </a>
           {{ end }}
-        {{ end }}
-      </div>
+          {{ end }}
+        </div>
+        <a href="/walks/" style="display:inline-block;margin-top:14px;font-size:13px;color:var(--brand);font-weight:600;text-decoration:none;">Browse all dog walks &rsaquo;</a>
+      </section>
+      {{ end }}
+
+    </div><!-- /.ga-body-outer -->
+  </div><!-- /.ga-content -->
+
+  <!-- Right: sidebar (desktop only) -->
+  <aside class="ga-sidebar" aria-label="Article navigation">
+
+    <span class="ga-sidebar-label">IN THIS GUIDE</span>
+    <nav class="ga-toc" id="ga-toc" aria-label="Table of contents">
+      <!-- Populated by JavaScript -->
+    </nav>
+
+    <div class="ga-sidebar-divider"></div>
+
+    <div class="ga-sidebar-cta">
+      <p>Get live weather for every walk.</p>
+      <a href="/get" class="ga-sidebar-cta-btn">Open Sniffout</a>
     </div>
 
-  </div><!-- /.guide-article-content -->
+    {{ $guides := where .Site.RegularPages "Section" "guides" }}
+    {{ $related := first 3 $guides }}
+    {{ $hasRelated := false }}
+    {{ range $related }}
+      {{ if ne .Title $.Title }}{{ $hasRelated = true }}{{ end }}
+    {{ end }}
 
-  <!-- Right sidebar (desktop only) -->
-  <div class="guide-article-sidebar">
-    <div class="walk-cta-stacked">
-      <div class="cta-headline cta-headline--desktop">Plan your next walk with live weather</div>
-      <div class="cta-subtext cta-subtext--desktop">Free. No account needed.</div>
-      <a href="/get" class="cta-btn-full">Open in Sniffout &rarr;</a>
-    </div>
-    <div style="margin-bottom:20px;"></div>
-    <div class="walk-section-heading">IN THIS GUIDE</div>
-    <div class="guide-toc">
-      <a href="#where-to-check-after-a-walk" class="guide-toc-link">Where to check after a walk</a>
-      <a href="#lungworm-and-tick-prevention" class="guide-toc-link">Lungworm and tick prevention</a>
-    </div>
-    <div style="margin-bottom:20px;"></div>
-    <div class="walk-section-heading">RELATED GUIDES</div>
-    {{ range first 2 (where .Site.RegularPages "Section" "guides") }}
+    {{ if $hasRelated }}
+    <div class="ga-sidebar-divider"></div>
+    <span class="ga-sidebar-label">RELATED GUIDES</span>
+    {{ range $related }}
     {{ if ne .Title $.Title }}
-    <a href="{{ .Permalink }}" class="guide-card" style="margin-bottom:8px;">
-      <div style="flex:1;">
-        {{ with .Params.category }}
-        {{ if eq . "Hazards" }}
-        <span class="category-pill category-pill--hazard">{{ . }}</span>
-        {{ else if eq . "Seasonal" }}
-        <span class="category-pill category-pill--seasonal">{{ . }}</span>
-        {{ else }}
-        <span class="category-pill category-pill--general">{{ . }}</span>
-        {{ end }}
-        {{ end }}
-        <div class="guide-card-title">{{ .Title }}</div>
-        <div class="guide-card-meta">{{ .Params.readTime }}</div>
-      </div>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:4px;flex-shrink:0;"><path d="M9 18l6-6-6-6"/></svg>
+    <a href="{{ .Permalink }}" class="ga-sidebar-guide-card">
+      <div class="ga-sidebar-guide-title">{{ .Title }}</div>
+      <div class="ga-sidebar-guide-meta">{{ .Params.readTime }}</div>
     </a>
     {{ end }}
     {{ end }}
-  </div><!-- /.guide-article-sidebar -->
+    {{ end }}
 
-</div><!-- /.guide-article-layout -->
+  </aside><!-- /.ga-sidebar -->
+
+</div><!-- /.ga-layout -->
+
+<!-- More guides (full width, below the grid) -->
+{{ $allGuides := where .Site.RegularPages "Section" "guides" }}
+{{ $moreGuides := first 3 $allGuides }}
+{{ $hasMG := false }}
+{{ range $moreGuides }}
+  {{ if ne .Title $.Title }}{{ $hasMG = true }}{{ end }}
+{{ end }}
+
+{{ if $hasMG }}
+<section class="ga-more-guides">
+  <div class="ga-more-guides-inner">
+    <div class="ga-more-guides-heading">MORE GUIDES</div>
+    <div class="ga-more-guides-grid">
+      {{ range $moreGuides }}
+      {{ if ne .Title $.Title }}
+      <a href="{{ .Permalink }}" class="guide-grid-card" data-category="{{ .Params.category }}">
+
+        {{ $bandClass := "guide-grid-card-band--general" }}
+        {{ if eq .Params.category "Hazards" }}{{ $bandClass = "guide-grid-card-band--hazard" }}{{ end }}
+        {{ if eq .Params.category "Seasonal" }}{{ $bandClass = "guide-grid-card-band--seasonal" }}{{ end }}
+        {{ if eq .Params.category "Breed guides" }}{{ $bandClass = "guide-grid-card-band--breed" }}{{ end }}
+
+        {{ with .Params.heroImage }}
+        <div class="guide-grid-card-band" style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.28)), url('{{ . }}'); background-size: cover; background-position: center;"></div>
+        {{ else }}
+        <div class="guide-grid-card-band {{ $bandClass }}">
+          {{ if eq .Params.category "Hazards" }}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.6;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          {{ else if eq .Params.category "Seasonal" }}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.6;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          {{ else if eq .Params.category "Breed guides" }}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.6;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          {{ else }}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.6;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        <div style="position:absolute;top:10px;left:10px;z-index:2;">
+          {{ if eq .Params.category "Hazards" }}
+          <span class="category-pill category-pill--hazard">{{ .Params.category }}</span>
+          {{ else if eq .Params.category "Seasonal" }}
+          <span class="category-pill category-pill--seasonal">{{ .Params.category }}</span>
+          {{ else }}
+          <span class="category-pill category-pill--general">{{ .Params.category }}</span>
+          {{ end }}
+        </div>
+
+        <div class="guide-grid-card-body">
+          <div class="guide-grid-card-title">{{ .Title }}</div>
+          <div class="guide-grid-card-footer">
+            <span class="guide-grid-card-time">{{ .Params.readTime }}</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </div>
+        </div>
+
+      </a>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+</div><!-- /.ga-page -->
+
+<!-- JS: TOC builder + active state + inline CTA insertion -->
+<script>
+(function() {
+  // Build sidebar TOC from H2 elements in article body
+  var tocContainer = document.getElementById('ga-toc');
+  var articleBody = document.getElementById('ga-article-body');
+  if (!tocContainer || !articleBody) return;
+
+  var headings = articleBody.querySelectorAll('h2');
+  if (!headings.length) return;
+
+  headings.forEach(function(h2) {
+    // Ensure the H2 has an id - Hugo auto-generates these from markdown
+    if (!h2.id) {
+      h2.id = h2.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    }
+    var link = document.createElement('a');
+    link.href = '#' + h2.id;
+    link.className = 'ga-toc-link';
+    link.textContent = h2.textContent;
+    tocContainer.appendChild(link);
+  });
+
+  // Active state via IntersectionObserver
+  var tocLinks = tocContainer.querySelectorAll('.ga-toc-link');
+  if (!tocLinks.length) return;
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(function(link) {
+          link.classList.remove('ga-toc-link--active');
+          if (link.getAttribute('href') === '#' + entry.target.id) {
+            link.classList.add('ga-toc-link--active');
+          }
+        });
+      }
+    });
+  }, {
+    rootMargin: '-20% 0px -70% 0px',
+    threshold: 0
+  });
+
+  headings.forEach(function(h2) { observer.observe(h2); });
+
+  // Insert inline CTA after the content following the 3rd H2
+  var ctaTemplate = document.getElementById('ga-inline-cta-tmpl');
+  if (ctaTemplate && headings.length >= 3) {
+    var thirdH2 = headings[2];
+    // Walk forward to find the last sibling before the 4th H2 (or end of body)
+    var insertAfter = thirdH2;
+    var cursor = thirdH2.nextElementSibling;
+    while (cursor && cursor.tagName !== 'H2') {
+      insertAfter = cursor;
+      cursor = cursor.nextElementSibling;
+    }
+    var ctaNode = document.importNode(ctaTemplate.content, true);
+    insertAfter.insertAdjacentElement('afterend', ctaNode.firstElementChild);
+  }
+})();
+</script>
 
 {{ end }}
