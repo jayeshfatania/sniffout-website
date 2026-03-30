@@ -59,10 +59,7 @@
       <div class="walk-list-card-body">
         <div class="walk-list-card-name">{{ $p.Title }}</div>
         <div class="walk-list-card-loc">{{ $p.Params.location }}</div>
-        <p class="walk-list-card-teaser">{{ $p.Params.description | truncate 90 }}</p>
-        <div class="walk-list-card-pills">
-          {{ with $p.Params.distance }}<span class="meta-pill">{{ . }}</span>{{ end }}
-        </div>
+        {{ with $p.Params.distance }}<div class="walk-list-card-distance">{{ . }}</div>{{ end }}
       </div>
     </a>
 

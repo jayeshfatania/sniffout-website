@@ -224,60 +224,49 @@
 <!-- JS: TOC builder + active state + inline CTA insertion -->
 <script>
 (function() {
-  // Build sidebar TOC from H2 elements in article body
-  var tocContainer = document.getElementById('ga-toc');
-  var articleBody = document.getElementById('ga-article-body');
-  if (!tocContainer || !articleBody) return;
+  const articleBody = document.getElementById('ga-article-body');
+  const headings = articleBody ? articleBody.querySelectorAll('h2') : [];
+  const toc = document.querySelector('.ga-toc');
 
-  var headings = articleBody.querySelectorAll('h2');
-  if (!headings.length) return;
+  if (toc && headings.length) {
+    toc.innerHTML = '';
+    headings.forEach(function(h2) {
+      if (!h2.id) {
+        h2.id = h2.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      }
+      const link = document.createElement('a');
+      link.href = '#' + h2.id;
+      link.className = 'ga-toc-link';
+      link.textContent = h2.textContent.trim();
+      toc.appendChild(link);
+    });
+  }
 
-  headings.forEach(function(h2) {
-    // Ensure the H2 has an id - Hugo auto-generates these from markdown
-    if (!h2.id) {
-      h2.id = h2.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-    }
-    var link = document.createElement('a');
-    link.href = '#' + h2.id;
-    link.className = 'ga-toc-link';
-    link.textContent = h2.textContent;
-    tocContainer.appendChild(link);
-  });
-
-  // Active state via IntersectionObserver
-  var tocLinks = tocContainer.querySelectorAll('.ga-toc-link');
-  if (!tocLinks.length) return;
-
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        tocLinks.forEach(function(link) {
-          link.classList.remove('ga-toc-link--active');
-          if (link.getAttribute('href') === '#' + entry.target.id) {
-            link.classList.add('ga-toc-link--active');
-          }
-        });
+  // Active state via scroll position
+  window.addEventListener('scroll', function() {
+    const links = document.querySelectorAll('.ga-toc-link');
+    let current = '';
+    document.querySelectorAll('#ga-article-body h2').forEach(function(h2) {
+      if (window.scrollY >= h2.offsetTop - 120) {
+        current = h2.id;
       }
     });
-  }, {
-    rootMargin: '-20% 0px -70% 0px',
-    threshold: 0
+    links.forEach(function(link) {
+      link.classList.toggle('ga-toc-link--active', link.getAttribute('href') === '#' + current);
+    });
   });
 
-  headings.forEach(function(h2) { observer.observe(h2); });
-
   // Insert inline CTA after the content following the 3rd H2
-  var ctaTemplate = document.getElementById('ga-inline-cta-tmpl');
+  const ctaTemplate = document.getElementById('ga-inline-cta-tmpl');
   if (ctaTemplate && headings.length >= 3) {
-    var thirdH2 = headings[2];
-    // Walk forward to find the last sibling before the 4th H2 (or end of body)
-    var insertAfter = thirdH2;
-    var cursor = thirdH2.nextElementSibling;
+    const thirdH2 = headings[2];
+    let insertAfter = thirdH2;
+    let cursor = thirdH2.nextElementSibling;
     while (cursor && cursor.tagName !== 'H2') {
       insertAfter = cursor;
       cursor = cursor.nextElementSibling;
     }
-    var ctaNode = document.importNode(ctaTemplate.content, true);
+    const ctaNode = document.importNode(ctaTemplate.content, true);
     insertAfter.insertAdjacentElement('afterend', ctaNode.firstElementChild);
   }
 })();

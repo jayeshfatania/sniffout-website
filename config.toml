@@ -1,4 +1,4 @@
-baseURL = "https://sniffout.co.uk/"
+baseURL = "https://sniffout-website.pages.dev/"
 languageCode = "en-gb"
 title = "Sniffout - Dog walks and weather for the UK"
 theme = "sniffout"

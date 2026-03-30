@@ -1252,14 +1252,18 @@ h1.walk-sidebar-title {
   padding: 12px 16px;
   background: transparent;
   border-bottom: none;
+  display: flex;
+  flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  white-space: nowrap;
-  display: flex;
+  scrollbar-width: none;
   gap: 8px;
+  padding-bottom: 4px;
 }
 
-.filter-bar::-webkit-scrollbar { display: none; }
+.filter-bar::-webkit-scrollbar {
+  display: none;
+}
 
 .filter-chip {
   display: inline-flex;
@@ -1346,6 +1350,12 @@ h1.walk-sidebar-title {
   font-size: 11px;
   color: rgba(255,255,255,0.75);
   margin-bottom: 6px;
+}
+
+.walk-list-card-distance {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  margin-top: 2px;
 }
 
 .walk-list-card-teaser {
@@ -2148,7 +2158,7 @@ h1.walk-sidebar-title {
   border-left: 4px solid var(--sienna);
   padding-left: 22px;
   margin: 32px 0 32px;
-  font-style: normal;
+  font-style: italic;
 }
 
 .ga-body {
