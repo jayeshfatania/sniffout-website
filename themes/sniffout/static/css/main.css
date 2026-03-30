@@ -1200,9 +1200,10 @@ h1.walk-sidebar-title {
 /* --- Area index page --- */
 
 .area-hero {
-  background: #FFFFFF;
+  background: transparent;
   padding: 20px 16px 16px;
-  border-bottom: none;
+  border: none;
+  box-shadow: none;
 }
 
 .area-h1 {
@@ -1286,11 +1287,10 @@ h1.walk-sidebar-title {
   text-decoration: none;
   background: linear-gradient(135deg, #C8D8B0 0%, #8BAD68 100%);
   margin-bottom: 10px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease;
 }
 
 .walk-list-card:active { transform: scale(0.97); }
-.walk-list-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 
 .walk-list-card-img {
   position: absolute;
@@ -1300,6 +1300,12 @@ h1.walk-sidebar-title {
   bottom: 0;
   background: linear-gradient(135deg, #C8D8B0 0%, #2C4A14 100%);
   overflow: hidden;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.walk-list-card:hover .walk-list-card-img {
+  transform: scale(1.04);
+  filter: brightness(1.08);
 }
 
 .walk-list-card-body {
@@ -1364,11 +1370,11 @@ h1.walk-sidebar-title {
   background: var(--brand);
   display: block;
   text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, filter 0.4s ease;
 }
 
 .walk-hero-card:active { transform: scale(0.97); }
-.walk-hero-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.walk-hero-card:hover { filter: brightness(1.08); }
 
 .walk-hero-card-body {
   position: absolute;
@@ -1447,8 +1453,6 @@ h1.walk-sidebar-title {
     padding: 24px 28px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    border-bottom: none;
-    border-radius: 12px;
   }
   .area-h1 {
     font-size: 26px;
@@ -1643,12 +1647,12 @@ h1.walk-sidebar-title {
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, filter 0.4s ease;
   margin-bottom: 0;
 }
 
 .guide-hero-card:active { transform: scale(0.97); }
-.guide-hero-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.guide-hero-card:hover { filter: brightness(1.08); }
 
 .guide-hero-inner {
   display: flex;
@@ -1769,11 +1773,10 @@ h1.walk-sidebar-title {
   display: block;
   text-decoration: none;
   background: var(--brand);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease;
 }
 
 .guide-grid-card:active { transform: scale(0.97); }
-.guide-grid-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 
 .guide-grid-card-band {
   position: absolute;
@@ -1787,6 +1790,12 @@ h1.walk-sidebar-title {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.guide-grid-card:hover .guide-grid-card-band {
+  transform: scale(1.04);
+  filter: brightness(1.08);
 }
 
 .guide-grid-card-band--hazard {
