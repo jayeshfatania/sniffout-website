@@ -14,9 +14,9 @@ Blue-green algae is one of the few hazards on a dog walk that can kill an otherw
 
 ## What is blue-green algae?
 
-Despite the name, it is not algae. Blue-green algae is caused by cyanobacteria - microscopic bacteria that can form blooms in freshwater when conditions are right. Warm temperatures, still water, and high nutrient levels create the conditions most likely to produce a bloom, which is why the problem is most common from late spring through to early autumn, typically May to September.
+Despite the name, it is not algae. Blue-green algae is caused by cyanobacteria, microscopic bacteria that can form blooms in freshwater when conditions are right. Warm temperatures, still water, and high nutrient levels create the conditions most likely to produce a bloom, which is why the problem is most common from late spring through to early autumn, typically May to September.
 
-A bloom can look like green or blue-green paint on the water surface. It can appear as foam, scum, or floating mats. It can smell unpleasant, though not always. And in some cases the water can look clear and still be affected - which is the part that makes this hazard harder to manage than most.
+A bloom can look like green or blue-green paint on the water surface. It can appear as foam, scum, or floating mats. It can smell unpleasant, though not always. And in some cases the water can look clear and still be affected, which is the part that makes this hazard harder to manage than most.
 
 ## Where does it occur in the UK?
 
@@ -24,7 +24,7 @@ Blue-green algae affects lakes, reservoirs, ponds, slow-moving rivers, and canal
 
 The Environment Agency and UKHSA monitor known water bodies and issue warnings when blooms are confirmed. Warning signs are posted at many affected sites during bloom season. However, signs are not present everywhere. Smaller ponds and private reservoirs are much less likely to be monitored or signed. The absence of a warning sign does not mean the water is safe.
 
-For current warnings in England, the Environment Agency's Swimfo map is the most reliable single source. Checking it before a summer walk near any lake or reservoir takes about thirty seconds.
+For current warnings, check your local council website and the Environment Agency's news and alerts page before any summer walk near lakes, reservoirs, or slow-moving water. The Canal and River Trust also issues warnings for canals and inland waterways. Warning signs posted at the water's edge are the most immediate indicator, but smaller ponds and private water bodies are rarely monitored or signed.
 
 ## Why is it dangerous for dogs?
 
@@ -59,7 +59,7 @@ Speed matters here more than with almost any other hazard in this guide series. 
 
 A few habits make a significant difference during the May to September season:
 
-Check the Environment Agency Swimfo map and local authority social media before walks near lakes, reservoirs, or slow rivers in warm settled weather. Blooms develop quickly - a water body that was clear last weekend may not be clear today.
+Check local council websites and the Environment Agency news and alerts page before walks near lakes, reservoirs, or slow rivers in warm settled weather. Blooms develop quickly - a water body that was clear last weekend may not be clear today.
 
 If you see green or blue-green discolouration, surface scum, or foam along the water's edge, keep [dog name] out regardless of whether there is a warning sign. If in doubt, do not let them in.
 
@@ -73,4 +73,4 @@ Mango once waded into a reservoir on a Lake District walk that had a small warni
 
 The risk from blue-green algae is real, particularly in warm summers, but it is also avoidable with a straightforward habit: check local water quality warnings before summer walks near lakes and reservoirs, and keep [dog name] back from any water that looks discoloured or has surface foam. That combination, done consistently, removes most of the risk.
 
-If you are planning a walk near water this summer, many Sniffout walks pass lakes, reservoirs, and rivers where blooms have been recorded in previous seasons. Check the Environment Agency Swimfo map before heading out during the warmer months.
+If you are planning a walk near water this summer, many Sniffout walks pass lakes, reservoirs, and rivers where blooms have been recorded in previous seasons. Check local council websites and the Environment Agency news and alerts page before heading out during the warmer months.

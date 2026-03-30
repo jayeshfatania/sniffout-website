@@ -22,7 +22,7 @@ There is nothing to weigh up here, no level of exposure to monitor at home. If y
 
 The most common source is drips and puddles under parked cars. On residential streets, driveways, and in car parks, antifreeze can pool on tarmac and remain there for hours. It has a slightly sweet smell and taste that dogs find attractive, which means a dog investigating the front of a parked car can lick a puddle before you have time to intervene.
 
-Spills near garages and service areas are another risk, as is antifreeze that has been improperly disposed of. Risk is highest in the colder months - October through February - when antifreeze is being topped up in car cooling systems more frequently across the UK. But the risk is not purely seasonal. Any time a car is being serviced or a coolant reservoir is being handled nearby, the exposure risk exists.
+Spills near garages and service areas are another risk, as is antifreeze that has been improperly disposed of. Risk is highest in the colder months, October through February, when antifreeze is being topped up in car cooling systems more frequently across the UK. But the risk is not purely seasonal. Any time a car is being serviced or a coolant reservoir is being handled nearby, the exposure risk exists.
 
 ## Symptoms of antifreeze poisoning
 
@@ -38,13 +38,13 @@ The critical message here is straightforward: do not wait for Stage 2. If there 
 
 Call your vet. That is the only appropriate response.
 
-This is a veterinary emergency. Time matters here more than with most poisoning cases because treatment must begin within a few hours of ingestion to be effective. When you call, tell the vet directly that you suspect ethylene glycol poisoning. That specific information helps them act quickly.
+This is a veterinary emergency. Time matters here more than with most poisoning cases. Treatment must begin within 12 hours of ingestion to be effective, and the earlier within that window the better the outcome. When you call, tell the vet directly that you suspect ethylene glycol poisoning. That specific information helps them act quickly.
 
 Do not try to induce vomiting at home. Do not wait to see whether symptoms develop or resolve on their own. If your vet is unavailable, the Animal Poison Line (01202 509000) operates around the clock.
 
 ## How to reduce the risk on walks
 
-The main practical step is to avoid letting a dog sniff or lick puddles near parked cars, particularly in cold weather. Biscuit has a habit of diving under car bumpers on our way back through town in winter - keeping a short lead through residential car parks and service areas is not worth arguing with.
+The main practical step is to avoid letting a dog sniff or lick puddles near parked cars, particularly in cold weather. Biscuit has a habit of diving under car bumpers on our way back through town in winter. Keeping a short lead through residential car parks and service areas is not worth arguing with.
 
 Keep dogs on lead in car parks, driveways near garages, and petrol forecourt areas. Be especially aware in the weeks after cold spells, when antifreeze is more likely to have been recently added to vehicles. The risk is concentrated in dense residential streets with heavy overnight parking and anywhere near a workshop or commercial garage.
 
@@ -56,4 +56,4 @@ Propylene-glycol-based antifreeze products are significantly less toxic to anima
 
 ---
 
-Antifreeze poisoning is survivable if treatment begins quickly. The outcome depends less on the amount ingested than on how fast treatment starts. Knowing what to look for and acting immediately - rather than waiting to see if things improve - is what makes the difference.
+Antifreeze poisoning is survivable if treatment begins quickly. The outcome depends less on the amount ingested than on how fast treatment starts. Knowing what to look for and acting immediately, rather than waiting to see if things improve, is what makes the difference.

@@ -20,7 +20,7 @@ Overweight dogs, thick-coated breeds, older dogs, and puppies are all more vulne
 
 ## When is it too hot to walk a dog in the UK?
 
-PDSA guidance is a useful reference point. Above 20 degrees Celsius warrants extra caution, particularly in direct sun. Above 25 degrees is high risk for most dogs, and higher risk still for brachycephalic or overweight dogs. Direct midday sun raises the felt temperature considerably beyond what a thermometer shows.
+Blue Cross and Vets Now both note that temperatures above 20 degrees Celsius warrant extra caution for most dogs, particularly in direct sun. As temperatures climb further the risk increases, and more so for brachycephalic or overweight dogs. Direct midday sun raises the felt temperature considerably beyond what a thermometer shows.
 
 A practical test for pavements: hold the back of your hand flat on the tarmac for five seconds. If you cannot hold it there, it is too hot for [dog name]'s paws. Tarmac absorbs and holds heat well above air temperature on sunny days, and paw pad burns are painful and slow to heal.
 
@@ -41,13 +41,13 @@ The critical point is how quickly things can change. Early signs warrant stoppin
 If [dog name] is showing early signs of overheating, act in this order:
 
 1. Move to shade immediately.
-2. Offer small amounts of cool water to drink. Not ice cold.
-3. Apply cool wet towels to the neck, armpits, and groin. Not ice packs.
-4. Pour cool water over [dog name], concentrating on the same areas. Not very cold water.
+2. Offer small amounts of cool water to drink.
+3. Pour cold water over [dog name], concentrating on the neck, armpits, and groin. Do not cover [dog name] with wet towels.
+4. If you have an ice pack or frozen items, wrap them in a towel and hold briefly against the groin, neck, or armpits.
 5. Fan [dog name] to help evaporation do its work.
 6. Call your vet. Do not wait to see if [dog name] improves before calling.
 
-Two things are worth underlining. First: do not use ice or very cold water. It causes blood vessels near the skin to constrict, which slows cooling rather than speeding it up. Cool water is what you want. Second: a dog left in a parked car on a warm day can reach dangerous temperatures in a matter of minutes, even with windows cracked. This is not an edge case.
+One thing worth underlining: a dog left in a parked car on a warm day can reach dangerous temperatures in a matter of minutes, even with windows cracked. This is not an edge case.
 
 ## Choosing the right walks in hot weather
 
