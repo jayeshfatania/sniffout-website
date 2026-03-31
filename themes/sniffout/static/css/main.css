@@ -1752,6 +1752,7 @@ h1.walk-sidebar-title {
   gap: 10px;
   align-self: stretch;
   width: 100%;
+  flex: 1;
 }
 
 .guide-hero-pill {
