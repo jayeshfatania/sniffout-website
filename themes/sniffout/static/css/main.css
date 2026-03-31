@@ -1932,8 +1932,6 @@ h1.walk-sidebar-title {
   display: none;
 }
 
-.guide-hero-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; }
-
 .guide-grid-card-footer {
   display: flex;
   justify-content: space-between;
