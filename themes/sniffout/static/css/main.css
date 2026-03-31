@@ -1821,6 +1821,8 @@ h1.walk-sidebar-title {
   .guide-hero-inner {
     flex-direction: column;
     gap: 16px;
+    justify-content: space-between;
+    height: 100%;
   }
   .guide-hero-body {
     flex: 1;
