@@ -1146,6 +1146,10 @@ h1.walk-sidebar-title {
   border-radius: 20px;
 }
 
+.walk-card-h-bottom { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+.walk-card-h-dist-text { font-size: 11px; color: rgba(255,255,255,0.85); font-weight: 500; }
+.walk-card-h-lead-badge { position: static; font-size: 10px; padding: 2px 7px; }
+
 .home-see-all {
   display: inline-block;
   padding: 12px 20px 0;
