@@ -1398,6 +1398,10 @@ h1.walk-sidebar-title {
   margin-top: 2px;
 }
 
+.walk-list-card-bottom { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.walk-list-card-dist-text { font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 500; }
+.walk-list-card-lead-badge { position: static; font-size: 10px; padding: 2px 8px; }
+
 .walk-list-card-teaser {
   display: none;
 }
