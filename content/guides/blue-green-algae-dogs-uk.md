@@ -14,6 +14,8 @@ Blue-green algae is one of the few hazards on a dog walk that can kill an otherw
 
 ## What is blue-green algae?
 
+![Blue-green algae bloom on a lake surface - what to look for before letting your dog swim](/img/guides/blue-green-algae-inline-1.jpg)
+
 Despite the name, it is not algae. Blue-green algae is caused by cyanobacteria, microscopic bacteria that can form blooms in freshwater when conditions are right. Warm temperatures, still water, and high nutrient levels create the conditions most likely to produce a bloom, which is why the problem is most common from late spring through to early autumn, typically May to September.
 
 A bloom can look like green or blue-green paint on the water surface. It can appear as foam, scum, or floating mats. It can smell unpleasant, though not always. And in some cases the water can look clear and still be affected, which is the part that makes this hazard harder to manage than most.
@@ -56,6 +58,8 @@ If you see green scum, foam, or paint-like patches on water and [dog name] has a
 Speed matters here more than with almost any other hazard in this guide series. If your vet is closed, call an emergency vet line.
 
 ## How to reduce the risk on summer walks
+
+![A blue-green algae warning sign posted at a waterway](/img/guides/blue-green-algae-inline-2.jpg)
 
 A few habits make a significant difference during the May to September season:
 

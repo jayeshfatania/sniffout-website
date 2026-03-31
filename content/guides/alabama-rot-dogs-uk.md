@@ -38,11 +38,15 @@ A live map of confirmed cases is maintained at arrf.co.uk, where you can check c
 
 Most cases occur between November and May. The summer months of July and August see very few confirmed cases. This is an established seasonal pattern, confirmed by multiple sources including the RVC.
 
+![A muddy woodland path in winter - the conditions most associated with Alabama rot cases](/img/guides/alabama-rot-inline-2.jpg)
+
 Most recorded cases have also been associated with muddy woodland walks, particularly during wet conditions. The connection is documented and widely noted. It is not, however, a confirmed causal link. Walking in woodland in winter and spring does not cause Alabama rot. The trigger, if it is environmental, has not been identified. The pattern is worth being aware of without being a reason to change where you walk.
 
 ## What are the signs?
 
 Alabama rot typically progresses in two stages.
+
+![An unexplained skin lesion on a dog's lower leg - the first sign of Alabama rot](/img/guides/alabama-rot-inline-1.jpg)
 
 **Stage one: skin lesions.** The first sign in all confirmed cases is an unexplained skin lesion, most commonly on the lower legs, below the knee or elbow. Lesions can also appear on the paws, pads, between the toes, and less commonly on the muzzle, tongue, flank, face, or belly. They tend to look like a sore, a small ulcer, a red patch, or a circular area of missing fur. The key characteristic is that they are not explained by a known injury. Dogs often lick the affected area.
 

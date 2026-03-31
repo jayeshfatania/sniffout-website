@@ -28,6 +28,8 @@ Neither the walker nor the farmer is doing anything wrong by being there. The Co
 
 ## What to do when entering a cattle field
 
+![A public footpath running through a cattle field - stop and assess before entering](/img/guides/cattle-inline-1.jpg)
+
 Before you open the gate, stop and look. Where is the herd? Are there calves? Is there a clear route from where you are standing to the far exit? This takes thirty seconds and changes how you walk the field.
 
 If there are calves, assess seriously whether you need to cross at all. In spring and early summer, when calves are young and mothers are most protective, the most effective decision you can make is to take a different route. If the OS map shows an alternative path that avoids the field, this is the time of year to use it.
@@ -35,6 +37,8 @@ If there are calves, assess seriously whether you need to cross at all. In sprin
 If you are going through: keep the lead short. A long lead gives a dog more range and makes it look more like a free-running animal to the herd. Walk steadily at a normal pace, as close to the field boundary as the path allows. Keep to the hedge or fence, not through the centre of the field. Give the herd as wide a berth as you can. No sudden movements, no raised voices. If Biscuit starts fixating on the cattle, I move him to heel and keep his attention on me rather than the herd. It helps.
 
 ## If cattle start to approach
+
+![A dog on a short lead at a field gate - keeping control near livestock](/img/guides/cattle-inline-2.jpg)
 
 The instinct is to speed up. Resist it. Running triggers the chase response and you will not outpace a moving herd. Walk steadily and directly towards the nearest exit: a gate or stile, not just the hedge. Maintain a normal pace. Keep your eyes on where you are going rather than on the cattle.
 

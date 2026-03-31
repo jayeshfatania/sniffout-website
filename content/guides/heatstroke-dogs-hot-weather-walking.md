@@ -28,6 +28,8 @@ Timing makes a real difference. Early morning walks before 8am and evening walks
 
 ## Signs of heatstroke in dogs
 
+![A dog panting heavily in warm weather - an early warning sign of overheating](/img/guides/heatstroke-inline-1.jpg)
+
 The earlier you catch overheating, the simpler the outcome. Early signs are easy to miss if you are not looking for them.
 
 **Early signs:** Excessive panting that is not easing off. Heavy drooling. [Dog name] appearing slower and less alert than usual, seeking shade, or becoming reluctant to keep walking. These are clear signals.
@@ -46,6 +48,8 @@ If [dog name] is showing early signs of overheating, act in this order:
 4. If you have an ice pack or frozen items, wrap them in a towel and hold briefly against the groin, neck, or armpits.
 5. Fan [dog name] to help evaporation do its work.
 6. Call your vet. Do not wait to see if [dog name] improves before calling.
+
+![A dog drinking from a water bowl on a walk - carrying water is essential in warm weather](/img/guides/heatstroke-inline-2.jpg)
 
 One thing worth underlining: a dog left in a parked car on a warm day can reach dangerous temperatures in a matter of minutes, even with windows cracked. This is not an edge case.
 

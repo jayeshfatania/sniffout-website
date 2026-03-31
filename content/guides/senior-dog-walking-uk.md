@@ -33,6 +33,8 @@ PDSA put it simply: "little and often is best as joints get stiffer when they've
 
 Both point to the same practical approach. What changes is duration and intensity, not frequency. A senior dog that previously did one long walk and one shorter one each day is better served by three or four shorter outings than by cutting the total in half. Regular gentle movement keeps joints mobile. Inactivity stiffens them.
 
+![An older dog walking steadily on a lead - the right pace for a senior dog](/img/guides/senior-dog-inline-1.jpg)
+
 **What to change:**
 
 - Duration of individual walks, not how often you go out.
@@ -52,6 +54,8 @@ Some signs are obvious. A dog that lies down mid-walk and refuses to continue is
 Others are subtler and show up later. A dog that completes a walk normally but is slow to rise and stiff the following morning has given you important information about yesterday. This is worth naming clearly as a practical diagnostic tool.
 
 **The morning-after test:** if [dog name] is noticeably stiffer when getting up the morning after a walk than on a normal morning, that walk was probably too much. The Kennel Club's guidance on this is direct - random strenuous activity often guarantees soreness the following day. A walk that causes no obvious trouble during or immediately afterwards can still register as discomfort the next morning, particularly because dogs tend not to show pain clearly while they are moving. The day after is often more informative than the day of.
+
+![A dog resting on a walk - if they stop, let them rest](/img/guides/senior-dog-inline-2.jpg)
 
 Other post-walk signs worth watching for: reluctance to get up from bed, lameness that was not present before, and more sleep than usual in the hours following a walk.
 
