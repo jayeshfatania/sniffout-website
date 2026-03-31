@@ -1750,6 +1750,7 @@ h1.walk-sidebar-title {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-self: stretch;
 }
 
 .guide-hero-pill {
@@ -1770,6 +1771,7 @@ h1.walk-sidebar-title {
   line-height: 1.2;
   letter-spacing: -0.3px;
   margin: 0;
+  max-width: 600px;
 }
 
 .guide-hero-desc {
@@ -1777,6 +1779,7 @@ h1.walk-sidebar-title {
   color: rgba(255,255,255,0.75);
   line-height: 1.6;
   margin: 0;
+  max-width: 600px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
