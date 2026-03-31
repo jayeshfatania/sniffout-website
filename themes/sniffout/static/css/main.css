@@ -1647,7 +1647,7 @@ h1.walk-sidebar-title {
   font-weight: 600;
   padding: 3px 8px;
   border-radius: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   display: inline-block;
 }
 
@@ -1924,11 +1924,13 @@ h1.walk-sidebar-title {
   display: none;
 }
 
+.guide-hero-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
+
 .guide-grid-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .guide-grid-card-time {
