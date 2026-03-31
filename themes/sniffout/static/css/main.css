@@ -1715,7 +1715,7 @@ h1.walk-sidebar-title {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   text-decoration: none;
   transition: transform 0.15s ease;
   margin-bottom: 0;
@@ -1772,7 +1772,7 @@ h1.walk-sidebar-title {
   line-height: 1.2;
   letter-spacing: -0.3px;
   margin: 0;
-  max-width: 600px;
+  max-width: 60%;
 }
 
 .guide-hero-desc {
@@ -1780,7 +1780,7 @@ h1.walk-sidebar-title {
   color: rgba(255,255,255,0.75);
   line-height: 1.6;
   margin: 0;
-  max-width: 600px;
+  max-width: 60%;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -1928,7 +1928,7 @@ h1.walk-sidebar-title {
   display: none;
 }
 
-.guide-hero-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
+.guide-hero-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; }
 
 .guide-grid-card-footer {
   display: flex;
