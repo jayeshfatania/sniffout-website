@@ -1822,9 +1822,9 @@ h1.walk-sidebar-title {
     flex-direction: column;
     gap: 16px;
     justify-content: space-between;
+    flex: 1;
   }
   .guide-hero-body {
-    flex: 1;
     gap: 12px;
   }
   .guide-hero-title {
