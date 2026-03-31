@@ -25,11 +25,13 @@
       {{ with .Params.heroImage }}<div class="guide-hero-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('{{ . }}');"></div>{{ end }}
       <div class="guide-hero-inner">
         <div class="guide-hero-body">
-          <span class="guide-hero-pill">{{ .Params.category }}</span>
           <h2 class="guide-hero-title">{{ .Title }}</h2>
           <p class="guide-hero-desc">{{ .Params.description }}</p>
           <span class="guide-hero-meta">{{ .Params.readTime }}</span>
-          <span class="guide-hero-cta">Read guide</span>
+          <div class="guide-hero-bottom">
+            <span class="guide-hero-pill">{{ .Params.category }}</span>
+            <span class="guide-hero-cta">Read guide &rarr;</span>
+          </div>
         </div>
       </div>
     </a>
@@ -63,24 +65,15 @@
         </div>
         {{ end }}
 
-        <!-- Category pill (absolute top-left) -->
-        <div style="position:absolute;top:10px;left:10px;z-index:2;">
-          {{ if eq .Params.category "Hazards" }}
-          <span class="category-pill category-pill--hazard">{{ .Params.category }}</span>
-          {{ else if eq .Params.category "Seasonal" }}
-          <span class="category-pill category-pill--seasonal">{{ .Params.category }}</span>
-          {{ else }}
-          <span class="category-pill category-pill--general">{{ .Params.category }}</span>
-          {{ end }}
-        </div>
-
         <!-- Card body (absolute bottom, dark gradient) -->
         <div class="guide-grid-card-body">
           <div class="guide-grid-card-title">{{ .Title }}</div>
           <div class="guide-grid-card-desc">{{ .Params.description }}</div>
           <div class="guide-grid-card-footer">
+            {{ if eq .Params.category "Hazards" }}<span class="category-pill category-pill--hazard">{{ .Params.category }}</span>
+            {{ else if eq .Params.category "Seasonal" }}<span class="category-pill category-pill--seasonal">{{ .Params.category }}</span>
+            {{ else }}<span class="category-pill category-pill--general">{{ .Params.category }}</span>{{ end }}
             <span class="guide-grid-card-time">{{ .Params.readTime }}</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
           </div>
         </div>
 

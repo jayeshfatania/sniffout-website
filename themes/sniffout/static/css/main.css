@@ -1132,19 +1132,14 @@ h1.walk-sidebar-title {
   margin-bottom: 5px;
 }
 
-.walk-card-h-pills {
-  display: flex;
-  gap: 4px;
-}
+/* Homepage scroll card meta row */
+.walk-card-h-meta-row { display: flex; align-items: center; gap: 6px; }
+.walk-card-h-dist { font-size: 11px; color: rgba(255,255,255,0.85); font-weight: 500; }
+.walk-card-h-lead { font-size: 11px; color: rgba(255,255,255,0.75); font-weight: 400; }
+.walk-card-h-lead::before { content: "·"; margin-right: 6px; opacity: 0.6; }
 
-.walk-card-h-pill {
-  font-size: 10px;
-  font-weight: 500;
-  background: rgba(255,255,255,0.9);
-  color: #2C4A14;
-  padding: 2px 7px;
-  border-radius: 20px;
-}
+/* Walks index card - lead badge at bottom */
+.walk-list-card-lead-badge { position: relative; top: auto; right: auto; margin-top: 4px; display: inline-block; }
 
 .home-see-all {
   display: inline-block;
@@ -1639,7 +1634,7 @@ h1.walk-sidebar-title {
   font-weight: 600;
   padding: 3px 8px;
   border-radius: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   display: inline-block;
 }
 
@@ -1916,11 +1911,14 @@ h1.walk-sidebar-title {
   display: none;
 }
 
+/* Guides hero card bottom row */
+.guide-hero-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+
 .guide-grid-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .guide-grid-card-time {
