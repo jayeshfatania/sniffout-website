@@ -19,6 +19,11 @@ description_long: |
 
   Dogs can be off lead on much of the circuit, with care near the village and the more popular lakeside sections. Grasmere village has a cafe, toilets, and the famous gingerbread shop. The route passes the churchyard where Wordsworth is buried. This is a short walk by Lake District standards but gives a proper feel of the landscape without requiring a full fell day.
 dogSummary: "Good off-lead stretches along the lakeshore. Keep on lead on the road sections through Grasmere village. Dogs can swim in the lake on the quieter northern shore."
+pullQuote: ""
+relatedGuides:
+  - blue-green-algae-dogs-uk
+  - cattle-dog-walkers-uk
+  - grass-seeds-dogs-uk
 heroImage: "/img/walks/grasmere-lake.jpg"
 date: 2026-03-29
 ---

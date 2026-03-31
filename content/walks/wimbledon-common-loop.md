@@ -19,6 +19,11 @@ description_long: |
 
   The common is well used but large enough that you can find quieter corners even on weekends. Early mornings are good year-round. This is a reliable London walk for dogs that need real space and varied ground rather than a tidier park circuit.
 dogSummary: "Full off-lead access across the Common. Several ponds for dogs to swim in. Keep leads on near horses as the Common has bridleways and horse riders are frequent. Ticks present in the heathland, particularly spring and autumn."
+pullQuote: ""
+relatedGuides:
+  - ticks-dogs-uk
+  - alabama-rot-dogs-uk
+  - grass-seeds-dogs-uk
 heroImage: "/img/walks/wimbledon-common.jpg"
 date: 2026-03-30
 ---

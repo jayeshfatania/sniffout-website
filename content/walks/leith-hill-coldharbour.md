@@ -19,6 +19,11 @@ description_long: |
 
   Dogs can be off lead on much of the route, though the woodland sections have areas where livestock may be grazing nearby. Leith Hill is National Trust land. This is a genuinely satisfying half-day walk for a dog that wants variety and decent distance.
 dogSummary: "Off-lead woodland throughout. The climb is steady rather than steep and suitable for most dogs. No livestock on this route. Ticks present in the woodland, particularly March to October."
+pullQuote: ""
+relatedGuides:
+  - ticks-dogs-uk
+  - alabama-rot-dogs-uk
+  - cattle-dog-walkers-uk
 heroImage: "/img/walks/leith-hill.jpg"
 date: 2026-03-30
 ---

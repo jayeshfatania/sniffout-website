@@ -19,6 +19,11 @@ description_long: |
 
   This is an exposed walk. Wind along the clifftop can be strong at any time of year and is significantly worse in autumn and winter. Check the forecast before you go. The route can be very busy in summer; out of season it is considerably quieter and the views are no less impressive. This is a walk that rewards returning to - no two visits feel identical.
 dogSummary: "Keep on lead near cliff edges - drops are sheer and unfenced. Off-lead on the valley sections inland. Dogs welcome on the beach at Birling Gap."
+pullQuote: ""
+relatedGuides:
+  - heatstroke-dogs-hot-weather-walking
+  - ticks-dogs-uk
+  - grass-seeds-dogs-uk
 heroImage: "/img/walks/seven-sisters.jpg"
 date: 2026-03-29
 ---

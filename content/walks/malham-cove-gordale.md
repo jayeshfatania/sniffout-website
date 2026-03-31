@@ -19,6 +19,11 @@ description_long: |
 
   Dogs can be off lead for much of the walk. The Yorkshire Dales are at their best in late spring and early autumn. Malham village, at the start and finish, has a cafe and toilets. This is a walk with genuine drama packed into a relatively short distance, and worth the journey from most of the north of England.
 dogSummary: "Keep on lead on the limestone pavement - the surface is uneven and gaps between clints can trap paws. Good off-lead on the open moorland sections. Sheep grazing throughout - leads essential near livestock."
+pullQuote: ""
+relatedGuides:
+  - cattle-dog-walkers-uk
+  - ticks-dogs-uk
+  - grass-seeds-dogs-uk
 heroImage: "/img/walks/malham-cove.jpg"
 date: 2026-03-29
 ---

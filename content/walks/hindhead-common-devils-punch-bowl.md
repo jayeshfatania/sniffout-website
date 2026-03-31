@@ -19,6 +19,11 @@ description_long: |
 
   Dogs can be off lead across most of the heath. The area is managed for ground-nesting birds between March and August, so check any seasonal notices at the car park. The varied terrain - open heath, woodland edges, steep gradients - makes this more interesting than a flat park circuit of the same length.
 dogSummary: "Excellent off-lead heathland throughout most of the route. Adders present on open heath April to October. The steep descent into the Punch Bowl is loose underfoot in places. No livestock on the main circuit."
+pullQuote: ""
+relatedGuides:
+  - ticks-dogs-uk
+  - grass-seeds-dogs-uk
+  - heatstroke-dogs-hot-weather-walking
 heroImage: "/img/walks/hindhead-common.png"
 date: 2026-03-30
 ---

@@ -19,6 +19,11 @@ description_long: |
 
   This is one of the quieter corners of Richmond Park. Weekday mornings are particularly calm. Worth combining with the wider deer loop for a full outing, or visiting alone when you want something gentle and contained.
 dogSummary: "Dogs must be kept on lead inside the Isabella Plantation itself. Off-lead on the open parkland of Richmond Park surrounding it. The streams inside the plantation are accessible and dogs enjoy paddling in warm weather."
+pullQuote: ""
+relatedGuides:
+  - ticks-dogs-uk
+  - alabama-rot-dogs-uk
+  - grass-seeds-dogs-uk
 heroImage: "/img/walks/isabella-plantation.jpg"
 date: 2026-03-30
 ---

@@ -19,6 +19,11 @@ description_long: |
 
   Box Hill is popular - particularly at weekends, on Bank Holidays, and in good weather. Weekday mornings outside school holidays are significantly calmer. The summit area has a cafe and is the busiest point on the route. Dogs can be off lead on much of the open downland, though the steeper slopes deserve care, particularly with younger or less sure-footed dogs.
 dogSummary: "Partial off-lead on the open downland. Keep on lead near the cafe and on the steeper chalk paths. Water available at the cafe."
+pullQuote: ""
+relatedGuides:
+  - ticks-dogs-uk
+  - heatstroke-dogs-hot-weather-walking
+  - grass-seeds-dogs-uk
 heroImage: "/img/walks/box-hill.jpg"
 date: 2026-03-29
 ---
