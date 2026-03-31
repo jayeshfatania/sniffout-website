@@ -891,7 +891,7 @@ h1.walk-sidebar-title {
   text-align: center;
   position: relative;
   overflow: hidden;
-  min-height: 560px;
+  min-height: 420px;
 }
 
 /* Carousel images */
@@ -921,7 +921,7 @@ h1.walk-sidebar-title {
 .home-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.50));
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55));
   z-index: 1;
 }
 
@@ -952,26 +952,19 @@ h1.walk-sidebar-title {
 }
 
 .home-cta-btn {
-  background: #2C4A14;
-  color: white;
+  background: white;
+  color: #2C4A14;
   font-size: 15px;
   font-weight: 700;
-  border-radius: 100px;
-  padding: 16px 36px;
-  display: inline-block;
-  width: auto;
-  max-width: none;
+  border-radius: 14px;
+  padding: 14px 28px;
+  display: block;
+  width: 100%;
+  max-width: 280px;
   margin: 0 auto 12px;
   text-align: center;
   text-decoration: none;
-  box-shadow: 0 4px 16px rgba(44,74,20,0.35);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  letter-spacing: 0.01em;
-}
-
-.home-cta-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(44,74,20,0.45);
+  transition: transform 0.15s ease;
 }
 
 .home-cta-btn:active { transform: scale(0.97); }
@@ -986,7 +979,7 @@ h1.walk-sidebar-title {
 @media (min-width: 768px) {
   .home-hero {
     padding: 80px 20px 72px;
-    min-height: 680px;
+    min-height: 500px;
   }
   .home-hero-inner {
     max-width: 560px;
@@ -1055,8 +1048,7 @@ h1.walk-sidebar-title {
 /* Featured walks section */
 .home-featured {
   background: #FFFFFF;
-  padding: 32px 20px;
-  text-align: center;
+  padding: 32px 0 32px 20px;
 }
 
 .home-featured-heading {
@@ -1064,7 +1056,7 @@ h1.walk-sidebar-title {
   font-weight: 700;
   color: #1A1A1A;
   margin: 4px 0 16px;
-  text-align: center;
+  padding: 0 20px;
 }
 
 .walk-card-h-row {
@@ -1079,8 +1071,8 @@ h1.walk-sidebar-title {
 .walk-card-h-row::-webkit-scrollbar { display: none; }
 
 .walk-card-h {
-  width: 220px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   flex-shrink: 0;
   background: linear-gradient(135deg, #C8D8B0 0%, #2C4A14 100%);
   border-radius: 12px;
@@ -1107,17 +1099,10 @@ h1.walk-sidebar-title {
 
 .walk-card-h:active { transform: scale(0.97); }
 
-.walk-card-h-badges {
-  position: absolute;
-  bottom: 36px;
-  left: 10px;
-  display: flex;
-  gap: 4px;
-  z-index: 2;
-}
-
 .walk-card-h-badge {
-  position: static;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
 }
 
 .walk-card-h-body {
@@ -1163,13 +1148,13 @@ h1.walk-sidebar-title {
 
 .home-see-all {
   display: inline-block;
-  margin: 16px auto 0;
+  padding: 12px 20px 0;
   font-size: 13px;
   font-weight: 600;
   color: #2C4A14;
   text-decoration: none;
   border-bottom: 1px solid rgba(44,74,20,0.25);
-  text-align: center;
+  padding-bottom: 1px;
 }
 
 @media (min-width: 768px) {

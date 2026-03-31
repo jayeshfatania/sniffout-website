@@ -16,35 +16,6 @@
   </div>
 </section>
 
-<!-- Featured walks section -->
-<section class="home-featured">
-  <div class="walk-section-heading">FEATURED WALKS</div>
-  <h2 class="home-featured-heading">Dog walks across the UK</h2>
-  <div class="walk-card-h-row">
-    {{ range first 6 (where .Site.RegularPages "Section" "walks") }}
-    <a href="{{ .Permalink }}" class="walk-card-h">
-      {{ with .Params.heroImage }}<div class="walk-card-h-bg" style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.52)), url('{{ . }}');"></div>{{ end }}
-      <div class="walk-card-h-badges">
-        {{ with .Params.difficulty }}
-        <span class="walk-hero-badge walk-card-h-badge walk-hero-badge--{{ . | lower }}">{{ . }}</span>
-        {{ end }}
-        {{ with .Params.offLead }}
-        <span class="walk-hero-badge walk-card-h-badge">{{ . }}</span>
-        {{ end }}
-      </div>
-      <div class="walk-card-h-body">
-        <div class="walk-card-h-name">{{ .Title }}</div>
-        <div class="walk-card-h-loc">{{ .Params.location }}</div>
-        <div class="walk-card-h-pills">
-          {{ with .Params.distance }}<span class="walk-card-h-pill">{{ . }}</span>{{ end }}
-        </div>
-      </div>
-    </a>
-    {{ end }}
-  </div>
-  <a href="/walks/" class="home-see-all">Browse all walks</a>
-</section>
-
 <!-- What you get section -->
 <section class="home-benefits">
   <div class="home-benefits-inner">
@@ -67,6 +38,30 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- Featured walks section -->
+<section class="home-featured">
+  <div class="walk-section-heading" style="padding:0 20px;">FEATURED WALKS</div>
+  <h2 class="home-featured-heading">Dog walks across the UK</h2>
+  <div class="walk-card-h-row">
+    {{ range first 6 (where .Site.RegularPages "Section" "walks") }}
+    <a href="{{ .Permalink }}" class="walk-card-h">
+      {{ with .Params.heroImage }}<div class="walk-card-h-bg" style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.52)), url('{{ . }}');"></div>{{ end }}
+      {{ with .Params.difficulty }}
+      <div class="walk-hero-badge walk-card-h-badge walk-hero-badge--{{ . | lower }}">{{ . }}</div>
+      {{ end }}
+      <div class="walk-card-h-body">
+        <div class="walk-card-h-name">{{ .Title }}</div>
+        <div class="walk-card-h-loc">{{ .Params.location }}</div>
+        <div class="walk-card-h-pills">
+          {{ with .Params.distance }}<span class="walk-card-h-pill">{{ . }}</span>{{ end }}
+        </div>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+  <a href="/walks/" class="home-see-all">Browse all walks</a>
 </section>
 
 <!-- Hazard awareness strip -->
