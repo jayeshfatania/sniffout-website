@@ -1772,7 +1772,6 @@ h1.walk-sidebar-title {
   line-height: 1.2;
   letter-spacing: -0.3px;
   margin: 0;
-  max-width: 60%;
 }
 
 .guide-hero-desc {
@@ -1780,7 +1779,6 @@ h1.walk-sidebar-title {
   color: rgba(255,255,255,0.75);
   line-height: 1.6;
   margin: 0;
-  max-width: 60%;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -1821,12 +1819,11 @@ h1.walk-sidebar-title {
     padding: 32px;
   }
   .guide-hero-inner {
-    flex-direction: row;
-    align-items: center;
-    gap: 32px;
+    flex-direction: column;
+    gap: 16px;
   }
   .guide-hero-body {
-    flex: 0 0 60%;
+    flex: 1;
     gap: 12px;
   }
   .guide-hero-title {
