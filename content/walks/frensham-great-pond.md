@@ -12,6 +12,12 @@ parking: "Frensham Great Pond car park, National Trust"
 gettingThere: "Farnham station then bus to Frensham"
 facilities: "National Trust cafe at the car park"
 description: "Frensham Great Pond is one of the largest natural lakes in Surrey, set within a wide expanse of heathland managed by the National Trust. The circuit around the pond combines open heathland with the lakeside path and offers one of the best flat walks in the county. The heathland is particularly striking in August when the heather flowers."
+description_long: |
+  Frensham Great Pond is one of the best summer dog walks in Surrey. The pond covers around 100 acres and dogs can swim freely along much of the shore - the beach section near the car park is particularly good for this. Sandy heathland paths surround the water and extend out across open heath, giving the walk an open, unhurried feel that is unusual this close to the M3.
+
+  The terrain is sandy and well-drained, which means the paths stay firm in most conditions. This makes for good winter walking too: the heathland holds up far better than the clay paths common elsewhere in Surrey. The heather on the surrounding heath flowers in August and September, when the whole area takes on a purple-pink colour.
+
+  One thing to be aware of: the pond is popular. The beach area is busy on summer weekends and Bank Holidays. Weekday visits, or arriving early, make a significant difference. This is a particularly good walk for water dogs who need a proper swim.
 dogSummary: "Dogs allowed off lead on the heathland sections. Keep on lead on the beach area near the pond where it gets busy in summer. Dogs can swim in the pond from designated areas. Adders present on the heathland April to October."
 heroImage: "/img/walks/frensham-great-pond.jpg"
 date: 2026-03-30
