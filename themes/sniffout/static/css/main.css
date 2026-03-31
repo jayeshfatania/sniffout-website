@@ -2891,6 +2891,45 @@ h1.walk-sidebar-title {
   }
 }
 
+/* --- Pagination --- */
+.pagination-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0 32px;
+}
+.pagination-count {
+  font-size: 13px;
+  color: var(--ink-2, #888);
+  margin: 0;
+}
+.pagination-more-btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #2C4A14;
+  border: 1.5px solid #2C4A14;
+  border-radius: 100px;
+  padding: 12px 28px;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+.pagination-more-btn:hover { background: #EDF2E8; }
+.pagination-more-btn:active { transform: scale(0.97); background: #EDF2E8; }
+.pagination-prev-btn {
+  font-size: 13px;
+  color: var(--ink-2, #888);
+  text-decoration: underline;
+}
+.pagination-end {
+  font-size: 13px;
+  color: var(--ink-2, #888);
+  margin: 0;
+}
+
 /* --- Simple page (About, Privacy) --- */
 .simple-content p {
   margin-bottom: 1.5rem;

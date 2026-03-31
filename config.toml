@@ -8,6 +8,9 @@ enableRobotsTXT = true
   description = "Discover the best dog walks across the UK with live weather, hazard alerts, and dog-friendly spots. Free, no account needed."
   brand_colour = "#2C4A14"
 
+[pagination]
+  pagerSize = 6
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

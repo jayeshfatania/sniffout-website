@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 {{- $featured := index .Pages 0 -}}
-{{- $rest := after 1 .Pages -}}
+{{- $paginator := .Paginate (after 1 .Pages) -}}
 
 <div class="guides-page">
   <div class="guides-page-inner">
@@ -18,7 +18,8 @@
       <button class="filter-chip guide-filter-chip" onclick="filterGuides('Breed guides', this)">Breed guides</button>
     </div>
 
-    <!-- Hero featured card (first guide) -->
+    <!-- Hero featured card (first guide, page 1 only) -->
+    {{ if eq $paginator.PageNumber 1 }}
     {{ with $featured }}
     <a href="{{ .Permalink }}" class="guide-hero-card">
       {{ with .Params.heroImage }}<div class="guide-hero-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('{{ . }}');"></div>{{ end }}
@@ -33,10 +34,11 @@
       </div>
     </a>
     {{ end }}
+    {{ end }}
 
     <!-- Guide card grid (all guides except the first) -->
     <div class="guide-grid" id="guide-grid" style="margin-top:28px;">
-      {{ range $rest }}
+      {{ range $paginator.Pages }}
       <a href="{{ .Permalink }}" class="guide-grid-card" data-category="{{ .Params.category }}">
 
         <!-- Background: photo or coloured band with icon -->
@@ -85,6 +87,22 @@
       </a>
       {{ end }}
     </div><!-- /.guide-grid -->
+
+    {{ if gt $paginator.TotalPages 1 }}
+    <nav class="pagination-nav" aria-label="Guides pages">
+      <p class="pagination-count">
+        Showing {{ len $paginator.Pages }} of {{ $paginator.TotalNumberOfElements }} guides
+      </p>
+      {{ if $paginator.HasNext }}
+      <a href="{{ $paginator.Next.URL }}" class="pagination-more-btn">Show more guides</a>
+      {{ else }}
+      <p class="pagination-end">All {{ $paginator.TotalNumberOfElements }} guides shown</p>
+      {{ end }}
+      {{ if $paginator.HasPrev }}
+      <a href="{{ $paginator.Prev.URL }}" class="pagination-prev-btn">Previous page</a>
+      {{ end }}
+    </nav>
+    {{ end }}
 
   </div><!-- /.guides-page-inner -->
 </div><!-- /.guides-page -->
