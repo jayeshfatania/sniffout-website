@@ -19,7 +19,7 @@ description_long: |
 
   One thing to be aware of: the pond is popular. The beach area is busy on summer weekends and Bank Holidays. Weekday visits, or arriving early, make a significant difference. This is a particularly good walk for water dogs who need a proper swim.
 dogSummary: "Dogs allowed off lead on the heathland sections. Keep on lead on the beach area near the pond where it gets busy in summer. Dogs can swim in the pond from designated areas. Adders present on the heathland April to October."
-pullQuote: ""
+pullQuote: "Sandy heathland paths surround the water and extend out across open heath, giving the walk an open, unhurried feel that is unusual this close to the M3."
 relatedGuides:
   - blue-green-algae-dogs-uk
   - grass-seeds-dogs-uk

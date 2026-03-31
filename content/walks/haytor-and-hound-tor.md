@@ -19,7 +19,7 @@ description_long: |
 
   This is open-access land and dogs can be off lead across most of it. The moorland character makes for an excellent day out for a dog that wants real space and genuine countryside. Cold, wet, and windswept in bad weather - and spectacular in good. Come prepared for either.
 dogSummary: "Excellent off-lead moorland throughout. Sheep and Dartmoor ponies are a constant presence so keep leads on near livestock. The granite scramble to the top of Haytor is manageable for most dogs but not suitable for older or less agile dogs."
-pullQuote: ""
+pullQuote: "Cold, wet, and windswept in bad weather - and spectacular in good."
 relatedGuides:
   - ticks-dogs-uk
   - grass-seeds-dogs-uk

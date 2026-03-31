@@ -19,7 +19,7 @@ description_long: |
 
   The terrain is varied and generally good underfoot, though the forest paths can be muddy after wet periods. Spring foaling season adds particular interest but also the greatest need for care around the ponies. This is a walk that rewards a slower pace and attention to surroundings.
 dogSummary: "Keep on lead near the free-roaming ponies and cattle - they have right of way and can be unpredictable around dogs. Good off-lead stretches on the open heathland away from livestock."
-pullQuote: ""
+pullQuote: "A pony will generally move away; a protective mare with a foal in spring will not."
 relatedGuides:
   - cattle-dog-walkers-uk
   - alabama-rot-dogs-uk

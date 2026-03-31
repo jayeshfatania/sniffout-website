@@ -19,7 +19,7 @@ description_long: |
 
   Dogs can be off lead on much of the route, though the woodland sections have areas where livestock may be grazing nearby. Leith Hill is National Trust land. This is a genuinely satisfying half-day walk for a dog that wants variety and decent distance.
 dogSummary: "Off-lead woodland throughout. The climb is steady rather than steep and suitable for most dogs. No livestock on this route. Ticks present in the woodland, particularly March to October."
-pullQuote: ""
+pullQuote: "Leith Hill sits at 294 metres - the highest point in the South East of England - and the walk to the top earns the view."
 relatedGuides:
   - ticks-dogs-uk
   - alabama-rot-dogs-uk

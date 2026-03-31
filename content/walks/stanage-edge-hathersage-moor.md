@@ -19,7 +19,7 @@ description_long: |
 
   Dogs can be off lead across most of the moor. The moor is managed for grouse, and from August 12th shooting may be taking place on or near the route - local signage will indicate this. This is one of the most satisfying walking routes in the Peak District for both dog and owner, and the edge views are among the best of any day walk in the north of England.
 dogSummary: "Excellent off-lead moorland and edge walking. Sheep on the moor so leads near livestock. The gritstone edge itself is narrow in places and dogs need to be watched near the drops. No livestock on the edge itself."
-pullQuote: ""
+pullQuote: "Stanage Edge is one of the Peak District's iconic gritstone escarpments - a long dark crag running across the moor above Hathersage, with climbers on the rock face on most days and wide views east across the Hope Valley."
 relatedGuides:
   - ticks-dogs-uk
   - heatstroke-dogs-hot-weather-walking

@@ -19,7 +19,7 @@ description_long: |
 
   Dogs can be off lead across most of the heath. The area is managed for ground-nesting birds between March and August, so check any seasonal notices at the car park. The varied terrain - open heath, woodland edges, steep gradients - makes this more interesting than a flat park circuit of the same length.
 dogSummary: "Excellent off-lead heathland throughout most of the route. Adders present on open heath April to October. The steep descent into the Punch Bowl is loose underfoot in places. No livestock on the main circuit."
-pullQuote: ""
+pullQuote: "The Devil's Punch Bowl is a dramatic natural amphitheatre - a steep-sided valley scooped into the Surrey heathland that is unlike anything else in the South East."
 relatedGuides:
   - ticks-dogs-uk
   - grass-seeds-dogs-uk

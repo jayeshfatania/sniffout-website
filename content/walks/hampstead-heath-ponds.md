@@ -19,7 +19,7 @@ description_long: |
 
   Dogs can be off lead across much of the heath, with some areas of on-lead restriction around the formal ponds and gardens. The heath is popular year-round but particularly busy on summer weekends. Early mornings provide the best version of this walk - quieter, often misty, and with the full range of wildlife the site supports before the crowds arrive. This is one of the best all-year dog walks available within London.
 dogSummary: "Excellent off-lead access across most of the Heath. Dogs can swim in the mixed bathing pond. Keep on lead near the children's play areas."
-pullQuote: ""
+pullQuote: "Early mornings provide the best version of this walk - quieter, often misty, and with the full range of wildlife the site supports before the crowds arrive."
 relatedGuides:
   - blue-green-algae-dogs-uk
   - ticks-dogs-uk

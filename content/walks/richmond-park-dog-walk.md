@@ -12,7 +12,7 @@ parking: "Richmond Gate car park, free"
 gettingThere: "Richmond station, 10 min walk"
 facilities: "Cafe at Pembroke Lodge"
 dogSummary: "On-lead throughout. Water at the Pen Ponds. Keep extra distance from deer October to November during the rut."
-pullQuote: ""
+pullQuote: "Richmond Park is one of the few places in London where a dog walk genuinely feels wild."
 relatedGuides:
   - ticks-dogs-uk
   - heatstroke-dogs-hot-weather-walking
