@@ -1799,15 +1799,20 @@ h1.walk-sidebar-title {
   font-size: 13px;
   font-weight: 600;
   border-radius: 20px;
-  padding: 8px 16px;
+  padding: 6px 14px;
   text-decoration: none;
-  align-self: flex-start;
-  margin-top: 4px;
   transition: transform 0.15s ease;
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 .guide-hero-cta:active { transform: scale(0.97); }
+
+.guide-hero-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
 
 .guide-hero-visual {
   display: none;
@@ -1816,16 +1821,17 @@ h1.walk-sidebar-title {
 @media (min-width: 768px) {
   .guide-hero-card {
     min-height: 280px;
-    padding: 32px;
+    padding: 32px 32px 6px 32px;
   }
   .guide-hero-inner {
     flex-direction: column;
     gap: 16px;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex: 1;
   }
   .guide-hero-body {
     gap: 12px;
+    flex: 1;
   }
   .guide-hero-title {
     font-size: 28px;
