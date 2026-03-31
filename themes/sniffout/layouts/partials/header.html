@@ -20,28 +20,45 @@
   </div>
 </header>
 
-<div class="nav-mobile-overlay" id="nav-mobile-overlay">
-  <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Close menu">&times;</button>
+<div class="nav-mobile-scrim" id="nav-mobile-scrim" aria-hidden="true"></div>
+<div class="nav-mobile-panel" id="nav-mobile-panel" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Close menu">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
   <nav class="nav-mobile-links">
-    <a href="/walks/" class="nav-mobile-link {{ if or (eq .Section "walks") (hasPrefix .RelPermalink "/walks/") }}nav-mobile-link--active{{ end }}">Walks</a>
-    <a href="/guides/" class="nav-mobile-link {{ if or (eq .Section "guides") (hasPrefix .RelPermalink "/guides/") }}nav-mobile-link--active{{ end }}">Guides</a>
-    <a href="/about/" class="nav-mobile-link {{ if eq .RelPermalink "/about/" }}nav-mobile-link--active{{ end }}">About</a>
+    <a href="/walks/" class="nav-mobile-link{{ if or (eq .Section "walks") (hasPrefix .RelPermalink "/walks/") }} active{{ end }}">Walks</a>
+    <a href="/guides/" class="nav-mobile-link{{ if or (eq .Section "guides") (hasPrefix .RelPermalink "/guides/") }} active{{ end }}">Guides</a>
+    <a href="/about/" class="nav-mobile-link{{ if eq .RelPermalink "/about/" }} active{{ end }}">About</a>
   </nav>
 </div>
 
 <script>
-document.getElementById('nav-hamburger').addEventListener('click', function() {
-  document.getElementById('nav-mobile-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-});
-document.getElementById('nav-mobile-close').addEventListener('click', function() {
-  document.getElementById('nav-mobile-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-});
-document.querySelectorAll('.nav-mobile-link').forEach(function(link) {
-  link.addEventListener('click', function() {
-    document.getElementById('nav-mobile-overlay').classList.remove('open');
+(function() {
+  var hamburger = document.getElementById('nav-hamburger');
+  var panel = document.getElementById('nav-mobile-panel');
+  var scrim = document.getElementById('nav-mobile-scrim');
+  var closeBtn = document.getElementById('nav-mobile-close');
+  if (!hamburger || !panel || !scrim || !closeBtn) return;
+
+  function openMenu() {
+    panel.classList.add('open');
+    scrim.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeMenu() {
+    panel.classList.remove('open');
+    scrim.classList.remove('open');
     document.body.style.overflow = '';
+    hamburger.focus();
+  }
+
+  hamburger.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  scrim.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && panel.classList.contains('open')) closeMenu();
   });
-});
+})();
 </script>
