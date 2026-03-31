@@ -24,6 +24,10 @@ relatedGuides:
   - blue-green-algae-dogs-uk
   - ticks-dogs-uk
   - grass-seeds-dogs-uk
+nearbyWalks:
+  - richmond-park-dog-walk
+  - wimbledon-common-loop
+  - box-hill-summit-loop
 heroImage: "/img/walks/hampstead-heath.jpg"
 date: 2026-03-29
 ---

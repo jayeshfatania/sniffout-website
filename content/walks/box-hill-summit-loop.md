@@ -24,6 +24,10 @@ relatedGuides:
   - ticks-dogs-uk
   - heatstroke-dogs-hot-weather-walking
   - grass-seeds-dogs-uk
+nearbyWalks:
+  - leith-hill-coldharbour
+  - hindhead-common-devils-punch-bowl
+  - frensham-great-pond
 heroImage: "/img/walks/box-hill.jpg"
 date: 2026-03-29
 ---

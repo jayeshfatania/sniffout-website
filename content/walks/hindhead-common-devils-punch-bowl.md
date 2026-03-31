@@ -24,6 +24,10 @@ relatedGuides:
   - ticks-dogs-uk
   - grass-seeds-dogs-uk
   - heatstroke-dogs-hot-weather-walking
+nearbyWalks:
+  - frensham-great-pond
+  - leith-hill-coldharbour
+  - box-hill-summit-loop
 heroImage: "/img/walks/hindhead-common.png"
 date: 2026-03-30
 ---

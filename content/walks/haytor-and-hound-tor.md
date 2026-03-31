@@ -24,6 +24,9 @@ relatedGuides:
   - ticks-dogs-uk
   - grass-seeds-dogs-uk
   - alabama-rot-dogs-uk
+nearbyWalks:
+  - grasmere-lake-circuit
+  - stanage-edge-hathersage-moor
 heroImage: "/img/walks/haytor-dartmoor.jpg"
 date: 2026-03-30
 ---

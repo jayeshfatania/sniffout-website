@@ -24,6 +24,10 @@ relatedGuides:
   - ticks-dogs-uk
   - heatstroke-dogs-hot-weather-walking
   - grass-seeds-dogs-uk
+nearbyWalks:
+  - haytor-and-hound-tor
+  - malham-cove-gordale
+  - grasmere-lake-circuit
 heroImage: "/img/walks/stanage-edge.jpg"
 date: 2026-03-30
 ---

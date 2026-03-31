@@ -24,6 +24,10 @@ relatedGuides:
   - ticks-dogs-uk
   - alabama-rot-dogs-uk
   - cattle-dog-walkers-uk
+nearbyWalks:
+  - box-hill-summit-loop
+  - hindhead-common-devils-punch-bowl
+  - frensham-great-pond
 heroImage: "/img/walks/leith-hill.jpg"
 date: 2026-03-30
 ---

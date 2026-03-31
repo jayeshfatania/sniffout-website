@@ -664,6 +664,12 @@ h1.walk-sidebar-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s ease;
+}
+.nearby-walk-row:hover {
+  background: #F7F5F0;
 }
 
 .nearby-walk-name {

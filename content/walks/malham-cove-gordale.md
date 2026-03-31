@@ -24,6 +24,9 @@ relatedGuides:
   - cattle-dog-walkers-uk
   - ticks-dogs-uk
   - grass-seeds-dogs-uk
+nearbyWalks:
+  - stanage-edge-hathersage-moor
+  - grasmere-lake-circuit
 heroImage: "/img/walks/malham-cove.jpg"
 date: 2026-03-29
 ---

@@ -24,6 +24,10 @@ relatedGuides:
   - blue-green-algae-dogs-uk
   - grass-seeds-dogs-uk
   - ticks-dogs-uk
+nearbyWalks:
+  - hindhead-common-devils-punch-bowl
+  - leith-hill-coldharbour
+  - box-hill-summit-loop
 heroImage: "/img/walks/frensham-great-pond.jpg"
 date: 2026-03-30
 ---

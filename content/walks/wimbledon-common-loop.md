@@ -24,6 +24,10 @@ relatedGuides:
   - ticks-dogs-uk
   - alabama-rot-dogs-uk
   - grass-seeds-dogs-uk
+nearbyWalks:
+  - richmond-park-dog-walk
+  - isabella-plantation
+  - hampstead-heath-ponds
 heroImage: "/img/walks/wimbledon-common.jpg"
 date: 2026-03-30
 ---

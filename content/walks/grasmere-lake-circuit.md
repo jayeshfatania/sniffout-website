@@ -24,6 +24,10 @@ relatedGuides:
   - blue-green-algae-dogs-uk
   - cattle-dog-walkers-uk
   - grass-seeds-dogs-uk
+nearbyWalks:
+  - stanage-edge-hathersage-moor
+  - malham-cove-gordale
+  - haytor-and-hound-tor
 heroImage: "/img/walks/grasmere-lake.jpg"
 date: 2026-03-29
 ---

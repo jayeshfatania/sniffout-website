@@ -24,6 +24,9 @@ relatedGuides:
   - cattle-dog-walkers-uk
   - alabama-rot-dogs-uk
   - ticks-dogs-uk
+nearbyWalks:
+  - frensham-great-pond
+  - hindhead-common-devils-punch-bowl
 heroImage: "/img/walks/burley-new-forest.png"
 date: 2026-03-29
 ---

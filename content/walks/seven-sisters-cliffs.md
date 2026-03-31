@@ -24,6 +24,9 @@ relatedGuides:
   - heatstroke-dogs-hot-weather-walking
   - ticks-dogs-uk
   - grass-seeds-dogs-uk
+nearbyWalks:
+  - box-hill-summit-loop
+  - leith-hill-coldharbour
 heroImage: "/img/walks/seven-sisters.jpg"
 date: 2026-03-29
 ---
