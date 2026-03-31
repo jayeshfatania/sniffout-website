@@ -1,207 +1,221 @@
 {{ define "main" }}
 
 {{- $isOnLead := or (eq .Params.offLead "On-lead only") (eq .Params.offLead "On lead") (eq .Params.offLead "None") -}}
+{{- $isFullOffLead := or (eq .Params.offLead "Full") (eq .Params.offLead "Full off-lead") -}}
 
-<!-- Breadcrumb (desktop: shown above hero via CSS; mobile: hidden) -->
-<nav class="walk-breadcrumb">
+<!-- Breadcrumb -->
+<nav class="ws-breadcrumb">
+  <a href="/">Home</a>
+  <span class="ws-breadcrumb-sep">&rsaquo;</span>
   <a href="/walks/">Walks</a>
-  <span class="walk-breadcrumb-sep">&rsaquo;</span>
-  <a href="/walks/">{{ .Params.county }}</a>
-  <span class="walk-breadcrumb-sep">&rsaquo;</span>
-  <span class="walk-breadcrumb-current">{{ .Title }}</span>
+  <span class="ws-breadcrumb-sep">&rsaquo;</span>
+  <span class="ws-breadcrumb-current">{{ .Title }}</span>
 </nav>
 
-<div class="walk-page">
+<!-- Hero -->
+<div class="ws-hero">
+  {{ if .Params.heroImage }}
+  <img class="ws-hero-img" src="{{ .Params.heroImage }}" alt="{{ .Title }}" />
+  {{ else }}
+  <div class="ws-hero-img ws-hero-img--fallback"></div>
+  {{ end }}
+  <div class="ws-hero-overlay"></div>
+  <div class="ws-hero-content">
+    <div class="ws-hero-text">
+      <h1 class="ws-hero-title">{{ .Title }}</h1>
+      <p class="ws-hero-location">{{ .Params.location }}</p>
+    </div>
+    <div class="ws-hero-badges">
+      <span class="ws-hero-badge ws-hero-badge--diff ws-hero-badge--{{ .Params.difficulty | lower }}">{{ .Params.difficulty }}</span>
+      <span class="ws-hero-badge ws-hero-badge--lead {{ if $isFullOffLead }}ws-hero-badge--offlead{{ else if $isOnLead }}ws-hero-badge--onlead{{ else }}ws-hero-badge--partial{{ end }}">{{ .Params.offLead }}</span>
+    </div>
+  </div>
+</div>
 
-  <!-- LEFT COLUMN: hero + body content -->
-  <div class="walk-content">
+<!-- Stat strip -->
+<div class="ws-stat-strip">
+  <div class="ws-stat-tile">
+    <svg class="ws-stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/><path d="M13 13l6 6"/>
+    </svg>
+    <span class="ws-stat-value">{{ .Params.distance }}</span>
+    <span class="ws-stat-label">Distance</span>
+  </div>
+  <div class="ws-stat-tile">
+    <svg class="ws-stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+    </svg>
+    <span class="ws-stat-value">{{ .Params.duration }}</span>
+    <span class="ws-stat-label">Duration</span>
+  </div>
+  <div class="ws-stat-tile">
+    <svg class="ws-stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 3L4 15h16L16 3"/><path d="M4 15c0 2.21 3.58 4 8 4s8-1.79 8-4"/>
+    </svg>
+    <span class="ws-stat-value">{{ .Params.terrain }}</span>
+    <span class="ws-stat-label">Terrain</span>
+  </div>
+  <div class="ws-stat-tile">
+    <svg class="ws-stat-icon {{ if $isFullOffLead }}ws-stat-icon--offlead{{ else if $isOnLead }}ws-stat-icon--onlead{{ else }}ws-stat-icon--partial{{ end }}" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>
+    <span class="ws-stat-value {{ if $isFullOffLead }}ws-stat-value--offlead{{ else if $isOnLead }}ws-stat-value--onlead{{ else }}ws-stat-value--partial{{ end }}">{{ .Params.offLead }}</span>
+    <span class="ws-stat-label">Off-lead</span>
+  </div>
+</div>
 
-    <!-- Hero image or map -->
-    {{ if .Params.heroImage }}
-    <div class="walk-hero" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('{{ .Params.heroImage }}'); background-size: cover; background-position: center;">
-    {{ else }}
-    <div class="walk-hero">
-      <svg class="walk-hero-svg" width="375" height="200" viewBox="0 0 375 200" preserveAspectRatio="xMidYMid slice">
-        <path d="M0 80 Q80 60 160 90 Q240 120 375 100" stroke="white" stroke-width="4" fill="none"/>
-        <path d="M0 140 Q100 130 200 150 Q300 170 375 155" stroke="white" stroke-width="3" fill="none"/>
-        <path d="M120 0 Q130 80 140 200" stroke="white" stroke-width="3" fill="none"/>
-        <path d="M80 60 Q130 80 170 120 Q210 160 200 190" stroke="#2C4A14" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
-        <circle cx="130" cy="100" r="8" fill="#2C4A14" stroke="white" stroke-width="2.5"/>
-      </svg>
+<!-- Two-column layout -->
+<div class="ws-layout">
+
+  <!-- Content column -->
+  <div class="ws-content">
+
+    <!-- Ailsa's description with optional pull quote -->
+    <div class="ws-description">
+      {{- $desc := .Params.description_long | default .Params.description -}}
+      {{- $paras := split $desc "\n\n" -}}
+      {{- $pullQuote := .Params.pullQuote -}}
+      {{- $quoteInserted := false -}}
+      {{- range $i, $para := $paras -}}
+        {{- if and (not $quoteInserted) (ge $i 2) $pullQuote -}}
+          <blockquote class="ws-pull-quote">{{ $pullQuote }}</blockquote>
+          {{- $quoteInserted = true -}}
+        {{- end -}}
+        {{ markdownify $para }}
+      {{- end -}}
+    </div>
+
+    <!-- Seasonal notes -->
+    <div class="ws-section-label">Seasonal notes</div>
+    <div class="seasonal-notes">
+      <div class="seasonal-pill seasonal-pill--amber"><span class="seasonal-bold">Deer rut</span> &middot; Oct-Nov &middot; Keep extra distance</div>
+      <div class="seasonal-pill seasonal-pill--green"><span class="seasonal-bold">Tick season</span> &middot; Mar-Oct &middot; Check after every visit</div>
+    </div>
+
+    <!-- Related guides -->
+    {{ if .Params.relatedGuides }}
+    <div class="ws-guides">
+      <div class="ws-guides-label">Good to know</div>
+      {{ range first 3 .Params.relatedGuides }}
+        {{- $guide := $.Site.GetPage (printf "/guides/%s" .) -}}
+        {{ if $guide }}
+        <a href="{{ $guide.RelPermalink }}" class="ws-guide-card">
+          {{ if $guide.Params.category }}<span class="ws-guide-category">{{ $guide.Params.category }}</span>{{ end }}
+          <span class="ws-guide-title">{{ $guide.Title }}</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-2);flex-shrink:0"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        {{ end }}
+      {{ end }}
+    </div>
     {{ end }}
-      <div class="walk-hero-badge walk-hero-badge--left walk-hero-badge--{{ .Params.difficulty | lower }}">{{ .Params.difficulty }}</div>
-      <div class="walk-hero-badge {{ if $isOnLead }}walk-hero-badge--onlead{{ else }}walk-hero-badge--offlead{{ end }}">{{ .Params.offLead }}</div>
-      {{ if not .Params.heroImage }}<div class="walk-hero-attr">&copy; Crown copyright OS</div>{{ end }}
+
+    <!-- Weather CTA - mobile position (above practical info) -->
+    <div class="ws-weather-cta ws-mobile-only">
+      <div class="ws-weather-cta-text">
+        <div class="ws-weather-cta-headline">Get live weather for this walk</div>
+        <div class="ws-weather-cta-sub">Today's verdict, hazards, and best time window.</div>
+      </div>
+      <a href="https://sniffout.app" target="_blank" rel="noopener" class="ws-weather-cta-btn">Open Sniffout</a>
     </div>
 
-    <!-- Mobile-only: title + chips + stats pills (hidden on desktop, shown in sidebar instead) -->
-    <div class="walk-mobile-header walk-body">
-      <h1 class="walk-title">{{ .Title }}</h1>
-      <div class="walk-chips">
-        <span class="chip--location">{{ .Params.county }}</span>
-        <span class="chip--location">{{ .Params.area }}</span>
-      </div>
-      <div class="walk-stats-pills">
-        <span class="stat-pill">{{ .Params.distance }}</span>
-        <span class="stat-pill">{{ .Params.terrain }}</span>
-        <span class="stat-pill">{{ .Params.duration }}</span>
+    <!-- Practical info - mobile -->
+    <div class="ws-mobile-only">
+      <div class="ws-section-label">Practical info</div>
+      <div class="ws-practical-rows">
+        <div class="ws-practical-row">
+          <span class="ws-practical-key">Parking</span>
+          <span class="ws-practical-val">{{ .Params.parking }}</span>
+        </div>
+        <div class="ws-practical-row">
+          <span class="ws-practical-key">Getting there</span>
+          <span class="ws-practical-val">{{ .Params.gettingThere }}</span>
+        </div>
+        <div class="ws-practical-row ws-practical-row--last">
+          <span class="ws-practical-key">Facilities</span>
+          <span class="ws-practical-val">{{ .Params.facilities }}</span>
+        </div>
       </div>
     </div>
 
-    <!-- Mobile-only: primary CTA (flex row with pill button) -->
-    <div class="walk-cta-row walk-mobile-only">
-      <div class="walk-cta-inner">
+    <!-- For your dog - mobile -->
+    <div class="ws-dog-card ws-mobile-only">
+      <div class="ws-dog-label">For your dog</div>
+      <div class="ws-dog-body">{{ .Params.dogSummary }}</div>
+    </div>
+
+    <!-- Nearby walks -->
+    <div class="ws-section-label">More walks nearby</div>
+    <div class="nearby-walks">
+      <div class="nearby-walk-row">
         <div>
-          <div class="cta-headline">Get live weather for this walk</div>
-          <div class="cta-subtext">Free. No account needed.</div>
+          <div class="nearby-walk-name">Bushy Park Waterhouse Walk</div>
+          <div class="nearby-walk-meta">4.1 km &middot; Easy &middot; Off-lead areas</div>
         </div>
-        <a href="https://sniffout.app" target="_blank" rel="noopener" class="cta-pill-btn">Open in Sniffout</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <div class="nearby-walk-row">
+        <div>
+          <div class="nearby-walk-name">Ham Common Circular</div>
+          <div class="nearby-walk-meta">2.8 km &middot; Easy &middot; Off-lead</div>
+        </div>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
       </div>
     </div>
 
-    <!-- Mobile-only: divider after CTA -->
-    <div class="walk-divider-full walk-mobile-only"></div>
+  </div><!-- /.ws-content -->
 
-    <!-- Main body: description, dog box, seasonal, practical, nearby, CTAs -->
-    <div class="walk-body walk-body-main">
+  <!-- Sidebar (desktop only) -->
+  <div class="ws-sidebar">
 
-      <div class="walk-section-heading">About this walk</div>
-      <p class="walk-description">{{ .Params.description }}</p>
-
-      <!-- For your dog box - mobile position (inside flow); desktop position is in sidebar -->
-      <div class="walk-dog-box walk-mobile-only">
-        <div class="dog-box-label">For your dog</div>
-        <div class="dog-box-body">{{ .Params.dogSummary }}</div>
+    <!-- Weather CTA -->
+    <div class="ws-weather-cta">
+      <div class="ws-weather-cta-text">
+        <div class="ws-weather-cta-headline">Get live weather for this walk</div>
+        <div class="ws-weather-cta-sub">Today's verdict, hazards, and best time window.</div>
       </div>
-
-      <!-- Seasonal notes (static placeholder per brief) -->
-      <div class="walk-section-heading">Seasonal notes</div>
-      <div class="seasonal-notes">
-        <div class="seasonal-pill seasonal-pill--amber"><span class="seasonal-bold">Deer rut</span> &middot; Oct-Nov &middot; Keep extra distance</div>
-        <div class="seasonal-pill seasonal-pill--green"><span class="seasonal-bold">Tick season</span> &middot; Mar-Oct &middot; Check after every visit</div>
-      </div>
-
-      <!-- Practical info - white card on mobile -->
-      <div class="walk-section-heading">Practical info</div>
-      <div class="practical-card walk-mobile-only">
-        <div class="practical-card-row">
-          <span class="practical-key">Parking</span><span class="practical-val">{{ .Params.parking }}</span>
-        </div>
-        <div class="practical-card-row">
-          <span class="practical-key">Transport</span><span class="practical-val">{{ .Params.gettingThere }}</span>
-        </div>
-        <div class="practical-card-row practical-card-row--last">
-          <span class="practical-key">Facilities</span><span class="practical-val">{{ .Params.facilities }}</span>
-        </div>
-      </div>
-
-      <!-- Nearby walks (static placeholder per brief) -->
-      <div class="walk-section-heading">More walks nearby</div>
-      <div class="nearby-walks">
-        <div class="nearby-walk-row">
-          <div>
-            <div class="nearby-walk-name">Bushy Park Waterhouse Walk</div>
-            <div class="nearby-walk-meta">4.1 km &middot; Easy &middot; Off-lead areas</div>
-          </div>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-        </div>
-        <div class="nearby-walk-row">
-          <div>
-            <div class="nearby-walk-name">Ham Common Circular</div>
-            <div class="nearby-walk-meta">2.8 km &middot; Easy &middot; Off-lead</div>
-          </div>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-        </div>
-      </div>
-
-      <!-- Secondary CTA -->
-      <a href="https://sniffout.app" target="_blank" rel="noopener" class="btn-secondary">Plan this walk in Sniffout &rarr;</a>
-
-      <!-- Store badges (mobile only - desktop has them in sidebar) -->
-      <div class="walk-store-badges walk-mobile-only">
-        <div class="badge-store">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          <div><div class="badge-label">Download on the</div><div class="badge-name">App Store</div></div>
-        </div>
-        <div class="badge-store">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M3.18 23.76c.32.18.68.18 1.02.01l11.49-6.45-2.54-2.54-9.97 8.98z" fill="#EA4335"/><path d="M21.54 10.04L19.1 8.67l-2.89 2.57 2.89 2.57 2.46-1.38c.7-.4.7-1.99-.02-2.39z" fill="#FBBC05"/><path d="M4.2.24C3.86.07 3.5.07 3.18.25L13.5 10.57l2.54-2.54L4.2.24z" fill="#4285F4"/><path d="M3.18.25C2.48.65 2 1.41 2 2.28v19.44c0 .87.48 1.63 1.18 2.04l10.32-10.32L3.18.25z" fill="#34A853"/></svg>
-          <div><div class="badge-label">Get it on</div><div class="badge-name">Google Play</div></div>
-        </div>
-      </div>
-
-      <!-- Area link (mobile - at bottom of main content) -->
-      <a href="/walks/" class="area-link walk-mobile-only">More {{ .Params.county }} dog walks &rsaquo;</a>
-
-    </div><!-- /.walk-body-main -->
-  </div><!-- /.walk-content -->
-
-  <!-- RIGHT SIDEBAR (desktop only - hidden on mobile via CSS) -->
-  <div class="walk-sidebar">
-    <h1 class="walk-title walk-sidebar-title">{{ .Title }}</h1>
-    <div class="walk-chips">
-      <span class="chip--location">{{ .Params.county }}</span>
-      <span class="chip--location">{{ .Params.area }}</span>
+      <a href="https://sniffout.app" target="_blank" rel="noopener" class="ws-weather-cta-btn">Open Sniffout</a>
     </div>
-    <!-- Stats 2x2 grid -->
-    <div class="walk-stats-grid">
-      <div class="stat-cell">
-        <div class="stat-label">Distance</div>
-        <div class="stat-value">{{ .Params.distance }}</div>
+
+    <!-- Practical info -->
+    <div class="ws-section-label">Practical info</div>
+    <div class="ws-practical-rows">
+      <div class="ws-practical-row">
+        <span class="ws-practical-key">Parking</span>
+        <span class="ws-practical-val">{{ .Params.parking }}</span>
       </div>
-      <div class="stat-cell">
-        <div class="stat-label">Difficulty</div>
-        <div class="stat-value">{{ .Params.difficulty }}</div>
+      <div class="ws-practical-row">
+        <span class="ws-practical-key">Getting there</span>
+        <span class="ws-practical-val">{{ .Params.gettingThere }}</span>
       </div>
-      <div class="stat-cell">
-        <div class="stat-label">Terrain</div>
-        <div class="stat-value stat-value--sm">{{ .Params.terrain }}</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-label">Off-lead</div>
-        <div class="stat-value stat-value--sm {{ if $isOnLead }}stat-value--onlead{{ end }}">{{ .Params.offLead }}</div>
+      <div class="ws-practical-row ws-practical-row--last">
+        <span class="ws-practical-key">Facilities</span>
+        <span class="ws-practical-val">{{ .Params.facilities }}</span>
       </div>
     </div>
-    <!-- CTA block stacked (desktop version) -->
-    <div class="walk-cta-stacked">
-      <div class="cta-headline cta-headline--desktop">Get live weather for this walk</div>
-      <div class="cta-subtext cta-subtext--desktop">Today's verdict, hazards, best window. Free.</div>
-      <a href="https://sniffout.app" target="_blank" rel="noopener" class="cta-btn-full">Open in Sniffout &rarr;</a>
-    </div>
-    <!-- Store badges in sidebar -->
-    <div class="walk-store-badges walk-store-badges--sidebar">
-      <div class="badge-store">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        <span class="badge-store-text">App Store</span>
-      </div>
-      <div class="badge-store">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M3.18 23.76c.32.18.68.18 1.02.01l11.49-6.45-2.54-2.54-9.97 8.98z" fill="#EA4335"/><path d="M21.54 10.04L19.1 8.67l-2.89 2.57 2.89 2.57 2.46-1.38c.7-.4.7-1.99-.02-2.39z" fill="#FBBC05"/><path d="M4.2.24C3.86.07 3.5.07 3.18.25L13.5 10.57l2.54-2.54L4.2.24z" fill="#4285F4"/><path d="M3.18.25C2.48.65 2 1.41 2 2.28v19.44c0 .87.48 1.63 1.18 2.04l10.32-10.32L3.18.25z" fill="#34A853"/></svg>
-        <span class="badge-store-text">Google Play</span>
-      </div>
-    </div>
-    <!-- Divider -->
-    <div class="walk-divider-sidebar"></div>
-    <!-- Practical info (bare rows, desktop style) -->
-    <div class="practical-heading">Practical info</div>
-    <div class="practical-rows-bare">
-      <div class="practical-row-bare">
-        <span class="practical-key-bare">Parking</span>
-        <span class="practical-val-bare">{{ .Params.parking }}</span>
-      </div>
-      <div class="practical-row-bare">
-        <span class="practical-key-bare">Transport</span>
-        <span class="practical-val-bare">{{ .Params.gettingThere }}</span>
-      </div>
-      <div class="practical-row-bare">
-        <span class="practical-key-bare">Facilities</span>
-        <span class="practical-val-bare">{{ .Params.facilities }}</span>
-      </div>
-    </div>
-    <!-- For your dog (desktop position - bottom of sidebar) -->
-    <div class="walk-dog-box">
-      <div class="dog-box-label">For your dog</div>
-      <div class="dog-box-body">{{ .Params.dogSummary }}</div>
-    </div>
-  </div><!-- /.walk-sidebar -->
 
-</div><!-- /.walk-page -->
+    <!-- For your dog -->
+    <div class="ws-dog-card">
+      <div class="ws-dog-label">For your dog</div>
+      <div class="ws-dog-body">{{ .Params.dogSummary }}</div>
+    </div>
+
+  </div><!-- /.ws-sidebar -->
+
+</div><!-- /.ws-layout -->
+
+<!-- App Store CTA strip -->
+<div class="ws-app-cta">
+  <p class="ws-app-cta-tagline">Plan this walk with live weather and dog-safe route info</p>
+  <div class="ws-app-cta-badges">
+    <div class="badge-store">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      <div><div class="badge-label">Download on the</div><div class="badge-name">App Store</div></div>
+    </div>
+    <div class="badge-store">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M3.18 23.76c.32.18.68.18 1.02.01l11.49-6.45-2.54-2.54-9.97 8.98z" fill="#EA4335"/><path d="M21.54 10.04L19.1 8.67l-2.89 2.57 2.89 2.57 2.46-1.38c.7-.4.7-1.99-.02-2.39z" fill="#FBBC05"/><path d="M4.2.24C3.86.07 3.5.07 3.18.25L13.5 10.57l2.54-2.54L4.2.24z" fill="#4285F4"/><path d="M3.18.25C2.48.65 2 1.41 2 2.28v19.44c0 .87.48 1.63 1.18 2.04l10.32-10.32L3.18.25z" fill="#34A853"/></svg>
+      <div><div class="badge-label">Get it on</div><div class="badge-name">Google Play</div></div>
+    </div>
+  </div>
+</div>
+
 {{ end }}

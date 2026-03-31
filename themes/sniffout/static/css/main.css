@@ -21,6 +21,7 @@
   --sienna: #B85C2C;
   --sienna-light: #F5E8E0;
   --sienna-dark: #8A4420;
+  --brand-tint: #EDF2E8;
 }
 
 html { scroll-behavior: smooth; }
@@ -2892,4 +2893,400 @@ h1.walk-sidebar-title {
 /* --- Simple page (About, Privacy) --- */
 .simple-content p {
   margin-bottom: 1.5rem;
+}
+
+/* ============================================================
+   Walk single page — ws- prefix
+   ============================================================ */
+
+/* Visibility helpers */
+.ws-mobile-only { display: block; }
+@media (min-width: 768px) {
+  .ws-mobile-only { display: none !important; }
+}
+
+/* Breadcrumb */
+.ws-breadcrumb {
+  display: none;
+}
+@media (min-width: 768px) {
+  .ws-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 28px;
+    font-size: 12px;
+    color: var(--ink-3, #888);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .ws-breadcrumb a { color: var(--brand); text-decoration: none; }
+  .ws-breadcrumb-sep { color: var(--ink-3, #888); }
+  .ws-breadcrumb-current { color: var(--ink-3, #888); }
+}
+
+/* Hero */
+.ws-hero {
+  position: relative;
+  min-height: 380px;
+  overflow: hidden;
+  background: var(--brand);
+}
+@media (min-width: 768px) {
+  .ws-hero { min-height: 500px; }
+}
+.ws-hero-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+}
+.ws-hero-img--fallback {
+  background: #3a5c1a;
+}
+.ws-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 35%, rgba(0,0,0,0.68) 100%);
+  pointer-events: none;
+}
+.ws-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 20px 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .ws-hero-content { padding: 28px 32px; }
+}
+.ws-hero-text { flex: 1; min-width: 0; }
+.ws-hero-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+@media (min-width: 768px) {
+  .ws-hero-title { font-size: 36px; }
+}
+.ws-hero-location {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.80);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .ws-hero-location { font-size: 13px; }
+}
+.ws-hero-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.ws-hero-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+/* Difficulty badge colours */
+.ws-hero-badge--easy    { background: #2C4A14; color: #fff; }
+.ws-hero-badge--moderate { background: #D97706; color: #fff; }
+.ws-hero-badge--hard    { background: #EF4444; color: #fff; }
+/* Off-lead badge */
+.ws-hero-badge--lead    { background: #fff; color: #2C4A14; }
+.ws-hero-badge--offlead { background: #fff; color: #2C4A14; }
+.ws-hero-badge--onlead  { background: rgba(255,255,255,0.85); color: #7A5C00; }
+.ws-hero-badge--partial { background: rgba(255,255,255,0.85); color: #7A5C00; }
+
+/* Stat strip */
+.ws-stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+.ws-stat-tile {
+  background: var(--surface);
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.ws-stat-icon {
+  color: var(--ink-2);
+}
+.ws-stat-icon--offlead { color: var(--brand); }
+.ws-stat-icon--onlead  { color: var(--ink-2); }
+.ws-stat-icon--partial { color: #D97706; }
+.ws-stat-value {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .ws-stat-value { font-size: 16px; }
+}
+.ws-stat-value--offlead { color: var(--brand); }
+.ws-stat-value--onlead  { color: var(--ink-2); }
+.ws-stat-value--partial { color: #D97706; }
+.ws-stat-label {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ink-2);
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+/* Two-column layout */
+.ws-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .ws-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 48px;
+    padding: 0 32px;
+    align-items: start;
+  }
+}
+
+/* Content column */
+.ws-content {
+  min-width: 0;
+  padding: 24px 20px;
+}
+@media (min-width: 768px) {
+  .ws-content {
+    padding: 32px 0;
+  }
+}
+
+/* Sidebar */
+.ws-sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .ws-sidebar {
+    display: block;
+    padding: 32px 0;
+    position: sticky;
+    top: 24px;
+  }
+}
+
+/* Section label */
+.ws-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(44, 74, 20, 0.55);
+  margin-bottom: 12px;
+  margin-top: 32px;
+}
+.ws-content .ws-section-label:first-child,
+.ws-sidebar .ws-section-label:first-child {
+  margin-top: 0;
+}
+
+/* Description */
+.ws-description {
+  margin-bottom: 8px;
+}
+.ws-description p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+@media (min-width: 768px) {
+  .ws-description p { font-size: 16px; line-height: 1.75; }
+}
+
+/* Pull quote */
+.ws-pull-quote {
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ink);
+  border-left: 3px solid var(--sienna);
+  padding-left: 20px;
+  margin: 28px 0;
+}
+@media (min-width: 768px) {
+  .ws-pull-quote { font-size: 18px; }
+}
+
+/* Related guides */
+.ws-guides {
+  margin-bottom: 0;
+}
+.ws-guides-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(44, 74, 20, 0.55);
+  margin-bottom: 12px;
+  margin-top: 32px;
+}
+.ws-guide-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand-tint);
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: transform 0.15s ease;
+}
+.ws-guide-card:active { transform: scale(0.98); }
+.ws-guide-category {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--brand);
+  background: var(--brand-tint);
+  padding: 3px 8px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ws-guide-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Weather CTA */
+.ws-weather-cta {
+  background: var(--brand-tint);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(44, 74, 20, 0.12);
+}
+.ws-weather-cta-text { margin-bottom: 12px; }
+.ws-weather-cta-headline {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand);
+  margin-bottom: 4px;
+}
+.ws-weather-cta-sub {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.ws-weather-cta-btn {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+.ws-weather-cta-btn:active { transform: scale(0.97); }
+
+/* Practical info rows */
+.ws-practical-rows {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.ws-practical-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.ws-practical-row--last { border-bottom: none; }
+.ws-practical-key {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ws-practical-val {
+  font-size: 13px;
+  color: var(--ink);
+  text-align: right;
+}
+
+/* For your dog card */
+.ws-dog-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+.ws-dog-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(44, 74, 20, 0.55);
+  margin-bottom: 8px;
+}
+.ws-dog-body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+/* App CTA strip */
+.ws-app-cta {
+  background: var(--brand-tint);
+  border-top: 1px solid rgba(44, 74, 20, 0.15);
+  padding: 32px 20px;
+  text-align: center;
+}
+.ws-app-cta-tagline {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brand);
+  margin: 0 0 16px;
+}
+.ws-app-cta-badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
