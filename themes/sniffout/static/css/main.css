@@ -1712,7 +1712,7 @@ h1.walk-sidebar-title {
   border-radius: 16px;
   overflow: hidden;
   min-height: 220px;
-  padding: 24px;
+  padding: 24px 24px 6px 24px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
