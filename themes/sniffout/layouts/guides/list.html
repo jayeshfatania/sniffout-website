@@ -29,7 +29,9 @@
           <p class="guide-hero-desc">{{ .Params.description }}</p>
           <span class="guide-hero-meta">{{ .Params.readTime }}</span>
           <div class="guide-hero-footer">
-            <span class="guide-hero-pill">{{ .Params.category }}</span>
+            {{ if eq .Params.category "Hazards" }}<span class="category-pill category-pill--hazard">{{ .Params.category }}</span>
+            {{ else if eq .Params.category "Seasonal" }}<span class="category-pill category-pill--seasonal">{{ .Params.category }}</span>
+            {{ else }}<span class="category-pill category-pill--general">{{ .Params.category }}</span>{{ end }}
             <span class="guide-hero-cta">Read guide &rarr;</span>
           </div>
         </div>
