@@ -5,6 +5,8 @@ layout: "simple"
 
 Sniffout is a walk planning app built for dog owners across the UK. It gives you walks, weather, and the local knowledge you actually need - all in one place, all built around one question: is this a good walk for your dog today?
 
+<img src="/img/luna.jpg" alt="Luna the Bearcoat Shar Pei" style="max-width:400px;width:100%;border-radius:20px;box-shadow:0 4px 24px rgba(44,74,20,0.12);margin:24px auto;display:block;">
+
 ## What you get
 
 **Find dog walks across the UK.** A curated and growing list of routes, parks, and countryside walks - with off-lead detail, terrain type, and distance, not a generic map that was not made for dogs.

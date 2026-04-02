@@ -719,9 +719,10 @@ h1.walk-sidebar-title {
 /* --- Store badges (mobile: centred row with two-line text) --- */
 .walk-store-badges {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   justify-content: center;
-  margin-bottom: 4px;
+  max-width: 320px;
+  margin: 12px auto 0;
 }
 
 .badge-store {
@@ -732,6 +733,9 @@ h1.walk-sidebar-title {
   align-items: center;
   gap: 5px;
   text-decoration: none;
+  max-width: 150px;
+  height: 44px;
+  flex: 1;
 }
 
 .badge-label {
@@ -748,11 +752,12 @@ h1.walk-sidebar-title {
 /* Store badges sidebar variant */
 .walk-store-badges--sidebar {
   justify-content: flex-start;
-  margin-bottom: 14px;
+  max-width: none;
+  margin: 0 0 14px;
 }
 
 .walk-store-badges--sidebar .badge-store {
-  flex: 1;
+  flex: 0 0 auto;
   justify-content: center;
   padding: 7px 10px;
 }
@@ -1564,6 +1569,10 @@ h1.walk-sidebar-title {
   }
   .walk-list .pagination-nav {
     grid-column: 1 / -1;
+  }
+  .area-layout > .pagination-nav {
+    grid-column: 1 / -1;
+    width: 100%;
   }
   .area-sidebar {
     display: block;
@@ -2895,6 +2904,7 @@ h1.walk-sidebar-title {
   justify-content: center;
   gap: 12px;
   margin: 32px 0;
+  width: 100%;
 }
 .pagination-count {
   font-size: 13px;
