@@ -9,4 +9,4 @@ heroImage: ""
 date: 2026-04-02
 ---
 
-Placeholder intro for Dartmoor walks. To be replaced with Saoirse copy.
+Haytor and Hound Tor give you Dartmoor at its most open - granite ridgelines, tussock grass, and views that stretch as far as the weather allows. Dogs can run free on much of the moor, but Dartmoor ponies, cattle, and sheep graze freely across the same ground, so the lead is always close by. Adders are active on the moorland from spring. The terrain is rough underfoot and fog rolls in fast.

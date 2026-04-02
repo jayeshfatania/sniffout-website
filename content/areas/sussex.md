@@ -9,4 +9,4 @@ heroImage: ""
 date: 2026-04-02
 ---
 
-Placeholder intro for Sussex walks. To be replaced with Saoirse copy.
+Seven Sisters is one of the most recognisable stretches of walking on the South Downs - white chalk cliffs, rolling downland, and long views out to sea. Dogs need to be kept on a lead or under very close control near the cliff edges; the drops are serious. The South Downs Way runs through the area, opening up longer routes away from the cliff line.

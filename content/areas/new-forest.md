@@ -9,4 +9,4 @@ heroImage: ""
 date: 2026-04-02
 ---
 
-Placeholder intro for New Forest walks. To be replaced with Saoirse copy.
+Burley Common puts you in the middle of ancient woodland, open heathland, and gravel tracks that stretch further than most dogs can manage in a day. The New Forest is genuinely good for dogs, but the rules here are not optional. Ponies, cattle, donkeys, and pigs roam freely throughout the park. Dogs must be on a lead near all livestock at all times.

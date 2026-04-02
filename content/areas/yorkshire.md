@@ -10,4 +10,4 @@ heroImage: ""
 date: 2026-04-02
 ---
 
-Placeholder intro for Yorkshire walks. To be replaced with Saoirse copy.
+Stanage Edge and Malham Cove are two of the most distinctive dog walking destinations in the north of England, and neither is a gentle stroll. Gritstone moorland, exposed ridgelines, and steep limestone gorges make this serious walking country. Weather changes fast on the tops. Sheep graze on most of the open land, so lead awareness matters on farmland and during lambing.
