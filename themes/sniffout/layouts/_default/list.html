@@ -22,6 +22,19 @@
   <button class="filter-chip" onclick="filterWalks('terrain', 'Coastal', this)">Coastal</button>
 </div>
 
+<!-- Explore by area -->
+{{ $areaPages := where .Site.RegularPages "Section" "areas" }}
+{{ if $areaPages }}
+<div class="explore-by-area">
+  <div class="walk-section-heading">EXPLORE BY AREA</div>
+  <div class="area-pill-row">
+    {{ range $areaPages }}
+    <a href="{{ .Permalink }}" class="area-pill">{{ .Title }}</a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
 <!-- Walk list + desktop sidebar wrapper -->
 <div class="area-layout area-layout--single">
 

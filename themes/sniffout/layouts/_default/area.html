@@ -1,0 +1,64 @@
+{{ define "main" }}
+
+{{- $walks := .Params.walks -}}
+{{- $walkCount := len $walks -}}
+
+<div class="area-page-inner">
+
+  <!-- Breadcrumb -->
+  <nav class="area-breadcrumb">
+    <a href="/">Home</a>
+    <span class="area-breadcrumb-sep">&rsaquo;</span>
+    <a href="/walks/">Walks</a>
+    <span class="area-breadcrumb-sep">&rsaquo;</span>
+    <span>{{ .Params.area }}</span>
+  </nav>
+
+  <!-- Page header -->
+  <h1 class="area-h1">{{ .Title }}</h1>
+  {{ with .Description }}
+  <p class="area-intro">{{ . }}</p>
+  {{ end }}
+  {{ with .Content }}
+  <div class="area-intro-content">{{ . }}</div>
+  {{ end }}
+  <span class="count-chip" style="margin-bottom:24px;display:inline-flex;">{{ $walkCount }} {{ if eq $walkCount 1 }}walk{{ else }}walks{{ end }}</span>
+
+  <!-- Walk card grid -->
+  <div class="area-walk-grid">
+    {{ range $walks }}
+      {{ $walk := $.Site.GetPage (printf "/walks/%s" .) }}
+      {{ with $walk }}
+      <a href="{{ .Permalink }}" class="walk-list-card">
+        {{ if .Params.heroImage }}
+        <div class="walk-list-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('{{ .Params.heroImage }}'); background-size: cover; background-position: center;"></div>
+        {{ else }}
+        <div class="walk-list-card-img"></div>
+        {{ end }}
+        <div class="walk-list-card-body">
+          <div class="walk-list-card-name">{{ .Title }}</div>
+          <div class="walk-list-card-loc">{{ .Params.location }}</div>
+          <div class="walk-list-card-bottom">
+            {{ with .Params.distance }}<span class="walk-list-card-dist-text">{{ . }}</span>{{ end }}
+            {{ with .Params.offLead }}<span class="walk-hero-badge walk-list-card-lead-badge {{ if or (eq . "On-lead only") (eq . "On lead") (eq . "None") }}walk-hero-badge--onlead{{ else if eq . "Partial" }}walk-hero-badge--partial{{ else }}walk-hero-badge--offlead{{ end }}">{{ . }}</span>{{ end }}
+          </div>
+        </div>
+      </a>
+      {{ end }}
+    {{ end }}
+  </div><!-- /.area-walk-grid -->
+
+  <!-- Seasonal hazard note -->
+  <div class="area-hazard-note">
+    Seasonal note: Check individual walk pages for current hazard alerts in this area.
+  </div>
+
+  <!-- CTA -->
+  <div class="walk-cta-stacked area-cta">
+    <div class="cta-headline cta-headline--desktop">Get live weather for these walks</div>
+    <a href="/get" class="cta-btn-full">Open in Sniffout &rarr;</a>
+  </div>
+
+</div><!-- /.area-page-inner -->
+
+{{ end }}

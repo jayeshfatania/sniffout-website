@@ -3385,3 +3385,101 @@ h1.walk-sidebar-title {
 @media (max-width: 768px) {
   .about-luna-photo { max-width: 100%; margin: 24px 16px; }
 }
+
+/* --- Area index pages (Surrey, London, etc.) --- */
+
+.area-page-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+.area-breadcrumb {
+  font-size: 13px;
+  color: #888888;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.area-breadcrumb a {
+  color: var(--brand);
+  text-decoration: none;
+}
+.area-breadcrumb a:hover { text-decoration: underline; }
+.area-breadcrumb-sep {
+  color: #BBBBBB;
+  font-size: 14px;
+}
+
+.area-intro-content {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.area-walk-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.area-hazard-note {
+  background: #F0F7E8;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 32px 0;
+  font-size: 14px;
+  color: #555555;
+  border-left: 4px solid #2C4A14;
+  line-height: 1.55;
+}
+
+.area-cta {
+  max-width: 480px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+/* Explore by area - walks index */
+.explore-by-area {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 20px;
+}
+.area-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.area-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand);
+  background: #E8F0DC;
+  border: 1px solid rgba(44,74,20,0.15);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.area-pill:hover { background: #DDE8CC; }
+.area-pill:active { transform: scale(0.97); }
+
+@media (min-width: 768px) {
+  .area-page-inner {
+    padding: 48px 28px 64px;
+  }
+  .area-walk-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .explore-by-area {
+    padding: 0 28px 24px;
+  }
+}
