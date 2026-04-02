@@ -30,3 +30,22 @@ nearbyWalks:
 heroImage: "/img/walks/malham-cove.jpg"
 date: 2026-03-29
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Malham Cove?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome at Malham Cove. Off-lead is possible on some sections but sheep graze extensively in the surrounding fields, so leads are required through farmland and during lambing season (March to May). The limestone pavement at the top of the Cove has deep crevices (grikes) which can be hazardous for small dogs - keep them on a lead on the pavement. The walk up to the Cove involves a steep climb with stone steps. Parking is available in Malham village (pay and display, can fill up on weekends). The village has a dog-friendly pub.
+
+</div>
+</div>
+</div>
+
+</div>

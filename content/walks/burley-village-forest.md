@@ -30,3 +30,22 @@ nearbyWalks:
 heroImage: "/img/walks/burley-new-forest.png"
 date: 2026-03-29
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to the New Forest at Burley?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome in the New Forest around Burley. However, the lead rules here are strict and enforced. New Forest ponies, cattle, donkeys, and pigs roam freely throughout the park - dogs must be on a lead near all livestock at all times. This is not advisory; it is a legal requirement under the New Forest byelaws. Adders are present on the heathland areas. The terrain is a mix of ancient woodland, open heath, and gravel tracks. Free parking is available at several Forestry England car parks near Burley.
+
+</div>
+</div>
+</div>
+
+</div>

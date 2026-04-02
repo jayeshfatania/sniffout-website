@@ -3483,3 +3483,35 @@ h1.walk-sidebar-title {
     padding: 0 28px 24px;
   }
 }
+
+/* --- Walk FAQ section --- */
+
+.ws-faq-outer {
+  margin-top: 40px;
+}
+
+.walk-faq {
+  margin: 0 0 32px;
+  padding: 0;
+}
+
+.walk-faq h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1C1A16;
+  margin-bottom: 20px;
+}
+
+.walk-faq h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1C1A16;
+  margin: 20px 0 8px;
+}
+
+.walk-faq p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #555555;
+  margin-bottom: 12px;
+}

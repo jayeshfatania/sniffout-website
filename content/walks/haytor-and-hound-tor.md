@@ -30,3 +30,22 @@ nearbyWalks:
 heroImage: "/img/walks/haytor-dartmoor.jpg"
 date: 2026-03-30
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Haytor and Hound Tor?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome at Haytor and Hound Tor on Dartmoor. Much of the moorland is open access land and dogs can be off-lead, but Dartmoor ponies, cattle, and sheep roam freely across the moor so keep dogs under close control at all times. Leads are essential near any livestock. Adders are present on the moorland - keep dogs on leads through heather and bracken during April to July. The terrain is rough with tussock grass, bogs, and exposed rock. Weather changes fast and fog can roll in quickly. Free parking is available at the Haytor car park.
+
+</div>
+</div>
+</div>
+
+</div>

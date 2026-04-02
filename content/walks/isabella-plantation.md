@@ -31,3 +31,22 @@ nearbyWalks:
 heroImage: "/img/walks/isabella-plantation.jpg"
 date: 2026-03-30
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Isabella Plantation?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs on leads are permitted inside Isabella Plantation at all times. This is a permanent lead requirement regardless of season. The plantation is an enclosed garden within Richmond Park, so deer do not typically graze inside, though they may be encountered on the approach paths. Dog waste bins are located at the main gates.
+
+</div>
+</div>
+</div>
+
+</div>

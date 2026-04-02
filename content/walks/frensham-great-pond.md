@@ -31,3 +31,22 @@ nearbyWalks:
 heroImage: "/img/walks/frensham-great-pond.jpg"
 date: 2026-03-30
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Frensham Great Pond?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome at Frensham Great Pond. Off-lead is permitted on the heathland and in the woodland areas. The pond itself is accessible for dogs to swim, but be aware of blue-green algae warnings during summer months - check for posted notices before letting dogs enter the water. Frensham Common is one of only two sites in Surrey confirmed for all six native reptile species, including adders. Keep dogs on a lead on the heathland during April to July to reduce the risk of adder encounters. Parking is available at the National Trust car park (charges apply for non-members).
+
+</div>
+</div>
+</div>
+
+</div>

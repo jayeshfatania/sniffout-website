@@ -31,3 +31,22 @@ nearbyWalks:
 heroImage: "/img/walks/box-hill.jpg"
 date: 2026-03-29
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Box Hill?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome at Box Hill. Off-lead is permitted on the chalk downland and woodland areas, but keep dogs on a lead near the stepping stones, in the cafe area, and near any livestock. Box Hill is a National Trust site. The main car park at the summit (Burford Bridge or Zig Zag Road) charges for non-members. The terrain includes steep chalk slopes and some unfenced drops near the viewpoint. Livestock occasionally graze the downland during conservation grazing periods.
+
+</div>
+</div>
+</div>
+
+</div>

@@ -31,3 +31,22 @@ nearbyWalks:
 heroImage: "/img/walks/stanage-edge.jpg"
 date: 2026-03-30
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Stanage Edge?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome at Stanage Edge. Off-lead is possible on the open moorland but sheep graze widely across the area, so leads are essential near livestock and during lambing season (March to May). The gritstone edge has steep drops on the climbing side - keep dogs away from the cliff face. The terrain is exposed moorland with rough paths. Weather on the tops can change rapidly. Adders are present on the Eastern Moors. Parking is available at the Hollin Bank or Dennis Knoll car parks (charges may apply).
+
+</div>
+</div>
+</div>
+
+</div>

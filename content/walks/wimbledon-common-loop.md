@@ -31,3 +31,22 @@ nearbyWalks:
 heroImage: "/img/walks/wimbledon-common.jpg"
 date: 2026-03-30
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Wimbledon Common?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome on Wimbledon Common and can be off-lead across most of the area. Leads are required around all ponds from 1 March to 31 August and on The Plain during the same period to protect ground-nesting birds. The Common connects to Putney Heath and Putney Lower Common, extending the walking area. Horse riders share several paths so keep dogs under close control on bridleways.
+
+</div>
+</div>
+</div>
+
+</div>

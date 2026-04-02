@@ -31,3 +31,22 @@ nearbyWalks:
 heroImage: "/img/walks/grasmere-lake.jpg"
 date: 2026-03-29
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Grasmere Lake?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome around Grasmere Lake. The lakeside path is suitable for off-lead walking in most sections, but sheep graze on the surrounding fells and meadows so keep dogs on a lead near any livestock. The terrain is relatively gentle compared to the surrounding fells - lakeside paths and valley meadows. Dogs can access the lake for swimming. Parking is available in Grasmere village (pay and display). The village has several dog-friendly cafes and pubs.
+
+</div>
+</div>
+</div>
+
+</div>

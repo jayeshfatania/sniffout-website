@@ -31,3 +31,22 @@ nearbyWalks:
 heroImage: "/img/walks/leith-hill.jpg"
 date: 2026-03-30
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Leith Hill?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome at Leith Hill and can be off-lead in the woodland and open areas. This is a National Trust site. Keep dogs on a lead near livestock if present and in the area around Leith Hill Tower. The terrain is hilly woodland with some muddy sections in wet weather. Ticks are present in the woodland - check your dog after walks, particularly in spring and summer.
+
+</div>
+</div>
+</div>
+
+</div>

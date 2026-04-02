@@ -31,3 +31,22 @@ nearbyWalks:
 heroImage: "/img/walks/hindhead-common.png"
 date: 2026-03-30
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Hindhead Common?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome at Hindhead Common and the Devil's Punch Bowl. Off-lead is permitted on the heathland and woodland trails. This is a National Trust site and part of the Wealden Heaths National Nature Reserve. The open heathland is prime adder habitat - keep dogs on a lead through heather and bracken during April to July. The terrain includes steep slopes into the Punch Bowl. Ground-nesting birds (woodlark, nightjar, Dartford warbler) are present, so keep dogs on paths during the nesting season (March to August). Parking is available at the National Trust car park near the cafe.
+
+</div>
+</div>
+</div>
+
+</div>

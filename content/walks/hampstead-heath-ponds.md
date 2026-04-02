@@ -31,3 +31,22 @@ nearbyWalks:
 heroImage: "/img/walks/hampstead-heath.jpg"
 date: 2026-03-29
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Hampstead Heath?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome on Hampstead Heath and can be off-lead in most areas. Leads are required in the formal gardens (Hill Garden, Golders Hill Park flower gardens), around the bathing ponds, and in any areas with ground-nesting birds during nesting season. Dogs are not permitted in the swimming ponds. The Heath has a dedicated dog swimming area at the Mixed Bathing Pond during certain periods. Golders Hill Park has a small zoo area where dogs must be on leads.
+
+</div>
+</div>
+</div>
+
+</div>

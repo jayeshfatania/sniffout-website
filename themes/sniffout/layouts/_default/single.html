@@ -162,6 +162,11 @@
     </div>
     {{ end }}
 
+    <!-- FAQ content (schema markup from markdown body) -->
+    {{ with .Content }}
+    <div class="ws-faq-outer">{{ . }}</div>
+    {{ end }}
+
   </div><!-- /.ws-content -->
 
   <!-- Sidebar (desktop only) -->

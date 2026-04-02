@@ -32,3 +32,35 @@ heroImage: "/img/walks/richmond-park.jpg"
 heroAlt: "Richmond Park open grassland with deer in the distance"
 date: 2026-03-28
 ---
+
+<div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
+
+## Frequently asked questions
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Can I take my dog to Richmond Park?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, dogs are welcome throughout Richmond Park. Off-lead is permitted across most of the park, but leads are mandatory during deer birthing season (1 May to 31 July) across the entire park with no exceptions. Leads are also required year-round in skylark protection zones (Lawn Field, Crown Field, and The Bog) and around all ponds including Pen Ponds. During the rutting season (September to November), keep at least 50 metres from deer. It is a criminal offence for dogs to chase deer in the park. Dogs are not permitted in Pembroke Lodge Gardens.
+
+</div>
+</div>
+</div>
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+### Is there parking at Richmond Park?
+
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+
+Yes, there are several free car parks across the park including Kingston Gate, Broomfield Hill, Pen Ponds, Roehampton Gate, Robin Hood Gate, Ham Gate, and Pembroke Lodge. Parking is currently free of charge.
+
+</div>
+</div>
+</div>
+
+</div>
