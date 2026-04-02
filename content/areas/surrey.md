@@ -15,4 +15,4 @@ heroImage: ""
 date: 2026-04-02
 ---
 
-Placeholder intro for Surrey walks. To be replaced with Saoirse copy.
+The Surrey Hills pack more terrain variety into a single county than almost anywhere in southern England. Open deer parkland and heathland ponds at one end, steep chalk escarpments at the other. Most walks suit any dog on any day; a handful earn their views. Off-lead sections throughout. Worth knowing about ticks in woodland and adders on heathland once spring arrives.

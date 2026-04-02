@@ -12,4 +12,4 @@ heroImage: ""
 date: 2026-04-02
 ---
 
-Placeholder intro for London walks. To be replaced with Saoirse copy.
+Richmond Park alone covers 2,500 acres of open deer-grazed grassland inside Greater London. It is one of four Sniffout walks in the city, all with off-lead sections, taking in heathland, parkland, and sheltered woodland. London walking is bigger and greener than the outside view suggests. One thing to know: the Richmond Park deer need space during the rut in autumn and calving in spring.
