@@ -1558,6 +1558,10 @@ h1.walk-sidebar-title {
     margin: 0 auto;
     align-items: start;
   }
+  .area-layout--single {
+    grid-template-columns: 1fr;
+    max-width: 880px;
+  }
   .walk-list {
     padding: 20px 28px;
     display: grid;
@@ -3369,7 +3373,7 @@ h1.walk-sidebar-title {
 
 /* About page Luna photo */
 .about-luna-photo {
-  max-width: 560px;
+  max-width: 672px;
   width: 100%;
   margin: 32px auto;
   display: block;
@@ -3381,8 +3385,7 @@ h1.walk-sidebar-title {
   width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  object-fit: contain;
 }
 .about-luna-caption {
   text-align: center;
