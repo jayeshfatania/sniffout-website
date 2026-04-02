@@ -6,7 +6,7 @@
 
 :root {
   --brand: #2C4A14;
-  --bg: #F7F5F0;
+  --bg: #F4EFE6;
   --surface: #FFFFFF;
   --border: rgba(0,0,0,0.08);
   --ink: #1A1A1A;
@@ -29,7 +29,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   padding: 0;
-  background: #F7F5F0;
+  background: var(--bg);
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   color: #1a1a1a;
   font-size: 16px;
@@ -56,7 +56,7 @@ img { display: block; max-width: 100%; }
 /* --- Header --- */
 /* Mobile: bg #F7F5F0, padding 12px 16px, flex, space-between, border-bottom */
 .site-header {
-  background: #F7F5F0;
+  background: var(--bg);
   padding: 12px 16px;
   display: flex;
   align-items: center;
@@ -260,7 +260,13 @@ img { display: block; max-width: 100%; }
 .walk-hero-badge--onlead {
   top: 10px;
   right: 10px;
-  color: #b45309;
+  color: #7A5C00;
+}
+
+.walk-hero-badge--partial {
+  top: 10px;
+  right: 10px;
+  color: #7A5C00;
 }
 
 /* Difficulty-specific badge colours */
@@ -379,7 +385,7 @@ h1.walk-sidebar-title {
 }
 
 .stat-cell {
-  background: #F7F5F0;
+  background: var(--bg);
   border-radius: 10px;
   padding: 10px 12px;
 }
@@ -416,8 +422,9 @@ h1.walk-sidebar-title {
 
 .walk-cta-inner {
   background: #2C4A14;
-  border-radius: 14px;
+  border-radius: 16px;
   padding: 14px 16px;
+  max-width: 560px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -582,7 +589,7 @@ h1.walk-sidebar-title {
 /* --- Practical info card (mobile white card) --- */
 .practical-card {
   background: white;
-  border-radius: 12px;
+  border-radius: 16px;
   border: 0.5px solid rgba(0,0,0,0.08);
   overflow: hidden;
   margin-bottom: 14px;
@@ -658,19 +665,22 @@ h1.walk-sidebar-title {
 
 .nearby-walk-row {
   background: white;
-  border-radius: 12px;
-  border: 0.5px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 1px 6px rgba(44,74,20,0.06);
   padding: 10px 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
   color: inherit;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, transform 0.15s ease;
+  cursor: pointer;
 }
 .nearby-walk-row:hover {
-  background: #F7F5F0;
+  background: var(--bg);
 }
+.nearby-walk-row:active { transform: scale(0.97); }
 
 .nearby-walk-name {
   font-size: 13px;
@@ -998,7 +1008,7 @@ h1.walk-sidebar-title {
 
 /* Benefit blocks */
 .home-benefits {
-  background: #F7F5F0;
+  background: var(--bg);
   padding: 40px 20px;
 }
 
@@ -1075,12 +1085,13 @@ h1.walk-sidebar-title {
   height: 200px;
   flex-shrink: 0;
   background: linear-gradient(135deg, #C8D8B0 0%, #2C4A14 100%);
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
   text-decoration: none;
   display: block;
   position: relative;
   transition: transform 0.15s ease;
+  cursor: pointer;
 }
 
 .walk-card-h-bg {
@@ -1113,7 +1124,7 @@ h1.walk-sidebar-title {
   z-index: 2;
   padding: 10px 12px;
   background: linear-gradient(transparent, rgba(0,0,0,0.72));
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 16px 16px;
 }
 
 .walk-card-h-name {
@@ -1152,14 +1163,16 @@ h1.walk-sidebar-title {
 
 .home-see-all {
   display: inline-block;
-  padding: 12px 20px 0;
+  margin: 4px 0 0 20px;
   font-size: 13px;
   font-weight: 600;
   color: #2C4A14;
   text-decoration: none;
-  border-bottom: 1px solid rgba(44,74,20,0.25);
+  border-bottom: 1px solid rgba(44,74,20,0.3);
   padding-bottom: 1px;
+  transition: opacity 0.15s ease;
 }
+.home-see-all:hover { opacity: 0.7; }
 
 @media (min-width: 768px) {
   .home-featured {
@@ -1311,7 +1324,7 @@ h1.walk-sidebar-title {
   font-size: 12px;
   font-weight: 500;
   color: #555555;
-  background: #F7F5F0;
+  background: var(--bg);
   border: 0.5px solid rgba(0,0,0,0.12);
   padding: 6px 12px;
   border-radius: 20px;
@@ -1340,13 +1353,14 @@ h1.walk-sidebar-title {
 .walk-list-card {
   position: relative;
   height: 200px;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
   display: block;
   text-decoration: none;
   background: linear-gradient(135deg, #C8D8B0 0%, #8BAD68 100%);
   margin-bottom: 10px;
   transition: transform 0.15s ease;
+  cursor: pointer;
 }
 
 .walk-list-card:active { transform: scale(0.97); }
@@ -1375,7 +1389,7 @@ h1.walk-sidebar-title {
   z-index: 2;
   padding: 12px;
   background: linear-gradient(transparent, rgba(0,0,0,0.72));
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 16px 16px;
 }
 
 .walk-list-card-name {
@@ -1420,7 +1434,7 @@ h1.walk-sidebar-title {
 .meta-pill {
   font-size: 11px;
   color: #555555;
-  background: #F7F5F0;
+  background: var(--bg);
   border: 0.5px solid rgba(0,0,0,0.08);
   padding: 3px 9px;
   border-radius: 20px;
@@ -1548,6 +1562,9 @@ h1.walk-sidebar-title {
   .walk-list-card {
     margin-bottom: 0;
   }
+  .walk-list .pagination-nav {
+    grid-column: 1 / -1;
+  }
   .area-sidebar {
     display: block;
     background: #FFFFFF;
@@ -1555,7 +1572,7 @@ h1.walk-sidebar-title {
     position: sticky;
     top: 56px;
     border: 0.5px solid rgba(0,0,0,0.08);
-    border-radius: 12px;
+    border-radius: 16px;
     min-height: 300px;
   }
 }
@@ -1600,8 +1617,9 @@ h1.walk-sidebar-title {
 
 .guide-card {
   background: #FFFFFF;
-  border-radius: 12px;
-  border: 0.5px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(44,74,20,0.07);
   padding: 14px 16px;
   margin-bottom: 10px;
   display: flex;
@@ -1610,6 +1628,7 @@ h1.walk-sidebar-title {
   text-decoration: none;
   color: #1A1A1A;
   transition: transform 0.15s ease;
+  cursor: pointer;
 }
 
 .guide-card:active { transform: scale(0.97); }
@@ -1665,7 +1684,7 @@ h1.walk-sidebar-title {
 
 .category-pill--general {
   color: #888888;
-  background: #F7F5F0;
+  background: var(--bg);
   border: 0.5px solid rgba(0,0,0,0.10);
 }
 
@@ -1851,12 +1870,13 @@ h1.walk-sidebar-title {
 .guide-grid-card {
   position: relative;
   height: 220px;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
   display: block;
   text-decoration: none;
   background: var(--brand);
   transition: transform 0.15s ease;
+  cursor: pointer;
 }
 
 .guide-grid-card:active { transform: scale(0.97); }
@@ -1894,7 +1914,7 @@ h1.walk-sidebar-title {
 }
 
 .guide-grid-card-band--general {
-  background-color: #F7F5F0;
+  background-color: var(--bg);
 }
 
 .guide-grid-card-body {
@@ -1904,7 +1924,7 @@ h1.walk-sidebar-title {
   right: 0;
   padding: 14px;
   background: linear-gradient(transparent, rgba(0,0,0,0.78));
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 16px 16px;
 }
 
 .guide-grid-card-title {
@@ -2586,7 +2606,7 @@ h1.walk-sidebar-title {
   border-radius: 14px;
   border: 0.5px solid rgba(0,0,0,0.08);
   padding: 16px;
-  background: #F7F5F0;
+  background: var(--bg);
   margin-bottom: 16px;
 }
 
@@ -2604,7 +2624,7 @@ h1.walk-sidebar-title {
 .install-qr-placeholder {
   width: 80px;
   height: 80px;
-  background: #F7F5F0;
+  background: var(--bg);
   border-radius: 8px;
   border: 0.5px solid rgba(0,0,0,0.08);
   display: flex;
@@ -2663,7 +2683,7 @@ h1.walk-sidebar-title {
   font-size: 12px;
   font-weight: 600;
   color: #555555;
-  background: #F7F5F0;
+  background: var(--bg);
   cursor: pointer;
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   border: none;
@@ -2718,7 +2738,7 @@ h1.walk-sidebar-title {
 }
 
 .install-why {
-  background: #F7F5F0;
+  background: var(--bg);
   padding: 28px 20px;
 }
 
@@ -2816,7 +2836,7 @@ h1.walk-sidebar-title {
 }
 
 .error-cta {
-  background: #F7F5F0;
+  background: var(--bg);
   padding: 32px 20px;
 }
 
@@ -2858,7 +2878,7 @@ h1.walk-sidebar-title {
     padding: 0 0 48px;
   }
   .error-page {
-    background: #F7F5F0;
+    background: var(--bg);
     padding-bottom: 48px;
   }
 }
@@ -3172,8 +3192,8 @@ h1.walk-sidebar-title {
   background: var(--surface);
   border: 1px solid var(--border);
   border-left: 3px solid var(--brand-tint);
-  border-radius: 12px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  box-shadow: 0 1px 6px rgba(44,74,20,0.06);
   text-decoration: none;
   margin-bottom: 10px;
   transition: transform 0.15s ease;
@@ -3202,7 +3222,7 @@ h1.walk-sidebar-title {
 /* Weather CTA */
 .ws-weather-cta {
   background: var(--brand-tint);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 16px;
   margin-bottom: 24px;
   border: 1px solid rgba(44, 74, 20, 0.12);
@@ -3235,7 +3255,7 @@ h1.walk-sidebar-title {
 .ws-practical-rows {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
   margin-bottom: 24px;
 }
@@ -3265,7 +3285,7 @@ h1.walk-sidebar-title {
 .ws-dog-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 16px;
   margin-bottom: 24px;
 }

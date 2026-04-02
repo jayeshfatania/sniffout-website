@@ -56,7 +56,7 @@
         <div class="walk-list-card-loc">{{ $p.Params.location }}</div>
         <div class="walk-list-card-bottom">
           {{ with $p.Params.distance }}<span class="walk-list-card-dist-text">{{ . }}</span>{{ end }}
-          {{ with $p.Params.offLead }}<span class="walk-hero-badge walk-list-card-lead-badge {{ if or (eq . "On-lead only") (eq . "On lead") }}walk-hero-badge--onlead{{ else }}walk-hero-badge--offlead{{ end }}">{{ . }}</span>{{ end }}
+          {{ with $p.Params.offLead }}<span class="walk-hero-badge walk-list-card-lead-badge {{ if or (eq . "On-lead only") (eq . "On lead") (eq . "None") }}walk-hero-badge--onlead{{ else if eq . "Partial" }}walk-hero-badge--partial{{ else }}walk-hero-badge--offlead{{ end }}">{{ . }}</span>{{ end }}
         </div>
       </div>
     </a>
