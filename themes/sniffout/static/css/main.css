@@ -466,6 +466,9 @@ h1.walk-sidebar-title {
   border-radius: 14px;
   padding: 14px;
   margin-bottom: 10px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-headline--desktop {
@@ -1061,36 +1064,47 @@ h1.walk-sidebar-title {
   padding: 32px 0 32px 20px;
 }
 
+.home-featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 14px;
+}
+
 .home-featured-heading {
   font-size: 18px;
   font-weight: 700;
   color: #1A1A1A;
-  margin: 4px 0 16px;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .walk-card-h-row {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 16px;
-  padding-right: 20px;
+  padding: 0 20px 16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 }
 
 .walk-card-h-row::-webkit-scrollbar { display: none; }
 
 .walk-card-h {
-  width: 200px;
+  min-width: 260px;
   height: 200px;
   flex-shrink: 0;
+  scroll-snap-align: start;
   background: linear-gradient(135deg, #C8D8B0 0%, #2C4A14 100%);
   border-radius: 16px;
   overflow: hidden;
   text-decoration: none;
   display: block;
   position: relative;
-  transition: transform 0.15s ease;
+  box-shadow: 0 2px 16px rgba(44,74,20,0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
 }
 
@@ -1108,6 +1122,7 @@ h1.walk-sidebar-title {
   filter: brightness(1.08);
 }
 
+.walk-card-h:hover { transform: translateY(-2px); box-shadow: 0 4px 24px rgba(44,74,20,0.12); }
 .walk-card-h:active { transform: scale(0.97); }
 
 .walk-card-h-badge {
@@ -1162,45 +1177,28 @@ h1.walk-sidebar-title {
 .walk-card-h-lead-badge { position: static; font-size: 10px; padding: 2px 7px; }
 
 .home-see-all {
-  display: inline-block;
-  margin: 4px 0 0 20px;
   font-size: 13px;
   font-weight: 600;
   color: #2C4A14;
   text-decoration: none;
-  border-bottom: 1px solid rgba(44,74,20,0.3);
-  padding-bottom: 1px;
-  transition: opacity 0.15s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
-.home-see-all:hover { opacity: 0.7; }
+.home-see-all:hover { text-decoration: underline; }
 
 @media (min-width: 768px) {
   .home-featured {
-    padding: 40px;
+    padding: 40px 0 32px;
+  }
+  .home-featured-header {
+    padding: 0 40px;
   }
   .walk-card-h-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    padding: 0 40px 16px;
     gap: 16px;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: visible;
-    padding: 0;
   }
   .walk-card-h {
-    width: auto;
-    flex-shrink: unset;
-  }
-  .home-featured-heading {
-    padding: 0;
-    max-width: 1200px;
-    margin: 4px auto 16px;
-  }
-  .home-featured .walk-section-heading {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-    display: block;
+    min-width: 300px;
   }
 }
 
@@ -1359,10 +1357,12 @@ h1.walk-sidebar-title {
   text-decoration: none;
   background: linear-gradient(135deg, #C8D8B0 0%, #8BAD68 100%);
   margin-bottom: 10px;
-  transition: transform 0.15s ease;
+  box-shadow: 0 2px 16px rgba(44,74,20,0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
 }
 
+.walk-list-card:hover { transform: translateY(-2px); box-shadow: 0 4px 24px rgba(44,74,20,0.12); }
 .walk-list-card:active { transform: scale(0.97); }
 
 .walk-list-card-img {
@@ -1736,11 +1736,13 @@ h1.walk-sidebar-title {
   flex-direction: column;
   justify-content: flex-start;
   text-decoration: none;
-  transition: transform 0.15s ease;
+  box-shadow: 0 4px 24px rgba(44,74,20,0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   margin-bottom: 0;
   position: relative;
 }
 
+.guide-hero-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(44,74,20,0.16); }
 .guide-hero-card:active { transform: scale(0.97); }
 
 .guide-hero-card-bg {
@@ -1875,10 +1877,12 @@ h1.walk-sidebar-title {
   display: block;
   text-decoration: none;
   background: var(--brand);
-  transition: transform 0.15s ease;
+  box-shadow: 0 2px 16px rgba(44,74,20,0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
 }
 
+.guide-grid-card:hover { transform: translateY(-2px); box-shadow: 0 4px 24px rgba(44,74,20,0.12); }
 .guide-grid-card:active { transform: scale(0.97); }
 
 .guide-grid-card-band {
@@ -2888,8 +2892,9 @@ h1.walk-sidebar-title {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 12px;
-  margin: 24px 0 32px;
+  margin: 32px 0;
 }
 .pagination-count {
   font-size: 13px;
@@ -3198,6 +3203,7 @@ h1.walk-sidebar-title {
   margin-bottom: 10px;
   transition: transform 0.15s ease;
 }
+.ws-guide-card:hover { transform: translateY(-2px); box-shadow: 0 4px 18px rgba(44,74,20,0.10); }
 .ws-guide-card:active { transform: scale(0.98); }
 .ws-guide-category {
   font-size: 11px;
