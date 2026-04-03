@@ -3451,9 +3451,16 @@ h1.walk-sidebar-title {
 }
 .area-pill-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 8px;
   margin-top: 8px;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.area-pill-row::-webkit-scrollbar {
+  display: none;
 }
 .area-pill {
   display: inline-flex;
@@ -3467,6 +3474,8 @@ h1.walk-sidebar-title {
   border-radius: 20px;
   text-decoration: none;
   transition: transform 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .area-pill:hover { background: #DDE8CC; }
 .area-pill:active { transform: scale(0.97); }
