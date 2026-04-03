@@ -35,6 +35,8 @@ heroAlt: "Richmond Park open grassland with deer in the distance"
 date: 2026-03-28
 ---
 
+Richmond Park is one of the few places in London where a dog can have a genuinely long off-lead run on grass. The park covers 2,500 acres and most of it is open to dogs, with the exception of the Pen Ponds area from May to July when the ground-nesting birds are active. The red and fallow deer are here year-round - around 630 of them - and the park rule is simple: if your dog goes near the deer, it goes back on the lead. Most days that is not an issue. The deer are spread widely enough that a walk across the Isabella Plantation side or up towards Pembroke Lodge stays well clear of the main herds. The paths are flat, wide, and easy underfoot on dry days, though the grass sections hold water after prolonged rain. The Roehampton Gate, Richmond Gate, and Kingston Gate car parks all have reasonable space on weekday mornings. Pembroke Lodge serves food and has a terrace with room for dogs.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions

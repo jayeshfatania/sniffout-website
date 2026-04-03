@@ -33,6 +33,8 @@ heroImage: "/img/walks/seven-sisters.jpg"
 date: 2026-03-29
 ---
 
+The Seven Sisters walk follows the chalk clifftop from Seaford Head to Birling Gap across eight kilometres of open downland, with the English Channel on one side and the Cuckmere Valley on the other. The cliffs are genuinely dramatic and also genuinely dangerous - there is no fence at the edge on most of the route, and the chalk erodes without warning, so leads near the clifftop are not optional. The path across the downland itself is broad and mostly firm, with livestock grazing year-round - mainly sheep and occasionally cattle. Leads are needed whenever livestock are present, which is most of the year. The valley section at the start, where the path crosses the Cuckmere floodplain to reach the beach at Cuckmere Haven, can flood after heavy winter rain and the river path sometimes becomes impassable. In summer the valley is dry and the shingle beach is accessible, though it gives no shade. Birling Gap has a National Trust cafe and limited parking; arrive early on summer weekends or the car park will be full before 10am.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions

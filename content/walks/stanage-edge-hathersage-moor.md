@@ -34,6 +34,8 @@ heroImage: "/img/walks/stanage-edge.jpg"
 date: 2026-03-30
 ---
 
+Stanage Edge runs for about five kilometres along a gritstone ridge above the Hope Valley, and the approach from the Plantation car park near Hathersage is the most direct way onto the moor. The ridge itself is broad and flat on top, with views east across the Sheffield suburbs and west into the Derbyshire hills. Dogs are off-lead on the open moorland, but the Edge has a working climbing face with steep drops on the eastern side - not the place to let a dog with no sense of height range freely near the rim. Sheep are present across the moorland from spring through autumn and reliable recall is necessary. The Eastern Moors below the Edge are designated adder habitat; from April to September the bracken and tussock areas on the descent paths are best avoided by dogs that push into undergrowth. The path can be wet and boggy after rain, particularly in the lower moorland sections. The Plantation car park is the most practical base; the Norfolk Arms at Ringinglow is a short drive and dog-friendly inside.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions

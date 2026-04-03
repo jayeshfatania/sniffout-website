@@ -34,6 +34,8 @@ heroImage: "/img/walks/hampstead-heath.jpg"
 date: 2026-03-29
 ---
 
+Hampstead Heath sits in north London but does not feel like it. The Heath covers 320 acres of ancient mixed landscape - meadow, woodland, scrub, and the hill at Parliament Hill that gives you the full London skyline to the south. Dogs are off-lead across the majority of it, with the exceptions being the formal gardens at Golders Hill Park and the immediate areas around the mixed and ladies' bathing ponds, where leads are required. The terrain is the most varied of the London walks on Sniffout: gravel paths on the main routes, open grass on the hill, and rougher undergrowth in the woodland sections that dogs tend to investigate at length. The paths become slippery on the wooded slopes after rain. Parliament Hill itself is well-drained and firm year-round. The Heath is best approached early in the morning on summer weekends when it fills quickly. The Lido cafe near the Highgate Ponds side is dog-friendly outside and a reliable stop.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions

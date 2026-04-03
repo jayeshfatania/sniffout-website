@@ -33,6 +33,8 @@ heroImage: "/img/walks/haytor-dartmoor.jpg"
 date: 2026-03-30
 ---
 
+The walk between Haytor and Hound Tor crosses open Dartmoor - 7.8 kilometres of rough moorland that feels very different from anything in the south of England. The ground is honest about the effort involved: tussock grass, wet peat bogs that look firmer than they are, and rocky sections that require some attention underfoot. Dogs are technically off-lead on open moorland, but Dartmoor has free-roaming ponies, cattle, and sheep across the whole route and leads are needed whenever the path takes you near livestock, which happens regularly. Adders are common on the sunny, south-facing slopes around both tors - the rocky gaps between boulders at Hound Tor in particular are the kind of spots where a curious nose gets too close. Weather on Dartmoor changes without much warning; the moor can be in cloud when Exeter is sunny. The summit of Haytor itself is granite and loose in places. This is an excellent walk for a confident, well-trained dog; less suitable for one that is unreliable around livestock.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions

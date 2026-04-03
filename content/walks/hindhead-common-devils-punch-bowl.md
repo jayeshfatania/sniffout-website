@@ -34,6 +34,8 @@ heroImage: "/img/walks/hindhead-common.png"
 date: 2026-03-30
 ---
 
+The Devil's Punch Bowl is not a subtle feature - the heathland falls away into a dramatic bowl-shaped valley that is visible from the road before you even park. The National Trust land here forms part of the Wealden Heaths National Nature Reserve, and the heathland plateau above the bowl is open and off-lead. The path that descends into the Punch Bowl is steep and sandy in places, with exposed roots on the lower sections; it is manageable but dogs on slippery harnesses need a bit of attention on the descent. Ground-nesting birds use the heath from March through August - the National Trust signage will show any areas that are temporarily cordoned. Adder sightings are consistent on the open heath in warm weather: they are not aggressive but they will strike if a dog puts a nose too close. The A3 underpass was built specifically to reconnect the heathland severed by the old road and it does the job - the walk feels continuous. The cafe at the visitor centre car park is dog-friendly outside.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions

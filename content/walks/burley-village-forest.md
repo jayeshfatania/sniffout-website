@@ -33,6 +33,8 @@ heroImage: "/img/walks/burley-new-forest.png"
 date: 2026-03-29
 ---
 
+The New Forest around Burley is ancient woodland and open heathland that has been grazed by free-roaming animals for centuries, and nothing about the walk preparation changes that fact: your dog is on the lead from the moment you leave the car park. The Verderers' bylaws are clear on this - dogs must be on lead near all Forest livestock, and the ponies, cattle, donkeys, and pigs that roam the Forest are classified as livestock whether they are on the roadside or in the depths of the woodland. This is not negotiable. The paths are flat, well-maintained, and easy in all weathers, which makes Burley a good option when conditions elsewhere are difficult. The village itself is about a mile from the best heathland walking, so parking in the village and walking out through the woodland edge is the natural approach. The heath areas carry adder populations particularly in the drier, south-facing sections - stay on the paths. The White Buck Inn in Burley is dog-friendly and serves food.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions

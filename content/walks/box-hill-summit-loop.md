@@ -34,6 +34,8 @@ heroImage: "/img/walks/box-hill.jpg"
 date: 2026-03-29
 ---
 
+Box Hill is anchored by the steep zigzag path that climbs the chalk face from the River Mole up to the National Trust viewpoint above. From the top you are looking south across the Weald - a long, wide view that opens up after the enclosed climb through yew and box woodland. The stepping stones across the Mole at the base are the best part for most dogs, especially in summer when the water runs shallow and clear. Off-lead is permitted on the open downland above, though you will sometimes find conservation grazing on the upper slopes - cattle in summer, sheep in early spring - and leads are needed when livestock are present. The zigzag path is chalk rubble underfoot and dry chalk grips well, but it becomes loose and slippery in wet weather; the gradient is steep enough that it is worth considering the long path around instead on a wet day. The National Trust cafe at the top is dog-friendly on the terrace. The Burford Bridge car park at the base fills early on sunny weekends.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions

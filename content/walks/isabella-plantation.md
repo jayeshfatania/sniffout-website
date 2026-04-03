@@ -34,6 +34,8 @@ heroImage: "/img/walks/isabella-plantation.jpg"
 date: 2026-03-30
 ---
 
+The Isabella Plantation is a walled woodland garden inside Richmond Park, and it asks one thing of you from the moment you arrive: keep your dog on the lead. The 1.4-kilometre circuit through azalea beds, ornamental ponds, and dense rhododendron paths is entirely on-lead, which makes it a different kind of walk - slower, more companionable, and very easy on the legs. The paths are well-maintained gravel and bark chip, flat throughout, with the ponds fenced at the edges. In late April and May the azaleas are in full colour and the paths get busy, particularly on weekends. Early morning visits are noticeably quieter. The planting is densely layered and the canopy provides genuine shade in summer, making this one of the cooler options in Richmond Park on hot days. Dogs do not get much freedom here, but the sensory interest is considerable - the pond margins carry a lot of scent. It is a good option for a dog that needs a shorter or calmer outing.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions

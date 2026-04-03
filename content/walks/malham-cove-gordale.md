@@ -33,6 +33,8 @@ heroImage: "/img/walks/malham-cove.jpg"
 date: 2026-03-29
 ---
 
+Malham Cove is a curved limestone cliff face 80 metres high, formed by glacial meltwater and now dry - the stream that once fell over its edge has long since moved underground. The path from the village follows Malham Beck to the base of the cove, then climbs steeply via stone steps on the right-hand side to reach the limestone pavement at the top. The pavement is the reason to come, but it requires care: the deep crevices between the limestone blocks - called grikes - are wide enough in places for a small dog to fall into, and a dog of any size that is prone to scrambling needs to be on the lead here. Sheep are on the farmland sections both on the approach and above the cove; leads are mandatory during lambing from late March through May. The descent is the same steep stone stair you came up. The Beck can be crossed on stepping stones near the village when water levels are low. The Buck Inn in Malham is dog-friendly and serves food year-round.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions

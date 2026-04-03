@@ -34,6 +34,8 @@ heroImage: "/img/walks/frensham-great-pond.jpg"
 date: 2026-03-30
 ---
 
+Frensham Great Pond gives you something rare in the Surrey countryside: a genuinely large open body of water where dogs can swim freely, combined with miles of surrounding heathland for the walk itself. The beach at the north end of the pond is sandy and gently shelving - the kind of entry that suits reluctant swimmers as well as the dogs that hit the water at a sprint. Check the National Trust and Surrey Wildlife Trust sites for blue-green algae notices before you go in summer; the pond is tested regularly and warnings are posted when conditions develop, but the risk is real. The surrounding heathland is off-lead and extends in several directions from the main pond car park. This is one of only two sites in Surrey where all six native reptile species are recorded, including adders - stay on the paths through the heather from April to September and do not let dogs investigate the scrubby hollows. The Frensham Pond Hotel has outdoor seating that takes dogs.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions

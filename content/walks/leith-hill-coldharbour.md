@@ -34,6 +34,8 @@ heroImage: "/img/walks/leith-hill.jpg"
 date: 2026-03-30
 ---
 
+Leith Hill is the highest point in the whole of southeast England, and the tower at the summit takes you just over 1,000 feet above sea level - far enough to see the English Channel on a clear day. The National Trust land here covers a mix of oak and pine woodland on the lower slopes and open heathland towards the top. Dogs are off-lead through the woodland paths, which are wide, well-marked, and shaded through summer. The heathland sections can be shorter on clearly signed routes and dogs tend to range freely. The ground holds water badly in winter: the clay soil across the northern approach from Coldharbour becomes deep mud from November through to March, and a pair of boots that you do not mind thoroughly cleaning is not optional. Ticks are active from April onwards in the heathland and bracken areas - check ears, groin, and armpits after every visit through to October. The Plough pub in Coldharbour is dog-friendly inside, which is worth knowing given how wet the car park can get.
+
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
 ## Frequently asked questions
