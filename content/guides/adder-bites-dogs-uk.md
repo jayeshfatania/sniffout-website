@@ -4,7 +4,7 @@ description: "A calm and practical guide to adder bites in dogs for UK walkers. 
 category: "Hazards"
 author: "Tom"
 date: 2026-04-02
-heroImage: ""
+heroImage: "/img/guides/adder-bites-hero.jpg"
 seasonal: true
 seasonStart: 3
 seasonEnd: 9
