@@ -1,5 +1,7 @@
 ---
 title: "Leith Hill and Coldharbour"
+lat: 51.1792
+lng: -0.3726
 location: "Coldharbour, Surrey"
 county: "Surrey"
 area: "Surrey Hills"

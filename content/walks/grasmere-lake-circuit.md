@@ -1,5 +1,7 @@
 ---
 title: "Grasmere Lake Circuit"
+lat: 54.4592
+lng: -3.0237
 location: "Grasmere, Cumbria"
 county: "Cumbria"
 area: "Lake District"

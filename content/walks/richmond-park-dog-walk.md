@@ -1,5 +1,7 @@
 ---
 title: "Richmond Park Dog Walk"
+lat: 51.4411
+lng: -0.2749
 location: "Richmond, London"
 county: "London"
 area: "Richmond upon Thames"

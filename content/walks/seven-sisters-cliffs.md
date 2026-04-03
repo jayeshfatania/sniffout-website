@@ -1,5 +1,7 @@
 ---
 title: "Seven Sisters Cliffs"
+lat: 50.7717
+lng: 0.1634
 location: "Seaford, East Sussex"
 county: "East Sussex"
 area: "Seven Sisters"

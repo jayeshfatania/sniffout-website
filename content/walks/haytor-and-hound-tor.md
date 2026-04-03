@@ -1,5 +1,7 @@
 ---
 title: "Haytor and Hound Tor"
+lat: 50.5784
+lng: -3.7417
 location: "Dartmoor, Devon"
 county: "Devon"
 area: "Dartmoor"

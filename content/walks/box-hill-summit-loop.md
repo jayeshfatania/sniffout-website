@@ -1,5 +1,7 @@
 ---
 title: "Box Hill Summit Loop"
+lat: 51.2533
+lng: -0.3039
 location: "Dorking, Surrey"
 county: "Surrey"
 area: "Box Hill"

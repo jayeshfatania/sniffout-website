@@ -1,5 +1,7 @@
 ---
 title: "Burley Village and Forest Walks"
+lat: 50.8492
+lng: -1.6578
 location: "Burley, Hampshire"
 county: "Hampshire"
 area: "New Forest"

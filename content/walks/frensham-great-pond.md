@@ -1,5 +1,7 @@
 ---
 title: "Frensham Great Pond"
+lat: 51.1549
+lng: -0.7944
 location: "Frensham, Surrey"
 county: "Surrey"
 area: "Surrey Hills"

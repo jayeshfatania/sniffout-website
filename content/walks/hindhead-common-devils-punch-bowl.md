@@ -1,5 +1,7 @@
 ---
 title: "Hindhead Common and Devils Punch Bowl"
+lat: 51.1097
+lng: -0.7246
 location: "Hindhead, Surrey"
 county: "Surrey"
 area: "Surrey Hills"

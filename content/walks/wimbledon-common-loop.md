@@ -1,5 +1,7 @@
 ---
 title: "Wimbledon Common Loop"
+lat: 51.4346
+lng: -0.2207
 location: "Wimbledon, London"
 county: "London"
 area: "Wimbledon"

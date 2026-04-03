@@ -1,5 +1,7 @@
 ---
 title: "Stanage Edge and Hathersage Moor"
+lat: 53.3541
+lng: -1.6392
 location: "Hathersage, Derbyshire"
 county: "Derbyshire"
 area: "Peak District"

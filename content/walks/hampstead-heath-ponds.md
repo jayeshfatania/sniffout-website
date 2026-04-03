@@ -1,5 +1,7 @@
 ---
 title: "Hampstead Heath and Ponds"
+lat: 51.5625
+lng: -0.1644
 location: "Hampstead, London"
 county: "London"
 area: "Hampstead"

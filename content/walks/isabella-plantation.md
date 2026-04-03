@@ -1,5 +1,7 @@
 ---
 title: "Isabella Plantation"
+lat: 51.4368
+lng: -0.2780
 location: "Richmond Park, London"
 county: "London"
 area: "Richmond Park"

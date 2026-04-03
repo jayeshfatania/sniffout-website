@@ -1,5 +1,7 @@
 ---
 title: "Malham Cove and Gordale Scar"
+lat: 54.0697
+lng: -2.1563
 location: "Malham, North Yorkshire"
 county: "North Yorkshire"
 area: "Yorkshire Dales"
