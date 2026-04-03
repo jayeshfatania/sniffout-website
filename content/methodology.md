@@ -1,7 +1,7 @@
 ---
 title: "How Sniffout scores walk quality"
 description: "How Sniffout's walk quality scores work, where the thresholds come from, and the veterinary research behind the system."
-layout: "page"
+type: "pages"
 ---
 
 When Sniffout shows you a green bar for 8am and an amber one for midday, that is not a guess. Each bar is calculated from real weather data using thresholds drawn from veterinary research - studies tracking hundreds of thousands of UK dogs, clinical data on heat-related illness, and welfare guidance published by the veterinary organisations that treat these conditions every year.

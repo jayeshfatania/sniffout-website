@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="page-layout">
+  <div class="page-layout-inner">
+    <nav class="page-nav">
+      <a href="/">Home</a>
+      <span class="page-nav-sep">/</span>
+      <span>{{ .Title }}</span>
+    </nav>
+    <h1 class="page-heading">{{ .Title }}</h1>
+    <div class="page-prose">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{ end }}
