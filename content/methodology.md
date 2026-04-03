@@ -14,7 +14,7 @@ Use the scores as a starting point. They will remove the guesswork on most days.
 
 ## What we measure
 
-**Temperature** is the biggest factor in walk quality for most dogs. Dogs cool themselves almost entirely through panting - a process that becomes progressively less effective as temperature and humidity rise. UK veterinary research has found that heatstroke in dogs occurs at lower temperatures than most owners expect: the median temperature on exercise-triggered heatstroke days in the UK is around 16-17 degrees Celsius. This is UK-specific data from real clinical cases, not estimates from human physiology. Because humidity affects how effectively panting works, Sniffout uses apparent temperature (the "feels like" figure that combines heat and humidity) rather than air temperature alone.
+**Temperature** is the biggest factor in walk quality for most dogs. Dogs cool themselves almost entirely through panting - a process that becomes progressively less effective as temperature and humidity rise. UK veterinary research has found that heatstroke in dogs occurs at lower temperatures than most owners expect: the median temperature on exercise-triggered heatstroke days in the UK is around 16-17 degrees Celsius, measured as Wet Bulb Globe Temperature (a composite measure incorporating humidity and solar radiation that reads lower than standard air temperature). This is UK-specific data from real clinical cases, not estimates from human physiology. BVA data shows that 38 percent of small animal vets had treated dogs for heatstroke after being walked on a hot day - compared to just 9 percent from hot cars. Walking, not confinement, is the primary cause of heatstroke in UK dogs. Because humidity affects how effectively panting works, Sniffout uses apparent temperature (the "feels like" figure that combines heat and humidity) rather than air temperature alone.
 
 **Rain** is scored on what is actually falling, not just the chance of rain. A 90 percent chance of light drizzle is very different from a 50 percent chance of heavy downpour. Sniffout uses Met Office rain intensity classifications to separate light drizzle (no penalty - dogs are fine in drizzle) from moderate rain (shorter walk recommended) from heavy rain or thunderstorms (not recommended). Thunderstorms are treated as a hard stop - not because of lightning risk, but because dogs can panic, bolt, and become lost.
 
@@ -22,7 +22,7 @@ Use the scores as a starting point. They will remove the guesswork on most days.
 
 **Cold** is scored differently by breed. Short-coated and small dogs start to struggle at around 7 degrees Celsius, while most medium-coated breeds are comfortable well below zero. Sniffout applies wind chill to the effective temperature rather than raw air temperature, because the combination of cold and wind extracts heat from a dog's body significantly faster than either factor alone.
 
-**Breed adjustments** are built into the scoring for brachycephalic breeds - French Bulldogs, Pugs, English Bulldogs, and similar short-muzzled dogs. These breeds have a restricted airway that makes panting less efficient, and peer-reviewed data shows they have significantly higher risk of heat-related illness than average dogs at the same temperature. Sniffout shifts all heat thresholds four degrees lower for these breeds.
+**Breed adjustments** are built into the scoring for brachycephalic breeds - French Bulldogs, Pugs, English Bulldogs, and similar short-muzzled dogs. These breeds have a restricted airway that makes panting less efficient, and peer-reviewed data shows they have significantly higher risk of heat-related illness than average dogs at the same temperature. Sniffout shifts all heat thresholds four degrees lower for these breeds. This offset is modelled from available evidence - including VetCompass data showing French Bulldogs have 6.5 times the heat-related illness risk of Labradors, and clinical data showing a Bulldog developed hyperthermia at 21 degrees Celsius while standing still - rather than a single published threshold.
 
 ---
 
@@ -77,6 +77,7 @@ Sniffout's walk quality scores are based on published veterinary research and UK
 - O'Neill et al., "Risk Factors for Severe and Fatal Heat-Related Illness in UK Dogs - A VetCompass Study," Veterinary Sciences 2022. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9144152/
 - O'Neill et al., "Incidence and risk factors for heat-related illness (heatstroke) in UK dogs under primary veterinary care in 2016," Scientific Reports 2020. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7303136/
 - Drobatz and Macintire, "Pathophysiology of heatstroke in dogs - revisited," Journal of Veterinary Emergency and Critical Care 1996. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5800390/
+- O'Neill et al., "Dogs Don't Die Just in Hot Cars - Exertional Heat-Related Illness (Heatstroke) in UK Dogs under Primary Veterinary Care in 2016," Scientific Reports 2020. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7459873/
 - Herrmann et al., "Climate of origin affects tick (Ixodes ricinus) host-seeking behavior in response to temperature," PLOS ONE 2014. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3997332/
 
 ### UK veterinary organisations
@@ -85,6 +86,7 @@ Sniffout's walk quality scores are based on published veterinary research and UK
 - Blue Cross dog and thunderstorm guidance. https://www.bluecross.org.uk
 - RSPCA winter cold weather care for dogs. https://www.rspca.org.uk
 - Vets Now: "How Cold Is Too Cold for Dogs" and pavement heat guidance. https://www.vets-now.com
+- BVA hot weather guidance and heatstroke data. https://www.bva.co.uk
 
 ### Weather and environmental
 
