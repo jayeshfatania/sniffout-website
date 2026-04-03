@@ -26,6 +26,8 @@ Key UK strongholds include Surrey and Hampshire - Surrey has the second largest 
 
 Adders emerge from hibernation from late March in southern England and are active through to October. The highest-risk window for dog bites is April through July - a VPIS retrospective study found that 69.2% of recorded bites fell within this period. (Reid et al. 2011, VPIS) Spring is particularly hazardous because adders are still sluggish after hibernation and cannot escape quickly, and because their venom is at its most potent at this time of year. VPIS data also shows that bites cluster most commonly between 3pm and 4pm - the warmest part of a spring or summer afternoon, when adders are most actively basking.
 
+![Adder habitat - open heathland and bracken in the UK](/img/guides/adder-inline-1.jpg)
+
 ## How dogs get bitten
 
 Dogs are almost always bitten out of curiosity. An adder is basking on a warm bank, among heather, or under a log, and the dog pushes its nose in to investigate before the snake has time to move away. Off-lead dogs in heathland are at the highest risk for exactly this reason. Dogs with a strong prey drive or scenting instinct are particularly likely to investigate closely rather than moving on.
@@ -76,6 +78,8 @@ Good habits reduce risk substantially in adder habitat.
 ## Sniffout walks in adder habitat
 
 Several of the walks in Sniffout's collection pass through terrain where adders are present. These are also some of the finest walking landscapes in the UK - the open heathland and warm moorland that adders favour is genuinely beautiful country. The walks below just call for a little extra care during the spring and summer months.
+
+![Walking through adder country - heathland paths in spring](/img/guides/adder-inline-2.jpg)
 
 **Keep dogs on a lead through heath and moorland sections** - Hindhead Common, Frensham Great Pond, Haytor and Hound Tor on Dartmoor, and the Burley Village walk in the New Forest all pass through prime adder habitat. Hindhead is one of a small number of Surrey sites where all six of the UK's native reptile species have been recorded. Frensham Great Pond and Little Pond are confirmed adder sites and are among the most important heathland reptile habitats in Surrey. (Surrey Wildlife Trust)
 

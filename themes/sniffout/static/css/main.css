@@ -2314,6 +2314,15 @@ h1.walk-sidebar-title {
   margin: 48px 0;
 }
 
+.ga-body img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 24px 0;
+  display: block;
+}
+
 .ga-body strong {
   font-weight: 700;
   color: var(--ink);
@@ -3362,17 +3371,15 @@ h1.walk-sidebar-title {
 /* About page Luna photo */
 .about-luna-photo {
   max-width: 672px;
-  width: 100%;
   margin: 32px auto;
-  display: block;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 24px rgba(44, 74, 20, 0.12);
+  padding: 0 16px;
 }
 .about-luna-photo img {
   width: 100%;
   height: auto;
+  border-radius: 12px;
   display: block;
+  box-shadow: 0 4px 24px rgba(44, 74, 20, 0.12);
 }
 .about-luna-caption {
   text-align: center;
@@ -3383,7 +3390,7 @@ h1.walk-sidebar-title {
   font-style: italic;
 }
 @media (max-width: 768px) {
-  .about-luna-photo { max-width: 100%; margin: 24px 16px; }
+  .about-luna-photo { max-width: 100%; margin: 24px auto; }
 }
 
 /* --- Area index pages (Surrey, London, etc.) --- */
