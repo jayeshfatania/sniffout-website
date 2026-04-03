@@ -3502,6 +3502,42 @@ h1.walk-sidebar-title {
 
 /* --- Walk FAQ section --- */
 
+/* Weather preview card */
+.ws-weather-card { border-radius: 16px; overflow: hidden; border: 0.5px solid rgba(44,74,20,0.12); margin: 32px 0; }
+.ws-wc-gradient-bar { height: 4px; background: linear-gradient(90deg, #2C4A14 0%, #7CB342 45%, #E6B44C 75%, #DDD8CE 100%); }
+.ws-wc-gradient-bar.hot { background: linear-gradient(90deg, #E6B44C 0%, #C0392B 50%, #C0392B 100%); }
+.ws-wc-inner { background: #fff; padding: 20px 20px 16px; }
+.ws-wc-top { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.ws-wc-temp { font-size: 34px; font-weight: 500; color: #2C4A14; letter-spacing: -1px; line-height: 1; }
+.ws-wc-temp sup { font-size: 15px; font-weight: 500; }
+.ws-wc-temp.hot { color: #C0392B; }
+.ws-wc-divider { width: 1px; height: 34px; background: rgba(44,74,20,0.12); flex-shrink: 0; }
+.ws-wc-info { flex: 1; min-width: 0; }
+.ws-wc-kicker { font-size: 11px; color: #888; margin-bottom: 2px; }
+.ws-wc-verdict { font-size: 15px; font-weight: 500; color: #1C1A16; }
+.ws-wc-verdict.hot { color: #C0392B; }
+.ws-wc-sub { font-size: 12px; color: #888; margin-top: 1px; }
+.ws-wc-window-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.ws-wc-window-label { font-size: 13px; font-weight: 500; color: #1C1A16; }
+.ws-wc-window-badge { font-size: 11px; font-weight: 500; background: #2C4A14; color: #fff; padding: 3px 10px; border-radius: 20px; }
+.ws-wc-window-badge.hot { background: #C0392B; }
+.ws-wc-bars { display: flex; align-items: flex-end; gap: 2px; height: 88px; }
+.ws-wc-loading { font-size: 13px; color: #888; display: flex; align-items: center; height: 100%; }
+.ws-wc-bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; min-width: 0; }
+.ws-wc-bar-icon { height: 14px; display: flex; align-items: center; justify-content: center; }
+.ws-wc-bar-icon svg { width: 10px; height: 10px; }
+.ws-wc-bar-block { width: 100%; border-radius: 3px 3px 1px 1px; min-height: 4px; }
+.ws-wc-bar-time { font-size: 8px; color: #888; margin-top: 3px; text-align: center; overflow: hidden; white-space: nowrap; }
+.ws-wc-legend { display: flex; gap: 12px; margin-top: 14px; padding-top: 12px; border-top: 0.5px solid rgba(44,74,20,0.08); flex-wrap: wrap; }
+.ws-wc-legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #888; }
+.ws-wc-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+.ws-wc-disclaimer { display: flex; align-items: center; gap: 6px; margin-top: 12px; padding: 8px 12px; background: rgba(44,74,20,0.04); border-radius: 10px; }
+.ws-wc-disclaimer span { font-size: 11px; color: #888; line-height: 1.3; }
+.ws-wc-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 0.5px solid rgba(44,74,20,0.08); margin-top: 12px; gap: 12px; }
+.ws-wc-note { font-size: 12px; color: #888; line-height: 1.4; flex: 1; }
+.ws-wc-cta { font-size: 13px; font-weight: 500; color: #fff; background: #2C4A14; padding: 10px 16px; border-radius: 10px; text-decoration: none; display: flex; align-items: center; gap: 6px; white-space: nowrap; flex-shrink: 0; }
+.ws-wc-cta.hot { background: #C0392B; }
+
 .ws-faq-outer {
   margin-top: 40px;
 }
