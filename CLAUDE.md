@@ -54,6 +54,7 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - Install page (/get)
 - About page
 - Privacy page (placeholder)
+- Methodology page (/methodology/) - uses page layout template (themes/sniffout/layouts/pages/single.html, type: pages in front matter)
 
 ### Guide articles live or complete
 - Ticks: content/guides/ticks-dogs-uk.md
@@ -65,7 +66,10 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - Grass seeds: content/guides/grass-seeds-dogs-uk.md
 - Adder bites: content/guides/adder-bites-dogs-uk.md (complete - research, written, fact-checked, images)
 - Shar Pei walking: content/guides/walking-shar-pei-uk.md
-- Senior dog walking: content/guides/senior-dog-walking-uk.md (article written - Fact Checker review pending)
+- Senior dog walking: content/guides/senior-dog-walking-uk.md (fact-checked, PASS)
+- French Bulldog walking guide: content/guides/french-bulldog-walking-guide.md (fact-checked, PASS)
+- Cockapoo walking guide: content/guides/cockapoo-walking-guide.md (fact-checked, PASS with one correction applied)
+- Temperature guide ("Is it too hot to walk my dog"): IN PIPELINE - research complete at docs/research/heat-guide-research-april-3.md, Tom writing, mid-May deadline
 
 ### SEO infrastructure
 - FAQ blocks on all 14 walk pages with schema.org FAQPage markup
@@ -100,15 +104,12 @@ Full persona specs: docs/copy/website-personas.md
 
 ## Content backlog (priority order)
 
-1. "Is it too hot to walk my dog" temperature guide - mid-May deadline for summer search peak
-2. French Bulldog walking guide
-3. Cockapoo walking guide
-4. Labrador walking guide
-5. "How far should I walk my dog" guide
-6. Website methodology page (scoring sources - required before go-live, liability protection)
-7. Website weather preview card on walk pages
-8. Ailsa descriptions for all 14 live walk pages
-9. Walk images: newlands-corner.jpg, ranmore-common.jpg still to source
+1. "Is it too hot to walk my dog" temperature guide - mid-May deadline, research complete at docs/research/heat-guide-research-april-3.md, Tom writing
+2. Labrador walking guide
+3. "How far should I walk my dog" guide
+4. Website weather preview card on walk pages
+5. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
+6. Ailsa descriptions: written at docs/copy/ailsa-walk-descriptions-april-3.md - pending Developer commit to walk pages
 
 ## SEO reference
 
@@ -118,6 +119,15 @@ Full persona specs: docs/copy/website-personas.md
 - Breed guides have no competitor coverage - genuine white space
 - Area index pages highest-return/lowest-effort content
 - Seasonal content must be published 6-8 weeks before peak search period
+
+## Analytics
+
+- GA4 live on app and website. Measurement ID: G-B1GQG1KWD3
+- Guide scroll tracking: guide_read event fires at 50% scroll depth
+- Weather card events tracked on homepage and guide pages
+- CTA click tracking on install CTAs
+- Custom events on PWA: tab_view, walk_card_tap, walk_detail_open, weather_check, nearby_search, app_install_prompt, app_installed
+- Beta source tracking via ?src= URL parameter
 
 ## Developer push verification (mandatory)
 
@@ -138,13 +148,21 @@ Confirm origin/main matches HEAD before saying the task is complete.
 ## Affiliate strategy
 
 Top programmes to join (in priority order):
-1. Everypaw Pet Insurance via AWIN
-2. Rover UK via Webgains
+1. Everypaw Pet Insurance via AWIN (CPA up to £20/policy - highest individual value)
+2. Rover UK via Webgains (15% per sale)
 3. VioVet via AWIN
-4. Petplan via Optimise Media Group
+4. Petplan via Optimise Media Group (approximately £10/policy)
 5. tails.com via AWIN
+6. Booking.com via AWIN (approximately 3.75-6% of booking value - high per-conversion value)
+7. Canopy and Stars (contact directly - premium dog-friendly accommodation)
+8. Cool Camping (contact directly - premium dog-friendly accommodation)
 
-Network to join first: AWIN. Then Amazon Associates UK simultaneously.
+Network to join first: AWIN. Then Amazon Associates UK and Webgains simultaneously.
+
+### Dog-friendly accommodation affiliates (new - high value)
+Walk pages near dog-friendly accommodation destinations (New Forest, Lake District, Dartmoor, Surrey Hills) are a natural placement for accommodation affiliate links. "Where to stay near this walk" section: 2-3 links. Earn per booking passively. Booking.com per-conversion yield: approximately £15-24 on a 2-night weekend stay. Higher yield than most product affiliates.
+
+Pet insurance CPAs £20-40/sale are highest per-transaction value. Best pairing: heatstroke guide + insurance CTA; breed guides + breed-specific insurance mention (French Bulldog BOAS cover).
 
 Zero affiliate links on: Alabama rot, blue-green algae, cattle, antifreeze articles. Safety content only.
 Walk pages: maximum 1 contextual link. No product rails.
