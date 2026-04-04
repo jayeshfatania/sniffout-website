@@ -18,4 +18,26 @@
 <!-- Styles -->
 <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
 
-<!-- Analytics placeholder -->
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B1GQG1KWD3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B1GQG1KWD3');
+
+  // Beta source tracking
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var src = params.get('src');
+    if (src) {
+      gtag('set', 'user_properties', { 'traffic_source': src });
+      try { sessionStorage.setItem('sniffout_src', src); } catch(e) {}
+    } else {
+      try {
+        var stored = sessionStorage.getItem('sniffout_src');
+        if (stored) { gtag('set', 'user_properties', { 'traffic_source': stored }); }
+      } catch(e) {}
+    }
+  })();
+</script>

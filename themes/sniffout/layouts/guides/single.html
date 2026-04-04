@@ -272,4 +272,21 @@
 })();
 </script>
 
+<script>
+(function() {
+  var tracked = false;
+  var guideName = '{{ .Title }}';
+  window.addEventListener('scroll', function() {
+    if (tracked) return;
+    var scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+    if (scrollPercent > 0.5) {
+      tracked = true;
+      if (typeof gtag === 'function') {
+        gtag('event', 'guide_read', { 'guide_name': guideName });
+      }
+    }
+  });
+})();
+</script>
+
 {{ end }}

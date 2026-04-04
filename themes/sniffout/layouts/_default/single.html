@@ -149,7 +149,7 @@
         </div>
         <div class="ws-wc-bottom">
           <div class="ws-wc-note">Breed-specific alerts, humidity-adjusted scoring, and paw burn data in the app</div>
-          <a href="https://sniffout.app" target="_blank" rel="noopener" class="ws-wc-cta">Open in Sniffout <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></a>
+          <a href="https://sniffout.app" target="_blank" rel="noopener" class="ws-wc-cta" onclick="if(typeof gtag==='function'){gtag('event','weather_card_cta_click',{'walk_name':'{{ .Params.location }}'});}">Open in Sniffout <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></a>
         </div>
       </div>
     </div>
@@ -487,6 +487,7 @@
     }).join('');
 
     document.getElementById('ws-wc-bars').innerHTML = barsHtml;
+    if (typeof gtag === 'function') { gtag('event', 'weather_card_view', { 'walk_name': name }); }
   }
 })();
 </script>
