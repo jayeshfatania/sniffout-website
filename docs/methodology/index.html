@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://sniffout-website.pages.dev/methodology/">
+<title>How Sniffout scores walk quality | Sniffout</title>
+<meta name="description" content="How Sniffout&#39;s walk quality scores work, where the thresholds come from, and the veterinary research behind the system.">
+
+
+<meta property="og:title" content="How Sniffout scores walk quality">
+<meta property="og:description" content="How Sniffout&#39;s walk quality scores work, where the thresholds come from, and the veterinary research behind the system.">
+<meta property="og:url" content="https://sniffout-website.pages.dev/methodology/">
+<meta property="og:type" content="article">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B1GQG1KWD3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B1GQG1KWD3');
+
+  
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var src = params.get('src');
+    if (src) {
+      gtag('set', 'user_properties', { 'traffic_source': src });
+      try { sessionStorage.setItem('sniffout_src', src); } catch(e) {}
+    } else {
+      try {
+        var stored = sessionStorage.getItem('sniffout_src');
+        if (stored) { gtag('set', 'user_properties', { 'traffic_source': stored }); }
+      } catch(e) {}
+    }
+  })();
+</script>
+</head>
+  <body><header class="site-header">
+  <a href="/" class="header-logo">
+    <svg width="24" height="24" viewBox="0 0 350 295" fill="#2C4A14" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M150.238 1.39505C95.716 8.65305 55.391 40.3151 26.333 98.6801C9.24201 133.01 -0.0129863 168.059 1.36766e-05 198.399C0.0180137 238.297 19.579 266.148 54.238 275.622C62.871 277.982 89.477 278.015 99.605 275.678L106.472 274.094L112.27 277.841C146.167 299.75 197.119 299.989 232.673 278.407L240.3 273.776L248.019 275.588C260.003 278.4 285.056 278.124 295.738 275.063C319.332 268.301 337.339 251.535 344.764 229.417C348.429 218.499 349.555 208.368 348.878 192.399C346.695 140.866 321.225 81.944 285.087 44.8241C269.981 29.3071 249.89 16.105 231.249 9.44504C207.748 1.04904 176.307 -2.07595 150.238 1.39505ZM202.175 30.332C212.982 32.567 224.545 36.489 234.209 41.198C272.997 60.096 307.485 113.931 318.275 172.423C320.853 186.397 321.322 206.325 319.275 214.899C316.093 228.228 307.591 239.155 295.983 244.833C279.894 252.704 257.617 251.456 236.782 241.517C214.985 231.119 198.099 212.317 191.772 191.399C189.409 183.587 189.493 183.417 196.988 180.917C211.786 175.981 229.734 165.497 241.463 154.938C249.242 147.935 257.867 134.725 260.939 125.109C271.029 93.5291 256.287 64.143 223.253 49.991C199.351 39.751 164.895 37.956 138.238 45.562C114.349 52.378 94.739 69.383 87.684 89.399C84.791 97.61 84.578 112.818 87.221 122.612C93.319 145.21 113.619 165.531 142.633 178.08C148.741 180.721 154.301 182.886 154.988 182.891C156.705 182.902 156.564 184.576 154.252 191.618C151.122 201.153 148.61 206.472 144.314 212.656C131.311 231.38 112.55 243.862 90.598 248.396C61.824 254.34 38.433 242.563 30.639 218.209C25.269 201.429 29.7 165.177 40.781 135.236C48.214 115.149 61.584 90.613 73.136 75.857C93.297 50.104 119.375 34.42 150.238 29.485C162.114 27.586 191.189 28.06 202.175 30.332ZM139.509 95.743C143.621 98.135 146.582 104.906 145.727 109.963C144.436 117.606 135.932 123.294 128.562 121.444C127.083 121.073 124.155 119.051 122.055 116.952C118.723 113.619 118.238 112.542 118.238 108.467C118.238 102.948 120.161 98.799 123.973 96.095C128.873 92.618 133.942 92.503 139.509 95.743ZM218.967 94.8631C230.304 100.009 230.118 115.968 218.662 121.036C208.692 125.446 198.238 118.485 198.238 107.435C198.238 101.522 201.004 97.364 206.639 94.804C211.797 92.462 213.699 92.4711 218.967 94.8631ZM177.567 226.339C183.527 235.316 193.004 245.69 201.103 252.105C205.302 255.43 208.866 258.479 209.023 258.881C209.433 259.929 194.965 264.541 186.827 265.958C175.24 267.974 158.557 266.723 146.988 262.969C141.625 261.229 137.248 259.489 137.26 259.102C137.271 258.715 139.794 256.599 142.865 254.399C150.475 248.947 162.367 236.308 167.827 227.868C170.306 224.035 172.699 220.899 173.145 220.899C173.59 220.899 175.58 223.347 177.567 226.339Z"/>
+    </svg>
+    <span class="header-wordmark">sniffout</span>
+  </a>
+  <div class="header-right">
+    <nav class="header-nav">
+      <a href="/walks/" >Walks</a>
+      <a href="/guides/" >Guides</a>
+      <a href="/about/" >About</a>
+    </nav>
+    <a href="https://sniffout.app" target="_blank" rel="noopener" class="header-cta-pill">Get the app</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-mobile-scrim" id="nav-mobile-scrim" aria-hidden="true"></div>
+<div class="nav-mobile-panel" id="nav-mobile-panel" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Close menu">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <nav class="nav-mobile-links">
+    <a href="/walks/" class="nav-mobile-link">Walks</a>
+    <a href="/guides/" class="nav-mobile-link">Guides</a>
+    <a href="/about/" class="nav-mobile-link">About</a>
+  </nav>
+</div>
+
+<script>
+(function() {
+  var hamburger = document.getElementById('nav-hamburger');
+  var panel = document.getElementById('nav-mobile-panel');
+  var scrim = document.getElementById('nav-mobile-scrim');
+  var closeBtn = document.getElementById('nav-mobile-close');
+  if (!hamburger || !panel || !scrim || !closeBtn) return;
+
+  function openMenu() {
+    panel.classList.add('open');
+    scrim.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeMenu() {
+    panel.classList.remove('open');
+    scrim.classList.remove('open');
+    document.body.style.overflow = '';
+    hamburger.focus();
+  }
+
+  hamburger.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  scrim.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && panel.classList.contains('open')) closeMenu();
+  });
+})();
+</script>
+<main>
+<div class="page-layout">
+  <div class="page-layout-inner">
+    <nav class="page-nav">
+      <a href="/">Home</a>
+      <span class="page-nav-sep">/</span>
+      <span>How Sniffout scores walk quality</span>
+    </nav>
+    <h1 class="page-heading">How Sniffout scores walk quality</h1>
+    <div class="page-prose">
+      <p>When Sniffout shows you a green bar for 8am and an amber one for midday, that is not a guess. Each bar is calculated from real weather data using thresholds drawn from veterinary research - studies tracking hundreds of thousands of UK dogs, clinical data on heat-related illness, and welfare guidance published by the veterinary organisations that treat these conditions every year.</p>
+<p>But it is guidance, not a verdict. The score reflects what the weather is likely to feel like for an average healthy adult dog of a typical breed. Your dog is not average. A French Bulldog and a Siberian Husky standing in the same sunshine are having completely different experiences. A dog recovering from illness, or an older dog with stiff joints, needs a different walk than the same dog in peak condition.</p>
+<p>Use the scores as a starting point. They will remove the guesswork on most days. On the days where your dog seems off, or the weather is genuinely borderline, what you see and feel will always matter more than a number on a screen.</p>
+<hr>
+<h2 id="what-we-measure">What we measure</h2>
+<p><strong>Temperature</strong> is the biggest factor in walk quality for most dogs. Dogs cool themselves almost entirely through panting - a process that becomes progressively less effective as temperature and humidity rise. UK veterinary research has found that heatstroke in dogs occurs at lower temperatures than most owners expect: the median temperature on exercise-triggered heatstroke days in the UK is around 16-17 degrees Celsius, measured as Wet Bulb Globe Temperature (a composite measure incorporating humidity and solar radiation that reads lower than standard air temperature). This is UK-specific data from real clinical cases, not estimates from human physiology. BVA data shows that 38 percent of small animal vets had treated dogs for heatstroke after being walked on a hot day - compared to just 9 percent from hot cars. Walking, not confinement, is the primary cause of heatstroke in UK dogs. Because humidity affects how effectively panting works, Sniffout uses apparent temperature (the &ldquo;feels like&rdquo; figure that combines heat and humidity) rather than air temperature alone.</p>
+<p><strong>Rain</strong> is scored on what is actually falling, not just the chance of rain. A 90 percent chance of light drizzle is very different from a 50 percent chance of heavy downpour. Sniffout uses Met Office rain intensity classifications to separate light drizzle (no penalty - dogs are fine in drizzle) from moderate rain (shorter walk recommended) from heavy rain or thunderstorms (not recommended). Thunderstorms are treated as a hard stop - not because of lightning risk, but because dogs can panic, bolt, and become lost.</p>
+<p><strong>Wind</strong> matters most when walks involve woodland or exposed ground. Sniffout flags high wind conditions because falling branches and uprooted trees create genuine hazard in woodland at sustained winds of 50 km/h or above - the threshold used by outdoor education organisations to close woodland activities. For small dogs, moderate wind (around 30-40 km/h) can make walking uncomfortable and unstable before woodland risk becomes a factor.</p>
+<p><strong>Cold</strong> is scored differently by breed. Short-coated and small dogs start to struggle at around 7 degrees Celsius, while most medium-coated breeds are comfortable well below zero. Sniffout applies wind chill to the effective temperature rather than raw air temperature, because the combination of cold and wind extracts heat from a dog&rsquo;s body significantly faster than either factor alone.</p>
+<p><strong>Breed adjustments</strong> are built into the scoring for brachycephalic breeds - French Bulldogs, Pugs, English Bulldogs, and similar short-muzzled dogs. These breeds have a restricted airway that makes panting less efficient, and peer-reviewed data shows they have significantly higher risk of heat-related illness than average dogs at the same temperature. Sniffout shifts all heat thresholds four degrees lower for these breeds. This offset is modelled from available evidence - including VetCompass data showing French Bulldogs have 6.5 times the heat-related illness risk of Labradors, and clinical data showing a Bulldog developed hyperthermia at 21 degrees Celsius while standing still - rather than a single published threshold.</p>
+<hr>
+<h2 id="where-our-thresholds-come-from">Where our thresholds come from</h2>
+<p>The scoring thresholds are drawn from the following sources:</p>
+<p>Veterinary research from the Royal Veterinary College&rsquo;s VetCompass programme, which has tracked over 900,000 UK dogs under primary veterinary care and produced the most detailed UK-specific data on heat-related illness in dogs - including which breeds are most at risk and at what temperatures exercise-triggered illness occurs.</p>
+<p>UK welfare guidance from the PDSA, Blue Cross, and RSPCA, whose published walking guidance provides the practical thresholds most commonly cited by UK vets and pet care organisations.</p>
+<p>Veterinary clinical data on heatstroke in dogs published in Veterinary Sciences and Scientific Reports - peer-reviewed studies producing the breed risk multipliers used in the brachycephalic adjustment (French Bulldogs have 6.5 times the heat-related illness risk of a Labrador; Bulldogs have nearly 14 times the risk).</p>
+<p>Met Office weather classification standards for rain intensity - the same framework used by UK weather forecasters and hydrologists.</p>
+<p>Beaufort wind scale thresholds used by outdoor education organisations to make decisions about woodland activities.</p>
+<p>Vets Now temperature guidance for cold weather walking, which provides the breed-specific cold thresholds used in the low-temperature scoring.</p>
+<hr>
+<h2 id="what-we-estimate">What we estimate</h2>
+<p>Not everything in the scoring system comes from published research, and we think it matters to say so clearly.</p>
+<p><strong>Humidity multipliers.</strong> The scoring applies a 1.3x multiplier to heat penalties at relative humidity above 60 percent, and a 1.6x multiplier above 80 percent. The 80 percent threshold has veterinary research behind it - above that level, panting stops working effectively. But the 1.3x and 1.6x multiplier values, and the 60 percent intermediate threshold, are our estimates based on veterinary physiology principles. They are not derived from specific published research. We applied them because ignoring humidity at temperatures above 22 degrees Celsius would understate the risk, but we cannot point to a study that verifies these exact numbers.</p>
+<p><strong>Mud risk thresholds.</strong> The dry/damp/muddy/very muddy indicators are based on 48-hour cumulative rainfall and soil drainage research, not published dog walking guidance. No veterinary source publishes specific rainfall thresholds for path conditions. Our thresholds are practical estimates informed by soil science.</p>
+<p><strong>Small dog wind sensitivity.</strong> The specific wind speeds at which small dogs become unstable (around 32-40 km/h) come from aggregated sources rather than a single authoritative study. The principle is well-grounded - small dogs have a higher surface area to body weight ratio and are physically lighter - but the exact kilometre-per-hour thresholds are our interpretation.</p>
+<p>We would rather be honest about what we know and what we estimate than present everything as settled science. The estimates are conservative - they err on the side of caution - and they will be updated as better data becomes available.</p>
+<hr>
+<h2 id="breed-specific-adjustments">Breed-specific adjustments</h2>
+<p>The app adjusts scoring thresholds for the breed profile you set. The most significant adjustment applies to brachycephalic breeds (French Bulldogs, Pugs, English Bulldogs, Shih Tzus, and Cavalier King Charles Spaniels). VetCompass data shows these breeds have 2 to 14 times higher risk of heat-related illness than average dogs at equivalent temperatures and exercise levels. Sniffout shifts heat scoring thresholds four degrees lower for these breeds - so a day that scores as &ldquo;good&rdquo; for a Labrador may score as &ldquo;fair&rdquo; for a French Bulldog.</p>
+<hr>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>Sniffout&rsquo;s walk quality scores are based on published veterinary research and UK weather data. They are intended as general guidance only and are not a substitute for veterinary advice. Every dog is different - breed, age, weight, health conditions, fitness level, and individual temperament all affect how your dog responds to weather conditions. Always watch your dog for signs of discomfort, overheating, or distress during walks. If you are concerned about your dog&rsquo;s health or exercise tolerance, consult your vet. Sniffout does not accept liability for any injury or illness arising from use of the walk quality scoring system.</p>
+<hr>
+<h2 id="sources">Sources</h2>
+<h3 id="peer-reviewed-research">Peer-reviewed research</h3>
+<ul>
+<li>O&rsquo;Neill et al., &ldquo;Risk Factors for Severe and Fatal Heat-Related Illness in UK Dogs - A VetCompass Study,&rdquo; Veterinary Sciences 2022. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9144152/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9144152/</a></li>
+<li>O&rsquo;Neill et al., &ldquo;Incidence and risk factors for heat-related illness (heatstroke) in UK dogs under primary veterinary care in 2016,&rdquo; Scientific Reports 2020. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7303136/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7303136/</a></li>
+<li>Drobatz and Macintire, &ldquo;Pathophysiology of heatstroke in dogs - revisited,&rdquo; Journal of Veterinary Emergency and Critical Care 1996. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5800390/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5800390/</a></li>
+<li>O&rsquo;Neill et al., &ldquo;Dogs Don&rsquo;t Die Just in Hot Cars - Exertional Heat-Related Illness (Heatstroke) in UK Dogs under Primary Veterinary Care in 2016,&rdquo; Scientific Reports 2020. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7459873/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7459873/</a></li>
+<li>Herrmann et al., &ldquo;Climate of origin affects tick (Ixodes ricinus) host-seeking behavior in response to temperature,&rdquo; PLOS ONE 2014. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3997332/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3997332/</a></li>
+</ul>
+<h3 id="uk-veterinary-organisations">UK veterinary organisations</h3>
+<ul>
+<li>PDSA senior dog and hot weather walking guidance. <a href="https://www.pdsa.org.uk">https://www.pdsa.org.uk</a></li>
+<li>Blue Cross dog and thunderstorm guidance. <a href="https://www.bluecross.org.uk">https://www.bluecross.org.uk</a></li>
+<li>RSPCA winter cold weather care for dogs. <a href="https://www.rspca.org.uk">https://www.rspca.org.uk</a></li>
+<li>Vets Now: &ldquo;How Cold Is Too Cold for Dogs&rdquo; and pavement heat guidance. <a href="https://www.vets-now.com">https://www.vets-now.com</a></li>
+<li>BVA hot weather guidance and heatstroke data. <a href="https://www.bva.co.uk">https://www.bva.co.uk</a></li>
+</ul>
+<h3 id="weather-and-environmental">Weather and environmental</h3>
+<ul>
+<li>Met Office rain intensity classification framework. <a href="https://www.metoffice.gov.uk">https://www.metoffice.gov.uk</a></li>
+<li>Beaufort wind scale. <a href="https://www.metoffice.gov.uk/weather/guides/coast-and-sea/beaufort-scale">https://www.metoffice.gov.uk/weather/guides/coast-and-sea/beaufort-scale</a></li>
+<li>ECDC Ixodes ricinus factsheet (tick humidity and temperature thresholds). <a href="https://www.ecdc.europa.eu">https://www.ecdc.europa.eu</a></li>
+<li>UKHSA Lyme disease seasonal guidance. <a href="https://www.gov.uk/government/collections/lyme-disease-guidance-data-and-analysis">https://www.gov.uk/government/collections/lyme-disease-guidance-data-and-analysis</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-brand">
+    <svg width="18" height="18" viewBox="0 0 350 295" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M150.238 1.39505C95.716 8.65305 55.391 40.3151 26.333 98.6801C9.24201 133.01 -0.0129863 168.059 1.36766e-05 198.399C0.0180137 238.297 19.579 266.148 54.238 275.622C62.871 277.982 89.477 278.015 99.605 275.678L106.472 274.094L112.27 277.841C146.167 299.75 197.119 299.989 232.673 278.407L240.3 273.776L248.019 275.588C260.003 278.4 285.056 278.124 295.738 275.063C319.332 268.301 337.339 251.535 344.764 229.417C348.429 218.499 349.555 208.368 348.878 192.399C346.695 140.866 321.225 81.944 285.087 44.8241C269.981 29.3071 249.89 16.105 231.249 9.44504C207.748 1.04904 176.307 -2.07595 150.238 1.39505ZM202.175 30.332C212.982 32.567 224.545 36.489 234.209 41.198C272.997 60.096 307.485 113.931 318.275 172.423C320.853 186.397 321.322 206.325 319.275 214.899C316.093 228.228 307.591 239.155 295.983 244.833C279.894 252.704 257.617 251.456 236.782 241.517C214.985 231.119 198.099 212.317 191.772 191.399C189.409 183.587 189.493 183.417 196.988 180.917C211.786 175.981 229.734 165.497 241.463 154.938C249.242 147.935 257.867 134.725 260.939 125.109C271.029 93.5291 256.287 64.143 223.253 49.991C199.351 39.751 164.895 37.956 138.238 45.562C114.349 52.378 94.739 69.383 87.684 89.399C84.791 97.61 84.578 112.818 87.221 122.612C93.319 145.21 113.619 165.531 142.633 178.08C148.741 180.721 154.301 182.886 154.988 182.891C156.705 182.902 156.564 184.576 154.252 191.618C151.122 201.153 148.61 206.472 144.314 212.656C131.311 231.38 112.55 243.862 90.598 248.396C61.824 254.34 38.433 242.563 30.639 218.209C25.269 201.429 29.7 165.177 40.781 135.236C48.214 115.149 61.584 90.613 73.136 75.857C93.297 50.104 119.375 34.42 150.238 29.485C162.114 27.586 191.189 28.06 202.175 30.332ZM139.509 95.743C143.621 98.135 146.582 104.906 145.727 109.963C144.436 117.606 135.932 123.294 128.562 121.444C127.083 121.073 124.155 119.051 122.055 116.952C118.723 113.619 118.238 112.542 118.238 108.467C118.238 102.948 120.161 98.799 123.973 96.095C128.873 92.618 133.942 92.503 139.509 95.743ZM218.967 94.8631C230.304 100.009 230.118 115.968 218.662 121.036C208.692 125.446 198.238 118.485 198.238 107.435C198.238 101.522 201.004 97.364 206.639 94.804C211.797 92.462 213.699 92.4711 218.967 94.8631ZM177.567 226.339C183.527 235.316 193.004 245.69 201.103 252.105C205.302 255.43 208.866 258.479 209.023 258.881C209.433 259.929 194.965 264.541 186.827 265.958C175.24 267.974 158.557 266.723 146.988 262.969C141.625 261.229 137.248 259.489 137.26 259.102C137.271 258.715 139.794 256.599 142.865 254.399C150.475 248.947 162.367 236.308 167.827 227.868C170.306 224.035 172.699 220.899 173.145 220.899C173.59 220.899 175.58 223.347 177.567 226.339Z"/>
+    </svg>
+    <span class="footer-wordmark">sniffout</span>
+  </div>
+  <nav class="footer-links">
+    <a href="/walks/">Dog walks UK</a>
+    <a href="/about/">About</a>
+    <a href="/privacy/">Privacy</a>
+  </nav>
+  <span class="footer-copy">&copy; 2026 Sniffout</span>
+</footer>
+</body>
+</html>

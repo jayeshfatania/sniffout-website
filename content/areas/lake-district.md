@@ -5,6 +5,7 @@ area: "Lake District"
 layout: "area"
 walks:
   - "grasmere-lake-circuit"
+  - "elterwater-langdale-dog-walk"
 heroImage: ""
 date: 2026-04-02
 ---
