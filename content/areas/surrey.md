@@ -11,6 +11,12 @@ walks:
   - "frensham-great-pond"
   - "hindhead-common-devils-punch-bowl"
   - "isabella-plantation"
+  - "headley-heath-dog-walk"
+  - "bookham-common-dog-walk"
+  - "st-marthas-hill-dog-walk"
+  - "hurtwood-ridge-dog-walk"
+  - "epsom-common-dog-walk"
+  - "shere-abinger-roughs-dog-walk"
 heroImage: ""
 date: 2026-04-02
 ---
