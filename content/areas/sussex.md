@@ -5,6 +5,8 @@ area: "Sussex"
 layout: "area"
 walks:
   - "seven-sisters-cliffs"
+  - "cuckmere-haven-dog-walk"
+  - "cissbury-ring-dog-walk"
 heroImage: ""
 date: 2026-04-02
 ---

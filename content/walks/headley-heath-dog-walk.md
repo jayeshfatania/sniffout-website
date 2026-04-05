@@ -1,10 +1,10 @@
 ---
 title: "Headley Heath"
-description: "Dog walk at Headley Heath, Surrey. 2.6 miles, easy. National Trust heathland with sandy paths and belted Galloway cattle."
+description: "Dog walk at Headley Heath, Surrey. 4.2 km, easy. National Trust heathland with sandy paths and belted Galloway cattle."
 location: "Headley, Surrey"
 county: "Surrey"
 area: "Surrey"
-distance: "2.6 miles"
+distance: "4.2 km"
 difficulty: "Easy"
 duration: "60 mins"
 offLead: "Partial - leads near cattle and 1 Mar-31 Aug for ground-nesting birds"

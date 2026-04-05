@@ -1,10 +1,10 @@
 ---
 title: "Bookham Common and Fetcham Downs"
-description: "Dog walk at Bookham Common, Surrey. 3.1 miles, easy. Ancient oak woodland and grassland. Rail-accessible from Bookham station."
+description: "Dog walk at Bookham Common, Surrey. 5.0 km, easy. Ancient oak woodland and grassland. Rail-accessible from Bookham station."
 location: "Great Bookham, Surrey"
 county: "Surrey"
 area: "Surrey"
-distance: "3.1 miles"
+distance: "5.0 km"
 difficulty: "Easy"
 duration: "72 mins"
 offLead: "Partial - leads near cattle on The Plains and 1 Mar-31 Jul in heathland"

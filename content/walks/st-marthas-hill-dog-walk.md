@@ -1,10 +1,10 @@
 ---
 title: "St Martha's Hill and Chilworth"
-description: "Dog walk at St Martha's Hill, Guildford. 3.7 miles, moderate. Sandy paths on the North Downs Way with hilltop church views."
+description: "Dog walk at St Martha's Hill, Guildford. 6.0 km, moderate. Sandy paths on the North Downs Way with hilltop church views."
 location: "Guildford, Surrey"
 county: "Surrey"
 area: "Surrey"
-distance: "3.7 miles"
+distance: "6.0 km"
 difficulty: "Moderate"
 duration: "88 mins"
 offLead: "Partial - close control on paths, leads in churchyard"

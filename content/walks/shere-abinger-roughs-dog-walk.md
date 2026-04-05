@@ -1,10 +1,10 @@
 ---
 title: "Shere Village and Abinger Roughs"
-description: "Dog walk from Shere village through Abinger Roughs, Surrey. 3.5 miles, moderate. Pretty village, National Trust woodland, and the Tillingbourne stream."
+description: "Dog walk from Shere village through Abinger Roughs, Surrey. 5.6 km, moderate. Pretty village, National Trust woodland, and the Tillingbourne stream."
 location: "Shere, Surrey"
 county: "Surrey"
 area: "Surrey"
-distance: "3.5 miles"
+distance: "5.6 km"
 difficulty: "Moderate"
 duration: "80 mins"
 offLead: "Partial - off-lead in woodland, leads in village and near livestock"

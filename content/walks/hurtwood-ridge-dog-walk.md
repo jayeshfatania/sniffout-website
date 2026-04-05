@@ -1,10 +1,10 @@
 ---
 title: "The Hurtwood Ridge Walk"
-description: "Dog walk on the Hurtwood, Surrey. 4.3 miles, moderate. Largest open access land in southeast England with Pitch Hill views."
+description: "Dog walk on the Hurtwood, Surrey. 6.9 km, moderate. Largest open access land in southeast England with Pitch Hill views."
 location: "Ewhurst, Surrey"
 county: "Surrey"
 area: "Surrey"
-distance: "4.3 miles"
+distance: "6.9 km"
 difficulty: "Moderate"
 duration: "105 mins"
 offLead: "Full"

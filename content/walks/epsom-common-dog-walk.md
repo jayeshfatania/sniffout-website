@@ -1,10 +1,10 @@
 ---
 title: "Epsom Common and Stew Ponds"
-description: "Dog walk at Epsom Common, Surrey. 2.4 miles, easy. SSSI heathland and ancient woodland with ponds."
+description: "Dog walk at Epsom Common, Surrey. 3.9 km, easy. SSSI heathland and ancient woodland with ponds."
 location: "Epsom, Surrey"
 county: "Surrey"
 area: "Surrey"
-distance: "2.4 miles"
+distance: "3.9 km"
 difficulty: "Easy"
 duration: "55 mins"
 offLead: "Partial - close control required throughout (SSSI), leads near cattle"
