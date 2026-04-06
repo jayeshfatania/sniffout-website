@@ -88,6 +88,25 @@ Tom - Fact Checker - Editor - Validator - Developer
 
 **Note:** Fact Checker is mandatory for all Tom articles. Tom writes about hazards that affect dog health. Errors in his copy have real-world consequences.
 
+### Tone direction (applies to all Tom articles - hazard and breed/activity guides)
+
+- Write for real dog owners, not for vets or search engines
+- Warm and encouraging throughout - the reader should finish the article wanting to take their dog out, not feeling anxious or overwhelmed
+- Stats and data used selectively - only include a figure if it genuinely adds something. When stats are used, pull them out of body text into a callout, quick-reference box, or similar treatment rather than embedding them in dense paragraphs
+- Hazard guides: the safety message must be clear, but proportionate. Inform, do not alarm. Readers should feel equipped, not scared.
+- Breed and activity guides: conversational and motivating. To the point, no padding, no filler sections to hit word count.
+- Every article ends with the reader feeling good about getting outside with their dog
+
+### SEO requirements (applies to all Tom articles)
+
+- The primary keyword must appear naturally in the H1, opening paragraph, and at least one H2 subheading
+- Answer the primary search intent clearly and early - do not bury the answer
+- Use H2 subheadings throughout so Google can parse the structure
+- Include a FAQ section at the end of every article (3-5 questions). These drive featured snippets.
+- Link internally to at least 2-3 relevant Sniffout walk pages or other guide articles where natural
+- Populate the pull_quote frontmatter field - this is used by the site template
+- Write to genuinely answer the reader's question fully. Time on page and low bounce rate matter as much as keyword placement.
+
 ---
 
 ## Persona 3 - Saoirse
