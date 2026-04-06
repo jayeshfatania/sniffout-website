@@ -67,10 +67,14 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - Grass seeds: content/guides/grass-seeds-dogs-uk.md
 - Adder bites: content/guides/adder-bites-dogs-uk.md (complete - research, written, fact-checked, images)
 - Shar Pei walking: content/guides/walking-shar-pei-uk.md
+- Brachycephalic breeds dog walks: content/guides/best-dog-walks-brachycephalic-breeds.md
+- Autumn dog walks UK: content/guides/dog-walks-autumn-uk.md
+- Shar Pei fever (SPAID): content/guides/shar-pei-fever-spaid.md
+- Shar Pei skin fold care: content/guides/shar-pei-skin-fold-care.md
 - Senior dog walking: content/guides/senior-dog-walking-uk.md (fact-checked, PASS)
 - French Bulldog walking guide: content/guides/french-bulldog-walking-guide.md (fact-checked, PASS)
 - Cockapoo walking guide: content/guides/cockapoo-walking-guide.md (fact-checked, PASS with one correction applied)
-- Temperature guide "Is it too hot to walk my dog?": content/guides/is-it-too-hot-to-walk-my-dog.md (fact-checked, PASS, flagship seasonal article)
+- Temperature guide "Is it too hot to walk my dog?": content/guides/temperature-guide.md (fact-checked, PASS, flagship seasonal article)
 
 ### SEO infrastructure
 - FAQ blocks on all 39 walk pages with schema.org FAQPage markup
