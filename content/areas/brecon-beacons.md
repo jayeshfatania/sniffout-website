@@ -9,4 +9,4 @@ heroImage: ""
 date: 2026-04-05
 ---
 
-Bannau Brycheiniog (the Brecon Beacons) is the highest ground in southern Britain. Pen y Fan tops out at 886 metres and the walking is serious mountain territory with weather that changes fast. Leads are required throughout - livestock graze year-round and the CRoW Act applies on open access land from March to July. Fit, well-conditioned dogs cope well. The views are worth it.
+Pen y Fan at 886 metres is the highest point in southern Britain, and the dog walks in Bannau Brycheiniog (Brecon Beacons) match the scale of the landscape around it. This is mountain walking country with mountain weather: routes change fast underfoot and in the air. Livestock graze year-round across open access land, so the lead is always close.

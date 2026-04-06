@@ -5,8 +5,9 @@ area: "South Wales"
 layout: "area"
 walks:
   - "bute-park-dog-walk"
+  - "penllergare-valley-dog-walk"
 heroImage: ""
 date: 2026-04-05
 ---
 
-South Wales packs a lot of walking variety into a small area. Bute Park in Cardiff is one of the best urban dog walks in Britain - 56 acres of riverside arboretum and meadow with an on-site dog-friendly cafe. More walks across the region coming soon.
+Bute Park runs along the River Taff through the centre of Cardiff: 56 acres of riverside arboretum and meadow with a dedicated dog-friendly cafe on site. Dog walks in South Wales extend well beyond the city, with Penllergare's Victorian woodland to the west and valley walking, woodland, and coastal paths a short drive from Cardiff in most directions.

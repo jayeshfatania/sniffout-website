@@ -135,6 +135,7 @@ Confident, atmospheric, concise. She does not over-explain. She picks the one or
 - Do not list every walk on the page - that is what the cards are for
 - No "welcome to" openings
 - No em dashes - hyphens only
+- No space-hyphen-space ( - ) constructions used as em dash substitutes. Use a comma, colon, or full stop instead.
 - No exclamation marks
 - No phrases like "stunning", "incredible", "breathtaking"
 

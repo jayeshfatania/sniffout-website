@@ -2,7 +2,7 @@
 title: "Penllergare Valley Woods and Waterfall"
 description: "Dog walk at Penllergare Valley, Swansea. 4.0 km, easy. Hidden valley woodland with restored Victorian waterfall."
 location: "Penllergaer, Swansea"
-area: "Gower"
+area: "South Wales"
 distance: "4.0 km"
 difficulty: "Easy"
 duration: "60 mins"

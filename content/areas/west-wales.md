@@ -9,4 +9,4 @@ heroImage: ""
 date: 2026-04-05
 ---
 
-West Wales is quieter than the Gower or Pembrokeshire coast path, and that is a large part of its appeal. Llansteffan is the kind of place most visitors drive through without stopping - a castle above a tidal estuary, two dog-friendly pubs in the village, and a beach that is dog-friendly year-round on its southern sections. Worth the detour.
+Llansteffan sits above a tidal estuary in Carmarthenshire with a castle ruin on the headland and a dog-friendly beach below. Dog walks in West Wales are quieter than the better-known Pembrokeshire coast, with long stretches of coast and countryside largely to yourselves. The village has two pubs that take dogs, and the southern beach section is open to dogs all year.

@@ -10,4 +10,4 @@ heroImage: ""
 date: 2026-04-05
 ---
 
-Hampshire stretches from chalk downland above Winchester to the Solent coast, with ancient woodland, country parks, and easy-access coastal paths in between. Farley Mount offers excellent off-lead woodland walking; Lepe gives you Solent views and shingle beach year-round. Ticks are a consistent presence across Hampshire woodland from spring onwards.
+Farley Mount sits on a chalk ridge above Winchester with ancient woodland, open downland, and a pyramid monument at the summit with a good story behind it. Dog walks in Hampshire also reach the Solent coast at Lepe, where a shingle beach offers views across to the Isle of Wight and coastal walking that suits most dogs year-round. Ticks are a consistent hazard in Hampshire woodland from spring onwards.
