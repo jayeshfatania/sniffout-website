@@ -75,6 +75,8 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - French Bulldog walking guide: content/guides/french-bulldog-walking-guide.md (fact-checked, PASS)
 - Cockapoo walking guide: content/guides/cockapoo-walking-guide.md (fact-checked, PASS with one correction applied)
 - Temperature guide "Is it too hot to walk my dog?": content/guides/temperature-guide.md (fact-checked, PASS, flagship seasonal article)
+- Labrador walking guide: content/guides/labrador-walking-guide.md (fact-checked, PASS WITH CORRECTIONS applied, Editor pass complete)
+- How far should I walk my dog: content/guides/how-far-should-i-walk-my-dog.md (fact-checked, PASS WITH CORRECTIONS applied, Editor pass complete)
 
 ### SEO infrastructure
 - FAQ blocks on all 39 walk pages with schema.org FAQPage markup
