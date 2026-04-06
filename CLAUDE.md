@@ -21,6 +21,7 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 | Guide article template | themes/sniffout/layouts/guides/single.html |
 | Walk single template | themes/sniffout/layouts/walks/single.html |
 | Area template | themes/sniffout/layouts/areas/single.html |
+| Page layout template | themes/sniffout/layouts/pages/single.html (use type: "pages" in front matter) |
 | Homepage template | themes/sniffout/layouts/index.html |
 | Walk pages | content/walks/ |
 | Guide articles | content/guides/ |
@@ -48,9 +49,9 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 
 ### Pages live
 - Homepage
-- Walks index + 14 individual walk pages (all with FAQ blocks and schema.org markup)
+- Walks index + 39 individual walk pages (all with FAQ blocks and schema.org markup, weather preview card with lat/lng front matter)
 - Guides index + guide articles (see content/guides/)
-- Area index pages: 7 live (Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor)
+- Area index pages: 15+ live (Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales - plus additional Scotland areas)
 - Install page (/get)
 - About page
 - Privacy page (placeholder)
@@ -69,11 +70,11 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - Senior dog walking: content/guides/senior-dog-walking-uk.md (fact-checked, PASS)
 - French Bulldog walking guide: content/guides/french-bulldog-walking-guide.md (fact-checked, PASS)
 - Cockapoo walking guide: content/guides/cockapoo-walking-guide.md (fact-checked, PASS with one correction applied)
-- Temperature guide ("Is it too hot to walk my dog"): IN PIPELINE - research complete at docs/research/heat-guide-research-april-3.md, Tom writing, mid-May deadline
+- Temperature guide "Is it too hot to walk my dog?": content/guides/is-it-too-hot-to-walk-my-dog.md (fact-checked, PASS, flagship seasonal article)
 
 ### SEO infrastructure
-- FAQ blocks on all 14 walk pages with schema.org FAQPage markup
-- 7 area index pages capturing regional dog walk searches
+- FAQ blocks on all 39 walk pages with schema.org FAQPage markup
+- 15+ area index pages capturing regional dog walk searches
 - Pull quote frontmatter field on guide articles
 - heroImage frontmatter field on guides and walks
 
@@ -104,12 +105,23 @@ Full persona specs: docs/copy/website-personas.md
 
 ## Content backlog (priority order)
 
-1. "Is it too hot to walk my dog" temperature guide - mid-May deadline, research complete at docs/research/heat-guide-research-april-3.md, Tom writing
-2. Labrador walking guide
-3. "How far should I walk my dog" guide
-4. Website weather preview card on walk pages
-5. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
-6. Ailsa descriptions: written at docs/copy/ailsa-walk-descriptions-april-3.md - pending Developer commit to walk pages
+1. Labrador walking guide (next breed guide)
+2. "How far should I walk my dog" guide (5,000-10,000 monthly searches)
+3. Trail Tips: first batch - short practical hacks in Jayesh's founder voice (walk pages, standalone articles, social)
+4. Walk page enrichment: "Before you go" and "For your dog" sections (Designer task - spec needed)
+5. Saoirse area intros for all new area pages (15 areas now live, intros needed for all new pages)
+6. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
+7. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
+8. Remaining walk batches: Peak District, North East, North West, Midlands, Cotswolds, Shropshire, East of England, South West
+
+**Recently completed (not to re-do):**
+- Temperature guide "Is it too hot to walk my dog?": DONE (fact-checked PASS)
+- French Bulldog walking guide: DONE
+- Cockapoo walking guide: DONE
+- Senior dog walking article: DONE
+- Methodology page: DONE
+- Ailsa descriptions for original 14 walks: DONE (committed to walk pages)
+- Weather preview card on walk pages: DONE
 
 ## SEO reference
 
@@ -137,6 +149,24 @@ cd ~/Desktop/sniffout-website && git add . && git commit -m "sniffout-website - 
 git log --oneline -3
 ```
 Confirm origin/main matches HEAD before saying the task is complete.
+
+## Walk page pipeline
+
+Researcher verifies facts (distances, access rules, livestock, off-lead status) - Ailsa writes description (150-200 words) - Developer builds page.
+
+No Fact Checker required for walk pages unless health or safety claims are made. Fact Checker is mandatory for Tom hazard articles only.
+
+All distances on the website are in kilometres (not miles). Convert from miles in app data when building walk pages.
+
+## Image tracking
+
+Owner maintains a Google Sheets tracker for all walk and guide images. Check the tracker before sourcing new images.
+
+- Geograph images (geograph.org.uk): free to use under CC BY-SA licence. Must include credit: "Photo: [Photographer name] / Geograph, CC BY-SA 2.0"
+- Pexels images: free to use, no attribution required
+- Google Maps screenshots: copyrighted, do not use
+- OS map extracts: copyrighted, do not use without licence
+- AI-generated images: not approved for the website
 
 ## Process rules
 
