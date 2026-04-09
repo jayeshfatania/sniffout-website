@@ -6,8 +6,15 @@
     <description>Recent content in Dog walks by area on Sniffout - Dog walks and weather for the UK</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sniffout-website.pages.dev/areas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dog walks in the Peak District</title>
+      <link>https://sniffout-website.pages.dev/areas/peak-district/</link>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://sniffout-website.pages.dev/areas/peak-district/</guid>
+      <description>&lt;p&gt;Dog walks in the Peak District range from the gentle limestone valleys of the White Peak to the wild gritstone moorland of the Dark Peak. Dovedale, Mam Tor, Stanage Edge, and Kinder Scout between them cover most of what makes this national park worth visiting on foot.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dog walks at Loch Lomond</title>
       <link>https://sniffout-website.pages.dev/areas/loch-lomond/</link>
