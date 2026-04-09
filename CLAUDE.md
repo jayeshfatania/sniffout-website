@@ -58,7 +58,7 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - Methodology page (/methodology/) - uses page layout template (themes/sniffout/layouts/pages/single.html, type: pages in front matter)
 
 ### Guide articles live or complete
-- Ticks: content/guides/ticks-dogs-uk.md
+- Ticks: content/guides/ticks-dogs-uk.md (Editor pass complete)
 - Heatstroke: content/guides/heatstroke-dogs-hot-weather-walking.md
 - Alabama rot: content/guides/alabama-rot-dogs-uk.md
 - Blue-green algae: content/guides/blue-green-algae-dogs-uk.md
@@ -66,7 +66,7 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - Antifreeze: content/guides/antifreeze-dogs-uk.md
 - Grass seeds: content/guides/grass-seeds-dogs-uk.md
 - Adder bites: content/guides/adder-bites-dogs-uk.md (complete - research, written, fact-checked, images)
-- Shar Pei walking: content/guides/walking-shar-pei-uk.md
+- Shar Pei walking: content/guides/walking-shar-pei-uk.md (Editor pass complete)
 - Brachycephalic breeds dog walks: content/guides/best-dog-walks-brachycephalic-breeds.md
 - Autumn dog walks UK: content/guides/dog-walks-autumn-uk.md
 - Shar Pei fever (SPAID): content/guides/shar-pei-fever-spaid.md
@@ -118,7 +118,8 @@ Full persona specs: docs/copy/website-personas.md
 5. Saoirse area intros for all new area pages (15 areas now live, intros needed for all new pages)
 6. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
 7. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
-8. Remaining walk batches: Peak District, North East, North West, Midlands, Cotswolds, Shropshire, East of England, South West
+8. Batch 6: North East England walks (Hadrian's Wall, Northumberland Coast, Bamburgh, Kielder, Durham, Alnmouth) - next walk batch after Peak District
+9. Remaining walk batches: North West, Midlands, Cotswolds, Shropshire, East of England, South West
 
 **Recently completed (not to re-do):**
 - Temperature guide "Is it too hot to walk my dog?": DONE (fact-checked PASS)
