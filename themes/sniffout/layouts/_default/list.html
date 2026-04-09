@@ -83,12 +83,9 @@
         Showing {{ len $paginator.Pages }} of {{ $paginator.TotalNumberOfElements }} walks
       </p>
       {{ if $paginator.HasNext }}
-      <a href="{{ $paginator.Next.URL }}" class="pagination-more-btn">Show more walks</a>
+      <a href="{{ $paginator.Next.URL }}" class="pagination-more-btn" data-total="{{ $paginator.TotalNumberOfElements }}">Load more walks</a>
       {{ else }}
       <p class="pagination-end">All {{ $paginator.TotalNumberOfElements }} walks shown</p>
-      {{ end }}
-      {{ if $paginator.HasPrev }}
-      <a href="{{ $paginator.Prev.URL }}" class="pagination-prev-btn">Previous page</a>
       {{ end }}
     </nav>
     {{ end }}
@@ -116,5 +113,121 @@
   </div><!-- /.area-sidebar -->
 
 </div><!-- /.area-layout -->
+
+<script>
+(function () {
+  /* ── Fix 1: Short off-lead labels on index cards ────────────────────── */
+  function shortenLeadBadges() {
+    var badges = document.querySelectorAll('.walk-list-card-lead-badge');
+    badges.forEach(function (b) {
+      var text = b.textContent.trim();
+      if (/^Full/i.test(text))                              b.textContent = 'Full off-lead';
+      else if (/^Partial/i.test(text))                      b.textContent = 'Partial off-lead';
+      else if (/^(On[\s-]lead|Leads required|None)/i.test(text)) b.textContent = 'On-lead only';
+    });
+  }
+
+  /* ── Fix 2: Load more walks (inline, no page navigation) ────────────── */
+  function getActiveFilter() {
+    var chip = document.querySelector('.filter-chip--active');
+    if (!chip) return { type: 'all', value: null, el: null };
+    var onclick = chip.getAttribute('onclick') || '';
+    var m = onclick.match(/filterWalks\('([^']+)',\s*([^,)]+)/);
+    if (!m) return { type: 'all', value: null, el: chip };
+    var type  = m[1];
+    var raw   = m[2].trim().replace(/'/g, '');
+    var value = (raw === 'null' || raw === '') ? null : raw;
+    return { type: type, value: value, el: chip };
+  }
+
+  function reApplyFilter() {
+    if (typeof filterWalks !== 'function') return;
+    var f = getActiveFilter();
+    filterWalks(f.type, f.value, f.el);
+  }
+
+  function setCount(loaded, total) {
+    var el = document.querySelector('.pagination-count');
+    if (el) el.textContent = 'Showing ' + loaded + ' of ' + total + ' walks';
+  }
+
+  function initLoadMore() {
+    var btn = document.querySelector('.pagination-more-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      doLoadMore(btn);
+    });
+  }
+
+  function doLoadMore(btn) {
+    var nextUrl = btn.getAttribute('href');
+    if (!nextUrl) return;
+    var total    = parseInt(btn.dataset.total || '0', 10);
+    var origText = btn.textContent;
+
+    btn.textContent          = 'Loading...';
+    btn.style.pointerEvents  = 'none';
+    btn.style.opacity        = '0.6';
+
+    fetch(nextUrl)
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.text();
+      })
+      .then(function (html) {
+        var doc      = new DOMParser().parseFromString(html, 'text/html');
+        var newCards = doc.querySelectorAll('.walk-list-card');
+        var list     = document.querySelector('.walk-list');
+
+        newCards.forEach(function (card) {
+          list.appendChild(document.adoptNode(card));
+        });
+
+        shortenLeadBadges();
+        reApplyFilter();
+
+        var loadedCount = document.querySelectorAll('.walk-list-card').length;
+        setCount(loadedCount, total);
+
+        var nextBtn  = doc.querySelector('.pagination-more-btn');
+        var nextHref = nextBtn ? nextBtn.getAttribute('href') : null;
+
+        if (nextHref) {
+          btn.setAttribute('href', nextHref);
+          btn.textContent         = origText;
+          btn.style.pointerEvents = '';
+          btn.style.opacity       = '';
+        } else {
+          /* Last page loaded - swap button for end message */
+          var nav   = btn.closest('.pagination-nav');
+          var endEl = document.createElement('p');
+          endEl.className   = 'pagination-end';
+          endEl.textContent = 'All ' + total + ' walks loaded';
+          if (nav) {
+            nav.innerHTML = '';
+            nav.appendChild(endEl);
+          }
+        }
+      })
+      .catch(function (err) {
+        btn.textContent         = origText;
+        btn.style.pointerEvents = '';
+        btn.style.opacity       = '';
+        console.error('Sniffout load more error:', err);
+        var errEl         = document.createElement('p');
+        errEl.style.cssText = 'font-size:12px;color:#EF4444;margin:6px 0 0;text-align:center;';
+        errEl.textContent   = 'Could not load more walks - try again';
+        btn.parentNode.insertBefore(errEl, btn.nextSibling);
+        setTimeout(function () { if (errEl.parentNode) errEl.parentNode.removeChild(errEl); }, 4000);
+      });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    shortenLeadBadges();
+    initLoadMore();
+  });
+}());
+</script>
 
 {{ end }}
