@@ -101,4 +101,15 @@
   </div>
 </section>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.walk-card-h-lead-badge').forEach(function (b) {
+    var text = b.textContent.trim();
+    if (/^Full/i.test(text))                                   b.textContent = 'Full off-lead';
+    else if (/^Partial/i.test(text))                           b.textContent = 'Partial off-lead';
+    else if (/^(On[\s-]lead|Leads required|None)/i.test(text)) b.textContent = 'On-lead only';
+  });
+});
+</script>
+
 {{ end }}
