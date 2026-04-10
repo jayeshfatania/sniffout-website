@@ -510,4 +510,26 @@
 </script>
 {{ end }}
 
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": {{ .Title | jsonify }},
+  "description": {{ .Params.description | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": {{ .Params.location | jsonify }},
+    "addressCountry": "GB"
+  }{{ if .Params.heroImage }},
+  "image": {{ .Params.heroImage | absURL | jsonify }}{{ end }}{{ if and .Params.lat .Params.lng }},
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ .Params.lat }},
+    "longitude": {{ .Params.lng }}
+  }{{ end }}
+}
+</script>
+
 {{ end }}
