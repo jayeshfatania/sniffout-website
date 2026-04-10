@@ -81,7 +81,7 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 
 ### SEO infrastructure
 - FAQ blocks on all 64 walk pages with schema.org FAQPage markup
-- 22 area index pages capturing regional dog walk searches
+- 23 area index pages capturing regional dog walk searches
 - Pull quote frontmatter field on guide articles
 - heroImage frontmatter field on guides and walks
 
@@ -119,7 +119,8 @@ Full persona specs: docs/copy/website-personas.md
 5. Saoirse area intros for all new area pages (15 areas now live, intros needed for all new pages)
 6. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
 7. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
-9. Remaining walk batches: Shropshire, East of England, South West
+8. Batch 10: Shropshire (Stiperstones, Long Mynd, Wenlock Edge, Clent Hills)
+9. Remaining walk batches: East of England, South West
 
 **Recently completed (not to re-do):**
 - Temperature guide "Is it too hot to walk my dog?": DONE (fact-checked PASS)
@@ -133,7 +134,6 @@ Full persona specs: docs/copy/website-personas.md
 - Batch 7: North West England walks DONE (Formby Beach, Beacon Fell, Rivington Pike, Lyme Park - 4 walk pages + North West England area page)
 - Batch 8: East Midlands walks DONE (Bradgate Park, Calke Abbey, Cannock Chase, Sherwood Forest, Clumber Park, Lickey Hills - 6 walk pages + East Midlands area page)
 - Batch 9: Cotswolds walks DONE (Chipping Campden, Bourton-on-the-Water, Broadway Tower, Cleeve Hill, Symonds Yat, Malvern Hills - 6 walk pages + Cotswolds area page)
-- Batch 10 next: Shropshire (Stiperstones, Long Mynd, Wenlock Edge, Clent Hills)
 
 ## SEO reference
 
