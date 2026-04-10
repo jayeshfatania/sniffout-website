@@ -49,10 +49,10 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 
 ### Pages live
 - Homepage
-- Walks index + 64 individual walk pages (all with FAQ blocks and schema.org markup, weather preview card with lat/lng front matter)
+- Walks index + 71 individual walk pages (all with FAQ blocks and schema.org markup, weather preview card with lat/lng front matter)
 - Guides index + guide articles (see content/guides/)
-- Area index pages: 23 live (Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales, Peak District, North East England, North West England, East Midlands, Fife, Loch Lomond, Perthshire, Cotswolds)
-- Regions covered: Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh and Lothians, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales, Peak District, North East England, North West England, East Midlands, Fife, Loch Lomond, Perthshire, Cotswolds, Gloucestershire, Worcestershire, Herefordshire, Malvern Hills
+- Area index pages: 25 live (Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales, Peak District, North East England, North West England, East Midlands, Shropshire, East of England, Fife, Loch Lomond, Perthshire, Cotswolds)
+- Regions covered: Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh and Lothians, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales, Peak District, North East England, North West England, East Midlands, Shropshire, East of England, Suffolk, Norfolk, Fife, Loch Lomond, Perthshire, Cotswolds, Gloucestershire, Worcestershire, Herefordshire, Malvern Hills
 - Install page (/get)
 - About page
 - Privacy page (placeholder)
@@ -80,8 +80,8 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - How far should I walk my dog: content/guides/how-far-should-i-walk-my-dog.md (fact-checked, PASS WITH CORRECTIONS applied, Editor pass complete)
 
 ### SEO infrastructure
-- FAQ blocks on all 64 walk pages with schema.org FAQPage markup
-- 23 area index pages capturing regional dog walk searches
+- FAQ blocks on all 71 walk pages with schema.org FAQPage markup
+- 25 area index pages capturing regional dog walk searches
 - Pull quote frontmatter field on guide articles
 - heroImage frontmatter field on guides and walks
 
@@ -119,8 +119,7 @@ Full persona specs: docs/copy/website-personas.md
 5. Saoirse area intros for all new area pages (15 areas now live, intros needed for all new pages)
 6. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
 7. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
-8. Batch 10: Shropshire (Stiperstones, Long Mynd, Wenlock Edge, Clent Hills)
-9. Remaining walk batches: East of England, South West
+8. Batch 12: South West (Tehidy Cornwall, Moors Valley Dorset, Golden Cap, Exmoor, Quantock Hills, Dartmoor expansion)
 
 **Recently completed (not to re-do):**
 - Temperature guide "Is it too hot to walk my dog?": DONE (fact-checked PASS)
@@ -134,6 +133,8 @@ Full persona specs: docs/copy/website-personas.md
 - Batch 7: North West England walks DONE (Formby Beach, Beacon Fell, Rivington Pike, Lyme Park - 4 walk pages + North West England area page)
 - Batch 8: East Midlands walks DONE (Bradgate Park, Calke Abbey, Cannock Chase, Sherwood Forest, Clumber Park, Lickey Hills - 6 walk pages + East Midlands area page)
 - Batch 9: Cotswolds walks DONE (Chipping Campden, Bourton-on-the-Water, Broadway Tower, Cleeve Hill, Symonds Yat, Malvern Hills - 6 walk pages + Cotswolds area page)
+- Batch 10: Shropshire walks DONE (Stiperstones, Long Mynd, Wenlock Edge, Clent Hills - 4 walk pages + Shropshire area page)
+- Batch 11: East of England walks DONE (Dunwich Heath, Thetford Forest, Sheringham Park - 3 walk pages + East of England area page)
 
 ## SEO reference
 
