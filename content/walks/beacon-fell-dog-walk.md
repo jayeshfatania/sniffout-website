@@ -7,7 +7,7 @@ area: "North West England"
 distance: "3.4 km"
 difficulty: "Easy"
 terrain: "Woodland paths, moorland summit, compacted stone tracks"
-offLead: "Off-lead through most of the park; on leads near seasonal livestock, farmland fringes, and wildlife ponds"
+offLead: "Partial - off-lead through most of the park; on leads near livestock, farmland fringes, and ponds"
 duration: "1.5-2 hours"
 parking: "Beacon Fell Country Park car park, PR3 2NL - pay and display"
 lat: 53.8785

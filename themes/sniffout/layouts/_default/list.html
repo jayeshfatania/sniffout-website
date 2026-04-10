@@ -124,6 +124,7 @@
       if (/^Full/i.test(text))                              b.textContent = 'Full off-lead';
       else if (/^Partial/i.test(text))                      b.textContent = 'Partial off-lead';
       else if (/^(On[\s-]lead|Leads required|None)/i.test(text)) b.textContent = 'On-lead only';
+      else if (text.length > 20)                            b.textContent = text.slice(0, 19) + '\u2026';
     });
   }
 
