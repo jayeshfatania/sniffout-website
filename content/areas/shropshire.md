@@ -12,4 +12,4 @@ heroImage: ""
 date: 2026-04-10
 ---
 
-Dog walks in Shropshire take in some of the most dramatic hill country in England, from the quartzite ridge at Stiperstones to the sweeping moorland plateau of the Long Mynd. Wenlock Edge offers ancient limestone woodland, while the Clent Hills sit on the Worcestershire border within reach of Birmingham.
+The Devil's Chair on the Stiperstones ridge is one of the more atmospheric landmarks on any walk in England: a quartzite outcrop above ancient heathland, wind-exposed and ancient. Shropshire dog walks occupy a part of England that serious dog walkers have largely to themselves. The Long Mynd runs a plateau above Church Stretton with a stream running the full length of Carding Mill Valley below it. Wenlock Edge is limestone woodland. The Clent Hills bring the same quality of walking to the Birmingham edge.

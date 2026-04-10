@@ -532,11 +532,28 @@
   }
 
   function getBarColour(score) {
-    if (score >= 80) return '#2C4A14';
-    if (score >= 60) return '#7CB342';
-    if (score >= 40) return '#E6B44C';
-    if (score >= 20) return '#DDD8CE';
-    return '#C0392B';
+    var stops = [
+      { s: 100, r: 26,  g: 58,  b: 10  },
+      { s: 80,  r: 44,  g: 74,  b: 20  },
+      { s: 60,  r: 90,  g: 138, b: 46  },
+      { s: 40,  r: 230, g: 180, b: 76  },
+      { s: 20,  r: 176, g: 168, b: 152 },
+      { s: 0,   r: 192, g: 57,  b: 43  }
+    ];
+    for (var i = 0; i < stops.length - 1; i++) {
+      if (score >= stops[i + 1].s) {
+        var t = (score - stops[i + 1].s) /
+                (stops[i].s - stops[i + 1].s);
+        var r = Math.round(stops[i + 1].r +
+                t * (stops[i].r - stops[i + 1].r));
+        var g = Math.round(stops[i + 1].g +
+                t * (stops[i].g - stops[i + 1].g));
+        var b = Math.round(stops[i + 1].b +
+                t * (stops[i].b - stops[i + 1].b));
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+      }
+    }
+    return 'rgb(192,57,43)';
   }
 
   function renderCard(scored, name, currentHour, isTomorrow) {
@@ -623,6 +640,28 @@
 })();
 </script>
 
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": "\"Stanage Edge and Hathersage Moor\"",
+  "description": "\"Stanage Edge is the longest and most dramatic gritstone escarpment in the Peak District, stretching for nearly 5 kilometres along the moorland plateau. The route follows the top of the edge with sweeping views west across the Hope Valley before descending to Hathersage Moor and returning along quieter moorland tracks.\"",
+  "url": "\"https://sniffout-website.pages.dev/walks/stanage-edge-hathersage-moor/\"",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "\"Hathersage, Derbyshire\"",
+    "addressCountry": "GB"
+  },
+  "image": "\"https://sniffout-website.pages.dev/img/walks/stanage-edge.jpg\"",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude":  53.3541 ,
+    "longitude":  -1.6392 
+  }
+}
+</script>
 
 
     </main><footer class="site-footer">

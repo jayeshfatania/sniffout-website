@@ -320,14 +320,110 @@
         Showing 6 of 18 guides
       </p>
       
-      <a href="/guides/page/2/" class="pagination-more-btn">Show more guides</a>
-      
+      <a href="/guides/page/2/" class="pagination-more-btn" data-total="18">Load more guides</a>
       
     </nav>
     
 
   </div>
 </div>
+
+<script>
+(function () {
+  function getActiveCategory() {
+    var chip = document.querySelector('.guide-filter-chip.filter-chip--active');
+    if (!chip) return { category: 'all', el: null };
+    var onclick = chip.getAttribute('onclick') || '';
+    var m = onclick.match(/filterGuides\('([^']*)',/);
+    return { category: m ? m[1] : 'all', el: chip };
+  }
+
+  function reApplyFilter() {
+    if (typeof filterGuides !== 'function') return;
+    var f = getActiveCategory();
+    filterGuides(f.category, f.el);
+  }
+
+  function setCount(loaded, total) {
+    var el = document.querySelector('.pagination-count');
+    if (el) el.textContent = 'Showing ' + loaded + ' of ' + total + ' guides';
+  }
+
+  function initLoadMore() {
+    var btn = document.querySelector('.pagination-more-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      doLoadMore(btn);
+    });
+  }
+
+  function doLoadMore(btn) {
+    var nextUrl = btn.getAttribute('href');
+    if (!nextUrl) return;
+    var total    = parseInt(btn.dataset.total || '0', 10);
+    var origText = btn.textContent;
+
+    btn.textContent         = 'Loading...';
+    btn.style.pointerEvents = 'none';
+    btn.style.opacity       = '0.6';
+
+    fetch(nextUrl)
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.text();
+      })
+      .then(function (html) {
+        var doc      = new DOMParser().parseFromString(html, 'text/html');
+        var newCards = doc.querySelectorAll('.guide-grid-card');
+        var grid     = document.getElementById('guide-grid');
+
+        newCards.forEach(function (card) {
+          grid.appendChild(document.adoptNode(card));
+        });
+
+        reApplyFilter();
+
+        var loadedCount = document.querySelectorAll('.guide-grid-card').length;
+        setCount(loadedCount, total);
+
+        var nextBtn  = doc.querySelector('.pagination-more-btn');
+        var nextHref = nextBtn ? nextBtn.getAttribute('href') : null;
+
+        if (nextHref) {
+          btn.setAttribute('href', nextHref);
+          btn.textContent         = origText;
+          btn.style.pointerEvents = '';
+          btn.style.opacity       = '';
+        } else {
+          var nav   = btn.closest('.pagination-nav');
+          var endEl = document.createElement('p');
+          endEl.className   = 'pagination-end';
+          endEl.textContent = 'All ' + total + ' guides loaded';
+          if (nav) {
+            nav.innerHTML = '';
+            nav.appendChild(endEl);
+          }
+        }
+      })
+      .catch(function (err) {
+        btn.textContent         = origText;
+        btn.style.pointerEvents = '';
+        btn.style.opacity       = '';
+        console.error('Sniffout load more guides error:', err);
+        var errEl           = document.createElement('p');
+        errEl.style.cssText = 'font-size:12px;color:#EF4444;margin:6px 0 0;text-align:center;';
+        errEl.textContent   = 'Could not load more guides - try again';
+        btn.parentNode.insertBefore(errEl, btn.nextSibling);
+        setTimeout(function () { if (errEl.parentNode) errEl.parentNode.removeChild(errEl); }, 4000);
+      });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initLoadMore();
+  });
+}());
+</script>
 
 
     </main><footer class="site-footer">

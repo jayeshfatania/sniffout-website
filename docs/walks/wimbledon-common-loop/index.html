@@ -300,7 +300,7 @@
       <a href="https://sniffout-website.pages.dev/walks/richmond-park-dog-walk/" class="nearby-walk-row">
         <div>
           <div class="nearby-walk-name">Richmond Park Dog Walk</div>
-          <div class="nearby-walk-meta">7.2 km &middot; Easy &middot; On-lead only</div>
+          <div class="nearby-walk-meta">7.2 km &middot; Easy &middot; Partial - on-lead during deer birthing season (1 May to 31 July) and in skylark zones year-round; off-lead permitted across most of the park outside these restrictions</div>
         </div>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
       </a>
@@ -532,11 +532,28 @@
   }
 
   function getBarColour(score) {
-    if (score >= 80) return '#2C4A14';
-    if (score >= 60) return '#7CB342';
-    if (score >= 40) return '#E6B44C';
-    if (score >= 20) return '#DDD8CE';
-    return '#C0392B';
+    var stops = [
+      { s: 100, r: 26,  g: 58,  b: 10  },
+      { s: 80,  r: 44,  g: 74,  b: 20  },
+      { s: 60,  r: 90,  g: 138, b: 46  },
+      { s: 40,  r: 230, g: 180, b: 76  },
+      { s: 20,  r: 176, g: 168, b: 152 },
+      { s: 0,   r: 192, g: 57,  b: 43  }
+    ];
+    for (var i = 0; i < stops.length - 1; i++) {
+      if (score >= stops[i + 1].s) {
+        var t = (score - stops[i + 1].s) /
+                (stops[i].s - stops[i + 1].s);
+        var r = Math.round(stops[i + 1].r +
+                t * (stops[i].r - stops[i + 1].r));
+        var g = Math.round(stops[i + 1].g +
+                t * (stops[i].g - stops[i + 1].g));
+        var b = Math.round(stops[i + 1].b +
+                t * (stops[i].b - stops[i + 1].b));
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+      }
+    }
+    return 'rgb(192,57,43)';
   }
 
   function renderCard(scored, name, currentHour, isTomorrow) {
@@ -623,6 +640,28 @@
 })();
 </script>
 
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": "\"Wimbledon Common Loop\"",
+  "description": "\"Wimbledon Common is one of London's largest areas of open heathland, covering over 460 hectares of heath, woodland, and ponds. The loop takes in the open heathland plateau, the woodland fringe, and the windmill that has stood on the Common since 1817. A consistently excellent dog walking destination with off-lead access throughout.\"",
+  "url": "\"https://sniffout-website.pages.dev/walks/wimbledon-common-loop/\"",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "\"Wimbledon, London\"",
+    "addressCountry": "GB"
+  },
+  "image": "\"https://sniffout-website.pages.dev/img/walks/wimbledon-common.jpg\"",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude":  51.4346 ,
+    "longitude":  -0.2207 
+  }
+}
+</script>
 
 
     </main><footer class="site-footer">

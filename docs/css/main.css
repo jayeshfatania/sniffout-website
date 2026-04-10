@@ -3087,6 +3087,9 @@ h1.walk-sidebar-title {
 .ws-hero-badge--offlead { background: #fff; color: #2C4A14; }
 .ws-hero-badge--onlead  { background: rgba(255,255,255,0.85); color: #7A5C00; }
 .ws-hero-badge--partial { background: rgba(255,255,255,0.85); color: #7A5C00; }
+@media (max-width: 767px) {
+  .ws-hero-badge--lead { max-width: 240px; overflow: hidden; text-overflow: ellipsis; }
+}
 
 /* Stat strip */
 .ws-stat-strip {

@@ -14,4 +14,4 @@ heroImage: ""
 date: 2026-04-10
 ---
 
-Dog walks in the Cotswolds take in some of the best ridge walking in England, from the escarpment at Dover's Hill and Cleeve Hill to the deep wooded gorge of the Wye Valley at Symonds Yat. The Malvern Hills add an entirely different character to the mix.
+Cleeve Hill is the highest point in the Cotswolds at 330 metres, and the open common below the summit has a wild, limestone character that most visitors to the region never find. Cotswolds dog walks are not all honey-stone villages and manicured estates. The escarpment above Chipping Campden looks west over Worcestershire, the gorge at Symonds Yat drops 150 metres to the River Wye, and the Malvern Hills rise from the Worcestershire plain in a ridge that rewards the effort of climbing it.

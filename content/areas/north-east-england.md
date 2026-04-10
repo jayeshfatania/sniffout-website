@@ -14,4 +14,4 @@ heroImage: ""
 date: 2026-04-09
 ---
 
-North East England covers some of the most dramatic and uncrowded dog walking in the UK. Hadrian's Wall runs across wild Northumberland moorland. Bamburgh's long pale beach has no seasonal ban. Kielder is England's largest man-made forest, remote and excellent for dogs with good recall. From the Northumberland coast to the forest valleys of County Durham, the routes here reward dogs and owners who want space and substance.
+Bamburgh Beach is six miles of pale sand with no seasonal dog restrictions - the kind of beach that has become rarer as restrictions tighten elsewhere on the English coast. North East England dog walks share that character: uncrowded, unhurried, and substantial. Hadrian's Wall crosses the Northumberland moorland on its own terms. Kielder is England's largest man-made forest and genuinely quiet even in summer. The area is consistently underestimated by dog owners from further south.

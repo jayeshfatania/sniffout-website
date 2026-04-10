@@ -14,4 +14,4 @@ heroImage: ""
 date: 2026-04-10
 ---
 
-Dog walks in South West England take in some of the most varied terrain in the country. Tehidy's ancient woodland in Cornwall, the Jurassic Coast clifftops at Golden Cap, the deep river gorge at Watersmeet on Exmoor, and the open moorland of the Quantocks and Dartmoor all within a few hours of each other.
+Golden Cap is the highest point on the entire south coast of England at 191 metres, and the Jurassic Coast cliffs below it are actively eroding into the sea. South West England dog walks cover more different terrain types than any other region on this site. Tehidy is ancient Cornish woodland with a lake. Moors Valley is pine forest over Dorset heathland. Watersmeet drops into an Exmoor gorge along a river. The Quantock Hills and Dartmoor add two entirely different moorland characters to what is already considerable variety.

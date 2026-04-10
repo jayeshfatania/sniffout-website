@@ -12,4 +12,4 @@ heroImage: ""
 date: 2026-04-09
 ---
 
-Dog walks in North West England take in Atlantic dunes at Formby, the high Lancashire moorland above Rivington and Beacon Fell, and the sweeping deer park at Lyme Park on the Cheshire edge of the Peak District.
+Formby's sand dunes are the first thing most people picture, and the combination of pine forest, red squirrel reserve, and open beach makes it the most distinctive dog walk in the region. North West England dog walks cover a wider range than that single location suggests. Beacon Fell and Rivington Pike are Lancashire fell walking with real elevation and open sky. Lyme Park sits on the Cheshire edge of the Pennines, its deer park circled by moorland above.

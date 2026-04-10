@@ -130,7 +130,7 @@
     </div>
     <div class="ws-hero-badges">
       <span class="ws-hero-badge ws-hero-badge--diff ws-hero-badge--easy">Easy</span>
-      <span class="ws-hero-badge ws-hero-badge--lead ws-hero-badge--onlead">On-lead only</span>
+      <span class="ws-hero-badge ws-hero-badge--lead ws-hero-badge--partial">Partial - on-lead during deer birthing season (1 May to 31 July) and in skylark zones year-round; off-lead permitted across most of the park outside these restrictions</span>
     </div>
   </div>
 </div>
@@ -159,10 +159,10 @@
     <span class="ws-stat-label">Terrain</span>
   </div>
   <div class="ws-stat-tile">
-    <svg class="ws-stat-icon ws-stat-icon--onlead" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <svg class="ws-stat-icon ws-stat-icon--partial" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
     </svg>
-    <span class="ws-stat-value ws-stat-value--onlead">On-lead only</span>
+    <span class="ws-stat-value ws-stat-value--partial">Partial - on-lead during deer birthing season (1 May to 31 July) and in skylark zones year-round; off-lead permitted across most of the park outside these restrictions</span>
     <span class="ws-stat-label">Off-lead</span>
   </div>
 </div>
@@ -540,11 +540,28 @@
   }
 
   function getBarColour(score) {
-    if (score >= 80) return '#2C4A14';
-    if (score >= 60) return '#7CB342';
-    if (score >= 40) return '#E6B44C';
-    if (score >= 20) return '#DDD8CE';
-    return '#C0392B';
+    var stops = [
+      { s: 100, r: 26,  g: 58,  b: 10  },
+      { s: 80,  r: 44,  g: 74,  b: 20  },
+      { s: 60,  r: 90,  g: 138, b: 46  },
+      { s: 40,  r: 230, g: 180, b: 76  },
+      { s: 20,  r: 176, g: 168, b: 152 },
+      { s: 0,   r: 192, g: 57,  b: 43  }
+    ];
+    for (var i = 0; i < stops.length - 1; i++) {
+      if (score >= stops[i + 1].s) {
+        var t = (score - stops[i + 1].s) /
+                (stops[i].s - stops[i + 1].s);
+        var r = Math.round(stops[i + 1].r +
+                t * (stops[i].r - stops[i + 1].r));
+        var g = Math.round(stops[i + 1].g +
+                t * (stops[i].g - stops[i + 1].g));
+        var b = Math.round(stops[i + 1].b +
+                t * (stops[i].b - stops[i + 1].b));
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+      }
+    }
+    return 'rgb(192,57,43)';
   }
 
   function renderCard(scored, name, currentHour, isTomorrow) {
@@ -631,6 +648,28 @@
 })();
 </script>
 
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": "\"Richmond Park Dog Walk\"",
+  "description": "\"Richmond Park's famous deer make this one of the most spectacular walks in London. Keep dogs on leads throughout - a legal requirement in the deer park. The Pen Ponds are a favourite stop for dogs, and on a clear day the views stretch all the way to St Paul's Cathedral.\"",
+  "url": "\"https://sniffout-website.pages.dev/walks/richmond-park-dog-walk/\"",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "\"Richmond, London\"",
+    "addressCountry": "GB"
+  },
+  "image": "\"https://sniffout-website.pages.dev/img/walks/richmond-park.jpg\"",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude":  51.4411 ,
+    "longitude":  -0.2749 
+  }
+}
+</script>
 
 
     </main><footer class="site-footer">
