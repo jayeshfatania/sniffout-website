@@ -116,9 +116,8 @@ Full persona specs: docs/copy/website-personas.md
 2. "How far should I walk my dog" guide (5,000-10,000 monthly searches)
 3. Trail Tips: first batch - short practical hacks in Jayesh's founder voice (walk pages, standalone articles, social)
 4. Walk page enrichment: "Before you go" and "For your dog" sections (Designer task - spec needed)
-5. Saoirse area intros for all new area pages (15 areas now live, intros needed for all new pages)
-6. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
-7. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
+5. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
+6. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
 
 **All 12 walk batches complete. 77 walk pages live.**
 
@@ -137,6 +136,7 @@ Full persona specs: docs/copy/website-personas.md
 - Batch 10: Shropshire walks DONE (Stiperstones, Long Mynd, Wenlock Edge, Clent Hills - 4 walk pages + Shropshire area page)
 - Batch 11: East of England walks DONE (Dunwich Heath, Thetford Forest, Sheringham Park - 3 walk pages + East of England area page)
 - Batch 12: South West walks DONE (Tehidy Country Park, Moors Valley, Golden Cap, Watersmeet Exmoor, Quantock Hills, Burrator Reservoir - 6 walk pages + South West England area page)
+- Saoirse area intros: DONE (Batches 5-12: Peak District, North East England, North West England, East Midlands, Cotswolds, Shropshire, East of England, South West England)
 
 ## SEO reference
 
