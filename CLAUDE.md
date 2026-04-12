@@ -112,12 +112,10 @@ Full persona specs: docs/copy/website-personas.md
 
 ## Content backlog (priority order)
 
-1. Labrador walking guide (next breed guide)
-2. "How far should I walk my dog" guide (5,000-10,000 monthly searches)
-3. Trail Tips: first batch - short practical hacks in Jayesh's founder voice (walk pages, standalone articles, social)
-4. Walk page enrichment: "Before you go" and "For your dog" sections (Designer task - spec needed)
-5. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
-6. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
+1. Trail Tips: first batch - short practical hacks in Jayesh's founder voice (walk pages, standalone articles, social)
+2. Walk page enrichment: "Before you go" and "For your dog" sections (Designer task - spec needed)
+3. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
+4. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
 
 **All 12 walk batches complete. 77 walk pages live.**
 
@@ -137,6 +135,8 @@ Full persona specs: docs/copy/website-personas.md
 - Batch 11: East of England walks DONE (Dunwich Heath, Thetford Forest, Sheringham Park - 3 walk pages + East of England area page)
 - Batch 12: South West walks DONE (Tehidy Country Park, Moors Valley, Golden Cap, Watersmeet Exmoor, Quantock Hills, Burrator Reservoir - 6 walk pages + South West England area page)
 - Saoirse area intros: DONE (Batches 5-12: Peak District, North East England, North West England, East Midlands, Cotswolds, Shropshire, East of England, South West England)
+- Labrador walking guide: DONE (fact-checked, PASS WITH CORRECTIONS applied, Editor pass complete)
+- How far should I walk my dog guide: DONE (fact-checked, PASS WITH CORRECTIONS applied, Editor pass complete)
 
 ## SEO reference
 
@@ -214,3 +214,8 @@ Walk pages: maximum 1 contextual link. No product rails.
 Homepage and install page: no affiliate links.
 
 Approved disclosure wording: "This article contains affiliate links, marked with (Ad) where they appear. If you buy through these links, Sniffout earns a small commission at no extra cost to you. We only link to products we would genuinely recommend to a fellow dog owner."
+
+### Sniffout+ subscription (Phase 2 revenue)
+Sniffout+ spec: docs/specs/sniffout-plus-spec-april-12.md (in PWA repo ~/Desktop/my-first-repo).
+Phase 2 revenue. Target: 5,000+ MAU. £29.99/year.
+V1 features: offline walk packs, 7-day weather, breed exercise goals, partner perks.
