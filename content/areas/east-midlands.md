@@ -14,4 +14,4 @@ heroImage: ""
 date: 2026-04-10
 ---
 
-Bradgate Park is the most-visited dog walk in Leicestershire, and for good reason: an open deer park with genuine off-lead space, a ruined manor on the hillside, and enough variety to sustain a morning. East Midlands dog walks lean heavily on the great estates and ancient forests. Sherwood Forest holds the Major Oak - one of the oldest trees in England - and Clumber Park and Calke Abbey offer the scale and quietness of National Trust parkland at its most expansive. Cannock Chase adds AONB heathland to the mix.
+Bradgate Park is the most-visited dog walk in Leicestershire: open deer park, ruined manor on the hillside, and genuine off-lead space. East Midlands dog walks lean heavily on great estates and ancient forests. Sherwood Forest holds the Major Oak, one of England's oldest trees. Clumber Park and Calke Abbey offer National Trust parkland at its most expansive. Cannock Chase adds AONB heathland to the mix.

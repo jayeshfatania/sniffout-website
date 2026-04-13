@@ -9,4 +9,4 @@ heroImage: ""
 date: 2026-04-05
 ---
 
-Llyn Padarn at Llanberis is the gentlest entry point into dog walks in Eryri (Snowdonia), a flat lakeside circuit with Yr Wyddfa's profile ahead for most of it. Part of the southern lakeshore path is closed until early 2027 for infrastructure works; a signed alternative through Coed Dinorwig woodland is in place. On a clear day, it gives you the full mountain atmosphere without the altitude.
+Eryri (Snowdonia) is one of the largest national parks in Britain, and dog walking here ranges from flat lakeside circuits in the valleys to serious mountain terrain at altitude. Llyn Padarn at Llanberis gives the full mountain atmosphere without the climb. Higher routes demand solid navigation and mountain footwear. Livestock graze across open access land year-round. The weather changes faster than forecast; start early.

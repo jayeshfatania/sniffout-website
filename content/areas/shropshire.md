@@ -12,4 +12,4 @@ heroImage: ""
 date: 2026-04-10
 ---
 
-The Devil's Chair on the Stiperstones ridge is one of the more atmospheric landmarks on any walk in England: a quartzite outcrop above ancient heathland, wind-exposed and ancient. Shropshire dog walks occupy a part of England that serious dog walkers have largely to themselves. The Long Mynd runs a plateau above Church Stretton with a stream running the full length of Carding Mill Valley below it. Wenlock Edge is limestone woodland. The Clent Hills bring the same quality of walking to the Birmingham edge.
+The Devil's Chair on the Stiperstones ridge is one of the most atmospheric landmarks in England: a quartzite outcrop above ancient heathland, wind-exposed and remote. Shropshire dog walks occupy a part of England that serious dog walkers largely have to themselves. The Long Mynd runs a plateau above Church Stretton with a stream through Carding Mill Valley below. Wenlock Edge is limestone woodland. The Clent Hills bring the same quality to the Birmingham edge.

@@ -9,4 +9,4 @@ heroImage: ""
 date: 2026-04-05
 ---
 
-Llansteffan sits above a tidal estuary in Carmarthenshire with a castle ruin on the headland and a dog-friendly beach below. Dog walks in West Wales are quieter than the better-known Pembrokeshire coast, with long stretches of coast and countryside largely to yourselves. The village has two pubs that take dogs, and the southern beach section is open to dogs all year.
+West Wales dog walking is quieter than the Pembrokeshire coast, with long stretches of Carmarthenshire coastline largely to yourselves. The walking is defined by tidal estuaries, castle ruins on headlands, and shingle beaches where dogs can run throughout the year. It rewards the drive: less visited and less crowded than almost anywhere else on the Welsh coast.

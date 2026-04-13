@@ -9,4 +9,4 @@ heroImage: ""
 date: 2026-04-05
 ---
 
-The Fife coast is underrated walking country. Tentsmuir combines Scots pine forest with one of the widest beaches in Scotland, and the seal colony at Tentsmuir Point is one of the most significant in Britain. Check tide times before you go - the sandflats come in fast.
+The Fife coastline is underrated dog walking country. Tentsmuir combines Scots pine forest with one of the widest sandy beaches in Scotland, and the grey seal colony at Tentsmuir Point is one of the largest in Britain. The Lomond Hills add moorland and wide views over the Forth estuary from higher ground. Check tide times at Tentsmuir before you go, the sandflats move fast.
