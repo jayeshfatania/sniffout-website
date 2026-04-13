@@ -5,6 +5,10 @@ date: 2026-04-06
 type: guides
 heroImage: ""
 pull_quote: "A quarter of all Labs carry a gene deletion that means they burn around 25% fewer calories at rest: your Lab is not greedy, the usual rules simply do not apply."
+author: "Tom"
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 Throw a ball for a Labrador and you will quickly understand the breed. They do not fetch until they are tired. They fetch until you stop. How much exercise does a Labrador actually need? More than most owners give them.

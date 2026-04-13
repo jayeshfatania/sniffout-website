@@ -8,6 +8,9 @@ heroImage: "/img/guides/adder-bites-hero.jpg"
 seasonal: true
 seasonStart: 3
 seasonEnd: 9
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 # Adder bites in dogs - what UK walkers need to know

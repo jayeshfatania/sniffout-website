@@ -5,5 +5,9 @@ readTime: "6 min read"
 description: "Pugs, French Bulldogs, and Bulldogs need a different approach to walks. Here is what to know."
 date: 2026-03-05
 heroImage: "/img/guides/brachycephalic-hero.jpg"
+author: "Tom"
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 Placeholder content - full article coming soon.

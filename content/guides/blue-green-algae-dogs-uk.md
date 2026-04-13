@@ -6,6 +6,10 @@ description: "How to spot blue-green algae, why it is dangerous for dogs, and wh
 date: 2026-03-30
 heroImage: "/img/guides/blue-green-algae.jpg"
 pullQuote: "Blue-green algae can kill a dog within hours. The difficulty is that not all affected water looks obviously contaminated."
+author: "Tom"
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 It is a warm July afternoon and Biscuit has found water. He is in before you have a chance to call him back - chest-deep, lapping at the surface, entirely pleased with himself. Most of the time this is fine. Near a lake with a green tint to the shallows and a faint scum along the edge, it is not.

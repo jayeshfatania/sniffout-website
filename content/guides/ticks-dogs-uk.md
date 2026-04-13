@@ -12,6 +12,10 @@ relatedWalks:
   - "burley-village-forest"
   - "headley-heath-dog-walk"
   - "hindhead-common-devils-punch-bowl"
+author: "Tom"
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 Ticks are a regular feature of the British countryside, particularly for anyone who walks dogs through woodland, heathland, or long grass between March and October. They are small, they attach quietly, and they can carry disease, but they are also easy enough to deal with once you know the routine. The short version: check your dog after every walk in tick season, remove anything you find with a proper tool, and talk to your vet about prevention.

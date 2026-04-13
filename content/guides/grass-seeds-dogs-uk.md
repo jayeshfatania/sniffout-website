@@ -6,6 +6,10 @@ description: "How grass seeds harm dogs, when to check, where to look, and when 
 date: 2026-03-30
 heroImage: "/img/guides/grass-seeds-hero.jpg"
 pullQuote: "Over 90% of grass seed cases in UK dogs happen between June and September. A five-minute post-walk check after summer walks makes a real difference."
+author: "Tom"
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 Most grass seeds pass through summer walks without incident, sticking briefly to fur before falling away. But some do not - and the ones that do not can cause the kind of vet visits that start with a limp and end with a general anaesthetic. They are easy to miss, they are at their most dangerous between May and September, and a quick post-walk check makes a real difference.

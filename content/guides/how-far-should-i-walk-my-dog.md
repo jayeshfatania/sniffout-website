@@ -5,6 +5,10 @@ date: 2026-04-06
 type: guides
 heroImage: ""
 pull_quote: "The famously easy-going Labrador is one of the most under-exercised breeds in the UK."
+author: "Tom"
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 Most published guidance uses time rather than distance - and with good reason. A Springer Spaniel will cover twice the ground of a Basset Hound in the same 40 minutes. If you are planning a specific route and want a rough conversion, figure on 20 to 25 minutes per mile at a relaxed walking pace.

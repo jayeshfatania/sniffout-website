@@ -6,6 +6,9 @@ author: "Tom"
 date: 2026-04-04
 heroImage: ""
 pullQuote: "38% of UK vets have treated a dog for heatstroke after a walk. Just 9% from a hot car."
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 # Is it too hot to walk my dog? A temperature-by-temperature guide

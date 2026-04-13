@@ -6,6 +6,10 @@ description: "A calm, accurate guide to Alabama rot - how rare it is, what to lo
 date: 2026-03-30
 heroImage: "/img/guides/alabama-rot-hero.jpg"
 pullQuote: "Around 10 to 50 cases of Alabama rot are confirmed in UK dogs each year. Knowing what to look for matters more than worrying about it."
+author: "Tom"
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 Millions of dogs are walked in UK woodlands every year, including through the muddy paths and wet ground that dominate the countryside from November through to spring. Alabama rot is real, it can be serious, and it is also genuinely rare: roughly 10 to 50 confirmed cases are recorded across the whole of the UK each year. It is worth knowing what to look for. It should not stop you walking your dog in the woods.

@@ -6,6 +6,10 @@ description: "How exercise needs change as dogs age, what signs to watch for, an
 date: 2026-03-30
 heroImage: "/img/guides/senior-dog-hero.jpg"
 pullQuote: "The goal is not to do less - it is to do it differently. Shorter, more frequent walks beat long occasional ones for older dogs."
+author: "Tom"
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 Biscuit is five and still capable of embarrassing Mango - who is two - on a long moorland circuit. But Biscuit will not be five forever, and the way I walk him will need to change before he shows obvious signs that it should. That is the thing about senior dogs: the adjustments work best when they are made early and gradually, not in response to a vet visit or a limp. This guide covers what to expect, what to watch for, and how to adapt without reducing the quality of what you both get from a walk.

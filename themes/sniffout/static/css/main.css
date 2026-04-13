@@ -2243,6 +2243,54 @@ h1.walk-sidebar-title {
   padding: 0 16px;
 }
 
+.ga-byline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+.ga-byline-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ga-byline-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.ga-byline-role {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.ga-fact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brand);
+  background: rgba(44, 74, 20, 0.1);
+  border-radius: 10px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+.ga-methodology-note {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink-2);
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  margin-top: 40px;
+  line-height: 1.6;
+}
+.ga-methodology-note a {
+  color: var(--brand);
+  text-decoration: underline;
+}
+
 .ga-pull-quote {
   font-size: 19px;
   font-weight: 600;

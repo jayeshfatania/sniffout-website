@@ -53,6 +53,22 @@
   <div class="ga-content">
     <div class="ga-body-outer">
 
+      <!-- Author byline -->
+      {{ with .Params.author }}
+      <div class="ga-byline">
+        <div class="ga-byline-text">
+          <span class="ga-byline-name">Written by {{ . }}</span>
+          {{ with $.Params.authorRole }}<span class="ga-byline-role">{{ . }}</span>{{ end }}
+        </div>
+        {{ if $.Params.factChecked }}
+        <span class="ga-fact-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Fact checked
+        </span>
+        {{ end }}
+      </div>
+      {{ end }}
+
       <!-- Pull quote -->
       {{ with $pullQuote }}
       <blockquote class="ga-pull-quote">{{ . }}</blockquote>
@@ -62,6 +78,11 @@
       <div class="ga-body" id="ga-article-body">
         {{ .Content }}
       </div>
+
+      <!-- Methodology note -->
+      {{ if .Params.factChecked }}
+      <p class="ga-methodology-note">Walk quality scores and safety guidance on Sniffout are based on published research and UK veterinary sources. Read our <a href="/methodology/">methodology</a>.</p>
+      {{ end }}
 
       <!-- Inline install CTA (injected by JS after 3rd H2) -->
       <template id="ga-inline-cta-tmpl">

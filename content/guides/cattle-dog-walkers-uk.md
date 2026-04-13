@@ -6,6 +6,10 @@ description: "How to walk safely near cattle, what to do if a herd approaches, a
 date: 2026-03-30
 heroImage: "/img/guides/cattle.jpg"
 pullQuote: "If cattle get very close and you feel in danger, let the dog go. A dog without a lead will outrun cattle. You cannot."
+author: "Tom"
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 The first time Biscuit came face to face with a field of Belted Galloways in upper Northumberland, neither of us was quite ready for how quickly a herd of cattle can cover ground. We were well past the gate and halfway across before I noticed the calves. By the time the lead was tight in my hand, the nearest cow was already moving.

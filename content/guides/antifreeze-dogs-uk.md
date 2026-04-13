@@ -6,6 +6,10 @@ description: "Why antifreeze is extremely dangerous for dogs, how to recognise p
 date: 2026-03-30
 heroImage: "/img/guides/anti-freeze.jpg"
 pullQuote: "Antifreeze poisoning is treatable if caught early. The danger is that dogs can appear to recover before kidney failure sets in hours later."
+author: "Tom"
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 Antifreeze is one of the most acutely toxic substances a dog can encounter on a walk. It is widely used, often spilled carelessly, and unfortunately appears to taste sweet to dogs. The danger is highest in autumn and winter but exists year-round wherever cars are serviced or coolant is stored.

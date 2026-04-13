@@ -6,6 +6,10 @@ description: "How to spot the signs of heatstroke in dogs, when it is too hot to
 date: 2026-03-30
 heroImage: "/img/guides/heatstroke-hero.jpg"
 pullQuote: "Heatstroke in dogs progresses fast. By the time serious signs appear, you are already in emergency territory."
+author: "Tom"
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 It starts with a change of pace. A dog that was trotting along happily slows, finds a patch of shade, and begins to pant heavily. On a warm afternoon in July, those are signals worth taking seriously rather than walking through. Most heatstroke cases in UK dogs happen not on record-breaking days but on ordinary warm summer walks, when owners did not realise how fast things had built up. With a few adjustments to when and how you walk, almost all of them are preventable.

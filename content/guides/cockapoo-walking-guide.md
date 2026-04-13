@@ -5,6 +5,9 @@ category: "Breeds"
 author: "Tom"
 date: 2026-04-03
 heroImage: ""
+authorRole: "Dog safety and hazard writer"
+factChecker: "Sniffout Fact Checker"
+factChecked: true
 ---
 
 # Walking a Cockapoo - how far, how often, and what to know
