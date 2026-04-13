@@ -12,7 +12,18 @@ offLead: "Partial"
 duration: "~1h 30m"
 parking: "Box Hill National Trust car park"
 gettingThere: "Box Hill and Westhumble station 1.5 miles"
+nearestTown: "Dorking"
 facilities: "Cafe at summit viewpoint"
+accessNotes: "Conservation grazing on the upper slopes April to October. Leads required when cattle are present."
+waterOnRoute: "River Mole at the base. Stepping stones accessible in most conditions."
+shadeOnRoute: "Good shade in the woodland sections. The upper chalk downland is exposed."
+dogFacilities: "Dog-friendly terrace at the National Trust cafe at the summit."
+hasStiles: false
+hazards:
+  - ticks
+  - deer
+wetNote: "The chalk zigzag path becomes loose and slippery when wet. Take the longer path around the hill on wet days."
+hotNote: "The open downland has no shade. Walk early morning or late afternoon in summer. Water at the summit cafe."
 description: "One of Surrey's most iconic walks, Box Hill offers sweeping views across the North Downs and the Mole Valley. The route climbs through chalk grassland and mixed woodland to the summit viewpoint, with the descent through Juniper Bottom. Dogs are welcome throughout most of the estate."
 description_long: |
   Box Hill is one of the most visited National Trust sites in England, and the summit viewpoint over the Mole Valley is the reason. The walk up rewards you with a panoramic view across Surrey that stretches south towards the Downs. The zigzag path from the valley floor is the most famous approach - stepped and gradual, though it can be slippery when wet.
