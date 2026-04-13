@@ -14,7 +14,7 @@ facilities: "Toilets at Edale car park. No facilities on the plateau. Carry wate
 dogSummary: "Off-lead on the open plateau outside the CRoW Act period (1 March to 31 July). Leads essential on all farm approach paths through Edale. Reliable recall required - the plateau is large and featureless in mist. Not suitable for puppies, elderly dogs, or flat-faced breeds."
 lat: 53.3641
 lng: -1.8709
-heroImage: ""
+heroImage: "/img/walks/kinder-scout.jpg"
 date: 2026-04-09
 relatedGuides:
   - "adder-bites-dogs-uk"

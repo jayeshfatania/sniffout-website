@@ -14,7 +14,7 @@ facilities: "Seasonal food vans at Mam Nick on summer weekends. No facilities on
 dogSummary: "Off-lead on the open ridge outside the CRoW Act period (1 March to 31 July). Leads on valley return through farmland and near sheep. Good recall essential - exposed ridge with drops on both sides."
 lat: 53.3476
 lng: -1.8026
-heroImage: ""
+heroImage: "/img/walks/mam-tor.jpg"
 date: 2026-04-09
 relatedGuides:
   - "adder-bites-dogs-uk"

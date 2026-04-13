@@ -12,7 +12,7 @@ terrain: "Sandy paths and woodland"
 parking: "Halfpenny Lane car park, Chilworth"
 lat: 51.2131
 lng: -0.5002
-heroImage: ""
+heroImage: "/img/walks/st-marthas-hill.jpg"
 date: 2026-04-05
 ---
 

@@ -29,7 +29,7 @@ relatedGuides:
 nearbyWalks:
   - frensham-great-pond
   - hindhead-common-devils-punch-bowl
-heroImage: "/img/walks/burley-new-forest.png"
+heroImage: "/img/walks/burley-new-forest.jpg"
 date: 2026-03-29
 ---
 
