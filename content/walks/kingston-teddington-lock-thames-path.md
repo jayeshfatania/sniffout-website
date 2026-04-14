@@ -10,7 +10,7 @@ distance: "3.5 miles"
 duration: "~1h 30m"
 difficulty: "easy"
 terrain: "flat riverside path"
-offLead: "partial"
+offLead: "full"
 livestock: false
 hasStiles: false
 hasParking: true
@@ -20,10 +20,12 @@ walkType: "linear"
 startPoint: "Canbury Gardens car park, Lower Ham Road, KT2 5AU"
 endPoint: "Teddington Lock, Ferry Road, TW11 9NN"
 returnOptions:
+  - type: "walk"
+    detail: "Walk back the same way along the Thames Path - the simplest option and lets your dog enjoy the route twice."
   - type: "train"
-    detail: "Teddington Station to Kingston Station, South Western Railway, ~8 mins"
+    detail: "Teddington Station to Kingston Station, South Western Railway, ~8 mins. Verify current timetable at southwesternrailway.com before visiting."
   - type: "bus"
-    detail: "R68 and R70 buses connect Teddington and Kingston regularly"
+    detail: "R68 and R70 buses connect Teddington and Kingston. Check current timetables at tfl.gov.uk before visiting."
   - type: "two-car"
     detail: "Park one car at Teddington Lock car park and one at Canbury Gardens"
 waterAccess: true
@@ -35,7 +37,7 @@ date: 2026-04-14
 
 Canbury Gardens is a long, narrow riverside park on the Surrey bank of the Thames in Kingston, with mature trees, a bandstand, and dog waste bins at the Lower Ham Road entrance, the bandstand area, and the north end. Dogs are welcome throughout with no formal lead requirement, and the open grass is used freely by local dog walkers whatever the season. From here the Thames Path continues north along the Surrey bank, past boatyards, with informal river access at multiple grassy bank points where dogs can wade in and drink safely from the tidal-free water. The path is flat the whole way, which makes it reliable in any weather and with any dog. This is the weekly walk for Sniffout's founder Jayesh and his bearcoat Shar Pei Luna, and it earns its repeat visits: the river is always doing something different.
 
-Partial off-lead: Canbury Gardens is freely used off-lead. The Thames Path itself is on-lead due to cyclists and other walkers. At Teddington Lock, two footbridges cross to the Middlesex bank and Ham Lands, a Local Nature Reserve of rough grassland with no livestock, where dogs can be off-lead throughout. The Anglers pub on Broom Road (TW11 9NR) sits at the lock with a riverside terrace and dogs welcome outside. The easiest return is by train: Teddington Station to Kingston takes 8 minutes on South Western Railway, with the station a 5-10 minute walk from the lock.
+Full off-lead: dogs are welcome off-lead along the Thames Path on this stretch. The path has two levels for most of the route: an upper shared path used by cyclists and pedestrians, and a lower path closer to the river used by pedestrians only. The lower path is quieter and safer for dogs. Both are off-lead friendly. At Teddington Lock, two footbridges cross to the Middlesex bank and Ham Lands, a Local Nature Reserve of rough grassland with no livestock, where dogs can be off-lead throughout. The Anglers pub on Broom Road (TW11 9NR) sits at the lock with a riverside terrace and dogs welcome outside. The easiest return is by train: Teddington Station to Kingston takes 8 minutes on South Western Railway, with the station a 5-10 minute walk from the lock.
 
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
@@ -61,7 +63,7 @@ Yes. At Teddington Lock, cross the footbridges to the Middlesex bank and walk so
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
 <div itemprop="text">
 
-Canbury Gardens is used freely off-lead by local dog walkers throughout the year. The Thames Path towpath between Canbury Gardens and Teddington Lock is on-lead territory given the mix of cyclists, joggers, and other walkers on a narrow path. Ham Lands, accessible via the footbridges at Teddington Lock, is excellent off-lead territory throughout: no livestock, no formal restrictions, and enough open rough grassland to give dogs a proper run. Ground-nesting birds are present in spring, so keep dogs close to the path in Ham Lands between March and July.
+Dogs are welcome off-lead throughout this walk. Canbury Gardens is used freely off-lead by local dog walkers throughout the year. The Thames Path between Canbury Gardens and Teddington Lock has two levels: an upper path shared with cyclists, and a lower path closer to the river used by pedestrians only. The lower path is quieter and suits dogs well. Ham Lands, accessible via the footbridges at Teddington Lock, is excellent off-lead territory: no livestock, no formal restrictions, and enough open rough grassland to give dogs a proper run. Ground-nesting birds are present in spring, so keep dogs close to the path in Ham Lands between March and July.
 
 </div>
 </div>
