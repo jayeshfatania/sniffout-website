@@ -3571,6 +3571,13 @@ h1.walk-sidebar-title {
 .ws-info-card .ws-info-row:last-child {
   border-bottom: none;
 }
+.ws-info-row--stacked {
+  flex-wrap: wrap;
+}
+.ws-info-row--stacked .ws-return-list {
+  flex: 1 1 100%;
+  padding-left: 26px;
+}
 .ws-info-icon {
   flex-shrink: 0;
   margin-top: 1px;
