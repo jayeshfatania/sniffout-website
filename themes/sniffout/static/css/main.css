@@ -3221,7 +3221,7 @@ h1.walk-sidebar-title {
   font-size: 10px;
   font-weight: 700;
   color: var(--ink-2);
-  margin-left: -3px;
+  margin-right: 2px;
 }
 
 /* Gallery strip */
@@ -3584,6 +3584,7 @@ h1.walk-sidebar-title {
   color: var(--amber);
 }
 .ws-info-val {
+  display: block;
   flex: 1;
   font-size: 13px;
   color: var(--ink);
@@ -3844,6 +3845,57 @@ h1.walk-sidebar-title {
   line-height: 1.65;
   color: #555555;
   margin-bottom: 12px;
+}
+
+/* FAQ accordion */
+details.ws-faq-item {
+  border-bottom: 1px solid var(--border);
+}
+details.ws-faq-item:first-of-type {
+  border-top: 1px solid var(--border);
+}
+summary.ws-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+summary.ws-faq-question::-webkit-details-marker {
+  display: none;
+}
+summary.ws-faq-question::after {
+  content: '';
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--ink-2);
+  border-bottom: 2px solid var(--ink-2);
+  transform: rotate(45deg);
+  margin-bottom: 4px;
+  transition: transform 0.2s ease;
+}
+details[open] > summary.ws-faq-question::after {
+  transform: rotate(-135deg);
+  margin-bottom: -4px;
+}
+.ws-faq-answer {
+  padding: 0 0 16px;
+}
+.ws-faq-answer p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0 0 8px;
+}
+.ws-faq-answer p:last-child {
+  margin-bottom: 0;
 }
 
 /* Page layout - for standalone content pages like methodology */

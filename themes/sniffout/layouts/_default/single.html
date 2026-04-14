@@ -800,21 +800,45 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristAttraction",
-  "name": {{ .Title | jsonify }},
-  "description": {{ .Params.description | jsonify }},
-  "url": {{ .Permalink | jsonify }},
+  "name": {{ .Title | jsonify | safeJS }},
+  "description": {{ .Params.description | jsonify | safeJS }},
+  "url": {{ .Permalink | jsonify | safeJS }},
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": {{ .Params.location | jsonify }},
+    "addressLocality": {{ .Params.location | jsonify | safeJS }},
     "addressCountry": "GB"
   }{{ if .Params.heroImage }},
-  "image": {{ .Params.heroImage | absURL | jsonify }}{{ end }}{{ if and .Params.lat .Params.lng }},
+  "image": {{ .Params.heroImage | absURL | jsonify | safeJS }}{{ end }}{{ if and .Params.lat .Params.lng }},
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": {{ .Params.lat }},
     "longitude": {{ .Params.lng }}
   }{{ end }}
 }
+</script>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.walk-faq div[itemprop="mainEntity"]');
+  items.forEach(function(item) {
+    var h3 = item.querySelector('h3');
+    var answerBlock = item.querySelector('[itemprop="acceptedAnswer"]');
+    if (!h3 || !answerBlock) return;
+    var details = document.createElement('details');
+    details.className = 'ws-faq-item';
+    var summary = document.createElement('summary');
+    summary.className = 'ws-faq-question';
+    summary.setAttribute('itemprop', 'name');
+    summary.textContent = h3.textContent;
+    var answerWrap = document.createElement('div');
+    answerWrap.className = 'ws-faq-answer';
+    answerWrap.appendChild(answerBlock);
+    details.appendChild(summary);
+    details.appendChild(answerWrap);
+    item.innerHTML = '';
+    item.appendChild(details);
+  });
+})();
 </script>
 
 {{ end }}
