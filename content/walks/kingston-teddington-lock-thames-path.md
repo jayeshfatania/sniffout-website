@@ -44,6 +44,9 @@ gallery:
   - src: "/img/walks/kingston-teddington-2.jpg"
     caption: "Tree-lined path in autumn"
     credit: "Photo: Sniffout"
+  - src: "/img/walks/kingston-teddington-luna.jpg"
+    caption: "Luna in Canbury Gardens"
+    credit: "Photo: Sniffout"
 badge: "Sniffout Pick"
 date: 2026-04-14
 ---
