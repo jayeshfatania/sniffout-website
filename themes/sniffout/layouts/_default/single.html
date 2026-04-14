@@ -46,6 +46,28 @@
   </div>
 </div>
 
+{{ if .Params.gallery }}
+<!-- Gallery strip -->
+<div class="ws-gallery">
+  {{ range .Params.gallery }}
+  <figure class="ws-gallery-item">
+    <img
+      src="{{ .src }}"
+      alt="{{ .caption | default "" }}"
+      class="ws-gallery-img"
+      loading="lazy"
+    />
+    {{ if or .caption .credit }}
+    <figcaption class="ws-gallery-caption">
+      {{ if .caption }}<span class="ws-gallery-caption-text">{{ .caption }}</span>{{ end }}
+      {{ if .credit }}<span class="ws-gallery-credit">{{ .credit }}</span>{{ end }}
+    </figcaption>
+    {{ end }}
+  </figure>
+  {{ end }}
+</div>
+{{ end }}
+
 <!-- Stat strip -->
 <div class="ws-stat-strip{{ if eq .Params.walkType "linear" }} ws-stat-strip--linear{{ end }}">
   {{ if eq .Params.walkType "linear" }}
@@ -724,6 +746,51 @@
     document.getElementById('ws-wc-bars').innerHTML = barsHtml;
     if (typeof gtag === 'function') { gtag('event', 'weather_card_view', { 'walk_name': name }); }
   }
+})();
+</script>
+{{ end }}
+
+{{ if .Params.gallery }}
+<!-- Lightbox overlay -->
+<div class="ws-lightbox" id="ws-lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <button class="ws-lightbox-close" id="ws-lightbox-close" aria-label="Close">&times;</button>
+  <img class="ws-lightbox-img" id="ws-lightbox-img" src="" alt="" />
+  <div class="ws-lightbox-caption" id="ws-lightbox-caption"></div>
+</div>
+<script>
+(function() {
+  if (window.matchMedia('(max-width: 639px)').matches) return;
+  var lb = document.getElementById('ws-lightbox');
+  var lbImg = document.getElementById('ws-lightbox-img');
+  var lbCap = document.getElementById('ws-lightbox-caption');
+  var lbClose = document.getElementById('ws-lightbox-close');
+  document.querySelectorAll('.ws-gallery-img').forEach(function(img) {
+    img.addEventListener('click', function() {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      var item = img.closest('.ws-gallery-item');
+      var captionText = item.querySelector('.ws-gallery-caption-text');
+      var creditText = item.querySelector('.ws-gallery-credit');
+      var html = '';
+      if (captionText) html += '<span>' + captionText.textContent + '</span>';
+      if (creditText) html += '<br><span class="ws-lightbox-credit">' + creditText.textContent + '</span>';
+      lbCap.innerHTML = html;
+      lb.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  function closeLightbox() {
+    lb.classList.remove('is-open');
+    lbImg.src = '';
+    document.body.style.overflow = '';
+  }
+  lbClose.addEventListener('click', closeLightbox);
+  lb.addEventListener('click', function(e) {
+    if (e.target === lb) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lb.classList.contains('is-open')) closeLightbox();
+  });
 })();
 </script>
 {{ end }}
