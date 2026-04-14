@@ -6,6 +6,8 @@ layout: "area"
 walks:
   - "stanage-edge-hathersage-moor"
   - "malham-cove-gordale"
+  - "hardcastle-crags-hebden"
+  - "roseberry-topping"
 heroImage: ""
 date: 2026-04-02
 ---

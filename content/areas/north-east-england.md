@@ -10,6 +10,7 @@ walks:
   - "kielder-water-forest-dog-walk"
   - "durham-riverside-dog-walk"
   - "plessey-woods-dog-walk"
+  - "hamsterley-forest-dog-walk"
 heroImage: ""
 date: 2026-04-09
 ---

@@ -7,6 +7,7 @@ walks:
   - "seven-sisters-cliffs"
   - "cuckmere-haven-dog-walk"
   - "cissbury-ring-dog-walk"
+  - "devils-dyke-dog-walk"
 heroImage: ""
 date: 2026-04-02
 ---
