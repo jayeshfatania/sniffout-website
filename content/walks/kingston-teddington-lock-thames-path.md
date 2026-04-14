@@ -6,7 +6,7 @@ layout: "walk"
 lat: 51.4161
 lng: -0.3108
 location: "Kingston upon Thames, Surrey"
-distance: "3.5 miles"
+distance: "5.6 km"
 duration: "~1h 30m"
 difficulty: "easy"
 terrain: "flat riverside path"
