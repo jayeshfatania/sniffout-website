@@ -17,6 +17,7 @@ walks:
   - "hurtwood-ridge-dog-walk"
   - "epsom-common-dog-walk"
   - "shere-abinger-roughs-dog-walk"
+  - "kingston-teddington-lock-thames-path"
 heroImage: ""
 date: 2026-04-02
 ---
