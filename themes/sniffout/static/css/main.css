@@ -3138,6 +3138,14 @@ h1.walk-sidebar-title {
 @media (max-width: 767px) {
   .ws-hero-badge--lead { max-width: 240px; overflow: hidden; text-overflow: ellipsis; }
 }
+/* Linear walk badge */
+.ws-hero-badge--linear {
+  background: rgba(255,255,255,0.85);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
 
 /* Stat strip */
 .ws-stat-strip {
@@ -3179,6 +3187,41 @@ h1.walk-sidebar-title {
   color: var(--ink-2);
   letter-spacing: 0.02em;
   text-align: center;
+}
+/* Linear walk: 5-column stat strip (start + end replace distance) */
+.ws-stat-strip--linear {
+  grid-template-columns: repeat(5, 1fr);
+}
+.ws-stat-strip--linear .ws-stat-value {
+  font-size: 11px;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .ws-stat-strip--linear .ws-stat-value { font-size: 13px; }
+}
+/* Return options block inside Before you go */
+.ws-return-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2px;
+}
+.ws-return-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink);
+}
+.ws-return-icon {
+  color: var(--ink-2);
+  flex-shrink: 0;
+}
+.ws-return-x2 {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ink-2);
+  margin-left: -3px;
 }
 
 /* Two-column layout */
