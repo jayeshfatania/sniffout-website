@@ -453,7 +453,11 @@
     var codes = hourly.weather_code || hourly.weathercode;
 
     var now = new Date();
-    var currentHour = now.getHours();
+    var currentHour = parseInt(now.toLocaleString('en-GB', {
+      timeZone: 'Europe/London',
+      hour: 'numeric',
+      hour12: false
+    }));
     var dayOffset = currentHour >= 18 ? 24 : 0;
 
     var scored = [];
@@ -588,7 +592,7 @@
     var isHot = currentData.apparentTemp >= 28;
 
     var tempEl = document.getElementById('ws-wc-temp');
-    tempEl.innerHTML = Math.round(currentData.apparentTemp) + '<sup>o</sup>';
+    tempEl.innerHTML = Math.round(currentData.temp) + '<sup>o</sup>';
     if (isHot) tempEl.classList.add('hot');
 
     var dayLabel = isTomorrow ? 'tomorrow' : 'today';
