@@ -18,6 +18,8 @@ walks:
   - "epsom-common-dog-walk"
   - "shere-abinger-roughs-dog-walk"
   - "kingston-teddington-lock-thames-path"
+  - "cookham-to-marlow-thames-path"
+  - "river-wey-navigation-guildford-godalming"
 heroImage: ""
 date: 2026-04-02
 ---

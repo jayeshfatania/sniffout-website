@@ -8,6 +8,9 @@ walks:
   - "wimbledon-common-loop"
   - "hampstead-heath-ponds"
   - "isabella-plantation"
+  - "teddington-to-richmond-thames-path"
+  - "regents-canal-little-venice-camden"
+  - "oxleas-wood-shooters-hill-dog-walk"
 heroImage: ""
 date: 2026-04-02
 ---
