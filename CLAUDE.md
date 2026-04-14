@@ -49,7 +49,7 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 
 ### Pages live
 - Homepage
-- Walks index + 77 individual walk pages (all with FAQ blocks and schema.org markup, weather preview card with lat/lng front matter)
+- Walks index + 87 individual walk pages (all with FAQ blocks and schema.org markup, weather preview card with lat/lng front matter)
 - Guides index + guide articles (see content/guides/)
 - Area index pages: 26 live (Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales, Peak District, North East England, North West England, East Midlands, Shropshire, East of England, Fife, Loch Lomond, Perthshire, Cotswolds, South West England)
 - Regions covered: Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh and Lothians, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales, Peak District, North East England, North West England, East Midlands, Shropshire, East of England, Suffolk, Norfolk, Fife, Loch Lomond, Perthshire, Cotswolds, Gloucestershire, Worcestershire, Herefordshire, Malvern Hills, South West England, Cornwall, Dorset, Devon, Somerset
@@ -80,7 +80,7 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - How far should I walk my dog: content/guides/how-far-should-i-walk-my-dog.md (fact-checked, PASS WITH CORRECTIONS applied, Editor pass complete)
 
 ### SEO infrastructure
-- FAQ blocks on all 77 walk pages with schema.org FAQPage markup
+- FAQ blocks on all 87 walk pages with schema.org FAQPage markup
 - 26 area index pages capturing regional dog walk searches
 - Pull quote frontmatter field on guide articles
 - heroImage frontmatter field on guides and walks
@@ -112,12 +112,15 @@ Full persona specs: docs/copy/website-personas.md
 
 ## Content backlog (priority order)
 
-1. Trail Tips: first batch - short practical hacks in Jayesh's founder voice (walk pages, standalone articles, social)
-2. Walk page enrichment: "Before you go" and "For your dog" sections (Designer task - spec needed)
-3. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
-4. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
+1. Trail Tips Article 2 (hot weather hacks) - Article 1 complete, voice guide and tip bank DONE
+2. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
+3. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
+4. Waterside walk batch 2 (Cookham to Marlow, Teddington to Richmond, others) - batch 1 of 5 in progress
+5. Community map pins V1 spec and build (post-500 MAU - research complete April 14 2026)
 
-**All 12 walk batches complete. 77 walk pages live.**
+**DONE: Walk page enrichment "Before you go" and "For your dog" sections: LIVE (April 13 2026). Spec at docs/design/walk-page-sections-spec-april-13.md**
+**DONE: Trail Tips voice guide and tip bank: DONE. Files at docs/copy/trail-tips-voice-guide.md and docs/copy/trail-tips-bank.md. Article 1 complete.**
+**All 12 walk batches complete. 87 walk pages live.**
 
 **Recently completed (not to re-do):**
 - Temperature guide "Is it too hot to walk my dog?": DONE (fact-checked PASS)
@@ -134,9 +137,15 @@ Full persona specs: docs/copy/website-personas.md
 - Batch 10: Shropshire walks DONE (Stiperstones, Long Mynd, Wenlock Edge, Clent Hills - 4 walk pages + Shropshire area page)
 - Batch 11: East of England walks DONE (Dunwich Heath, Thetford Forest, Sheringham Park - 3 walk pages + East of England area page)
 - Batch 12: South West walks DONE (Tehidy Country Park, Moors Valley, Golden Cap, Watersmeet Exmoor, Quantock Hills, Burrator Reservoir - 6 walk pages + South West England area page)
-- Saoirse area intros: DONE (Batches 5-12: Peak District, North East England, North West England, East Midlands, Cotswolds, Shropshire, East of England, South West England)
+- Saoirse area intros: DONE for all 26 areas (April 13-14 2026)
 - Labrador walking guide: DONE (fact-checked, PASS WITH CORRECTIONS applied, Editor pass complete)
 - How far should I walk my dog guide: DONE (fact-checked, PASS WITH CORRECTIONS applied, Editor pass complete)
+- Author bylines on all Tom guide articles: DONE (April 14 2026). Fact checked badge and methodology link included.
+- Walk page photo gallery: DONE (April 14 2026). Gallery frontmatter array, caption and credit fields, lightbox on desktop. Images saved as [walk-slug]-2.jpg, [walk-slug]-3.jpg etc in static/img/walks/
+- Linear walk template: DONE (April 14 2026). walkType, startPoint, endPoint, returnOptions, waterAccess, canalWater, tidal frontmatter fields. Getting back section in Before you go sidebar. All blocks invisible on circular walks.
+- Kingston to Teddington Lock walk page: DONE (April 14 2026). First linear walk page. Founder personal walk. Sniffout Pick. 5 photos.
+- Underrated and waterside walks research: DONE (April 14 2026). 20 new walks identified. Files: docs/research/underrated-walks-research-april-14.md and docs/research/waterside-walks-research-april-14.md
+- Community map pins research: DONE (April 14 2026). Full competitor analysis, 15 pin types evaluated, V1 spec (5 types). File: docs/research/community-map-pins-research-april-14.md
 
 ## SEO reference
 
@@ -173,12 +182,24 @@ No Fact Checker required for walk pages unless health or safety claims are made.
 
 All distances on the website are in kilometres (not miles). Convert from miles in app data when building walk pages.
 
+## Linear walk content rules
+
+- Always list "walk back the same route" FIRST as return option before any transport options
+- Transport options must be verified accurate before publishing. If unverified, omit. Always add note to check timetables.
+- Never assume leads required on towpaths — research thoroughly
+- Where dual paths exist (shared cyclist/pedestrian upper vs pedestrian-only lower) describe explicitly — this is key differentiating detail
+- Verify before publishing: path surface, cyclists sharing, formal lead requirements, water access points
+
 ## Image tracking
 
 Owner maintains a Google Sheets tracker for all walk and guide images. Check the tracker before sourcing new images.
 
 - Geograph images (geograph.org.uk): free to use under CC BY-SA licence. Must include credit: "Photo: [Photographer name] / Geograph, CC BY-SA 2.0"
 - Pexels images: free to use, no attribution required
+- Wikimedia Commons: CC BY, CC BY-SA, CC0 and Public Domain images only. Never use NC or ND licenced images. Credit format: "Photo: [Name] / Wikimedia Commons, CC BY-SA [version]"
+- Owner personal photos: no credit needed. Use "Photo: Sniffout" in gallery credit field.
+- Gallery images: save as [walk-slug]-2.jpg, [walk-slug]-3.jpg etc in static/img/walks/
+- Hero images must be landscape orientation. Portrait images will not render correctly in the hero banner.
 - Google Maps screenshots: copyrighted, do not use
 - OS map extracts: copyrighted, do not use without licence
 - AI-generated images: not approved for the website
