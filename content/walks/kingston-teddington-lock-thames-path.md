@@ -31,6 +31,19 @@ returnOptions:
 waterAccess: true
 tidal: false
 heroImage: "/img/walks/kingston-teddington.jpg"
+gallery:
+  - src: "/img/walks/kingston-teddington-3.jpg"
+    caption: "Thames Path through Canbury Gardens"
+    credit: "Photo: Sniffout"
+  - src: "/img/walks/kingston-teddington-4.jpg"
+    caption: "Riverside path towards Teddington"
+    credit: "Photo: Sniffout"
+  - src: "/img/walks/kingston-teddington-5.jpg"
+    caption: "The Thames at Canbury Gardens"
+    credit: "Photo: Sniffout"
+  - src: "/img/walks/kingston-teddington-2.jpg"
+    caption: "Tree-lined path in autumn"
+    credit: "Photo: Sniffout"
 badge: "Sniffout Pick"
 date: 2026-04-14
 ---
