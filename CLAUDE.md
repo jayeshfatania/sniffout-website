@@ -49,7 +49,7 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 
 ### Pages live
 - Homepage
-- Walks index + 87 individual walk pages (all with FAQ blocks and schema.org markup, weather preview card with lat/lng front matter)
+- Walks index + 87 individual walk pages (all with FAQ blocks using native details/summary accordion, schema.org FAQPage markup, weather preview card with lat/lng front matter, walk description lead-in styling at 17px/500/1.6)
 - Guides index + guide articles (see content/guides/)
 - Area index pages: 26 live (Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales, Peak District, North East England, North West England, East Midlands, Shropshire, East of England, Fife, Loch Lomond, Perthshire, Cotswolds, South West England)
 - Regions covered: Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh and Lothians, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales, Peak District, North East England, North West England, East Midlands, Shropshire, East of England, Suffolk, Norfolk, Fife, Loch Lomond, Perthshire, Cotswolds, Gloucestershire, Worcestershire, Herefordshire, Malvern Hills, South West England, Cornwall, Dorset, Devon, Somerset
@@ -80,7 +80,7 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - How far should I walk my dog: content/guides/how-far-should-i-walk-my-dog.md (fact-checked, PASS WITH CORRECTIONS applied, Editor pass complete)
 
 ### SEO infrastructure
-- FAQ blocks on all 87 walk pages with schema.org FAQPage markup
+- FAQ accordion (details/summary) on all 87 walk pages with schema.org FAQPage markup
 - 26 area index pages capturing regional dog walk searches
 - Pull quote frontmatter field on guide articles
 - heroImage frontmatter field on guides and walks
@@ -146,6 +146,9 @@ Full persona specs: docs/copy/website-personas.md
 - Kingston to Teddington Lock walk page: DONE (April 14 2026). First linear walk page. Founder personal walk. Sniffout Pick. 5 photos.
 - Underrated and waterside walks research: DONE (April 14 2026). 20 new walks identified. Files: docs/research/underrated-walks-research-april-14.md and docs/research/waterside-walks-research-april-14.md
 - Community map pins research: DONE (April 14 2026). Full competitor analysis, 15 pin types evaluated, V1 spec (5 types). File: docs/research/community-map-pins-research-april-14.md
+- FAQ accordion on all walk pages: DONE (April 15 2026). Native details/summary pattern, collapsed by default, schema.org FAQPage markup preserved.
+- Kingston walk page fixes: DONE (April 15 2026). Fixed: fullOff-lead concatenation bug, schema.org JSON-LD escaped quotes, x2Park concatenation, getting back text overflow (.ws-return-list flex wrap), distance corrected to 5.6 km, deer rut hazard removed (no deer on Thames Path), two-car return option removed (impractical).
+- Walk description lead-in styling: DONE (April 15 2026). .ws-description renders at 17px, font-weight 500, line-height 1.6 across all walk pages.
 
 ## SEO reference
 
@@ -182,6 +185,8 @@ No Fact Checker required for walk pages unless health or safety claims are made.
 
 All distances on the website are in kilometres (not miles). Convert from miles in app data when building walk pages.
 
+Water access field: only Kingston to Teddington Lock currently has this populated. Backfill for other walks as pages are updated.
+
 ## Linear walk content rules
 
 - Always list "walk back the same route" FIRST as return option before any transport options
@@ -189,6 +194,7 @@ All distances on the website are in kilometres (not miles). Convert from miles i
 - Never assume leads required on towpaths — research thoroughly
 - Where dual paths exist (shared cyclist/pedestrian upper vs pedestrian-only lower) describe explicitly — this is key differentiating detail
 - Verify before publishing: path surface, cyclists sharing, formal lead requirements, water access points
+- Return options must be realistic for the walk distance. No two-car suggestions for short walks. Flag impractical options before publishing.
 
 ## Image tracking
 
