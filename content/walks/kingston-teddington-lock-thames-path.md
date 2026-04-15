@@ -26,8 +26,6 @@ returnOptions:
     detail: "Teddington Station to Kingston Station, South Western Railway, ~8 mins. Verify current timetable at southwesternrailway.com before visiting."
   - type: "bus"
     detail: "R68 and R70 buses connect Teddington and Kingston. Check current timetables at tfl.gov.uk before visiting."
-  - type: "two-car"
-    detail: "Park one car at Teddington Lock car park and one at Canbury Gardens"
 waterAccess: true
 tidal: false
 heroImage: "/img/walks/kingston-teddington.jpg"
@@ -102,7 +100,7 @@ There is a small pay-and-display car park on Lower Ham Road (KT2 5AU) directly a
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
 <div itemprop="text">
 
-The simplest return is by train. Teddington Station is a 5 to 10 minute walk from Teddington Lock along Broom Road and Station Road. South Western Railway runs between Teddington and Kingston in approximately 8 minutes, with trains roughly every 15 to 30 minutes depending on the time of day. Buses R68 and R70 also connect Teddington and Kingston if you prefer to avoid the station. If walking with two cars, a car can be left at the Teddington Lock car park on Ferry Road (TW11 9NN) and another at Canbury Gardens.
+The simplest return is by train. Teddington Station is a 5 to 10 minute walk from Teddington Lock along Broom Road and Station Road. South Western Railway runs between Teddington and Kingston in approximately 8 minutes, with trains roughly every 15 to 30 minutes depending on the time of day. Buses R68 and R70 also connect Teddington and Kingston if you prefer to avoid the station.
 
 </div>
 </div>

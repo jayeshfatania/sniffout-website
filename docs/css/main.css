@@ -3401,8 +3401,15 @@ h1.walk-sidebar-title {
   color: var(--ink);
   margin-bottom: 18px;
 }
+.ws-description p:first-of-type {
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #1A1A1A;
+}
 @media (min-width: 768px) {
   .ws-description p { font-size: 16px; line-height: 1.75; }
+  .ws-description p:first-of-type { font-size: 17px; line-height: 1.6; }
 }
 
 /* Pull quote */

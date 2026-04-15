@@ -137,7 +137,9 @@
     <!-- Seasonal notes -->
     <div class="ws-section-label">Seasonal notes</div>
     <div class="seasonal-notes">
+      {{- if in .Params.hazards "deer" }}
       <div class="seasonal-pill seasonal-pill--amber"><span class="seasonal-bold">Deer rut</span> &middot; Oct-Nov &middot; Keep extra distance</div>
+      {{- end }}
       <div class="seasonal-pill seasonal-pill--green"><span class="seasonal-bold">Tick season</span> &middot; Mar-Oct &middot; Check after every visit</div>
     </div>
 
