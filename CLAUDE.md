@@ -79,6 +79,9 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - Labrador walking guide: content/guides/labrador-walking-guide.md (fact-checked, PASS WITH CORRECTIONS applied, Editor pass complete)
 - How far should I walk my dog: content/guides/how-far-should-i-walk-my-dog.md (fact-checked, PASS WITH CORRECTIONS applied, Editor pass complete)
 
+### Trail Tips articles live
+- 5 shedding hacks: content/guides/5-shedding-hacks-dogs.md (Trail Tips Article 1)
+
 ### SEO infrastructure
 - FAQ accordion (details/summary) on all 87 walk pages with schema.org FAQPage markup
 - 26 area index pages capturing regional dog walk searches
