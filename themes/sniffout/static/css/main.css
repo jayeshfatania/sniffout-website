@@ -3334,6 +3334,41 @@ h1.walk-sidebar-title {
 .ws-lightbox-close:hover {
   opacity: 1;
 }
+.ws-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  z-index: 10000;
+  -webkit-tap-highlight-color: transparent;
+}
+.ws-lightbox-nav:hover {
+  opacity: 1;
+  background: rgba(0,0,0,0.5);
+}
+.ws-lightbox-nav--prev {
+  left: 16px;
+}
+.ws-lightbox-nav--next {
+  right: 16px;
+}
+.ws-lightbox-counter {
+  color: rgba(255,255,255,0.6);
+  font-size: 12px;
+  text-align: center;
+  margin-top: 4px;
+}
 
 /* Two-column layout */
 .ws-layout {
