@@ -186,6 +186,9 @@ Warm, slightly wry, urban. He is not selling anything - he is sharing something 
 | Homepage copy | Ravi | Ravi - Editor - Validator - Developer |
 | Install page | Ravi | Ravi - Editor - Validator - Developer |
 | Guide subheadings/pull quotes | Ravi | Ravi - Editor - Validator - Developer |
+| Walk page practical detail, founder's tips, pub/cafe descriptions, safety framing, route breakdown notes | Jay | Jay - Editor - Validator - Developer |
+
+Jay (The Trail Scout) works alongside Ailsa on walk pages. Ailsa writes the core 150-200 word atmospheric description. Jay writes the practical detail: founder's tips, pub descriptions, safety framing, parking tips, route breakdown leg descriptions, and seasonal advice. Jay's voice is personal and opinionated - like a WhatsApp from a friend. Full spec: docs/copy/jay-persona-spec.md
 
 ---
 
