@@ -1,6 +1,6 @@
 ---
 title: "Teddington to Richmond via the Thames Path"
-description: "A Thames Path walk from Teddington Lock to Richmond, with off-lead walking on Ham Lands. Note: Petersham Meadows has a total dog ban April to October."
+description: "A Thames Path walk from Teddington Lock to Richmond Hill, with off-lead walking through Ham Lands and the only view in England protected by an Act of Parliament. Dogs banned from Petersham Meadows April to October."
 slug: "teddington-to-richmond-thames-path"
 layout: "walk"
 lat: 51.4310
@@ -13,7 +13,7 @@ duration: "~1h 45m"
 difficulty: "easy"
 terrain: "paved"
 offLead: "partial"
-offLeadDescription: "Ham Lands (north bank return): fully off-lead year-round. South bank: leads near Teddington Lock weir. Petersham Meadows: total dog ban April-October (PSPO)."
+offLeadDescription: "Ham Lands (south bank, between Teddington and Richmond): fully off-lead year-round. Leads near Teddington Lock weir. Petersham Meadows: total dog ban April-October (PSPO protecting Belted Galloway cattle)."
 livestock: true
 hasStiles: false
 hasParking: true
@@ -34,9 +34,9 @@ heroImage: ""
 date: 2026-04-15
 ---
 
-The Teddington to Richmond walk follows the south bank of the Thames through one of the quieter corridors on the London towpath network, starting at the lock where the tidal river ends and calm, paddleable water begins. The route follows the riverside through Teddington before opening up toward Petersham, and it is here that dog walkers need to know the rules: Petersham Meadows has a total ban on dogs from 1 April to 31 October, enforced by a Public Spaces Protection Order. This is not a leads requirement - it is a complete prohibition, and the penalty is a criminal fine. During those months, take the signed riverside diversion via the Thames Path, which runs left of the meadows and rejoins the main route at the Richmond end. It is a straightforward alternative and well-used by locals.
+The Teddington to Richmond walk follows the south bank of the Thames through one of the quieter corridors on the London towpath network, starting at the lock where the tidal river ends and calm, paddleable water begins. The route heads toward Petersham, and it is here that dog walkers need to know the rules: Petersham Meadows has a total ban on dogs from 1 April to 31 October, enforced by a Public Spaces Protection Order to protect the grazing Belted Galloway cattle. This is not a leads requirement - it is a complete prohibition, and the penalty is a criminal fine. During those months, take the signed riverside diversion via the Thames Path, which stays to the left of the meadows against the river and rejoins the main route at the Richmond end.
 
-The reward for the full route is Ham Lands on the return leg if you cross at Teddington Lock footbridge - a wide, open floodplain nature reserve on the north bank where dogs can run off-lead freely throughout the year. Coming back along the Ham bank with a dog in open grassland and the river to one side is the best part of the whole outing. The surface is flat and well-maintained throughout, suitable at any time of year.
+The reward for the full route is the climb up to Richmond Hill through Terrace Gardens - steep but beautiful through tiered flower beds and woodland - to reach the only view in England protected by an Act of Parliament. From the Terrace you look down over the Thames bend that inspired Turner and Reynolds. For off-lead time, Ham Lands is the highlight: a wide, open floodplain nature reserve on the south bank between Teddington and Richmond where dogs can run freely through wildflower meadows year-round. The surface is flat and well-maintained throughout, suitable at any time of year.
 
 > **Important for dog walkers - Petersham Meadows:** Dogs are completely banned from Petersham Meadows from 1 April to 31 October. This is enforced by a Public Spaces Protection Order (PSPO) issued by Richmond Council - it is a criminal offence to take dogs onto the meadows during this period. Use the signed riverside diversion via the Thames Path at the Petersham Nursery junction.
 
@@ -46,7 +46,7 @@ The reward for the full route is Ham Lands on the return leg if you cross at Ted
 
 **Dog waste bins:** Dog waste bins are present throughout the Teddington and Richmond riverside corridor, maintained by Richmond and Kingston councils.
 
-**Dog-friendly stops:** The Lass O'Richmond Hill (8 Queens Road, Richmond, TW10 6JJ) - dogs welcome in bar. Water bowls and treats provided. Young's pub. Note: at the top of Richmond Hill, not directly on the riverside path. The Dysart Petersham (Petersham Road, TW10 7AA) - dogs welcome, water bowls and towels for muddy paws. Michelin-starred restaurant, best as a post-walk dining venue. The White Hart (1 Riverside, Twickenham, TW1 3DX) - dogs welcome, riverside. On the north (Twickenham) bank - relevant if using the Ham Lands north bank return.
+**Dog-friendly stops:** The Roebuck (130 Richmond Hill, TW10 6RN) - directly opposite the Richmond Hill viewpoint. Very dog-friendly with water bowls, treats, and attentive staff. On sunny days, take drinks across the road to the Terrace benches for the famous view. The Lass O'Richmond Hill (8 Queens Road, Richmond, TW10 6JJ) - dogs welcome in bar. Water bowls and treats provided. Young's pub. Note: at the top of Richmond Hill, not directly on the riverside path. The Dysart Petersham (Petersham Road, TW10 7AA) - dogs welcome, water bowls and towels for muddy paws. Michelin-starred destination dining, best for a fancy post-walk lunch rather than a casual pint. The White Hart (1 Riverside, Twickenham, TW1 3DX) - dogs welcome, riverside. On the north/west (Twickenham) bank - only relevant if you cross Teddington Lock footbridge or Richmond Bridge to the opposite side.
 
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
@@ -72,7 +72,7 @@ No. Dogs are completely banned from Petersham Meadows from 1 April to 31 October
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
 <div itemprop="text">
 
-Ham Lands on the north bank is fully off-lead year-round - cross at Teddington Lock footbridge to access it. This is a wide, open floodplain nature reserve with no livestock and no formal lead requirements. The south bank route itself is mostly on-lead near the lock and through Petersham.
+Ham Lands is fully off-lead year-round. It is on the south bank between Teddington and Richmond - you walk through it naturally on the Thames Path without needing to cross the river. It is a wide, open floodplain nature reserve with no livestock and no formal lead requirements. The main path near Teddington Lock is on-lead, and Petersham Meadows is a total dog ban zone from April to October.
 
 </div>
 </div>
