@@ -1,0 +1,21 @@
+{{ if .Params.routeLegs }}
+<div class="ws-route-breakdown">
+  <h3 class="ws-section-title">Route breakdown</h3>
+  <p class="ws-route-note">Distances are approximate and may vary depending on your route choices.</p>
+  <div class="ws-route-legs">
+    {{ range .Params.routeLegs }}
+    <div class="ws-route-leg">
+      <div class="ws-route-leg-left">
+        <div class="ws-route-leg-name">{{ .name }}</div>
+        {{ if .note }}<div class="ws-route-leg-note">{{ .note }}</div>{{ end }}
+      </div>
+      <div class="ws-route-leg-right">
+        <span class="ws-route-leg-meta">{{ .distance }}</span>
+        <span class="ws-route-leg-meta">{{ .time }}</span>
+        <span class="ws-route-leg-status ws-route-leg-status--{{ .statusClass }}">{{ .dogStatus }}</span>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
