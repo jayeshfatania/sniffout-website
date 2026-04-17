@@ -3191,9 +3191,9 @@ h1.walk-sidebar-title {
   letter-spacing: 0.02em;
   text-align: center;
 }
-/* Linear walk: 5-column stat strip (start + end replace distance) */
+/* Linear walk: 6-column stat strip (start + end + distance + duration + terrain + off-lead) */
 .ws-stat-strip--linear {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 .ws-stat-strip--linear .ws-stat-value {
   font-size: 11px;
@@ -3941,7 +3941,8 @@ h1.walk-sidebar-title {
 .ws-info-val {
   display: block;
   flex: 1;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 700;
   color: var(--ink);
   text-align: right;
 }
@@ -3956,7 +3957,7 @@ h1.walk-sidebar-title {
   display: block;
   font-size: 12px;
   color: var(--ink-2);
-  line-height: 1.5;
+  line-height: 1.4;
   margin-top: 2px;
 }
 .ws-hazard-chips {
