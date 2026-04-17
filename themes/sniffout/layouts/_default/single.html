@@ -138,6 +138,64 @@
     </div>
     {{ end }}
 
+    {{ if .Params.gallery }}
+    <!-- Gallery strip -->
+    <div class="ws-gallery-wrapper">
+      <button class="ws-gallery-arrow ws-gallery-arrow--prev" aria-label="Previous image" style="display:none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="ws-gallery">
+        {{ range .Params.gallery }}
+        <figure class="ws-gallery-item">
+          <img
+            src="{{ .src }}"
+            alt="{{ .caption | default "" }}"
+            class="ws-gallery-img"
+            loading="lazy"
+          />
+          {{ if or .caption .credit }}
+          <figcaption class="ws-gallery-caption">
+            {{ if .caption }}<span class="ws-gallery-caption-text">{{ .caption }}</span>{{ end }}
+            {{ if .credit }}<span class="ws-gallery-credit">{{ .credit }}</span>{{ end }}
+          </figcaption>
+          {{ end }}
+        </figure>
+        {{ end }}
+      </div>
+      <button class="ws-gallery-arrow ws-gallery-arrow--next" aria-label="Next image">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <script>
+    (function() {
+      var wrapper = document.querySelector('.ws-gallery-wrapper');
+      if (!wrapper) return;
+      var gallery = wrapper.querySelector('.ws-gallery');
+      var prevBtn = wrapper.querySelector('.ws-gallery-arrow--prev');
+      var nextBtn = wrapper.querySelector('.ws-gallery-arrow--next');
+      if (!gallery || !prevBtn || !nextBtn) return;
+
+      var scrollAmount = 300;
+
+      function updateArrows() {
+        prevBtn.style.display = gallery.scrollLeft > 10 ? 'flex' : 'none';
+        nextBtn.style.display = gallery.scrollLeft < (gallery.scrollWidth - gallery.clientWidth - 10) ? 'flex' : 'none';
+      }
+
+      prevBtn.addEventListener('click', function() {
+        gallery.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', function() {
+        gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+
+      gallery.addEventListener('scroll', updateArrows);
+      window.addEventListener('resize', updateArrows);
+      updateArrows();
+    })();
+    </script>
+    {{ end }}
+
     <!-- Live weather preview card -->
     {{ if and .Params.lat .Params.lng }}
     <div class="ws-weather-card" id="ws-weather-card"
@@ -181,28 +239,6 @@
           <a href="https://sniffout.app" target="_blank" rel="noopener" class="ws-wc-cta" onclick="if(typeof gtag==='function'){gtag('event','weather_card_cta_click',{'walk_name':'{{ .Params.location }}'});}">Open in Sniffout <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></a>
         </div>
       </div>
-    </div>
-    {{ end }}
-
-    {{ if .Params.gallery }}
-    <!-- Gallery strip -->
-    <div class="ws-gallery">
-      {{ range .Params.gallery }}
-      <figure class="ws-gallery-item">
-        <img
-          src="{{ .src }}"
-          alt="{{ .caption | default "" }}"
-          class="ws-gallery-img"
-          loading="lazy"
-        />
-        {{ if or .caption .credit }}
-        <figcaption class="ws-gallery-caption">
-          {{ if .caption }}<span class="ws-gallery-caption-text">{{ .caption }}</span>{{ end }}
-          {{ if .credit }}<span class="ws-gallery-credit">{{ .credit }}</span>{{ end }}
-        </figcaption>
-        {{ end }}
-      </figure>
-      {{ end }}
     </div>
     {{ end }}
 

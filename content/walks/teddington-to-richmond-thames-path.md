@@ -1,6 +1,6 @@
 ---
 title: "Teddington to Richmond via the Thames Path"
-description: "A Thames Path walk from Teddington Lock to Richmond Hill, with off-lead walking through Ham Lands and the only view in England protected by an Act of Parliament. Dogs banned from Petersham Meadows April to October."
+description: "Follow the Thames from Teddington Lock through Ham Lands to Richmond Hill - open meadows, off-lead grassland, and the most famous view in London."
 slug: "teddington-to-richmond-thames-path"
 layout: "walk"
 lat: 51.4310

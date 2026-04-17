@@ -3298,6 +3298,41 @@ h1.walk-sidebar-title {
     height: 285px;
   }
 }
+/* Gallery arrow navigation */
+.ws-gallery-wrapper {
+  position: relative;
+}
+.ws-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-70%);
+  background: rgba(255,255,255,0.9);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  transition: opacity 0.15s ease, background 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.ws-gallery-arrow:hover {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.ws-gallery-arrow--prev {
+  left: 8px;
+}
+.ws-gallery-arrow--next {
+  right: 8px;
+}
+.ws-gallery-arrow svg {
+  color: var(--ink);
+}
 /* Lightbox overlay */
 .ws-lightbox {
   display: none;
