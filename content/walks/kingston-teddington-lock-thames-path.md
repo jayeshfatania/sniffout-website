@@ -40,10 +40,10 @@ routeLegs:
     note: "Leafy park, bandstand, social dog spot"
     dogStatus: "Off-lead"
     statusClass: "offlead"
-  - name: "Thames Path to Teddington Lock"
+  - name: "Thames Path past The Boaters Inn"
     distance: "1.84 km"
     time: "~30 min"
-    note: "Two-level path, boatyards midway"
+    note: "Boat club next door to pub, then Thames Path to Teddington Lock"
     dogStatus: "Off-lead"
     statusClass: "offlead"
   - name: "Lock to The Anglers"
@@ -60,6 +60,9 @@ routeLegs:
     statusClass: "offlead"
 heroImage: "/img/walks/kingston-teddington.jpg"
 gallery:
+  - src: "/img/walks/kingston-teddington-lock-thames-path-boaters-inn.jpg"
+    caption: "Luna at The Boaters Inn, Canbury Gardens"
+    credit: "Photo: Sniffout"
   - src: "/img/walks/kingston-teddington-luna.jpg"
     caption: "Luna in Canbury Gardens"
     credit: "Photo: Sniffout"
@@ -78,13 +81,13 @@ date: 2026-04-14
 
 The Kingston to Teddington Lock walk via Canbury Gardens is Jay and Luna's weekly route, and it is easy to see why it holds up week after week. Canbury Gardens is a long, leafy riverside park with mature trees and a Victorian bandstand, and it draws a genuinely social mix of dogs - there is no formal lead requirement here, and most mornings you will find several loose groups making the most of the wide grassy stretches. The path runs on two levels: the upper path is shared with cyclists, but the lower path - closer to the water and for pedestrians only - is the quieter option and better for off-lead walking.
 
-Past the gardens, the route moves through working boatyards where boat trailers cross the path, so keep an eye out. The river here has multiple informal grassy access points where dogs can wade freely - the water is above the tidal limit and runs calm and clear.
+Past the gardens, the path passes The Boaters Inn - a pub right on the riverside in Canbury Gardens with a boat club next door - before continuing along the Thames Path toward Teddington Lock. The river here has multiple informal grassy access points where dogs can wade freely - the water is above the tidal limit and runs calm and clear.
 
-From the boatyard stretch, the path opens out onto Ham Lands, a stretch of rough grassland on the south bank between the boatyards and Teddington Lock. Dogs are off-lead here throughout the year - there is no livestock on Ham Lands, though ground-nesting birds use the area from March to July. The walk ends at Teddington Lock, a working lock and weir where leads go back on near the gate structure.
+From The Boaters Inn, the path opens out onto Ham Lands, a stretch of rough grassland on the south bank between the gardens and Teddington Lock. Dogs are off-lead here throughout the year - there is no livestock on Ham Lands, though ground-nesting birds use the area from March to July. The walk ends at Teddington Lock, a working lock and weir where leads go back on near the gate structure.
 
-**Seasonal notes:** March to July - ground-nesting birds are active on Ham Lands during this period. Ham Lands is not closed - keep dogs on a reliable close recall through the taller grassland sections rather than letting them range into the rough. Summer - the tree canopy along much of the route, particularly through Canbury Gardens and the approach to Ham Lands, makes this a good hot-weather walk. The lower path through the gardens stays shaded even on bright days, and the river access points along the boatyard stretch give dogs somewhere to cool off. Winter and wet weather - the lower path through Canbury Gardens can get slick after rain. Ham Lands holds water in the lower-lying sections after a wet week - waterproof boots are worth it from November through February.
+**Seasonal notes:** March to July - ground-nesting birds are active on Ham Lands during this period. Ham Lands is not closed - keep dogs on a reliable close recall through the taller grassland sections rather than letting them range into the rough. Summer - the tree canopy along much of the route, particularly through Canbury Gardens and the approach to Ham Lands, makes this a good hot-weather walk. The lower path through the gardens stays shaded even on bright days, and the river access points along the Thames Path give dogs somewhere to cool off. Winter and wet weather - the lower path through Canbury Gardens can get slick after rain. Ham Lands holds water in the lower-lying sections after a wet week - waterproof boots are worth it from November through February.
 
-**Dog-friendly stops:** The Anglers (Broom Road, TW11 9NR) - cross the Teddington Lock footbridges to the Twickenham/Middlesex bank. A proper riverside spot with a big terrace and the kind of unhurried atmosphere that suits a post-walk Sunday. Dogs are welcome, the terrace gives you a direct view back over the water.
+**Dog-friendly stops:** The Boaters Inn (Canbury Gardens, Lower Ham Road, KT2 5AU) - right in Canbury Gardens next to the boat club. Dogs are genuinely celebrated here - they have an entire wall dedicated to photos of visiting dogs, and they take a Polaroid and stick it up when you visit. Dog treats available. You can buy food for the ducks to feed from the riverside. The terrace overlooks the river with a stunning sunset view, and the big beer garden often has live music at weekends. The Anglers (Broom Road, TW11 9NR) - cross the Teddington Lock footbridges to the Twickenham/Middlesex bank. A proper riverside spot with a big terrace and unhurried atmosphere. Dogs welcome outside. A good reward stop if you are continuing to the lock end of the walk.
 
 <div class="walk-faq" itemscope itemtype="https://schema.org/FAQPage">
 
@@ -97,7 +100,7 @@ From the boatyard stretch, the path opens out onto Ham Lands, a stretch of rough
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
 <div itemprop="text">
 
-A full circular route is approximately 9 to 10 miles. From Kingston, follow the south bank through Canbury Gardens, the boatyard stretch, and Ham Lands to Teddington Lock. Continue along the south bank through Petersham to Richmond, then cross Richmond Bridge to the Twickenham (north/west) bank. Walk north along the Twickenham bank back towards Teddington Lock, then cross the Teddington Lock footbridges back to the Kingston/south bank side. This is a full-day walk. Note that Petersham Meadows is subject to a total dog ban from 1 April to 31 October under a PSPO - use the signed riverside diversion at the Petersham Nursery junction during this period.
+A full circular route is approximately 9 to 10 miles. From Kingston, follow the south bank through Canbury Gardens, past The Boaters Inn, and Ham Lands to Teddington Lock. Continue along the south bank through Petersham to Richmond, then cross Richmond Bridge to the Twickenham (north/west) bank. Walk north along the Twickenham bank back towards Teddington Lock, then cross the Teddington Lock footbridges back to the Kingston/south bank side. This is a full-day walk. Note that Petersham Meadows is subject to a total dog ban from 1 April to 31 October under a PSPO - use the signed riverside diversion at the Petersham Nursery junction during this period.
 
 </div>
 </div>
@@ -110,7 +113,7 @@ A full circular route is approximately 9 to 10 miles. From Kingston, follow the 
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
 <div itemprop="text">
 
-Dogs can be off-lead in Canbury Gardens - there is no formal lead requirement in the park. The lower path (pedestrians only) through the gardens is better suited to off-lead walking than the upper path, which is shared with cyclists. From the gardens through the boatyard stretch, keep dogs under close control as boat trailers cross the path at working boatyards. Ham Lands, on the south bank between the boatyards and Teddington Lock, is open off-lead walking on rough grassland with no livestock. Dogs should be on lead near the lock weir and gate structure at Teddington Lock, where the current near the water is strong.
+Dogs can be off-lead in Canbury Gardens - there is no formal lead requirement in the park. The lower path (pedestrians only) through the gardens is better suited to off-lead walking than the upper path, which is shared with cyclists. From the gardens, keep dogs under close control near the boat club area beside The Boaters Inn. Ham Lands, on the south bank between the gardens and Teddington Lock, is open off-lead walking on rough grassland with no livestock. Dogs should be on lead near the lock weir and gate structure at Teddington Lock, where the current near the water is strong.
 
 </div>
 </div>
