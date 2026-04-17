@@ -25,20 +25,6 @@
   <span class="ws-breadcrumb-current">{{ .Title }}</span>
 </nav>
 
-<!-- Sticky scroll title -->
-<div class="ws-sticky-title" id="ws-sticky-title">
-  <div class="ws-sticky-title-inner">
-    <a class="ws-sticky-back" href="/walks/">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-      <span class="ws-sticky-back-label">Walks</span>
-    </a>
-    <span class="ws-sticky-name">{{ .Title }}</span>
-    {{ if .Params.difficulty }}
-    <span class="ws-sticky-badge ws-hero-badge--diff ws-hero-badge--{{ .Params.difficulty }}">{{ .Params.difficulty }}</span>
-    {{ end }}
-  </div>
-</div>
-
 <!-- Hero -->
 <div class="ws-hero">
   {{ if .Params.heroImage }}
@@ -949,26 +935,6 @@
     item.innerHTML = '';
     item.appendChild(details);
   });
-})();
-</script>
-
-<script>
-(function() {
-  var hero = document.querySelector('.ws-hero');
-  var stickyTitle = document.getElementById('ws-sticky-title');
-  if (!hero || !stickyTitle) return;
-
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        stickyTitle.classList.remove('is-visible');
-      } else {
-        stickyTitle.classList.add('is-visible');
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(hero);
 })();
 </script>
 
