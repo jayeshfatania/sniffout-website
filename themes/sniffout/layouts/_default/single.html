@@ -1,7 +1,8 @@
 {{ define "main" }}
 
-{{- $isOnLead := or (eq .Params.offLead "On-lead only") (eq .Params.offLead "On lead") (eq .Params.offLead "None") -}}
-{{- $isFullOffLead := or (eq .Params.offLead "Full") (eq .Params.offLead "Full off-lead") -}}
+{{- $offLeadLower := .Params.offLead | lower -}}
+{{- $isOnLead := or (eq $offLeadLower "on-lead only") (eq $offLeadLower "on lead") (eq $offLeadLower "none") -}}
+{{- $isFullOffLead := or (eq $offLeadLower "full") (eq $offLeadLower "full off-lead") -}}
 
 {{/* ── Before you go: computed variables ─────────────────────────────── */}}
 {{- $parkingText := "" -}}
@@ -12,7 +13,6 @@
 
 {{/* ── For your dog: computed variables ──────────────────────────────── */}}
 {{- $offLeadNote := "" -}}
-{{- $offLeadLower := .Params.offLead | lower -}}
 {{- if or (eq $offLeadLower "full") (eq $offLeadLower "full off-lead") -}}{{- $offLeadNote = "Off-lead throughout - open access land, no road crossings on the main route." -}}{{- else if eq $offLeadLower "partial" -}}{{- $offLeadNote = "Off-lead in sections - check walk description for details." -}}{{- else if or (eq $offLeadLower "none") (eq $offLeadLower "on-lead only") (eq $offLeadLower "on lead") -}}{{- $offLeadNote = "On-lead throughout - road sections or livestock present." -}}{{- end -}}
 {{- $hazardChips := dict "ticks" "Ticks" "adders" "Adders" "algae" "Algae risk" "livestock" "Livestock" "deer" "Deer present" "ground-nesting-birds" "Ground-nesting birds" "cliff" "Unfenced drops" "flooding" "Flood risk" "paw-burn" "Paw burn risk" "mountain-bikers" "Shared with cyclists" -}}
 
@@ -59,6 +59,15 @@
     <span class="ws-stat-value">{{ .Params.endPoint }}</span>
     <span class="ws-stat-label">End</span>
   </div>
+  {{ if .Params.distance }}
+  <div class="ws-stat-tile">
+    <svg class="ws-stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/><path d="M13 13l6 6"/>
+    </svg>
+    <span class="ws-stat-value">{{ .Params.distance }}</span>
+    <span class="ws-stat-label">Distance</span>
+  </div>
+  {{ end }}
   {{ else }}
   <div class="ws-stat-tile">
     <svg class="ws-stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">

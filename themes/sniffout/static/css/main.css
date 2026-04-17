@@ -3191,9 +3191,9 @@ h1.walk-sidebar-title {
   letter-spacing: 0.02em;
   text-align: center;
 }
-/* Linear walk: 5-column stat strip (start + end replace distance) */
+/* Linear walk: 6-column stat strip (start + end + distance + duration + terrain + off-lead) */
 .ws-stat-strip--linear {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 .ws-stat-strip--linear .ws-stat-value {
   font-size: 11px;
