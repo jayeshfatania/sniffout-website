@@ -32,7 +32,7 @@ returnOptions:
 waterAccess: true
 tidal: false
 founderTipLabel: "Jay and Luna's tip"
-founderTip: "We do this walk most Sundays - Luna has done it more times than I can count and she still loses her mind at the boatyard stretch. The lower path through Canbury Gardens is the one you want: quieter, closer to the water, and no cyclists to navigate around."
+founderTip: "One of our favourite walks. In Canbury Gardens, the main path is the one to use - the lower riverside path here is popular with cyclists. But once you join the Thames Path beyond the gardens, switch to the lower path as the upper one becomes a shared route where cyclists are more frequent. The lower Thames Path is ideal - shadier, quieter, and has plenty of spots where dogs can get down to the water at the riverside."
 routeLegs:
   - name: "Canbury Gardens"
     distance: "0.9 km"

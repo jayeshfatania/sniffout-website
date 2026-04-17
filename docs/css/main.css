@@ -3206,6 +3206,9 @@ h1.walk-sidebar-title {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  position: sticky;
+  top: 0;
+  z-index: 80;
 }
 .ws-jump-bar::-webkit-scrollbar {
   display: none;
@@ -3217,6 +3220,7 @@ h1.walk-sidebar-title {
   white-space: nowrap;
   max-width: 1200px;
   margin: 0 auto;
+  justify-content: center;
 }
 .ws-jump-link {
   font-size: 13px;
@@ -3234,8 +3238,12 @@ h1.walk-sidebar-title {
 }
 @media (min-width: 768px) {
   .ws-jump-bar-inner {
-    gap: 4px;
+    gap: 8px;
     padding: 0 32px;
+    justify-content: center;
+  }
+  .ws-jump-link {
+    padding: 12px 20px;
   }
 }
 /* Sticky scroll title */
