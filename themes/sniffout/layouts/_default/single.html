@@ -93,8 +93,12 @@
     <div class="ws-jump-bar-inner">
       <a class="ws-jump-link" href="#description">Description</a>
       <a class="ws-jump-link" href="#weather">Weather</a>
-      <a class="ws-jump-link" href="#before-you-go">Before you go</a>
-      <a class="ws-jump-link" href="#for-your-dog">For your dog</a>
+      {{ if .Params.routeLegs }}
+      <a class="ws-jump-link" href="#route">Route</a>
+      {{ end }}
+      {{ if .Params.dogFriendlyStops }}
+      <a class="ws-jump-link" href="#stops">Stops</a>
+      {{ end }}
       <a class="ws-jump-link" href="#faq">FAQ</a>
     </div>
   </nav>
@@ -149,6 +153,10 @@
         {{ end }}
       {{ end }}
     </div>
+    {{ end }}
+
+    {{ if .Params.dogFriendlyStops }}
+    <div id="stops"></div>
     {{ end }}
 
     {{ if .Params.gallery }}
@@ -423,7 +431,7 @@
     </div>
 
     <!-- Before you go -->
-    <div id="before-you-go">
+    <div>
     <div class="ws-section-label">Before you go</div>
     <div class="ws-info-card">
       {{- if $parkingText }}<div class="ws-info-row">
@@ -482,7 +490,7 @@
     </div><!-- /#before-you-go -->
 
     <!-- For your dog -->
-    <div id="for-your-dog">
+    <div>
     <div class="ws-section-label">For your dog</div>
     <div class="ws-info-card">
       <div class="ws-info-row">
@@ -943,7 +951,7 @@
   var jumpLinks = document.querySelectorAll('.ws-jump-link');
   if (!jumpLinks.length) return;
 
-  var sectionIds = ['description', 'weather', 'before-you-go', 'for-your-dog', 'faq'];
+  var sectionIds = ['description', 'weather', 'route', 'stops', 'faq'];
   var sections = sectionIds.map(function(id) { return document.getElementById(id); }).filter(Boolean);
   if (!sections.length) return;
 
