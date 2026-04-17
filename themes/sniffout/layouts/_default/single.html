@@ -25,6 +25,20 @@
   <span class="ws-breadcrumb-current">{{ .Title }}</span>
 </nav>
 
+<!-- Sticky scroll title -->
+<div class="ws-sticky-title" id="ws-sticky-title">
+  <div class="ws-sticky-title-inner">
+    <a class="ws-sticky-back" href="/walks/">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      <span class="ws-sticky-back-label">Walks</span>
+    </a>
+    <span class="ws-sticky-name">{{ .Title }}</span>
+    {{ if .Params.difficulty }}
+    <span class="ws-sticky-badge ws-hero-badge--diff ws-hero-badge--{{ .Params.difficulty }}">{{ .Params.difficulty }}</span>
+    {{ end }}
+  </div>
+</div>
+
 <!-- Hero -->
 <div class="ws-hero">
   {{ if .Params.heroImage }}
@@ -87,6 +101,17 @@
   </div>
 </div>
 
+<!-- Jump links bar -->
+<nav class="ws-jump-bar" aria-label="Page sections">
+  <div class="ws-jump-bar-inner">
+    <a class="ws-jump-link" href="#description">Description</a>
+    <a class="ws-jump-link" href="#weather">Weather</a>
+    <a class="ws-jump-link" href="#before-you-go">Before you go</a>
+    <a class="ws-jump-link" href="#for-your-dog">For your dog</a>
+    <a class="ws-jump-link" href="#faq">FAQ</a>
+  </div>
+</nav>
+
 <!-- Two-column layout -->
 <div class="ws-layout">
 
@@ -94,7 +119,7 @@
   <div class="ws-content">
 
     <!-- Ailsa's description with optional pull quote -->
-    <div class="ws-description">
+    <div class="ws-description" id="description">
       {{- $desc := .Params.description_long | default .Params.description -}}
       {{- $paras := split $desc "\n\n" -}}
       {{- $pullQuote := .Params.pullQuote -}}
@@ -198,7 +223,7 @@
 
     <!-- Live weather preview card -->
     {{ if and .Params.lat .Params.lng }}
-    <div class="ws-weather-card" id="ws-weather-card"
+    <div class="ws-weather-card" id="weather"
       data-lat="{{ .Params.lat }}"
       data-lng="{{ .Params.lng }}"
       data-name="{{ .Params.location }}">
@@ -391,7 +416,7 @@
 
     <!-- FAQ content (schema markup from markdown body) -->
     {{ with .Content }}
-    <div class="ws-faq-outer">{{ . }}</div>
+    <div class="ws-faq-outer" id="faq">{{ . }}</div>
     {{ end }}
 
   </div><!-- /.ws-content -->
@@ -409,6 +434,7 @@
     </div>
 
     <!-- Before you go -->
+    <div id="before-you-go">
     <div class="ws-section-label">Before you go</div>
     <div class="ws-info-card">
       {{- if $parkingText }}<div class="ws-info-row">
@@ -464,8 +490,10 @@
       </div>
       {{- end }}
     </div>
+    </div><!-- /#before-you-go -->
 
     <!-- For your dog -->
+    <div id="for-your-dog">
     <div class="ws-section-label">For your dog</div>
     <div class="ws-info-card">
       <div class="ws-info-row">
@@ -523,6 +551,7 @@
       </div>{{- end }}
       {{- if .Params.hazards }}<div class="ws-hazard-chips">{{- range .Params.hazards }}{{- if ne . "livestock" }}{{- $chip := index $hazardChips . }}{{- if $chip }}<span class="ws-hazard-chip">{{ $chip }}</span>{{- end }}{{- end }}{{- end }}</div>{{- end }}
     </div>
+    </div><!-- /#for-your-dog -->
 
   </div><!-- /.ws-sidebar -->
 
@@ -546,7 +575,7 @@
 {{ if and .Params.lat .Params.lng }}
 <script>
 (function() {
-  var card = document.getElementById('ws-weather-card');
+  var card = document.getElementById('weather');
   if (!card) return;
 
   var lat = card.dataset.lat;
@@ -917,6 +946,26 @@
     item.innerHTML = '';
     item.appendChild(details);
   });
+})();
+</script>
+
+<script>
+(function() {
+  var hero = document.querySelector('.ws-hero');
+  var stickyTitle = document.getElementById('ws-sticky-title');
+  if (!hero || !stickyTitle) return;
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        stickyTitle.classList.remove('is-visible');
+      } else {
+        stickyTitle.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0 });
+
+  observer.observe(hero);
 })();
 </script>
 
