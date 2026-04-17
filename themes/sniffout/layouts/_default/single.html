@@ -54,7 +54,7 @@
     </div>
     <div class="ws-hero-badges">
       <span class="ws-hero-badge ws-hero-badge--diff ws-hero-badge--{{ .Params.difficulty | lower }}">{{ .Params.difficulty }}</span>
-      <span class="ws-hero-badge ws-hero-badge--lead {{ if $isFullOffLead }}ws-hero-badge--offlead{{ else if $isOnLead }}ws-hero-badge--onlead{{ else }}ws-hero-badge--partial{{ end }}">{{ .Params.offLead }}</span>
+      <span class="ws-hero-badge ws-hero-badge--lead {{ if $isFullOffLead }}ws-hero-badge--offlead{{ else if $isOnLead }}ws-hero-badge--onlead{{ else }}ws-hero-badge--partial{{ end }}">{{ .Params.offLead | humanize }}</span>
       {{ if eq .Params.walkType "linear" }}<span class="ws-hero-badge ws-hero-badge--linear"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Linear walk</span>{{ end }}
     </div>
   </div>
@@ -96,7 +96,7 @@
   </div>
   <div class="ws-stat-tile">
     <svg class="ws-stat-icon {{ if $isFullOffLead }}ws-stat-icon--offlead{{ else if $isOnLead }}ws-stat-icon--onlead{{ else }}ws-stat-icon--partial{{ end }}" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-    <span class="ws-stat-value {{ if $isFullOffLead }}ws-stat-value--offlead{{ else if $isOnLead }}ws-stat-value--onlead{{ else }}ws-stat-value--partial{{ end }}">{{ .Params.offLead }}</span>
+    <span class="ws-stat-value {{ if $isFullOffLead }}ws-stat-value--offlead{{ else if $isOnLead }}ws-stat-value--onlead{{ else }}ws-stat-value--partial{{ end }}">{{ .Params.offLead | humanize }}</span>
     <span class="ws-stat-label">Off-lead</span>
   </div>
 </div>
@@ -200,7 +200,8 @@
       var nextBtn = wrapper.querySelector('.ws-gallery-arrow--next');
       if (!gallery || !prevBtn || !nextBtn) return;
 
-      var scrollAmount = 300;
+      var firstItem = gallery.querySelector('.ws-gallery-item');
+      var scrollAmount = firstItem ? (firstItem.offsetWidth + 12) : 300;
 
       function updateArrows() {
         prevBtn.style.display = gallery.scrollLeft > 10 ? 'flex' : 'none';
@@ -341,7 +342,7 @@
           <svg class="ws-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           <span class="ws-info-key">Off-lead</span>
           <div class="ws-info-val-wrap">
-            <span class="ws-info-val">{{ .Params.offLead }}</span>
+            <span class="ws-info-val">{{ .Params.offLead | humanize }}</span>
             {{- if $offLeadNote }}<span class="ws-info-sublabel">{{ $offLeadNote }}</span>{{- end }}
           </div>
         </div>
@@ -500,7 +501,7 @@
         <svg class="ws-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         <span class="ws-info-key">Off-lead</span>
         <div class="ws-info-val-wrap">
-          <span class="ws-info-val">{{ .Params.offLead }}</span>
+          <span class="ws-info-val">{{ .Params.offLead | humanize }}</span>
           {{- if $offLeadNote }}<span class="ws-info-sublabel">{{ $offLeadNote }}</span>{{- end }}
         </div>
       </div>
@@ -963,9 +964,40 @@
         stickyTitle.classList.add('is-visible');
       }
     });
-  }, { threshold: 0 });
+  }, { threshold: 0.3 });
 
   observer.observe(hero);
+})();
+</script>
+
+<script>
+(function() {
+  var jumpLinks = document.querySelectorAll('.ws-jump-link');
+  if (!jumpLinks.length) return;
+
+  var sectionIds = ['description', 'weather', 'before-you-go', 'for-your-dog', 'faq'];
+  var sections = sectionIds.map(function(id) { return document.getElementById(id); }).filter(Boolean);
+  if (!sections.length) return;
+
+  function setActive(id) {
+    jumpLinks.forEach(function(link) {
+      if (link.getAttribute('href') === '#' + id) {
+        link.classList.add('is-active');
+      } else {
+        link.classList.remove('is-active');
+      }
+    });
+  }
+
+  var sectionObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        setActive(entry.target.id);
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+
+  sections.forEach(function(section) { sectionObserver.observe(section); });
 })();
 </script>
 

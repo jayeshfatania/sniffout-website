@@ -3207,7 +3207,7 @@ h1.walk-sidebar-title {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   position: sticky;
-  top: 0;
+  top: 52px;
   z-index: 80;
 }
 .ws-jump-bar::-webkit-scrollbar {
@@ -3236,6 +3236,10 @@ h1.walk-sidebar-title {
   color: var(--brand);
   border-bottom-color: var(--brand);
 }
+.ws-jump-link.is-active {
+  color: var(--brand);
+  border-bottom-color: var(--brand);
+}
 @media (min-width: 768px) {
   .ws-jump-bar-inner {
     gap: 8px;
@@ -3249,7 +3253,7 @@ h1.walk-sidebar-title {
 /* Sticky scroll title */
 .ws-sticky-title {
   position: fixed;
-  top: 0;
+  top: 52px;
   left: 0;
   right: 0;
   height: 52px;
@@ -3417,7 +3421,7 @@ h1.walk-sidebar-title {
 .ws-gallery-arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-70%);
+  transform: translateY(-50%);
   background: rgba(255,255,255,0.9);
   border: 1px solid var(--border);
   border-radius: 50%;
@@ -3750,7 +3754,7 @@ h1.walk-sidebar-title {
     display: block;
     padding: 32px 0;
     position: sticky;
-    top: 24px;
+    top: 68px;
   }
 }
 
