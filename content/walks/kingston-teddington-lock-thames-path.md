@@ -1,6 +1,6 @@
 ---
 title: "Kingston to Teddington Lock via Canbury Gardens"
-description: "A flat Thames Path walk from Kingston to Teddington Lock via Canbury Gardens and Ham Lands. The weekly route for Sniffout founder Jayesh and his Shar Pei Luna."
+description: "A flat Thames Path walk from Kingston to Teddington Lock via Canbury Gardens and Ham Lands. The weekly route for Sniffout founder Jay and his Shar Pei Luna."
 slug: "kingston-teddington-lock-thames-path"
 layout: "walk"
 lat: 51.4161
@@ -31,7 +31,7 @@ returnOptions:
     detail: "R68 and R70 buses connect Teddington and Kingston. Check current timetables at tfl.gov.uk before visiting."
 waterAccess: true
 tidal: false
-founderTipLabel: "Jayesh and Luna's tip"
+founderTipLabel: "Jay and Luna's tip"
 founderTip: "We do this walk most Sundays - Luna has done it more times than I can count and she still loses her mind at the boatyard stretch. The lower path through Canbury Gardens is the one you want: quieter, closer to the water, and no cyclists to navigate around."
 routeLegs:
   - name: "Canbury Gardens"
@@ -76,7 +76,7 @@ badge: "Sniffout Pick"
 date: 2026-04-14
 ---
 
-The Kingston to Teddington Lock walk via Canbury Gardens is Jayesh and Luna's weekly route, and it is easy to see why it holds up week after week. Canbury Gardens is a long, leafy riverside park with mature trees and a Victorian bandstand, and it draws a genuinely social mix of dogs - there is no formal lead requirement here, and most mornings you will find several loose groups making the most of the wide grassy stretches. The path runs on two levels: the upper path is shared with cyclists, but the lower path - closer to the water and for pedestrians only - is the quieter option and better for off-lead walking.
+The Kingston to Teddington Lock walk via Canbury Gardens is Jay and Luna's weekly route, and it is easy to see why it holds up week after week. Canbury Gardens is a long, leafy riverside park with mature trees and a Victorian bandstand, and it draws a genuinely social mix of dogs - there is no formal lead requirement here, and most mornings you will find several loose groups making the most of the wide grassy stretches. The path runs on two levels: the upper path is shared with cyclists, but the lower path - closer to the water and for pedestrians only - is the quieter option and better for off-lead walking.
 
 Past the gardens, the route moves through working boatyards where boat trailers cross the path, so keep an eye out. The river here has multiple informal grassy access points where dogs can wade freely - the water is above the tidal limit and runs calm and clear.
 
