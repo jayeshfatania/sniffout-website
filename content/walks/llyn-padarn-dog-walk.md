@@ -11,7 +11,7 @@ terrain: "Lakeside paths and woodland"
 parking: "Llanberis village car parks. Pay and display."
 lat: 53.1175
 lng: -4.1193
-heroImage: ""
+heroImage: "/img/walks/llyn-padarn.jpg"
 date: 2026-04-05
 ---
 

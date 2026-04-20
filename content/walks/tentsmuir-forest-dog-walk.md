@@ -12,7 +12,7 @@ duration: "110 mins"
 parking: "Tentsmuir Forest car park. Forestry and Land Scotland. Small charge."
 lat: 56.387
 lng: -2.826
-heroImage: ""
+heroImage: "/img/walks/tentsmuir-forest.jpg"
 date: 2026-04-05
 ---
 

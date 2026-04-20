@@ -11,7 +11,7 @@ terrain: "Beach and cliff path"
 parking: "Rhossili NT car park. NT members free, others pay."
 lat: 51.5689
 lng: -4.2893
-heroImage: "/img/walks/gower-peninsula.jpg"
+heroImage: "/img/walks/rhossili-bay.jpg"
 date: 2026-04-05
 ---
 

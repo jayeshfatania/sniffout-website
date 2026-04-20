@@ -12,7 +12,7 @@ duration: "100 mins"
 parking: "Bavelaw car park. Small charge."
 lat: 55.866
 lng: -3.361
-heroImage: "/img/walks/edinburgh-pentland-hills.jpg"
+heroImage: "/img/walks/threipmuir-reservoirs.jpg"
 date: 2026-04-05
 ---
 

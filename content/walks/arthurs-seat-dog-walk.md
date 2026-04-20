@@ -12,7 +12,7 @@ duration: "75 mins"
 parking: "Holyrood Palace car park or street parking on Queen's Drive"
 lat: 55.9441
 lng: -3.1615
-heroImage: "/img/walks/edinburgh-arthurs-seat.jpg"
+heroImage: "/img/walks/arthurs-seat.jpg"
 date: 2026-04-05
 ---
 

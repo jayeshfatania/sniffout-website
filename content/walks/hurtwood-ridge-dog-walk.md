@@ -12,7 +12,7 @@ terrain: "Woodland and heathland ridge"
 parking: "Hurtwood Car Park 1, near Peaslake. Free."
 lat: 51.1645
 lng: -0.4391
-heroImage: ""
+heroImage: "/img/walks/hurtwood-ridge.jpg"
 date: 2026-04-05
 ---
 

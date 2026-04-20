@@ -12,7 +12,7 @@ duration: "80 mins"
 parking: "The Hermitage car park. NTS members free."
 lat: 56.561
 lng: -3.609
-heroImage: ""
+heroImage: "/img/walks/hermitage-dunkeld.jpg"
 date: 2026-04-05
 ---
 

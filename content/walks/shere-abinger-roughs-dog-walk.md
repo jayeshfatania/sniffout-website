@@ -12,7 +12,7 @@ terrain: "Woodland and village lanes"
 parking: "Abinger Roughs NT car park, White Down Lane. Free. Or Shere village car park (charges apply)."
 lat: 51.2148
 lng: -0.4467
-heroImage: ""
+heroImage: "/img/walks/shere-abinger-roughs.jpg"
 date: 2026-04-05
 ---
 

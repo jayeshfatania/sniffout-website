@@ -11,7 +11,7 @@ terrain: "Mountain paths, steep and eroded"
 parking: "Pont ar Daf car park, LD3 8NL. Pay and display."
 lat: 51.8791
 lng: -3.4369
-heroImage: "/img/walks/brecon-pen-y-fan.jpg"
+heroImage: "/img/walks/pen-y-fan.jpg"
 date: 2026-04-05
 ---
 

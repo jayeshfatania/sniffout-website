@@ -12,7 +12,7 @@ duration: "60 mins"
 parking: "Balmaha car park. Pay and display. 177 spaces."
 lat: 55.988
 lng: -4.524
-heroImage: "/img/walks/loch-lomond.jpg"
+heroImage: "/img/walks/balmaha-loch-lomond.jpg"
 date: 2026-04-05
 ---
 

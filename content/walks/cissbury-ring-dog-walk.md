@@ -12,7 +12,7 @@ duration: "70 mins"
 parking: "Storrington Rise car park. Free."
 lat: 50.8678
 lng: -0.3782
-heroImage: ""
+heroImage: "/img/walks/cissbury-ring.jpg"
 date: 2026-04-05
 ---
 

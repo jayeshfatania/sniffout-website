@@ -12,7 +12,7 @@ terrain: "Woodland and heathland"
 parking: "Stew Lane entrance or Christ Church Road entrance. Free."
 lat: 51.3354
 lng: -0.2713
-heroImage: ""
+heroImage: "/img/walks/epsom-common.jpg"
 date: 2026-04-05
 ---
 
