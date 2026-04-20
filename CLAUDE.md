@@ -49,7 +49,7 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 
 ### Pages live
 - Homepage
-- Walks index + 87 individual walk pages (all with FAQ blocks using native details/summary accordion, schema.org FAQPage markup, weather preview card with lat/lng front matter, walk description lead-in styling at 17px/500/1.6)
+- Walks index + 90 individual walk pages (all with FAQ blocks using native details/summary accordion, schema.org FAQPage markup, weather preview card with lat/lng front matter, walk description lead-in styling at 17px/500/1.6)
 - Guides index + guide articles (see content/guides/)
 - Area index pages: 26 live (Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales, Peak District, North East England, North West England, East Midlands, Shropshire, East of England, Fife, Loch Lomond, Perthshire, Cotswolds, South West England)
 - Regions covered: Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh and Lothians, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales, Peak District, North East England, North West England, East Midlands, Shropshire, East of England, Suffolk, Norfolk, Fife, Loch Lomond, Perthshire, Cotswolds, Gloucestershire, Worcestershire, Herefordshire, Malvern Hills, South West England, Cornwall, Dorset, Devon, Somerset
@@ -115,15 +115,16 @@ Full persona specs: docs/copy/website-personas.md
 
 ## Content backlog (priority order)
 
-1. Trail Tips Article 2 (hot weather hacks) - Article 1 complete, voice guide and tip bank DONE
-2. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
-3. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
-4. Waterside walk batch 2 (Cookham to Marlow, Teddington to Richmond, others) - batch 1 of 5 in progress
-5. Community map pins V1 spec and build (post-500 MAU - research complete April 14 2026)
+1. Meta descriptions rewrite - Copywriter rewrites ready at docs/copy/meta-descriptions-rewrite-april-17.md. Owner reviewing before Developer applies.
+2. Trail Tips Article 2 (hot weather hacks) - Article 1 complete, voice guide and tip bank DONE. Seasonal deadline approaching.
+3. Design review P3 polish - 12 remaining P3 items from docs/design/walk-page-design-review-april-17.md
+4. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
+5. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
+6. Community map pins V1 spec and build (post-500 MAU - research complete April 14 2026)
 
 **DONE: Walk page enrichment "Before you go" and "For your dog" sections: LIVE (April 13 2026). Spec at docs/design/walk-page-sections-spec-april-13.md**
 **DONE: Trail Tips voice guide and tip bank: DONE. Files at docs/copy/trail-tips-voice-guide.md and docs/copy/trail-tips-bank.md. Article 1 complete.**
-**All 12 walk batches complete. 87 walk pages live.**
+**All 12 walk batches complete. 90 walk pages live (87 original batches + 3 new waterside/Thames walks April 15-19).**
 
 **Recently completed (not to re-do):**
 - Temperature guide "Is it too hot to walk my dog?": DONE (fact-checked PASS)
@@ -152,6 +153,69 @@ Full persona specs: docs/copy/website-personas.md
 - FAQ accordion on all walk pages: DONE (April 15 2026). Native details/summary pattern, collapsed by default, schema.org FAQPage markup preserved.
 - Kingston walk page fixes: DONE (April 15 2026). Fixed: fullOff-lead concatenation bug, schema.org JSON-LD escaped quotes, x2Park concatenation, getting back text overflow (.ws-return-list flex wrap), distance corrected to 5.6 km, deer rut hazard removed (no deer on Thames Path), two-car return option removed (impractical).
 - Walk description lead-in styling: DONE (April 15 2026). .ws-description renders at 17px, font-weight 500, line-height 1.6 across all walk pages.
+- Walk page template upgrade (April 17 2026): 4 new conditional partials (founder's tip, route breakdown, walk warning, gallery arrows), sticky jump links bar, icon replacements, gallery improvements, multiple CSS fixes. Full details in section below.
+- Kingston to Teddington Lock full rewrite (April 17-19 2026): corrected geography (Ham Lands), distance 2.9 km, The Boaters Inn added, route breakdown, founder's tip.
+- Teddington to Richmond full rewrite (April 17-19 2026): corrected geography, distance 5.1 km, walk warning (Petersham PSPO), route breakdown, founder's tip, 4 pub descriptions, Richmond Hill detail, 6 personal photos.
+- Jay (The Trail Scout) persona spec created (April 19 2026): docs/copy/jay-persona-spec.md. Added to persona registry.
+- All instances of "Jayesh" replaced with "Jay" on website (April 19 2026).
+- Full design review completed (April 17 2026): docs/design/walk-page-design-review-april-17.md. 27 issues found (3 P1, 12 P2, 12 P3). P1 and most P2 fixed.
+
+## Walk page template upgrades (April 17 2026)
+
+New conditional partials added to themes/sniffout/layouts/_default/single.html. All partials are conditional - only render when frontmatter fields are present. Existing pages are unaffected.
+
+| Partial | Frontmatter trigger | Notes |
+|---------|-------------------|-------|
+| Founder's Tip | founderTip + founderTipLabel | Sienna-bordered blockquote |
+| Route Breakdown | routeLegs array | Per-leg distance, time, off-lead status pills |
+| Walk Warning | walkWarning.title + walkWarning.body | Red-bordered safety notice |
+| Jump Links bar | Conditional links (Description, Route, Weather, FAQ) | Sticky below site header, active highlighting via IntersectionObserver |
+| Gallery arrows | gallery array (existing) | Left/right navigation buttons added |
+
+### Icon replacements (April 17)
+- Terrain: mountain icon replaced with Lucide footprints
+- Off-lead: shield replaced with Lucide check-circle
+- Sidebar icons: car (parking), bar-chart-2 (difficulty), corner-down-left (getting back), waves (water), alert-triangle (livestock)
+
+### Gallery improvements (April 17)
+- Moved to above weather chart, below seasonal notes
+- Left/right arrow navigation buttons added
+- Desktop cards enlarged to 380px
+- 4:3 aspect ratio enforced
+- Caption line clamping added
+- Scroll amount now dynamic (based on card width, not hardcoded 300px)
+
+### CSS fixes (April 17)
+- Paragraph spacing in walk page descriptions: margin-bottom 16px
+- Sidebar sticky offset fixed: top 68px to clear site header
+- scroll-padding-top: 110px added for anchor link offset
+- Gallery arrow vertical alignment fixed: translateY -50%
+- Off-lead value/sublabel display: block fix (prevents "FullOff-lead" concatenation)
+- Jump links focus-visible state added for keyboard accessibility
+- Lightbox aria-labels added for screen readers
+- Hero image alt="" with role="presentation" (decorative image)
+
+### Key CSS learnings (locked - do not repeat these mistakes)
+- overflow: auto on a position: sticky element breaks sticky positioning in most browsers. Separate onto different elements: wrapper for sticky, inner for overflow.
+- Two sticky elements at the same top position overlap. Resolved by choosing Option A: sticky jump links only, no sticky title.
+- Sidebar anchor links are unreliable for jump navigation because sidebar is sticky and repositions during scroll. Use main content column anchors only.
+- Jump links must match the visual order of sections on the page to avoid yo-yo scrolling.
+- scroll-padding-top is the correct CSS fix for anchor links landing behind sticky headers.
+
+### Meta descriptions
+- Copywriter produced warm rewrites for all 90+ walk pages: docs/copy/meta-descriptions-rewrite-april-17.md
+- Owner reviewing before application - NOT YET APPLIED to walk page frontmatter
+- Benchmark style: "Follow the Thames from Teddington Lock through Ham Lands to Richmond Hill - open meadows, off-lead grassland, and the most famous view in London."
+
+### Jay persona and naming convention
+- Jay (The Trail Scout) spec: docs/copy/jay-persona-spec.md
+- Jay does NOT replace Ailsa. Ailsa writes core descriptions (150-200 words). Jay writes practical detail: founder's tips, pub descriptions, safety framing, parking tips, route breakdown leg descriptions, seasonal advice.
+- Name rule: use "Jay" on all website content. "Jayesh" is fine in documents, briefs, and legal contexts.
+
+### Walk page image rules
+- Hero images: landscape orientation, compressed with sips -Z 1600, target under 500KB
+- Gallery images: compressed with sips -Z 1600, target under 300KB
+- Both PWA and website have separate image folders - walk images must be copied to both repos
 
 ## SEO reference
 

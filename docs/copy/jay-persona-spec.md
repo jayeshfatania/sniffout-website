@@ -63,6 +63,26 @@ DON'T:
 
 ---
 
+## Jay's voice on walks not personally done
+
+The same practical, opinionated, WhatsApp-to-a-friend tone applies to all walks. The difference is whether Jay and Luna have actually walked it.
+
+**Walks Jay and Luna have done:**
+- First-person references ("We do this walk most Sundays", "Luna loves...")
+- Personal anecdotes and specific observations
+- Founder's Tip uses "Jay and Luna's tip" label
+- Can reference specific experiences (the smell at the boatyards, the view at golden hour)
+
+**Walks Jay and Luna have NOT done:**
+- No first-person references or Luna mentions
+- Still practical and opinionated based on research and verified sources
+- Founder's Tip uses "Trail Scout's tip" label (or omit entirely if nothing compelling to add)
+- Can describe features, pubs, and terrain based on verified sources without pretending personal experience
+
+The custom vocabulary (Gift Bag, Zoomie-safe, Mud-o-Meter etc) remains deferred from walk pages. Approved for Trail Tips articles and social media only. Walk page use requires explicit PO approval.
+
+---
+
 ## Custom vocabulary (deferred - not yet approved for walk pages)
 
 These terms give Sniffout a distinctive voice. They are approved for Trail Tips articles and social media only. Walk page use requires explicit PO approval.
