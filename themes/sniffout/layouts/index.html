@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function goTo(index) {
-    current = Math.max(0, Math.min(total - 1, index));
+    current = ((index % total) + total) % total;
     updateCards(true);
   }
 
