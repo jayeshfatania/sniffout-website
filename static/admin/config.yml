@@ -2,6 +2,8 @@ backend:
   name: github
   repo: jayeshfatania/sniffout-website
   branch: main
+  base_url: https://sniffout-cms-auth.sniffout.workers.dev
+  auth_endpoint: /auth
 
 media_folder: static/img
 public_folder: /img
