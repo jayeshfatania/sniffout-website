@@ -58,7 +58,7 @@
   </div>
 </section>
 
-<!-- Featured walks section -->
+<!-- Featured walks coverflow carousel -->
 <section class="home-featured">
   <div class="home-featured-header reveal">
     <div>
@@ -67,20 +67,67 @@
     </div>
     <a href="/walks/" class="home-see-all">Browse all walks</a>
   </div>
-  <div class="walk-card-h-row">
-    {{ range first 6 (where .Site.RegularPages "Section" "walks") }}
-    <a href="{{ .Permalink }}" class="walk-card-h">
-      {{ with .Params.heroImage }}<div class="walk-card-h-bg" style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.52)), url('{{ . }}');"></div>{{ end }}
-      <div class="walk-card-h-body">
-        <div class="walk-card-h-name">{{ .Title }}</div>
-        <div class="walk-card-h-loc">{{ .Params.location }}</div>
-        <div class="walk-card-h-bottom">
-          {{ with .Params.distance }}<span class="walk-card-h-dist-text">{{ . }}</span>{{ end }}
-          {{ with .Params.offLead }}<span class="walk-hero-badge walk-card-h-lead-badge {{ if or (eq . "On-lead only") (eq . "On lead") (eq . "None") }}walk-hero-badge--onlead{{ else if eq . "Partial" }}walk-hero-badge--partial{{ else }}walk-hero-badge--offlead{{ end }}">{{ . }}</span>{{ end }}
-        </div>
+
+  <div class="cf-stage" id="cf-stage" tabindex="0" aria-label="Featured walks carousel">
+    <div class="cf-track" id="cf-track">
+
+      {{ $featuredSlugs := slice
+        "kingston-teddington-lock-thames-path"
+        "hardcastle-crags-hebden"
+        "mam-tor-dog-walk"
+        "cuckmere-haven-dog-walk"
+        "pen-y-fan-dog-walk"
+        "hermitage-dunkeld-dog-walk"
+        "isabella-plantation"
+        "threipmuir-harlaw-dog-walk"
+        "rhossili-bay-dog-walk"
+        "grasmere-lake-circuit"
+        "malham-cove-gordale"
+      }}
+
+      {{ $walks := slice }}
+      {{ range $featuredSlugs }}
+        {{ $page := site.GetPage (printf "/walks/%s" .) }}
+        {{ if $page }}
+          {{ $walks = $walks | append $page }}
+        {{ end }}
+      {{ end }}
+
+      {{ $total := len $walks }}
+      {{ range $i, $walk := $walks }}
+      <div class="cf-card" data-index="{{ $i }}">
+        <a href="{{ $walk.Permalink }}" class="cf-card-link" tabindex="-1" aria-label="{{ $walk.Title }}">
+          {{ with $walk.Params.heroImage }}
+          <div class="cf-card-bg" style="background-image: url('{{ . }}');"></div>
+          {{ end }}
+          <div class="cf-card-overlay"></div>
+          <div class="cf-card-region">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            {{ with $walk.Params.area }}{{ . }}{{ else }}{{ with $walk.Params.county }}{{ . }}{{ else }}UK{{ end }}{{ end }}
+          </div>
+          <div class="cf-card-body">
+            <div class="cf-card-counter">{{ printf "%02d" (add $i 1) }} / {{ printf "%02d" $total }}</div>
+            <div class="cf-card-title">{{ $walk.Title }}</div>
+            <div class="cf-card-meta">
+              {{ with $walk.Params.distance }}<span>{{ . }}</span>{{ end }}
+              {{ with $walk.Params.difficulty }}<span>{{ . }}</span>{{ end }}
+            </div>
+          </div>
+        </a>
       </div>
-    </a>
-    {{ end }}
+      {{ end }}
+
+    </div>
+
+    <!-- Controls -->
+    <button class="cf-btn cf-btn-prev" id="cf-prev" aria-label="Previous walk">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="cf-btn cf-btn-next" id="cf-next" aria-label="Next walk">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+
+    <div class="cf-dots" id="cf-dots" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -199,6 +246,154 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }, { passive: true });
   }
+})();
+</script>
+
+<script>
+(function() {
+  var stage = document.getElementById('cf-stage');
+  var track = document.getElementById('cf-track');
+  var dotsContainer = document.getElementById('cf-dots');
+  var prevBtn = document.getElementById('cf-prev');
+  var nextBtn = document.getElementById('cf-next');
+  if (!stage || !track) return;
+
+  var cards = Array.from(track.querySelectorAll('.cf-card'));
+  var total = cards.length;
+  var current = 2; // Start on third card so two show either side
+  var isDragging = false;
+  var dragStartX = 0;
+  var dragDeltaX = 0;
+  var SNAP_THRESHOLD = 40;
+
+  // Build dots
+  cards.forEach(function(_, i) {
+    var dot = document.createElement('button');
+    dot.className = 'cf-dot' + (i === current ? ' active' : '');
+    dot.setAttribute('aria-label', 'Walk ' + (i + 1));
+    dot.addEventListener('click', function() { goTo(i); });
+    dotsContainer.appendChild(dot);
+  });
+
+  function getCardWidth() {
+    return cards[0] ? cards[0].offsetWidth : 320;
+  }
+
+  function getStep() {
+    return Math.min(getCardWidth() * 0.62, window.innerWidth * 0.22);
+  }
+
+  function updateCards(animate) {
+    var cardW = getCardWidth();
+    var step = getStep();
+    cards.forEach(function(card, i) {
+      var offset = i - current;
+      var absOffset = Math.abs(offset);
+      var scale, opacity;
+      if (absOffset === 0) { scale = 1.0; opacity = 1.0; }
+      else if (absOffset === 1) { scale = 0.82; opacity = 0.72; }
+      else if (absOffset === 2) { scale = 0.64; opacity = 0.38; }
+      else { scale = 0.64; opacity = 0; }
+
+      if (!animate) {
+        card.style.transition = 'none';
+      } else {
+        card.style.transition = 'transform 0.55s cubic-bezier(.2,.8,.2,1), opacity 0.55s cubic-bezier(.2,.8,.2,1)';
+      }
+
+      var x = offset * step;
+      card.style.transform = 'translateX(' + x + 'px) scale(' + scale + ')';
+      card.style.opacity = opacity;
+      card.style.zIndex = 10 - absOffset;
+      card.style.pointerEvents = offset === 0 ? 'auto' : 'none';
+
+      // Only centre card is clickable for navigation
+      var link = card.querySelector('.cf-card-link');
+      if (link) link.tabIndex = offset === 0 ? 0 : -1;
+    });
+
+    // Update dots
+    var dots = dotsContainer.querySelectorAll('.cf-dot');
+    dots.forEach(function(dot, i) {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  function goTo(index) {
+    current = Math.max(0, Math.min(total - 1, index));
+    updateCards(true);
+  }
+
+  // Initial render
+  updateCards(false);
+  // Re-enable transitions after initial render
+  requestAnimationFrame(function() {
+    requestAnimationFrame(function() {
+      cards.forEach(function(card) {
+        card.style.transition = '';
+      });
+    });
+  });
+
+  // Prev/next buttons
+  if (prevBtn) prevBtn.addEventListener('click', function() { goTo(current - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+  // Click side card to centre it
+  cards.forEach(function(card, i) {
+    card.addEventListener('click', function(e) {
+      if (i !== current) {
+        e.preventDefault();
+        goTo(i);
+      }
+    });
+  });
+
+  // Drag / touch
+  function onDragStart(clientX) {
+    isDragging = true;
+    dragStartX = clientX;
+    dragDeltaX = 0;
+    cards.forEach(function(card) {
+      card.style.transition = 'none';
+    });
+  }
+
+  function onDragMove(clientX) {
+    if (!isDragging) return;
+    dragDeltaX = clientX - dragStartX;
+  }
+
+  function onDragEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+    if (dragDeltaX < -SNAP_THRESHOLD) goTo(current + 1);
+    else if (dragDeltaX > SNAP_THRESHOLD) goTo(current - 1);
+    else updateCards(true);
+  }
+
+  // Mouse
+  stage.addEventListener('mousedown', function(e) { onDragStart(e.clientX); });
+  window.addEventListener('mousemove', function(e) { if (isDragging) onDragMove(e.clientX); });
+  window.addEventListener('mouseup', onDragEnd);
+
+  // Touch
+  stage.addEventListener('touchstart', function(e) {
+    onDragStart(e.touches[0].clientX);
+  }, { passive: true });
+  stage.addEventListener('touchmove', function(e) {
+    onDragMove(e.touches[0].clientX);
+  }, { passive: true });
+  stage.addEventListener('touchend', onDragEnd);
+
+  // Keyboard
+  stage.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+  });
+
+  // Resize
+  window.addEventListener('resize', function() { updateCards(false); });
 })();
 </script>
 

@@ -1254,7 +1254,6 @@ h1.walk-sidebar-title {
 
 /* Featured walks section */
 .home-featured {
-  background: #FFFFFF;
   padding: 32px 0 32px 20px;
 }
 
@@ -1274,101 +1273,213 @@ h1.walk-sidebar-title {
   padding: 0;
 }
 
-.walk-card-h-row {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 0 20px 16px;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-}
-
-.walk-card-h-row::-webkit-scrollbar { display: none; }
-
-.walk-card-h {
-  min-width: 260px;
-  height: 200px;
-  flex-shrink: 0;
-  scroll-snap-align: start;
-  background: linear-gradient(135deg, #C8D8B0 0%, #2C4A14 100%);
-  border-radius: 16px;
-  overflow: hidden;
-  text-decoration: none;
-  display: block;
+/* === Coverflow carousel === */
+.cf-stage {
   position: relative;
-  box-shadow: 0 2px 16px rgba(44,74,20,0.07);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0 60px;
+  cursor: grab;
+  user-select: none;
+  outline: none;
 }
 
-.walk-card-h-bg {
+.cf-stage:active { cursor: grabbing; }
+
+.cf-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 480px;
+  touch-action: pan-y;
+}
+
+.cf-card {
+  position: absolute;
+  width: clamp(280px, 32vw, 420px);
+  aspect-ratio: 3/4;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.55s cubic-bezier(.2,.8,.2,1),
+              opacity 0.55s cubic-bezier(.2,.8,.2,1);
+  will-change: transform, opacity;
+  flex-shrink: 0;
+}
+
+.cf-card-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  z-index: 0;
+  transition: transform 0.55s cubic-bezier(.2,.8,.2,1);
 }
 
-.walk-card-h:hover .walk-card-h-bg {
-  transform: scale(1.04);
-  filter: brightness(1.08);
+.cf-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(0,0,0,0.7) 100%
+  );
 }
 
-.walk-card-h:hover { transform: translateY(-2px); box-shadow: 0 4px 24px rgba(44,74,20,0.12); }
-.walk-card-h:active { transform: scale(0.97); }
-
-.walk-card-h-badge {
-  top: 8px;
-  left: 8px;
-  z-index: 2;
+.cf-card-region {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+  pointer-events: none;
 }
 
-.walk-card-h-body {
+.cf-card-body {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 20px 18px;
   z-index: 2;
-  padding: 10px 12px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.72));
-  border-radius: 0 0 16px 16px;
 }
 
-.walk-card-h-name {
-  font-size: 13px;
+.cf-card-counter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.cf-card-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 19px;
   font-weight: 600;
   color: white;
-  margin-bottom: 2px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
 }
 
-.walk-card-h-loc {
-  font-size: 11px;
-  color: rgba(255,255,255,0.75);
-  margin-bottom: 5px;
-}
-
-.walk-card-h-pills {
+.cf-card-meta {
   display: flex;
-  gap: 4px;
+  gap: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
 }
 
-.walk-card-h-pill {
-  font-size: 10px;
-  font-weight: 500;
-  background: rgba(255,255,255,0.9);
-  color: #2C4A14;
-  padding: 2px 7px;
-  border-radius: 20px;
+.cf-card-meta span::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  vertical-align: middle;
+  margin-right: 6px;
 }
 
-.walk-card-h-bottom { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
-.walk-card-h-dist-text { font-size: 11px; color: rgba(255,255,255,0.85); font-weight: 500; }
-.walk-card-h-lead-badge { position: static; font-size: 10px; padding: 2px 7px; }
+.cf-card-meta span:first-child::before { display: none; }
+
+.cf-card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* Prev/next buttons */
+.cf-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--hairline);
+  background: color-mix(in oklab, var(--paper) 90%, white);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ink-900);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.cf-btn:active { transform: translateY(-50%) scale(0.95); }
+.cf-btn-prev { left: 16px; }
+.cf-btn-next { right: 16px; }
+
+/* Dots */
+.cf-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.cf-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ink-500);
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.cf-dot::after {
+  content: "";
+  position: absolute;
+  inset: -19px;
+}
+
+.cf-dot.active {
+  opacity: 1;
+  transform: scale(1.3);
+  background: var(--forest-800);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .cf-track { height: 420px; }
+  .cf-card {
+    width: min(84vw, 340px);
+    height: 420px;
+    aspect-ratio: unset;
+  }
+  .cf-btn { display: none; }
+}
+
+/* walk-card-h rules removed - replaced by coverflow carousel */
+
+/* walk-card-h rules — kept for reference, replaced by .cf-* coverflow
+.walk-card-h-row { display: flex; gap: 16px; overflow-x: auto; }
+.walk-card-h { min-width: 260px; height: 200px; border-radius: 16px; }
+.walk-card-h-bg, .walk-card-h-body, .walk-card-h-name, .walk-card-h-loc,
+.walk-card-h-pills, .walk-card-h-pill, .walk-card-h-bottom,
+.walk-card-h-dist-text, .walk-card-h-lead-badge { ... }
+*/
 
 .home-see-all {
   font-size: 13px;
@@ -1386,13 +1497,6 @@ h1.walk-sidebar-title {
   }
   .home-featured-header {
     padding: 0 40px;
-  }
-  .walk-card-h-row {
-    padding: 0 40px 16px;
-    gap: 16px;
-  }
-  .walk-card-h {
-    min-width: 300px;
   }
 }
 
