@@ -18,9 +18,9 @@
 
 <!-- What you get section -->
 <section class="home-benefits">
-  <div class="home-benefits-inner">
+  <div class="home-benefits-inner reveal">
     <div class="walk-section-heading">WHY SNIFFOUT</div>
-    <div class="benefit-grid">
+    <div class="benefit-grid reveal-stagger">
       <div class="benefit-block">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7"/></svg>
         <div class="benefit-title">Know before you go</div>
@@ -42,7 +42,7 @@
 
 <!-- Featured walks section -->
 <section class="home-featured">
-  <div class="home-featured-header">
+  <div class="home-featured-header reveal">
     <div>
       <div class="walk-section-heading" style="margin-bottom:4px;">FEATURED WALKS</div>
       <h2 class="home-featured-heading">Dog walks across the UK</h2>
@@ -68,7 +68,7 @@
 
 <!-- Hazard awareness strip -->
 <section class="hazard-strip">
-  <div class="hazard-strip-inner">
+  <div class="hazard-strip-inner reveal">
     <div class="walk-section-heading">BUILT FOR DOG SAFETY</div>
     <h2 class="hazard-strip-heading">Weather that matters to dogs, not just humans.</h2>
     <p class="hazard-strip-body">Sniffout checks for heat risk, storm warnings, paw-burning pavements, and the best window in the day to walk. It understands that a 28&deg;C day is very different for a Husky than a Labrador.</p>
@@ -111,6 +111,64 @@ document.addEventListener('DOMContentLoaded', function () {
     else if (text.length > 20)                                 b.textContent = text.slice(0, 19) + '\u2026';
   });
 });
+</script>
+
+<!-- Stats band -->
+<section class="stats-band">
+  <div class="stats-band-inner reveal">
+    <div class="stats-item">
+      <div class="stats-n">{{ $walkCount }}</div>
+      <div class="stats-l">Curated walks</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-n">4</div>
+      <div class="stats-l">UK nations</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-n">24</div>
+      <div class="stats-l">Counties covered</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-n">Daily</div>
+      <div class="stats-l">Weather forecasts</div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  // Scroll reveal
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var idx = el.dataset.staggerIdx;
+        if (idx !== undefined) {
+          el.style.transitionDelay = (Math.min(parseInt(idx), 8) * 0.06) + 's';
+        }
+        el.classList.add('is-visible');
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  document.querySelectorAll('.reveal-stagger > *').forEach(function(el, i) {
+    el.dataset.staggerIdx = i;
+    observer.observe(el);
+  });
+
+  // Compact header on scroll
+  var header = document.querySelector('.site-header');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      header.classList.toggle('is-scrolled', window.scrollY > 40);
+    }, { passive: true });
+  }
+})();
 </script>
 
 {{ end }}
