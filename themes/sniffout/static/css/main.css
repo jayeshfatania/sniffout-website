@@ -7,6 +7,7 @@
   --ink-700: oklch(0.38 0.015 100);
   --ink-500: oklch(0.55 0.012 100);
   --hairline: color-mix(in oklab, var(--ink-900) 7%, transparent);
+  --parallax-y: 0px;
   --section-y: 110px;
 }
 
@@ -946,7 +947,14 @@ h1.walk-sidebar-title {
   text-align: center;
   position: relative;
   overflow: hidden;
-  min-height: 420px;
+  min-height: min(100svh, 720px);
+}
+
+@media (max-width: 720px) {
+  .home-hero {
+    min-height: 100svh;
+    padding: 72px 22px 110px;
+  }
 }
 
 /* Carousel images */
@@ -958,6 +966,8 @@ h1.walk-sidebar-title {
   object-fit: cover;
   opacity: 0;
   animation: heroFade 20s infinite;
+  transform: translateY(var(--parallax-y, 0px));
+  will-change: transform;
 }
 .home-hero-img:nth-child(1) { animation-delay: 0s; }
 .home-hero-img:nth-child(2) { animation-delay: 5s; }
@@ -970,6 +980,13 @@ h1.walk-sidebar-title {
   25%  { opacity: 1; }
   30%  { opacity: 0; }
   100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-img {
+    transform: none !important;
+    will-change: auto;
+  }
 }
 
 /* Dark overlay over carousel */
@@ -986,6 +1003,31 @@ h1.walk-sidebar-title {
   align-items: center;
   position: relative;
   z-index: 2;
+  justify-content: center;
+  min-height: inherit;
+}
+
+/* Hero load fade-in */
+.home-hero-inner > * {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: heroFadeIn 0.8s cubic-bezier(.2,.7,.2,1) forwards;
+}
+
+.home-hero-inner > *:nth-child(1) { animation-delay: 0.1s; }
+.home-hero-inner > *:nth-child(2) { animation-delay: 0.17s; }
+.home-hero-inner > *:nth-child(3) { animation-delay: 0.24s; }
+
+@keyframes heroFadeIn {
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-inner > * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
 }
 
 .home-headline {
@@ -1034,7 +1076,6 @@ h1.walk-sidebar-title {
 @media (min-width: 768px) {
   .home-hero {
     padding: 80px 20px 72px;
-    min-height: 500px;
   }
   .home-hero-inner {
     max-width: 560px;
@@ -4482,6 +4523,75 @@ details[open] > summary.ws-faq-question::after {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+}
+
+/* === Mobile sticky bottom bar === */
+.mbar {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .mbar {
+    display: flex;
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 80;
+    padding: 10px;
+    border-radius: 18px;
+    background: color-mix(in oklab, var(--paper) 92%, white);
+    backdrop-filter: saturate(150%) blur(12px);
+    -webkit-backdrop-filter: saturate(150%) blur(12px);
+    border: 1px solid color-mix(in oklab, var(--ink-900) 10%, transparent);
+    gap: 8px;
+    align-items: center;
+  }
+
+  body {
+    padding-bottom: 88px;
+  }
+
+  .mbar-browse {
+    flex: 1;
+    text-align: center;
+    padding: 11px 16px;
+    border-radius: 12px;
+    border: 1px solid color-mix(in oklab, var(--ink-900) 12%, transparent);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink-900);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .mbar-browse:active {
+    transform: scale(0.97);
+  }
+
+  .mbar-cta {
+    flex: 1;
+    text-align: center;
+    padding: 11px 16px;
+    border-radius: 12px;
+    background: var(--forest-800);
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .mbar-cta:active {
+    transform: scale(0.97);
+  }
+
+  /* Hide store badges inside CTA section on mobile - bottom bar carries this action */
+  .home-final-cta .walk-store-badges {
+    display: none;
   }
 }
 
