@@ -950,7 +950,7 @@ h1.walk-sidebar-title {
 
 @media (max-width: 720px) {
   .home-hero {
-    min-height: 100svh;
+    min-height: 92svh;
     padding: 72px 22px 110px;
   }
 }
@@ -1025,6 +1025,34 @@ h1.walk-sidebar-title {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
+  }
+}
+
+/* === Hero scroll indicator === */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: rgba(255,255,255,0.7);
+  animation: scrollBounce 1.8s ease-in-out infinite;
+  transition: opacity 0.4s ease;
+}
+
+.hero-scroll-indicator.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-indicator {
+    animation: none;
   }
 }
 
