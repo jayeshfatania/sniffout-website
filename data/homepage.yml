@@ -1,0 +1,14 @@
+why_sniffout:
+  eyebrow: "Why Sniffout"
+  lead: "Built around what dogs need, not just what the forecast says."
+  lead_emphasis: "what dogs need"
+  points:
+    - index: "01"
+      title: "Know before you go"
+      description: "Live weather verdict for every walk. Heat warnings, storm alerts, best window of the day. Built around what dogs need, not just what the forecast says."
+    - index: "02"
+      title: "Handpicked UK walks"
+      description: "Curated dog walks across the UK. Distance, terrain, off-lead status, and parking for every one."
+    - index: "03"
+      title: "Your walk journal"
+      description: "Every walk logged, searchable, and remembered. No account required. Your data stays on your device."

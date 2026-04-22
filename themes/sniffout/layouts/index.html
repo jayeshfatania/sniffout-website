@@ -22,25 +22,37 @@
   </div>
 </section>
 
-<!-- What you get section -->
-<section class="home-benefits">
-  <div class="home-benefits-inner reveal">
-    <div class="walk-section-heading">WHY SNIFFOUT</div>
-    <div class="benefit-grid reveal-stagger">
-      <div class="benefit-block">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7"/></svg>
-        <div class="benefit-title">Know before you go</div>
-        <div class="benefit-body">Live weather verdict for every walk. Heat warnings, storm alerts, best window of the day. Built around what dogs need, not just what the forecast says.</div>
+<!-- Why Sniffout editorial strip -->
+<section class="why-sniffout">
+  <div class="why-sniffout-inner">
+    <div class="why-sniffout-copy reveal">
+      <div class="why-eyebrow">{{ site.Data.homepage.why_sniffout.eyebrow }}</div>
+      <p class="why-lead">{{ site.Data.homepage.why_sniffout.lead }}</p>
+      <div class="why-points">
+        {{ range site.Data.homepage.why_sniffout.points }}
+        <div class="why-point">
+          <div class="why-point-idx">{{ .index }}</div>
+          <div class="why-point-body">
+            <div class="why-point-title">{{ .title }}</div>
+            <div class="why-point-desc">{{ .description }}</div>
+          </div>
+        </div>
+        {{ end }}
       </div>
-      <div class="benefit-block">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <div class="benefit-title">Handpicked UK walks</div>
-        <div class="benefit-body">{{ $walkCount }} curated dog {{ if eq $walkCount 1 }}walk{{ else }}walks{{ end }} across the UK. Distance, terrain, off-lead status, and parking for every one.</div>
-      </div>
-      <div class="benefit-block">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C4A14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-        <div class="benefit-title">Your walk journal</div>
-        <div class="benefit-body">Every walk logged, searchable, and remembered. No account required. Your data stays on your device.</div>
+    </div>
+    <div class="why-sniffout-tile reveal">
+      <!-- Forecast tile placeholder - to be implemented separately -->
+      <div class="why-tile-placeholder">
+        <div class="why-tile-placeholder-inner">
+          <div class="why-tile-eyebrow">TODAY · RICHMOND</div>
+          <div class="why-tile-verdict">Good conditions</div>
+          <div class="why-tile-metrics">
+            <div class="why-tile-metric"><span class="why-tile-metric-val">18°C</span><span class="why-tile-metric-label">Temp</span></div>
+            <div class="why-tile-metric"><span class="why-tile-metric-val">Safe</span><span class="why-tile-metric-label">Pavement</span></div>
+            <div class="why-tile-metric"><span class="why-tile-metric-val">Low</span><span class="why-tile-metric-label">UV</span></div>
+            <div class="why-tile-metric"><span class="why-tile-metric-val">9-11am</span><span class="why-tile-metric-label">Best window</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
