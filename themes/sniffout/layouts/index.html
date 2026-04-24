@@ -272,25 +272,18 @@ document.addEventListener('DOMContentLoaded', function () {
   var nextBtn = document.getElementById('cf-next');
   if (!stage || !track) return;
 
-  var cards = Array.from(track.querySelectorAll('.cf-card'));
-  var total = cards.length;
-  var current = 2; // Start on third card so two show either side
+  var SNAP_THRESHOLD = 40;
   var isDragging = false;
   var dragStartX = 0;
   var dragDeltaX = 0;
-  var SNAP_THRESHOLD = 40;
 
-  // Build dots
-  cards.forEach(function(_, i) {
-    var dot = document.createElement('button');
-    dot.className = 'cf-dot' + (i === current ? ' active' : '');
-    dot.setAttribute('aria-label', 'Walk ' + (i + 1));
-    dot.addEventListener('click', function() { goTo(i); });
-    dotsContainer.appendChild(dot);
-  });
+  function getCards() {
+    return Array.from(track.querySelectorAll('.cf-card'));
+  }
 
   function getCardWidth() {
-    return cards[0] ? cards[0].offsetWidth : 320;
+    var cards = getCards();
+    return cards[0] ? cards[0].offsetWidth : 300;
   }
 
   function getStep() {
@@ -298,80 +291,146 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateCards(animate) {
-    var cardW = getCardWidth();
-    var step = getStep();
+    var cards = getCards();
+    var total = cards.length;
+    var centre = Math.floor(total / 2);
+
     cards.forEach(function(card, i) {
-      var offset = i - current;
+      var offset = i - centre;
       var absOffset = Math.abs(offset);
       var scale, opacity;
-      if (absOffset === 0) { scale = 1.0; opacity = 1.0; }
+
+      if (absOffset === 0)      { scale = 1.0;  opacity = 1.0; }
       else if (absOffset === 1) { scale = 0.75; opacity = 0.80; }
       else if (absOffset === 2) { scale = 0.55; opacity = 0.50; }
       else if (absOffset === 3) { scale = 0.40; opacity = 0.25; }
-      else { scale = 0.40; opacity = 0; }
+      else                      { scale = 0.40; opacity = 0; }
 
-      if (!animate) {
-        card.style.transition = 'none';
-      } else {
-        card.style.transition = 'transform 0.55s cubic-bezier(.2,.8,.2,1), opacity 0.55s cubic-bezier(.2,.8,.2,1)';
-      }
+      var transition = animate
+        ? 'transform 0.45s cubic-bezier(.2,.8,.2,1), opacity 0.45s cubic-bezier(.2,.8,.2,1)'
+        : 'none';
 
-      var x = offset * step;
-      card.style.transform = 'translateX(' + x + 'px) scale(' + scale + ')';
+      card.style.transition = transition;
+      card.style.transform = 'translateX(' + (offset * getStep()) + 'px) scale(' + scale + ')';
       card.style.opacity = opacity;
       card.style.zIndex = 10 - absOffset;
       card.style.pointerEvents = offset === 0 ? 'auto' : 'none';
 
-      // Only centre card is clickable for navigation
       var link = card.querySelector('.cf-card-link');
       if (link) link.tabIndex = offset === 0 ? 0 : -1;
     });
 
-    // Update dots
+    updateDots();
+  }
+
+  function getCentreCard() {
+    var cards = getCards();
+    return cards[Math.floor(cards.length / 2)];
+  }
+
+  // Move forward: take first card, append to end, re-render
+  function shiftNext(animate) {
+    var cards = getCards();
+    // Instantly move the leftmost card off-screen left before repositioning
+    var first = cards[0];
+    first.style.transition = 'none';
+    track.appendChild(first);
+    updateCards(animate !== false);
+  }
+
+  // Move backward: take last card, prepend to start, re-render
+  function shiftPrev(animate) {
+    var cards = getCards();
+    var last = cards[cards.length - 1];
+    last.style.transition = 'none';
+    track.insertBefore(last, track.firstChild);
+    updateCards(animate !== false);
+  }
+
+  // Build dots - one per card, keyed to card data-index
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    var cards = getCards();
+    cards.forEach(function(card) {
+      var dot = document.createElement('button');
+      dot.className = 'cf-dot';
+      dot.setAttribute('aria-label', 'Walk ' + (parseInt(card.dataset.index) + 1));
+      dot.dataset.cardIndex = card.dataset.index;
+      dot.addEventListener('click', function() {
+        goToIndex(parseInt(dot.dataset.cardIndex));
+      });
+      dotsContainer.appendChild(dot);
+    });
+    updateDots();
+  }
+
+  function updateDots() {
+    var centre = getCentreCard();
+    var centreIdx = centre ? centre.dataset.index : null;
     var dots = dotsContainer.querySelectorAll('.cf-dot');
-    dots.forEach(function(dot, i) {
-      dot.classList.toggle('active', i === current);
+    dots.forEach(function(dot) {
+      dot.classList.toggle('active', dot.dataset.cardIndex === centreIdx);
     });
   }
 
-  function goTo(index) {
-    current = ((index % total) + total) % total;
+  function goToIndex(targetIdx) {
+    var max = 22;
+    var attempts = 0;
+    while (getCentreCard() && parseInt(getCentreCard().dataset.index) !== targetIdx && attempts < max) {
+      var centre = parseInt(getCentreCard().dataset.index);
+      var cards = getCards();
+      var total = cards.length;
+      // Work out shortest path
+      var diff = targetIdx - centre;
+      if (diff > total / 2) diff -= total;
+      if (diff < -total / 2) diff += total;
+      if (diff > 0) shiftNext(false);
+      else shiftPrev(false);
+      attempts++;
+    }
     updateCards(true);
+  }
+
+  // Click a non-centre card to centre it
+  function attachCardClicks() {
+    var cards = getCards();
+    var centre = Math.floor(cards.length / 2);
+    cards.forEach(function(card, i) {
+      card.addEventListener('click', function(e) {
+        var currentCards = getCards();
+        var currentCentre = Math.floor(currentCards.length / 2);
+        var currentPos = currentCards.indexOf(card);
+        var offset = currentPos - currentCentre;
+        if (offset !== 0) {
+          e.preventDefault();
+          goToIndex(parseInt(card.dataset.index));
+        }
+      });
+    });
   }
 
   // Initial render
   updateCards(false);
-  // Re-enable transitions after initial render
+  buildDots();
+  attachCardClicks();
+
+  // Re-enable transitions after first render
   requestAnimationFrame(function() {
     requestAnimationFrame(function() {
-      cards.forEach(function(card) {
-        card.style.transition = '';
-      });
+      getCards().forEach(function(c) { c.style.transition = ''; });
     });
   });
 
   // Prev/next buttons
-  if (prevBtn) prevBtn.addEventListener('click', function() { goTo(current - 1); });
-  if (nextBtn) nextBtn.addEventListener('click', function() { goTo(current + 1); });
-
-  // Click side card to centre it
-  cards.forEach(function(card, i) {
-    card.addEventListener('click', function(e) {
-      if (i !== current) {
-        e.preventDefault();
-        goTo(i);
-      }
-    });
-  });
+  if (prevBtn) prevBtn.addEventListener('click', function() { shiftPrev(true); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { shiftNext(true); });
 
   // Drag / touch
   function onDragStart(clientX) {
     isDragging = true;
     dragStartX = clientX;
     dragDeltaX = 0;
-    cards.forEach(function(card) {
-      card.style.transition = 'none';
-    });
+    getCards().forEach(function(c) { c.style.transition = 'none'; });
   }
 
   function onDragMove(clientX) {
@@ -382,17 +441,16 @@ document.addEventListener('DOMContentLoaded', function () {
   function onDragEnd() {
     if (!isDragging) return;
     isDragging = false;
-    if (dragDeltaX < -SNAP_THRESHOLD) goTo(current + 1);
-    else if (dragDeltaX > SNAP_THRESHOLD) goTo(current - 1);
+    if (dragDeltaX < -SNAP_THRESHOLD) shiftNext(true);
+    else if (dragDeltaX > SNAP_THRESHOLD) shiftPrev(true);
     else updateCards(true);
+    dragDeltaX = 0;
   }
 
-  // Mouse
   stage.addEventListener('mousedown', function(e) { onDragStart(e.clientX); });
   window.addEventListener('mousemove', function(e) { if (isDragging) onDragMove(e.clientX); });
   window.addEventListener('mouseup', onDragEnd);
 
-  // Touch
   stage.addEventListener('touchstart', function(e) {
     onDragStart(e.touches[0].clientX);
   }, { passive: true });
@@ -401,13 +459,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { passive: true });
   stage.addEventListener('touchend', onDragEnd);
 
-  // Keyboard
   stage.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
-    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); shiftPrev(true); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); shiftNext(true); }
   });
 
-  // Resize
   window.addEventListener('resize', function() { updateCards(false); });
 })();
 </script>
