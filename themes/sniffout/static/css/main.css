@@ -1319,13 +1319,13 @@ h1.walk-sidebar-title {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 380px;
+  height: 360px;
   touch-action: pan-y;
 }
 
 .cf-card {
   position: absolute;
-  width: clamp(220px, 24vw, 320px);
+  width: clamp(200px, 22vw, 300px);
   aspect-ratio: 3/4;
   border-radius: 20px;
   overflow: hidden;
@@ -1491,10 +1491,10 @@ h1.walk-sidebar-title {
 
 /* Mobile */
 @media (max-width: 640px) {
-  .cf-track { height: 340px; }
+  .cf-track { height: 320px; }
   .cf-card {
-    width: min(74vw, 280px);
-    height: 340px;
+    width: min(72vw, 260px);
+    height: 320px;
     aspect-ratio: unset;
   }
   .cf-btn { display: none; }
