@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function getStep() {
-    return Math.min(getCardWidth() * 1.1, window.innerWidth * 0.32);
+    return Math.min(getCardWidth() * 0.72, window.innerWidth * 0.20);
   }
 
   function updateCards(animate) {
@@ -305,9 +305,10 @@ document.addEventListener('DOMContentLoaded', function () {
       var absOffset = Math.abs(offset);
       var scale, opacity;
       if (absOffset === 0) { scale = 1.0; opacity = 1.0; }
-      else if (absOffset === 1) { scale = 0.82; opacity = 0.72; }
-      else if (absOffset === 2) { scale = 0.64; opacity = 0.38; }
-      else { scale = 0.64; opacity = 0; }
+      else if (absOffset === 1) { scale = 0.75; opacity = 0.80; }
+      else if (absOffset === 2) { scale = 0.55; opacity = 0.50; }
+      else if (absOffset === 3) { scale = 0.40; opacity = 0.25; }
+      else { scale = 0.40; opacity = 0; }
 
       if (!animate) {
         card.style.transition = 'none';
