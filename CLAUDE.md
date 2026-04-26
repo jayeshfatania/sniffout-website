@@ -8,6 +8,9 @@ This file provides guidance for work in the sniffout-website Hugo static site re
 - Live: sniffout-website.pages.dev
 - Custom domain: sniffout.co.uk - NOT yet connected. Do not change baseURL until domain is live.
 - Separate repo from the PWA: github.com/jayeshfatania/sniffout-website
+- CMS: sniffout-website.pages.dev/admin (Sveltia CMS, login with GitHub)
+- OAuth Worker: sniffout-cms-auth.sniffout.workers.dev (Cloudflare Worker, source: ~/Desktop/sniffout-cms-auth/)
+- GitHub OAuth App: named "Sniffout", callback URL https://sniffout-cms-auth.sniffout.workers.dev/callback
 
 ## File protection
 
@@ -31,10 +34,13 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 | Fact check reports | docs/fact-check/ |
 | Research reports | docs/research/ |
 | Handoffs | docs/handoffs/ |
+| Homepage data (CMS-editable) | data/homepage.yml |
+| CMS config | static/admin/config.yml |
 
 ## Design decisions (locked)
 
-- Typeface: Plus Jakarta Sans sole typeface throughout. Fraunces display serif permanently rejected.
+- Primary typeface: Plus Jakarta Sans throughout (locked). Fraunces display serif permanently rejected.
+- Source Serif 4 added April 2026 for editorial/serif accent contexts (homepage Why Sniffout strip, lead text). JetBrains Mono added for mono contexts. Both loaded via head.html. Neither replaces Plus Jakarta Sans as the primary typeface.
 - Brand colour: #2C4A14 (Woodland Green)
 - Second accent: #B85C2C (Sienna) - applied to header CTA pill, difficulty badges, Sniffout Pick badge
 - Background: #F4EFE6 (warm linen) - matches PWA
@@ -45,10 +51,13 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - Hover on cards: translateY(-2px) - not scale(). More subtle for a content site.
 - baseURL: sniffout-website.pages.dev (do not change until sniffout.co.uk is live)
 
+### Design system tokens (added April 2026, main.css)
+--paper, --forest-800, --terracotta, --ink-900, --ink-700, --ink-500, --hairline, --section-y, --parallax-y
+
 ## Current site state
 
 ### Pages live
-- Homepage
+- Homepage (see Homepage design section below for full feature list - April 2026 redesign live)
 - Walks index + 90 individual walk pages (all with FAQ blocks using native details/summary accordion, schema.org FAQPage markup, weather preview card with lat/lng front matter, walk description lead-in styling at 17px/500/1.6)
 - Guides index + guide articles (see content/guides/)
 - Area index pages: 26 live (Surrey, London, New Forest, Yorkshire, Sussex, Lake District, Dartmoor, Hampshire, Hertfordshire, Edinburgh, Brecon Beacons, Snowdonia, Gower, South Wales, West Wales, Peak District, North East England, North West England, East Midlands, Shropshire, East of England, Fife, Loch Lomond, Perthshire, Cotswolds, South West England)
@@ -88,6 +97,43 @@ Do not modify sniffout-v2.html or dog-walk-dashboard.html. Those files are in a 
 - Pull quote frontmatter field on guide articles
 - heroImage frontmatter field on guides and walks
 
+## Homepage design (April 2026)
+
+All features below are live at sniffout-website.pages.dev.
+
+- Design system tokens in main.css (see Design decisions section)
+- Source Serif 4 + JetBrains Mono loaded in head.html
+- Surface rule: --paper background, --hairline dividers
+- Stats band above footer (4 metrics, Source Serif 4 numerals)
+- Scroll reveal animations (IntersectionObserver, prefers-reduced-motion safe)
+- Compact header on scroll
+- Hero: SVH height, parallax, load fade-in
+- Mobile sticky bottom bar (92svh hero height on mobile)
+- Scroll indicator: animated chevron at bottom 48px, fades on scroll, z-index 100
+- Why Sniffout editorial strip: replaces old benefit grid. Serif lead text, 3 numbered points, forecast tile placeholder (static mock, Richmond - live data decision pending)
+- Homepage data file: data/homepage.yml - Why Sniffout copy is CMS-editable
+- Coverflow carousel: 11 hand-picked walks, drag/swipe/keyboard/buttons, infinite wrap both directions (DOM reorder approach), progressive scaling (1.0/0.75/0.55/0.40), step = cardWidth * 0.72
+
+### Coverflow carousel status
+DOM reorder infinite loop is implemented. Verify on live site that wrap is seamless (user reported jumping in testing). Brief for fix was in progress at end of April session - check live before writing a brief.
+
+### Forecast tile status
+Placeholder is live (static mock, Richmond). Decision pending: live data vs static, which location. Parked until Jayesh decides.
+
+## Walk image status (April 2026)
+
+### Recently added/fixed
+- hardcastle-crags.jpg: added and committed (431KB)
+- newlands-corner-Ian-Capper.jpg: renamed to newlands-corner.jpg
+- heroImage frontmatter fixed: threipmuir-harlaw-dog-walk (threipmuir-reservoirs.jpg), pen-y-fan-dog-walk (pen-y-fan.jpg), rhossili-bay-dog-walk (rhossili-bay.jpg)
+
+### heroImage frontmatter - verify on live site
+These pages were briefed but paste may not have completed - verify hero images show on:
+shere-abinger-roughs-dog-walk, hurtwood-ridge-dog-walk, epsom-common-dog-walk, cissbury-ring-dog-walk, hermitage-dunkeld-dog-walk, tentsmuir-forest-dog-walk, llyn-padarn-dog-walk
+
+### Still needed
+- arthurs-seat.jpg and balmaha-loch-lomond.jpg: not yet sourced. heroImage cannot be wired until images exist.
+
 ## Content pipeline
 
 Researcher - Copywriter (Tom/Ailsa/Saoirse/Ravi) - Fact Checker (mandatory for Tom) - fixes - Editor - Validator - Developer
@@ -115,12 +161,17 @@ Full persona specs: docs/copy/website-personas.md
 
 ## Content backlog (priority order)
 
-1. Meta descriptions rewrite - Copywriter rewrites ready at docs/copy/meta-descriptions-rewrite-april-17.md. Owner reviewing before Developer applies.
-2. Trail Tips Article 2 (hot weather hacks) - Article 1 complete, voice guide and tip bank DONE. Seasonal deadline approaching.
-3. Design review P3 polish - 12 remaining P3 items from docs/design/walk-page-design-review-april-17.md
-4. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
-5. Walk images: newlands-corner.jpg, ranmore-common.jpg - PNG placeholders saved but need replacing (Google Maps screenshots are copyrighted, source proper photos)
-6. Community map pins V1 spec and build (post-500 MAU - research complete April 14 2026)
+1. heroImage frontmatter fixes (7 walk pages) - brief written, verify paste completed on live site before re-briefing
+2. Image checklist WALKS array - 10 missing walks need adding to image-checklist.html in PWA repo. Brief written, verify paste completed: cookham-to-marlow-thames-path, durham-riverside-dog-walk, epping-forest-connaught-water, holkham-beach-pinewoods, kingston-teddington-lock-thames-path, oxleas-wood-shooters-hill-dog-walk, regents-canal-little-venice-camden, river-wey-navigation-guildford-godalming, teddington-to-richmond-thames-path, threipmuir-harlaw-dog-walk
+3. durham-riverside-dog-walk.md - wrong title (Hamsterley Forest copy-paste error). Needs frontmatter fix.
+4. Meta descriptions rewrite - Copywriter rewrites ready at docs/copy/meta-descriptions-rewrite-april-17.md. Owner reviewing before Developer applies.
+5. Trail Tips Article 2 (hot weather hacks) - Article 1 complete, voice guide and tip bank DONE. Seasonal deadline approaching.
+6. Design review P3 polish - 12 remaining P3 items from docs/design/walk-page-design-review-april-17.md
+7. Coverflow carousel jump fix - verify live before writing brief
+8. Forecast tile live data - parked pending Jayesh decision on data source and location
+9. Contextual product links in existing guides (after AWIN setup - affiliate Phase 1)
+10. Walk images: ranmore-common.jpg, arthurs-seat.jpg, balmaha-loch-lomond.jpg - still needed
+11. Community map pins V1 spec and build (post-500 MAU - research complete April 14 2026)
 
 **DONE: Walk page enrichment "Before you go" and "For your dog" sections: LIVE (April 13 2026). Spec at docs/design/walk-page-sections-spec-april-13.md**
 **DONE: Trail Tips voice guide and tip bank: DONE. Files at docs/copy/trail-tips-voice-guide.md and docs/copy/trail-tips-bank.md. Article 1 complete.**
